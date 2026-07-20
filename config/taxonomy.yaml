@@ -1,0 +1,44 @@
+schema_version: 1
+
+domains:
+  - id: strategic_intent
+    name: Strategic intent
+
+  - id: decision_environment
+    name: Decision environment
+
+  - id: current_state
+    name: Current-state baseline
+
+  - id: value_and_use_cases
+    name: Value and use cases
+
+  - id: organization
+    name: Organization and operating model
+
+  - id: people_and_culture
+    name: People and culture
+
+  - id: governance
+    name: Governance and responsible AI
+
+  - id: data
+    name: Data readiness
+
+  - id: engineering_platform
+    name: AI engineering and platform
+
+  - id: security_trust
+    name: Security, trust and resilience
+
+  - id: agentic_ai
+    name: Agentic AI
+
+  - id: ecosystem_sourcing
+    name: Ecosystem and sourcing
+
+  - id: maturity_execution
+    name: Maturity and execution
+    outlook_sections:
+      - outlook/14-maturity
+      - outlook/15-roadmap
