@@ -1,0 +1,139 @@
+schema_version: 1
+
+source_root:
+  id: SROOT-0001
+  path: /Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs
+  storage: local_only
+
+processing_states:
+  - discovered
+  - metadata_recorded
+  - classification_pending
+  - route_pending
+  - approved_local
+  - approved_external
+  - extraction_in_progress
+  - extracted
+  - reviewed
+  - blocked
+  - retired
+
+classification_states:
+  - pending
+  - public
+  - internal
+  - restricted
+
+source_types:
+  pdf:
+    extensions:
+      - .pdf
+    extraction_status: supported
+    original_in_git: false
+
+  word:
+    extensions:
+      - .doc
+      - .docx
+    extraction_status: supported
+    original_in_git: false
+
+  presentation:
+    extensions:
+      - .ppt
+      - .pptx
+      - .key
+    extraction_status: review_required
+    original_in_git: false
+
+  spreadsheet:
+    extensions:
+      - .xls
+      - .xlsx
+      - .csv
+    extraction_status: review_required
+    original_in_git: false
+
+  image:
+    extensions:
+      - .png
+      - .jpg
+      - .jpeg
+      - .webp
+      - .svg
+    extraction_status: review_required
+    original_in_git: false
+
+  markdown:
+    extensions:
+      - .md
+    extraction_status: supported
+    original_in_git: conditional
+
+  text:
+    extensions:
+      - .txt
+      - .rtf
+    extraction_status: supported
+    original_in_git: conditional
+
+  apple_document:
+    extensions:
+      - .pages
+    extraction_status: review_required
+    original_in_git: false
+
+  web_document:
+    extensions:
+      - .html
+      - .htm
+    extraction_status: review_required
+    original_in_git: false
+
+  mind_map:
+    extensions:
+      - .mmd
+    extraction_status: review_required
+    original_in_git: false
+
+conditional_original_in_git:
+  applies_to:
+    - markdown
+    - text
+  allowed_when:
+    - repository_native_project_content
+    - approved_repository_derivative
+  prohibited_when:
+    - original_evidence_from_source_root
+    - contains_credentials
+    - contains_personal_data
+    - contains_restricted_operational_data
+  requires:
+    - approved_classification
+    - approved_processing_route
+    - source_provenance_when_derived
+
+ignored_files:
+  - .DS_Store
+  - Thumbs.db
+  - "*.tmp"
+  - "~$*"
+  - "*.swp"
+  - "*.bak"
+
+source_id_prefixes:
+  strategic_intent: SRC-SI
+  decision_environment: SRC-DE
+  current_state: SRC-CS
+  value_and_use_cases: SRC-VUC
+  organization: SRC-ORG
+  people_and_culture: SRC-PC
+  governance: SRC-GOV
+  data: SRC-DATA
+  engineering_platform: SRC-ENG
+  security_trust: SRC-ST
+  agentic_ai: SRC-AAI
+  ecosystem_sourcing: SRC-ES
+  maturity_execution: SRC-ME
+
+source_id_format: "<domain-prefix>-<six-digit-sequence>"
