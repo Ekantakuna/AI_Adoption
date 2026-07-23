@@ -1,0 +1,41 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: reference-architecture.schema.yaml
+title: AI reference architecture
+description: Versioned logical architecture for AI applications, models, agents, platforms and operations.
+type: object
+additionalProperties: false
+required: [reference_architecture_id, name, version, status, purpose, scope, architecture_layer_ids, component_descriptions, interface_descriptions, deployment_models, engineering_requirement_ids, pattern_ids, capability_ids, solution_ids, data_dependencies, observability_requirements, security_and_governance_requirements, risk_ids, control_ids, dependency_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  reference_architecture_id: {type: string, pattern: "^EARCH-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  scope: {type: string}
+  architecture_layer_ids: {$ref: "#/$defs/ids"}
+  component_descriptions: {$ref: "#/$defs/text"}
+  interface_descriptions: {$ref: "#/$defs/text"}
+  deployment_models: {$ref: "#/$defs/ids"}
+  engineering_requirement_ids: {$ref: "#/$defs/records"}
+  pattern_ids: {$ref: "#/$defs/records"}
+  capability_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  data_dependencies: {$ref: "#/$defs/text"}
+  observability_requirements: {$ref: "#/$defs/text"}
+  security_and_governance_requirements: {$ref: "#/$defs/text"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

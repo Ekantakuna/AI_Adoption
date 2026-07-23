@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: engineering-option.schema.yaml
+title: Engineering option
+description: Technical build, buy, partner, commercial, open-source, hosting or model-supply alternative.
+type: object
+additionalProperties: false
+required: [engineering_option_id, name, status, option_origin, hosting_model, model_supply_model, description, engineering_requirement_ids, use_case_ids, provider_ids, offering_ids, solution_ids, architecture_ids, pattern_ids, expected_benefits, tradeoffs, constraints, cost_assumptions, portability_and_exit_considerations, risk_ids, control_ids, dependency_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  engineering_option_id: {type: string, pattern: "^EOPT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, discovered, evaluating, shortlisted, recommended, not_recommended, selected_by_decision, rejected, superseded]}
+  option_origin: {$ref: "#/$defs/id"}
+  hosting_model: {$ref: "#/$defs/id"}
+  model_supply_model: {$ref: "#/$defs/id"}
+  description: {type: string}
+  engineering_requirement_ids: {$ref: "#/$defs/records"}
+  use_case_ids: {$ref: "#/$defs/records"}
+  provider_ids: {$ref: "#/$defs/records"}
+  offering_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  pattern_ids: {$ref: "#/$defs/records"}
+  expected_benefits: {$ref: "#/$defs/text"}
+  tradeoffs: {$ref: "#/$defs/text"}
+  constraints: {$ref: "#/$defs/text"}
+  cost_assumptions: {$ref: "#/$defs/text"}
+  portability_and_exit_considerations: {$ref: "#/$defs/text"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

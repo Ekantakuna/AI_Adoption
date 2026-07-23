@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-governance-requirement.schema.yaml
+title: Data governance requirement for AI
+description: AI-specific data governance extension requirement; it does not itself approve policy or controls.
+type: object
+additionalProperties: false
+required: [data_governance_requirement_id, name, governance_extension_area, status, description, rationale, lifecycle_stage_ids, applicability, required_governance_artifact_ids, role_ids, risk_ids, control_ids, evidence_requirements, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  data_governance_requirement_id: {type: string, pattern: "^DGR-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  governance_extension_area: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  description: {type: string}
+  rationale: {type: string}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  applicability: {$ref: "#/$defs/text"}
+  required_governance_artifact_ids: {$ref: "#/$defs/records"}
+  role_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  evidence_requirements: {$ref: "#/$defs/text"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  status: {type: string, enum: [proposed, draft, in_review, approved_as_requirement, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

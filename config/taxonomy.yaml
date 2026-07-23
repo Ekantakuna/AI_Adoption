@@ -169,10 +169,55 @@ domains:
       - outlook/15-roadmap
 
   - id: data
-    name: Data readiness
+    name: Data readiness for AI
+    description: Data capabilities, products, quality, metadata, governance extensions, analytics enablement and observability required for reliable and responsible AI.
+    includes:
+      - AI data-readiness target, assessments and improvement plan
+      - data requirements for AI use cases, models and agents
+      - data analytics capabilities supporting AI development and operation
+      - governed data products and access patterns for AI
+      - extension of data governance for AI-specific lifecycles and risks
+      - AI data-quality frameworks, dimensions, rules and evidence
+      - metadata, lineage, provenance, semantics and documentation practices
+      - data observability signals, checks, incidents and remediation
+      - current-state, target-state, gap, quality, metadata and observability assessment
+    excludes:
+      - enterprise policy and control approval owned by governance
+      - platform and reference-architecture ownership held by engineering_platform
+      - implemented platform facts owned by current_state
+      - security or privacy acceptance owned by security_trust and governance
+      - unsupported statements about current data readiness or quality
+    outlook_sections:
+      - outlook/09-data
+      - outlook/15-roadmap
 
   - id: engineering_platform
-    name: AI engineering and platform
+    name: AI engineering, platform and catalogue
+    description: Technical architecture, engineering practices, option evaluation, reusable patterns, observability, AI experience design and governed catalogue capabilities required to build and operate AI solutions.
+    includes:
+      - engineering requirements and target platform capabilities
+      - build, buy and partner technical option evaluation
+      - commercial, open-source and internally developed model trade-offs
+      - public-cloud, private-cloud, hybrid and on-premises deployment trade-offs
+      - AI reference architectures and architecture decisions
+      - reusable engineering, integration, prompt and context design patterns
+      - vendor, model, platform and application technical strategy inputs
+      - AI engineering lifecycle, delivery and operational practices
+      - AI observability requirements, signals, practices and tooling
+      - AI user-experience and human-AI interaction patterns
+      - governed AI catalogue policies, processes and entity inventory
+      - AI documentation, security-testing evidence, risk and control validation, and compliance-reporting support
+      - current-state, target-state, option, architecture and catalogue-readiness assessment
+    excludes:
+      - final build, buy or partner strategic choices owned by strategic_intent
+      - provider due diligence, contracting and commercial lifecycle owned by ecosystem_sourcing
+      - implemented-solution facts owned by current_state
+      - policy approval, control ownership and compliance conclusions owned by governance
+      - security-risk acceptance or security conclusions owned by security_trust
+      - unsupported product, provider or architecture recommendations
+    outlook_sections:
+      - outlook/10-engineering-platform
+      - outlook/15-roadmap
 
   - id: security_trust
     name: Security, trust and resilience

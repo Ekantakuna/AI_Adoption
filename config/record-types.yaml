@@ -43,6 +43,150 @@ record_types:
     schema: schemas/metric.schema.yaml
     purpose: Outcome, leading, lagging, operational or guardrail measure with targets and thresholds.
 
+  data_readiness_target:
+    id_prefix: DRTGT
+    register: registers/data-readiness-targets.yaml
+    schema: schemas/data-readiness-target.schema.yaml
+    purpose: Versioned TO-BE data-readiness profile for AI with target capabilities and outcomes.
+
+  data_requirement:
+    id_prefix: DREQ
+    register: registers/data-requirements.yaml
+    schema: schemas/data-requirement.schema.yaml
+    purpose: Functional, quality, metadata, access, governance or observability requirement for AI data.
+
+  data_product:
+    id_prefix: DPROD
+    register: registers/data-products.yaml
+    schema: schemas/data-product.schema.yaml
+    purpose: Governed, reusable data product or data interface intended for AI and analytics consumption.
+
+  data_capability_profile:
+    id_prefix: DCAP
+    register: registers/data-capability-profiles.yaml
+    schema: schemas/data-capability-profile.schema.yaml
+    purpose: Data capability definition connecting people, process, information, technology, governance and measures.
+
+  data_governance_requirement:
+    id_prefix: DGR
+    register: registers/data-governance-requirements.yaml
+    schema: schemas/data-governance-requirement.schema.yaml
+    purpose: AI-specific data governance extension requirement to be realized by governance artifacts, roles and controls.
+
+  data_quality_framework:
+    id_prefix: DQF
+    register: registers/data-quality-frameworks.yaml
+    schema: schemas/data-quality-framework.schema.yaml
+    purpose: Versioned framework defining AI data-quality dimensions, thresholds, assessment and escalation.
+
+  data_quality_rule:
+    id_prefix: DQR
+    register: registers/data-quality-rules.yaml
+    schema: schemas/data-quality-rule.schema.yaml
+    purpose: Executable or reviewable data-quality rule linked to data products, AI uses, thresholds and controls.
+
+  data_practice:
+    id_prefix: DPRAC
+    register: registers/data-practices.yaml
+    schema: schemas/data-practice.schema.yaml
+    purpose: Repeatable analytics, metadata, lineage, quality, access, lifecycle or stewardship practice for AI data.
+
+  data_observability_check:
+    id_prefix: DOBSC
+    register: registers/data-observability-checks.yaml
+    schema: schemas/data-observability-check.schema.yaml
+    purpose: Time-stamped observation of data freshness, volume, schema, quality, lineage, availability or use.
+
+  data_assessment:
+    id_prefix: DAS
+    register: registers/data-assessments.yaml
+    schema: schemas/data-assessment.schema.yaml
+    purpose: Evidence-backed data-readiness, capability, governance, quality, metadata or observability assessment.
+
+  data_finding:
+    id_prefix: DFND
+    register: registers/data-findings.yaml
+    schema: schemas/data-finding.schema.yaml
+    purpose: Granular evidence-backed data strength, gap, constraint, risk or improvement opportunity.
+
+  data_action:
+    id_prefix: DACT
+    register: registers/data-actions.yaml
+    schema: schemas/data-action.schema.yaml
+    purpose: Data capability, product, quality, metadata, governance or observability improvement linked to an approved finding.
+
+  engineering_requirement:
+    id_prefix: ENGREQ
+    register: registers/engineering-requirements.yaml
+    schema: schemas/engineering-requirement.schema.yaml
+    purpose: Vendor-neutral functional, technical, operational or assurance requirement for an AI platform, model or application.
+
+  engineering_option:
+    id_prefix: EOPT
+    register: registers/engineering-options.yaml
+    schema: schemas/engineering-option.schema.yaml
+    purpose: Build, buy, partner, commercial, open-source, cloud or on-premises technical option considered for a requirement or use case.
+
+  technology_evaluation:
+    id_prefix: TEVAL
+    register: registers/technology-evaluations.yaml
+    schema: schemas/technology-evaluation.schema.yaml
+    purpose: Evidence-backed technical comparison of engineering options without implying selection approval.
+
+  reference_architecture:
+    id_prefix: EARCH
+    register: registers/reference-architectures.yaml
+    schema: schemas/reference-architecture.schema.yaml
+    purpose: Versioned AI reference architecture defining logical components, interfaces, deployment patterns and cross-cutting controls.
+
+  engineering_design_pattern:
+    id_prefix: EDPAT
+    register: registers/engineering-design-patterns.yaml
+    schema: schemas/engineering-design-pattern.schema.yaml
+    purpose: Reusable AI, integration, prompt, context, deployment or operational design pattern with trade-offs and applicability.
+
+  engineering_practice:
+    id_prefix: EPRAC
+    register: registers/engineering-practices.yaml
+    schema: schemas/engineering-practice.schema.yaml
+    purpose: Repeatable engineering, observability, catalogue or operational practice with roles, evidence and measures.
+
+  ai_ux_pattern:
+    id_prefix: AIUX
+    register: registers/ai-ux-patterns.yaml
+    schema: schemas/ai-ux-pattern.schema.yaml
+    purpose: Reusable human-AI interaction and experience pattern with transparency, control, accessibility and recovery requirements.
+
+  ai_catalogue_entry:
+    id_prefix: AICAT
+    register: registers/ai-catalogue.yaml
+    schema: schemas/ai-catalogue-entry.schema.yaml
+    purpose: Governed discovery and inventory metadata for a model, agent, application, prompt library, software tool or platform service.
+
+  catalogue_assurance_check:
+    id_prefix: CASSUR
+    register: registers/catalogue-assurance-checks.yaml
+    schema: schemas/catalogue-assurance-check.schema.yaml
+    purpose: Time-stamped security, risk, control, documentation or compliance evidence check linked to an AI catalogue entity.
+
+  engineering_assessment:
+    id_prefix: EAS
+    register: registers/engineering-assessments.yaml
+    schema: schemas/engineering-assessment.schema.yaml
+    purpose: Evidence-backed current-state, target-state, architecture, option, observability or catalogue-readiness assessment.
+
+  engineering_finding:
+    id_prefix: EFND
+    register: registers/engineering-findings.yaml
+    schema: schemas/engineering-finding.schema.yaml
+    purpose: Granular evidence-backed engineering strength, gap, constraint, risk or improvement opportunity.
+
+  engineering_action:
+    id_prefix: EACT
+    register: registers/engineering-actions.yaml
+    schema: schemas/engineering-action.schema.yaml
+    purpose: Architecture, platform, pattern, observability, UX or catalogue improvement action linked to an approved finding.
+
   ai_strategy:
     id_prefix: AISTRAT
     register: registers/ai-strategies.yaml
@@ -458,6 +602,52 @@ record_types:
     purpose: Pathway action linked to maturity gaps and findings.
 
 source_collection_record_targets:
+  data:
+    - data_readiness_target
+    - data_requirement
+    - data_product
+    - data_capability_profile
+    - data_governance_requirement
+    - data_quality_framework
+    - data_quality_rule
+    - data_practice
+    - data_observability_check
+    - data_assessment
+    - data_finding
+    - data_action
+    - capability
+    - solution
+    - metric
+    - risk
+    - control
+  engineering_platform/prompt_and_context_engineering:
+    - engineering_requirement
+    - engineering_design_pattern
+    - engineering_practice
+    - ai_catalogue_entry
+    - ai_ux_pattern
+    - capability
+    - solution
+    - risk
+    - control
+  engineering_platform:
+    - engineering_requirement
+    - engineering_option
+    - technology_evaluation
+    - reference_architecture
+    - engineering_design_pattern
+    - engineering_practice
+    - ai_ux_pattern
+    - ai_catalogue_entry
+    - catalogue_assurance_check
+    - engineering_assessment
+    - engineering_finding
+    - engineering_action
+    - capability
+    - solution
+    - metric
+    - risk
+    - control
   decision_environment:
     - decision_intelligence_target
     - decision_type

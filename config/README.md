@@ -18,4 +18,8 @@ This directory contains project-wide controlled values, taxonomy, audience defin
 
 `decision-environment.yaml` controls the decision lifecycle, decision classes, choice-architecture components, input and evidence types, human authority and automation boundaries, outcome signals, learning changes, assessment dimensions, semantic relationships and cross-domain mappings.
 
+`data.yaml` controls AI data-readiness dimensions, lifecycle stages, requirements, products, capabilities, governance extensions, quality dimensions and rules, metadata practices, observability signals, assessments, semantic relationships and cross-domain mappings.
+
+`engineering-platform.yaml` controls engineering lifecycle stages, requirements, build/buy and deployment options, technical evaluation dimensions, reference-architecture layers, design patterns, observability signals, AI UX patterns, AI catalogue entities and processes, documentation, assurance checks, assessment values and cross-domain mappings.
+
 `ecosystem-sourcing.yaml` controls provider and offering types, sourcing lifecycle, evaluation and due-diligence dimensions, agreement obligations, performance signals, exit triggers, semantic relationships and cross-domain mappings.

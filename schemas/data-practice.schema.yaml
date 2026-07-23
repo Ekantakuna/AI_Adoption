@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-practice.schema.yaml
+title: Data practice
+description: Repeatable analytics, product, quality, metadata, access, stewardship or observability practice for AI data.
+type: object
+additionalProperties: false
+required: [data_practice_id, name, practice_type, version, status, purpose, scope, lifecycle_stage_ids, activities, inputs, outputs, role_ids, data_product_ids, solution_ids, governance_artifact_ids, evidence_requirements, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  data_practice_id: {type: string, pattern: "^DPRAC-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  practice_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, suspended, superseded, retired]}
+  purpose: {type: string}
+  scope: {type: string}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  activities: {$ref: "#/$defs/text"}
+  inputs: {$ref: "#/$defs/text"}
+  outputs: {$ref: "#/$defs/text"}
+  role_ids: {$ref: "#/$defs/records"}
+  data_product_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  governance_artifact_ids: {$ref: "#/$defs/records"}
+  evidence_requirements: {$ref: "#/$defs/text"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -149,7 +149,24 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - data_readiness_target
+  - data_requirement
+  - data_product
+  - data_capability_profile
+  - data_governance_requirement
+  - data_quality_framework
+  - data_quality_rule
+  - data_practice
+  - data_observability_check
+  - data_assessment
+  - data_finding
+  - data_action
+  - capability
+  - solution
+  - metric
+  - risk
+  - control
   source_type: mind_map
   extension: ".mmd"
   size_bytes: 2219
@@ -210,7 +227,24 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - engineering_requirement
+  - engineering_option
+  - technology_evaluation
+  - reference_architecture
+  - engineering_design_pattern
+  - engineering_practice
+  - ai_ux_pattern
+  - ai_catalogue_entry
+  - catalogue_assurance_check
+  - engineering_assessment
+  - engineering_finding
+  - engineering_action
+  - capability
+  - solution
+  - metric
+  - risk
+  - control
   source_type: pdf
   extension: ".pdf"
   size_bytes: 311931
@@ -271,7 +305,24 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - engineering_requirement
+  - engineering_option
+  - technology_evaluation
+  - reference_architecture
+  - engineering_design_pattern
+  - engineering_practice
+  - ai_ux_pattern
+  - ai_catalogue_entry
+  - catalogue_assurance_check
+  - engineering_assessment
+  - engineering_finding
+  - engineering_action
+  - capability
+  - solution
+  - metric
+  - risk
+  - control
   source_type: mind_map
   extension: ".mmd"
   size_bytes: 1621
@@ -1528,7 +1579,16 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - engineering_requirement
+  - engineering_design_pattern
+  - engineering_practice
+  - ai_catalogue_entry
+  - ai_ux_pattern
+  - capability
+  - solution
+  - risk
+  - control
   source_type: pdf
   extension: ".pdf"
   size_bytes: 2019012

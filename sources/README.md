@@ -30,3 +30,7 @@ Current-state technical evidence remains outside Git under the local `current_st
 Maturity evidence remains outside Git under `maturity_execution`. The local collection separates framework descriptions, reference models, qualitative and quantitative assessment inputs, assessment reports and action plans. A document's folder proposes its record target but does not approve its classification or conclusions.
 
 Decision-environment evidence remains outside Git under `decision_environment`. New sources use `SRC-DEC` and may propose decision target, type, context, choice-architecture, evidence, authority, outcome, learning and assessment records. The previously catalogued `SRC-SCO-000001` keeps its stable legacy ID while its routing metadata uses the dedicated decision-environment category.
+
+Data evidence remains outside Git under `data` and uses `SRC-DATA`. Folder routing may propose readiness targets, requirements, products, capability profiles, governance extensions, quality frameworks and rules, practices, observability checks, assessments, findings and actions, but it does not approve content access or data conclusions.
+
+Engineering evidence remains outside Git under `engineering_platform`. General engineering sources use `SRC-ENG`; prompt and context sources retain `SRC-PRM`. Folder routing may propose requirements, options, evaluations, architecture, patterns, practices, AI UX, catalogue, assurance, assessment and action records, but it does not approve content access or technical conclusions.

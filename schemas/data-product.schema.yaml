@@ -1,0 +1,48 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-product.schema.yaml
+title: Data product
+description: Governed reusable data product or interface intended for AI and analytics consumption.
+type: object
+additionalProperties: false
+required: [data_product_id, name, data_product_type, version, status, description, intended_AI_uses, prohibited_or_restricted_uses, business_domain_ids, owner_role_ids, steward_role_ids, source_system_refs, interface_and_access, schema_or_contract_ref, data_classification, rights_and_purpose_constraints, metadata_refs, lineage_refs, quality_framework_ids, quality_rule_ids, observability_check_ids, retention_and_disposition, solution_ids, use_case_ids, implementation_ids, risk_ids, control_ids, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  data_product_id: {type: string, pattern: "^DPROD-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  data_product_type: {$ref: "#/$defs/id"}
+  version: {type: [string, "null"]}
+  status: {type: string, enum: [proposed, registered, in_development, in_review, approved_for_use, restricted, active, deprecated, retired]}
+  description: {type: string}
+  intended_AI_uses: {$ref: "#/$defs/text"}
+  prohibited_or_restricted_uses: {$ref: "#/$defs/text"}
+  business_domain_ids: {$ref: "#/$defs/ids"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  steward_role_ids: {$ref: "#/$defs/records"}
+  source_system_refs: {$ref: "#/$defs/text"}
+  interface_and_access: {type: string}
+  schema_or_contract_ref: {type: [string, "null"]}
+  data_classification: {$ref: "#/$defs/classification"}
+  rights_and_purpose_constraints: {$ref: "#/$defs/text"}
+  metadata_refs: {$ref: "#/$defs/text"}
+  lineage_refs: {$ref: "#/$defs/text"}
+  quality_framework_ids: {$ref: "#/$defs/records"}
+  quality_rule_ids: {$ref: "#/$defs/records"}
+  observability_check_ids: {$ref: "#/$defs/records"}
+  retention_and_disposition: {type: string}
+  solution_ids: {$ref: "#/$defs/records"}
+  use_case_ids: {$ref: "#/$defs/records"}
+  implementation_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

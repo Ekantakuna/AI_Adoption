@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-requirement.schema.yaml
+title: Data requirement
+description: Requirement for data availability, quality, metadata, access, governance or observability.
+type: object
+additionalProperties: false
+required: [data_requirement_id, name, requirement_type, status, description, rationale, priority, acceptance_criteria, use_case_ids, implementation_ids, data_product_ids, capability_ids, engineering_requirement_ids, risk_ids, control_ids, metric_ids, owner_role_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  data_requirement_id: {type: string, pattern: "^DREQ-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  requirement_type: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  description: {type: string}
+  rationale: {type: string}
+  priority: {type: string, enum: [must, should, could, will_not, unassigned]}
+  acceptance_criteria: {$ref: "#/$defs/text"}
+  use_case_ids: {$ref: "#/$defs/records"}
+  implementation_ids: {$ref: "#/$defs/records"}
+  data_product_ids: {$ref: "#/$defs/records"}
+  capability_ids: {$ref: "#/$defs/records"}
+  engineering_requirement_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

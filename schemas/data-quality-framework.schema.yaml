@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-quality-framework.schema.yaml
+title: AI data quality framework
+description: Versioned dimensions, rules, thresholds, evidence and escalation for AI data fitness.
+type: object
+additionalProperties: false
+required: [data_quality_framework_id, name, version, status, purpose, scope, quality_dimension_ids, quality_rule_ids, assessment_method, scoring_or_aggregation_method, threshold_policy, use_case_context_requirements, role_ids, escalation_rules, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  data_quality_framework_id: {type: string, pattern: "^DQF-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  scope: {type: string}
+  quality_dimension_ids: {$ref: "#/$defs/ids"}
+  quality_rule_ids: {$ref: "#/$defs/records"}
+  assessment_method: {type: string}
+  scoring_or_aggregation_method: {type: string}
+  threshold_policy: {type: string}
+  use_case_context_requirements: {$ref: "#/$defs/text"}
+  role_ids: {$ref: "#/$defs/records"}
+  escalation_rules: {$ref: "#/$defs/text"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

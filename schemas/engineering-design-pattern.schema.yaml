@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: engineering-design-pattern.schema.yaml
+title: Engineering design pattern
+description: Reusable AI engineering pattern with context, forces, structure, trade-offs and assurance needs.
+type: object
+additionalProperties: false
+required: [engineering_design_pattern_id, name, pattern_type, version, status, intent, context, problem, forces, solution_structure, applicability, benefits, tradeoffs, failure_modes, implementation_guidance, architecture_ids, requirement_ids, related_pattern_ids, observability_signal_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  engineering_design_pattern_id: {type: string, pattern: "^EDPAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  pattern_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  intent: {type: string}
+  context: {type: string}
+  problem: {type: string}
+  forces: {$ref: "#/$defs/text"}
+  solution_structure: {$ref: "#/$defs/text"}
+  applicability: {$ref: "#/$defs/text"}
+  benefits: {$ref: "#/$defs/text"}
+  tradeoffs: {$ref: "#/$defs/text"}
+  failure_modes: {$ref: "#/$defs/text"}
+  implementation_guidance: {$ref: "#/$defs/text"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  requirement_ids: {$ref: "#/$defs/records"}
+  related_pattern_ids: {$ref: "#/$defs/records"}
+  observability_signal_ids: {$ref: "#/$defs/ids"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  status: {type: string, enum: [candidate, proposed, in_review, approved, deprecated, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

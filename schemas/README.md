@@ -73,6 +73,25 @@ Decision-environment contracts are:
 - `decision-outcome.schema.yaml` and `decision-learning-event.schema.yaml` for outcome-linked feedback and controlled evolution;
 - `decision-environment-assessment.schema.yaml` for evidence-backed capability, quality, control and learning assessment.
 
+Data-domain contracts are:
+
+- `data-readiness-target.schema.yaml` and `data-requirement.schema.yaml` for target readiness and contextual AI data needs;
+- `data-product.schema.yaml` and `data-capability-profile.schema.yaml` for reusable data products and capability design;
+- `data-governance-requirement.schema.yaml` for AI-specific governance extension requirements;
+- `data-quality-framework.schema.yaml` and `data-quality-rule.schema.yaml` for contextual quality dimensions, thresholds and rules;
+- `data-practice.schema.yaml` and `data-observability-check.schema.yaml` for lifecycle, metadata, analytics and reliability practices;
+- `data-assessment.schema.yaml`, `data-finding.schema.yaml` and `data-action.schema.yaml` for evidence-backed evaluation and improvement.
+
+Engineering-platform contracts are:
+
+- `engineering-requirement.schema.yaml`, `engineering-option.schema.yaml` and `technology-evaluation.schema.yaml` for vendor-neutral needs, alternatives and evidence-backed technical comparison;
+- `reference-architecture.schema.yaml` and `engineering-design-pattern.schema.yaml` for versioned architecture and reusable pattern design;
+- `engineering-practice.schema.yaml` for engineering, observability, operation, catalogue and documentation practices;
+- `ai-ux-pattern.schema.yaml` for human-AI interaction, control, feedback, recovery and accessibility;
+- `ai-catalogue-entry.schema.yaml` for governed entity inventory and documentation;
+- `catalogue-assurance-check.schema.yaml` for security, risk, control and compliance evidence checks;
+- `engineering-assessment.schema.yaml`, `engineering-finding.schema.yaml` and `engineering-action.schema.yaml` for evidence-backed evaluation, granular findings and improvement.
+
 Ecosystem-sourcing contracts are:
 
 - `ecosystem-provider.schema.yaml` and `ecosystem-offering.schema.yaml` for evidence-backed provider and service metadata;

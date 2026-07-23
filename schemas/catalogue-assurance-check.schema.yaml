@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: catalogue-assurance-check.schema.yaml
+title: Catalogue assurance check
+description: Time-stamped evidence check for an AI catalogue entity; it does not itself grant security, risk or compliance approval.
+type: object
+additionalProperties: false
+required: [catalogue_assurance_check_id, ai_catalogue_entry_id, check_type, status, scope, performed_at, valid_until, method, result, findings, evidence_refs, risk_ids, control_ids, governance_artifact_ids, remediation_action_ids, decision_ids, source_ids, classification, reviewed_by, reviewed_at]
+properties:
+  catalogue_assurance_check_id: {type: string, pattern: "^CASSUR-[0-9]{6}$"}
+  ai_catalogue_entry_id: {type: string, pattern: "^AICAT-[0-9]{6}$"}
+  check_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [planned, in_progress, evidence_pending, passed, passed_with_conditions, failed, expired, superseded]}
+  scope: {type: string}
+  performed_at: {type: [string, "null"], format: date-time}
+  valid_until: {type: [string, "null"], format: date-time}
+  method: {type: string}
+  result: {type: string}
+  findings: {$ref: "#/$defs/text"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  governance_artifact_ids: {$ref: "#/$defs/records"}
+  remediation_action_ids: {$ref: "#/$defs/records"}
+  decision_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

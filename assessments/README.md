@@ -12,4 +12,8 @@ This directory contains traceable current-state, target-state, gap, and maturity
 
 `decision-environment/` separates current state, target state, gaps, decision quality and learning-effectiveness assessments.
 
+`data/` separates current state, target state, use-case and product readiness, governance and capabilities, quality, metadata and lineage, and observability assessments.
+
+`engineering-platform/` separates current state, target state, architecture and options, observability and operations, AI UX and catalogue-readiness assessments.
+
 `ecosystem-sourcing/` separates market and capability, provider evaluation, due diligence, performance and value, and exit-readiness assessments.

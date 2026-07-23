@@ -1,0 +1,56 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: technology-evaluation.schema.yaml
+title: Technology evaluation
+description: Evidence-backed comparison of engineering options; it does not authorize selection.
+type: object
+additionalProperties: false
+required: [technology_evaluation_id, name, status, evaluation_type, scope, engineering_requirement_ids, engineering_option_ids, criteria, evaluation_results, proof_of_value_refs, recommendation, limitations, strategic_choice_ids, sourcing_case_ids, decision_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  technology_evaluation_id: {type: string, pattern: "^TEVAL-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, planned, in_progress, in_review, approved_as_input, superseded, cancelled]}
+  evaluation_type: {type: string, enum: [market_scan, option_comparison, model_evaluation, platform_evaluation, proof_of_value, architecture_fit, hosting_assessment, open_source_assessment]}
+  scope: {type: string}
+  engineering_requirement_ids: {$ref: "#/$defs/records"}
+  engineering_option_ids: {$ref: "#/$defs/records"}
+  criteria: {type: array, uniqueItems: true, items: {$ref: "#/$defs/criterion"}}
+  evaluation_results: {type: array, items: {$ref: "#/$defs/result"}}
+  proof_of_value_refs: {$ref: "#/$defs/text"}
+  recommendation: {type: string}
+  limitations: {$ref: "#/$defs/text"}
+  strategic_choice_ids: {$ref: "#/$defs/records"}
+  sourcing_case_ids: {$ref: "#/$defs/records"}
+  decision_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  criterion:
+    type: object
+    additionalProperties: false
+    required: [criterion_id, dimension, description, weight, scoring_method]
+    properties:
+      criterion_id: {$ref: "#/$defs/id"}
+      dimension: {$ref: "#/$defs/id"}
+      description: {type: string}
+      weight: {type: [number, "null"], minimum: 0}
+      scoring_method: {type: string}
+  result:
+    type: object
+    additionalProperties: false
+    required: [engineering_option_id, criterion_id, score, rationale, evidence_refs]
+    properties:
+      engineering_option_id: {type: string, pattern: "^EOPT-[0-9]{6}$"}
+      criterion_id: {$ref: "#/$defs/id"}
+      score: {type: [number, string, "null"]}
+      rationale: {type: string}
+      evidence_refs: {$ref: "#/$defs/text"}
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

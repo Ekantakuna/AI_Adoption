@@ -1,0 +1,40 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-quality-rule.schema.yaml
+title: Data quality rule
+description: Executable or reviewable rule evaluating data fitness for an intended AI use.
+type: object
+additionalProperties: false
+required: [data_quality_rule_id, name, rule_type, quality_dimension, version, status, description, data_product_ids, use_case_ids, implementation_ids, expression_or_method, threshold, severity, evaluation_frequency, owner_role_ids, observability_signal_ids, failure_action, risk_ids, control_ids, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  data_quality_rule_id: {type: string, pattern: "^DQR-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  rule_type: {$ref: "#/$defs/id"}
+  quality_dimension: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, suspended, superseded, retired]}
+  description: {type: string}
+  data_product_ids: {$ref: "#/$defs/records"}
+  use_case_ids: {$ref: "#/$defs/records"}
+  implementation_ids: {$ref: "#/$defs/records"}
+  expression_or_method: {type: string}
+  threshold: {type: [number, string, "null"]}
+  severity: {type: string, enum: [informational, low, medium, high, critical]}
+  evaluation_frequency: {type: string}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  observability_signal_ids: {$ref: "#/$defs/ids"}
+  failure_action: {type: string}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

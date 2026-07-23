@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-finding.schema.yaml
+title: Data finding
+description: Granular evidence-backed data strength, gap, constraint, risk or improvement opportunity.
+type: object
+additionalProperties: false
+required: [data_finding_id, data_assessment_id, finding_type, status, title, statement, dimension, qualitative_argument, quantitative_argument, affected_record_ids, impact, recommendation, action_ids, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, confidence, classification, reviewed_by, reviewed_at]
+properties:
+  data_finding_id: {type: string, pattern: "^DFND-[0-9]{6}$"}
+  data_assessment_id: {type: string, pattern: "^DAS-[0-9]{6}$"}
+  finding_type: {type: string, enum: [strength, gap, constraint, risk, nonconformance, opportunity, progress, regression]}
+  status: {type: string, enum: [proposed, in_review, approved, rejected, superseded, resolved]}
+  title: {type: string, minLength: 1}
+  statement: {type: string}
+  dimension: {$ref: "#/$defs/id"}
+  qualitative_argument: {type: string}
+  quantitative_argument: {type: [string, "null"]}
+  affected_record_ids: {$ref: "#/$defs/records"}
+  impact: {type: string}
+  recommendation: {type: string}
+  action_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  confidence: {type: string, enum: [low, medium, high]}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

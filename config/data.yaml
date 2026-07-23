@@ -1,0 +1,265 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+data_governance_requirements_do_not_approve_policy: true
+
+data_readiness_dimensions:
+  - strategic_alignment_and_use_case_demand
+  - data_availability_and_access
+  - data_quality_and_fitness_for_use
+  - metadata_semantics_and_documentation
+  - lineage_provenance_and_traceability
+  - governance_ownership_and_stewardship
+  - privacy_security_and_rights
+  - architecture_integration_and_interoperability
+  - analytics_and_AI_enablement
+  - observability_reliability_and_incident_response
+  - lifecycle_retention_and_disposition
+  - skills_operating_model_and_adoption
+
+data_lifecycle_stages:
+  - demand_and_use_case_definition
+  - discovery_and_inventory
+  - classification_and_ownership
+  - acquisition_or_generation
+  - preparation_and_transformation
+  - quality_and_fitness_evaluation
+  - approval_and_access
+  - AI_development_and_evaluation_use
+  - production_use_and_observability
+  - change_and_revalidation
+  - retention_archive_and_disposition
+
+requirement_types:
+  - availability
+  - access
+  - quality
+  - representativeness
+  - metadata
+  - semantics
+  - lineage_and_provenance
+  - privacy_and_rights
+  - security
+  - governance
+  - interoperability
+  - performance_and_scale
+  - observability
+  - retention_and_disposition
+  - documentation
+
+data_product_types:
+  - analytical_dataset
+  - training_dataset
+  - evaluation_dataset
+  - grounding_or_knowledge_corpus
+  - feature_set
+  - event_stream
+  - API_or_data_service
+  - master_or_reference_data
+  - synthetic_data_product
+  - feedback_and_outcome_data
+
+data_capability_areas:
+  - data_demand_and_product_management
+  - discovery_catalogue_and_inventory
+  - data_ownership_and_stewardship
+  - data_access_and_sharing
+  - data_engineering_and_preparation
+  - analytics_and_feature_engineering
+  - training_evaluation_and_grounding_data
+  - metadata_semantics_and_knowledge
+  - lineage_provenance_and_versioning
+  - data_quality_and_fitness_for_AI
+  - data_observability_and_reliability
+  - privacy_security_rights_and_retention
+  - synthetic_data
+  - feedback_outcome_and_learning_data
+
+governance_extension_areas:
+  - AI_data_ownership_and_accountability
+  - training_evaluation_and_grounding_data
+  - data_use_purpose_and_rights
+  - personal_sensitive_and_restricted_data
+  - representativeness_bias_and_fairness
+  - lineage_provenance_and_reproducibility
+  - synthetic_and_generated_data
+  - prompts_context_and_knowledge_sources
+  - third_party_and_provider_data
+  - production_feedback_and_human_interaction_data
+  - retention_deletion_and_model_unlearning_dependencies
+  - data_incident_change_and_revalidation
+
+quality_dimensions:
+  - accuracy
+  - completeness
+  - consistency
+  - validity
+  - uniqueness
+  - timeliness
+  - freshness
+  - availability
+  - integrity
+  - lineage_completeness
+  - representativeness
+  - balance
+  - label_quality
+  - grounding_relevance
+  - contamination_and_leakage
+  - rights_and_consent_validity
+  - fitness_for_intended_AI_use
+
+quality_rule_types:
+  - threshold
+  - reconciliation
+  - schema_and_contract
+  - statistical_distribution
+  - drift
+  - anomaly
+  - label_validation
+  - duplication
+  - leakage_and_contamination
+  - representativeness_and_balance
+  - lineage_and_provenance
+  - rights_and_retention
+  - human_review
+
+metadata_types:
+  - business
+  - technical
+  - operational
+  - governance
+  - quality
+  - security_and_privacy
+  - lineage_and_provenance
+  - semantic
+  - AI_use_and_model_relationship
+
+metadata_practices:
+  - discovery_and_registration
+  - business_definition_and_semantics
+  - ownership_and_stewardship
+  - schema_and_contract_management
+  - lineage_capture
+  - provenance_and_source_traceability
+  - version_and_change_management
+  - quality_metadata_management
+  - AI_use_and_model_linkage
+  - rights_restrictions_and_retention
+  - periodic_review_and_deprecation
+
+observability_signal_types:
+  - freshness
+  - volume
+  - availability
+  - schema_change
+  - distribution_change
+  - quality_rule_failure
+  - lineage_break
+  - pipeline_failure
+  - access_failure
+  - rights_or_retention_violation
+  - anomalous_use
+  - cost_and_consumption
+  - AI_outcome_correlation
+
+observability_statuses:
+  - healthy
+  - warning
+  - critical
+  - unknown
+  - suppressed
+  - resolved
+
+practice_types:
+  - data_demand_management
+  - data_product_management
+  - data_analytics_for_AI
+  - data_engineering
+  - data_quality_management
+  - metadata_and_semantics
+  - lineage_and_provenance
+  - access_and_sharing
+  - stewardship
+  - data_observability
+  - incident_and_problem_management
+  - lifecycle_and_retention
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap_analysis
+  - use_case_data_readiness
+  - data_product_readiness
+  - data_capability
+  - data_governance_extension
+  - data_quality
+  - metadata_and_lineage
+  - data_observability
+  - progress
+
+semantic_relationships:
+  - subject: data_readiness_target
+    predicate: defines
+    object: target_capabilities_quality_metadata_governance_and_observability
+  - subject: data_requirement
+    predicate: constrains
+    object: data_product_practice_solution_and_AI_use
+  - subject: data_product
+    predicate: supplies
+    object: use_case_model_agent_application_and_analytics
+  - subject: data_capability_profile
+    predicate: enabled_by
+    object: roles_practices_products_solutions_controls_and_metrics
+  - subject: data_governance_requirement
+    predicate: realized_by
+    object: governance_artifacts_roles_controls_and_evidence
+  - subject: data_quality_framework
+    predicate: governs
+    object: data_quality_rules_assessments_and_escalation
+  - subject: data_quality_rule
+    predicate: evaluates
+    object: data_product_fitness_for_AI_use
+  - subject: data_practice
+    predicate: manages
+    object: data_lifecycle_metadata_quality_and_observability
+  - subject: data_observability_check
+    predicate: observes
+    object: data_product_quality_lineage_and_operation
+  - subject: data_assessment
+    predicate: identifies
+    object: data_findings
+  - subject: data_finding
+    predicate: justifies
+    object: data_action
+
+cross_domain_mappings:
+  strategic_objectives: registers/strategic-objectives.yaml
+  decision_contexts: registers/decision-contexts.yaml
+  use_cases: registers/use-cases.yaml
+  implementations: registers/implementations.yaml
+  implementation_snapshots: registers/implementation-snapshots.yaml
+  solutions: registers/solutions.yaml
+  engineering_requirements: registers/engineering-requirements.yaml
+  reference_architectures: registers/reference-architectures.yaml
+  AI_catalogue: registers/ai-catalogue.yaml
+  governance_artifacts: registers/governance-artifacts.yaml
+  governance_roles: registers/governance-roles.yaml
+  risks: registers/risks.yaml
+  controls: registers/controls.yaml
+  metrics: registers/metrics.yaml
+  capabilities: registers/capabilities.yaml
+  initiatives: registers/initiatives.yaml
+  dependencies: registers/dependencies.yaml
+
+evidence_and_control_rules:
+  current_state_and_quality_claims_require_source_ids: true
+  data_readiness_conclusions_require_assessment_and_findings: true
+  data_product_registration_does_not_imply_access_or_AI_use_approval: true
+  quality_thresholds_require_use_case_context_and_owner_review: true
+  data_governance_requirements_do_not_approve_policy_or_controls: true
+  security_privacy_and_rights_checks_require_owning_domain_review: true
+  observability_checks_do_not_replace_incident_or_risk_decisions: true
+  actions_require_approved_findings: true
+  source_derived_records_remain_proposed_until_human_review: true

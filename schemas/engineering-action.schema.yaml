@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: engineering-action.schema.yaml
+title: Engineering action
+description: Approved-gap-driven architecture, platform, pattern, observability, UX or catalogue improvement action.
+type: object
+additionalProperties: false
+required: [engineering_action_id, name, action_type, status, description, intended_outcome, engineering_assessment_ids, engineering_finding_ids, initiative_ids, owner_role_ids, milestone_ids, dependency_ids, architecture_ids, requirement_ids, practice_ids, catalogue_entry_ids, start_date, target_date, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  engineering_action_id: {type: string, pattern: "^EACT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  action_type: {type: string, enum: [architecture, platform, model, integration, pattern, engineering_practice, observability, AI_UX, catalogue, documentation, assurance, retirement]}
+  status: {type: string, enum: [proposed, planned, approved, in_progress, blocked, completed, cancelled, superseded]}
+  description: {type: string}
+  intended_outcome: {type: string}
+  engineering_assessment_ids: {$ref: "#/$defs/records"}
+  engineering_finding_ids: {$ref: "#/$defs/records"}
+  initiative_ids: {$ref: "#/$defs/records"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  milestone_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  requirement_ids: {$ref: "#/$defs/records"}
+  practice_ids: {$ref: "#/$defs/records"}
+  catalogue_entry_ids: {$ref: "#/$defs/records"}
+  start_date: {type: [string, "null"], format: date}
+  target_date: {type: [string, "null"], format: date}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

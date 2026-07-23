@@ -1,0 +1,62 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ai-catalogue-entry.schema.yaml
+title: AI catalogue entry
+description: Governed discovery and inventory metadata for an AI technical entity.
+type: object
+additionalProperties: false
+required: [ai_catalogue_entry_id, entity_type, name, version, lifecycle_state, discovery_date, registration_date, description, intended_use, prohibited_or_restricted_use, canonical_record_ids, provider_ids, offering_ids, owner_role_ids, business_domain_ids, use_case_ids, implementation_ids, solution_ids, architecture_ids, dependency_ids, data_and_context_refs, governance_artifact_ids, documentation, approval_refs, assurance_check_ids, risk_ids, control_ids, metric_ids, last_reviewed_at, next_review_at, retirement_date, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  ai_catalogue_entry_id: {type: string, pattern: "^AICAT-[0-9]{6}$"}
+  entity_type: {$ref: "#/$defs/id"}
+  name: {type: string, minLength: 1}
+  version: {type: [string, "null"]}
+  lifecycle_state: {$ref: "#/$defs/id"}
+  discovery_date: {type: [string, "null"], format: date}
+  registration_date: {type: [string, "null"], format: date}
+  description: {type: string}
+  intended_use: {$ref: "#/$defs/text"}
+  prohibited_or_restricted_use: {$ref: "#/$defs/text"}
+  canonical_record_ids: {$ref: "#/$defs/records"}
+  provider_ids: {$ref: "#/$defs/records"}
+  offering_ids: {$ref: "#/$defs/records"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  business_domain_ids: {$ref: "#/$defs/ids"}
+  use_case_ids: {$ref: "#/$defs/records"}
+  implementation_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  data_and_context_refs: {$ref: "#/$defs/text"}
+  governance_artifact_ids: {$ref: "#/$defs/records"}
+  documentation:
+    type: array
+    items: {$ref: "#/$defs/document"}
+  approval_refs: {$ref: "#/$defs/text"}
+  assurance_check_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  last_reviewed_at: {type: [string, "null"], format: date-time}
+  next_review_at: {type: [string, "null"], format: date-time}
+  retirement_date: {type: [string, "null"], format: date}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  document:
+    type: object
+    additionalProperties: false
+    required: [documentation_type, reference, status, classification]
+    properties:
+      documentation_type: {$ref: "#/$defs/id"}
+      reference: {type: string}
+      status: {type: string, enum: [missing, draft, in_review, approved, outdated, not_applicable]}
+      classification: {$ref: "#/$defs/classification"}
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

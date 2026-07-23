@@ -14,4 +14,8 @@ The strategic-intent semantic layer is documented in `strategic-intent/README.md
 
 The decision-environment semantic layer is documented in `decision-environment/README.md`. It connects decision targets, types, contexts, choice architectures, evidence, authority, actual decisions, outcomes and learning loops.
 
+The data semantic layer is documented in `data/README.md`. It connects AI data requirements, products, capabilities, governance extensions, quality, metadata, lineage, observability, assessments and improvement.
+
+The engineering-platform semantic layer is documented in `engineering-platform/README.md`. It connects requirements, technical options, evaluations, architecture, patterns, practices, AI UX, catalogue entities, assurance evidence, assessments and actions.
+
 The ecosystem-sourcing semantic layer is documented in `ecosystem-sourcing/README.md`. It connects partnership requirements and strategic choices to sourcing cases, providers, offerings, evaluations, due diligence, agreements, performance and exit.

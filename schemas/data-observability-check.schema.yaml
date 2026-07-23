@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-observability-check.schema.yaml
+title: Data observability check
+description: Time-stamped observation of data reliability, quality, lineage, access or use.
+type: object
+additionalProperties: false
+required: [data_observability_check_id, data_product_id, signal_type, observed_at, observation_window, status, method, observed_value, expected_condition, quality_rule_ids, anomaly_or_incident_refs, impact, remediation_action_ids, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  data_observability_check_id: {type: string, pattern: "^DOBSC-[0-9]{6}$"}
+  data_product_id: {type: string, pattern: "^DPROD-[0-9]{6}$"}
+  signal_type: {$ref: "#/$defs/id"}
+  observed_at: {type: string, format: date-time}
+  observation_window: {type: string}
+  status: {type: string, enum: [healthy, warning, critical, unknown, suppressed, resolved]}
+  method: {type: string}
+  observed_value: {type: [number, string, boolean, "null"]}
+  expected_condition: {type: string}
+  quality_rule_ids: {$ref: "#/$defs/records"}
+  anomaly_or_incident_refs: {$ref: "#/$defs/text"}
+  impact: {type: string}
+  remediation_action_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

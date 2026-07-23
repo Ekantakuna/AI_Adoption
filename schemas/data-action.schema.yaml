@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: data-action.schema.yaml
+title: Data action
+description: Approved-finding-driven data readiness improvement coordinated through an initiative.
+type: object
+additionalProperties: false
+required: [data_action_id, name, action_type, status, description, intended_outcome, data_finding_ids, data_assessment_ids, initiative_ids, owner_role_ids, milestone_ids, dependency_ids, data_product_ids, capability_profile_ids, requirement_ids, start_date, target_date, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  data_action_id: {type: string, pattern: "^DACT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  action_type: {type: string, enum: [capability, data_product, analytics, data_engineering, governance_extension, data_quality, metadata, lineage, access, observability, stewardship, lifecycle]}
+  status: {type: string, enum: [proposed, planned, approved, in_progress, blocked, completed, cancelled, superseded]}
+  description: {type: string}
+  intended_outcome: {type: string}
+  data_finding_ids: {$ref: "#/$defs/records"}
+  data_assessment_ids: {$ref: "#/$defs/records"}
+  initiative_ids: {$ref: "#/$defs/records"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  milestone_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  data_product_ids: {$ref: "#/$defs/records"}
+  capability_profile_ids: {$ref: "#/$defs/records"}
+  requirement_ids: {$ref: "#/$defs/records"}
+  start_date: {type: [string, "null"], format: date}
+  target_date: {type: [string, "null"], format: date}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

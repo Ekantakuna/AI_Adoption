@@ -89,6 +89,34 @@ Decision-environment records form a traceable decision and learning lifecycle:
 
 These records reference shared terms, stakeholders, solutions, initiatives, risks, controls, metrics, capabilities and dependencies. Empty registers make no claim about current decision practices.
 
+Data-domain records form a readiness, product, quality, metadata and observability chain:
+
+- `data-readiness-targets.yaml` and `data-requirements.yaml` store TO-BE readiness and contextual AI data needs;
+- `data-products.yaml` stores governed reusable data products and access metadata;
+- `data-capability-profiles.yaml` connects people, process, information, technology, governance and measures;
+- `data-governance-requirements.yaml` stores AI-specific extension needs without approving policy;
+- `data-quality-frameworks.yaml` and `data-quality-rules.yaml` store contextual dimensions, thresholds and evaluation rules;
+- `data-practices.yaml` stores analytics, product, metadata, lineage, quality, access, stewardship and lifecycle practices;
+- `data-observability-checks.yaml` stores time-stamped reliability and quality observations;
+- `data-assessments.yaml`, `data-findings.yaml` and `data-actions.yaml` store evidence-backed evaluation and improvement.
+
+These records reference canonical governance, engineering, current-state, use-case, risk, control, metric, capability, initiative and dependency records. Empty registers make no data-readiness or data-quality claim.
+
+Engineering-platform records form a technical option, architecture, operation and catalogue chain:
+
+- `engineering-requirements.yaml` stores vendor-neutral platform, model, application and assurance needs;
+- `engineering-options.yaml` stores build, commercial, open-source, model-supply and hosting alternatives;
+- `technology-evaluations.yaml` stores evidence-backed comparisons that inform but do not authorize selection;
+- `reference-architectures.yaml` stores versioned logical layers, components, interfaces and deployment views;
+- `engineering-design-patterns.yaml` stores reusable AI, prompt, context, agent, integration, deployment and assurance patterns;
+- `engineering-practices.yaml` stores lifecycle, delivery, observability, reliability, cost and catalogue practices;
+- `ai-ux-patterns.yaml` stores transparent, controllable, recoverable and accessible human-AI interaction patterns;
+- `ai-catalogue.yaml` stores governed discovery and inventory metadata for models, agents, applications, prompts, libraries, tools and platform services;
+- `catalogue-assurance-checks.yaml` stores time-stamped documentation, security, risk, control and compliance evidence checks without implying approval;
+- `engineering-assessments.yaml`, `engineering-findings.yaml` and `engineering-actions.yaml` store evidence-backed evaluations, granular findings and approved-gap-driven improvements.
+
+These records reference shared use cases, capabilities, providers, offerings, strategic choices, sourcing cases, decisions, solutions, implementations, risks, controls, metrics, initiatives and dependencies. Empty registers make no current-state or product-selection claim.
+
 Ecosystem-sourcing records cover the complete external-provider lifecycle:
 
 - `ecosystem-providers.yaml` stores provider identity, capabilities, jurisdictions and relationship metadata;

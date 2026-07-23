@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: engineering-assessment.schema.yaml
+title: Engineering assessment
+description: Evidence-backed assessment of engineering capability, architecture, options, observability, AI UX or catalogue readiness.
+type: object
+additionalProperties: false
+required: [engineering_assessment_id, name, assessment_type, status, scope, assessment_date, comparison_date, method, architecture_ids, option_ids, catalogue_entry_ids, practice_ids, qualitative_arguments, quantitative_arguments, strengths, gaps, finding_ids, action_ids, capability_ids, metric_ids, risk_ids, control_ids, limitations, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  engineering_assessment_id: {type: string, pattern: "^EAS-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  assessment_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, planned, in_progress, in_review, approved, superseded]}
+  scope: {type: string}
+  assessment_date: {type: string, format: date}
+  comparison_date: {type: [string, "null"], format: date}
+  method: {type: string}
+  architecture_ids: {$ref: "#/$defs/records"}
+  option_ids: {$ref: "#/$defs/records"}
+  catalogue_entry_ids: {$ref: "#/$defs/records"}
+  practice_ids: {$ref: "#/$defs/records"}
+  qualitative_arguments: {$ref: "#/$defs/text"}
+  quantitative_arguments: {$ref: "#/$defs/text"}
+  strengths: {$ref: "#/$defs/text"}
+  gaps: {$ref: "#/$defs/text"}
+  finding_ids: {$ref: "#/$defs/records"}
+  action_ids: {$ref: "#/$defs/records"}
+  capability_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

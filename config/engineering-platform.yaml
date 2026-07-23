@@ -1,0 +1,320 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+technical_evaluation_does_not_authorize_selection: true
+
+engineering_lifecycle_stages:
+  - need_and_use_case_definition
+  - requirement_definition
+  - architecture_and_pattern_selection
+  - option_discovery
+  - technical_evaluation
+  - proof_of_value
+  - design_and_build
+  - verification_and_assurance
+  - deployment_and_release
+  - operation_and_observability
+  - improvement
+  - retirement_or_replacement
+
+requirement_types:
+  - functional
+  - model_capability
+  - data
+  - integration
+  - architecture
+  - deployment
+  - performance
+  - scalability
+  - availability_and_resilience
+  - observability
+  - security
+  - privacy
+  - governance_and_compliance
+  - user_experience
+  - accessibility
+  - portability_and_exit
+  - cost_and_consumption
+  - supportability
+
+option_origins:
+  - build_in_house
+  - commercial_product
+  - commercial_model_or_API
+  - open_source
+  - cloud_managed_service
+  - managed_service
+  - strategic_partner
+  - hybrid
+
+hosting_models:
+  - on_premises
+  - private_cloud
+  - public_cloud
+  - hybrid_cloud
+  - edge
+  - software_as_a_service
+  - provider_managed
+
+model_supply_models:
+  - internally_developed
+  - open_source_self_hosted
+  - open_source_managed
+  - commercial_API
+  - commercial_dedicated
+  - cloud_foundation_model_service
+  - fine_tuned_external_model
+  - hybrid_or_routed
+
+evaluation_dimensions:
+  - use_case_and_business_fit
+  - functional_and_model_capability
+  - quality_accuracy_and_reliability
+  - architecture_and_integration_fit
+  - data_fit_and_data_governance
+  - security_privacy_and_resilience
+  - responsible_AI_and_compliance
+  - performance_latency_and_scale
+  - observability_and_operability
+  - user_experience_and_accessibility
+  - engineering_effort_and_time_to_value
+  - total_cost_and_consumption_predictability
+  - portability_interoperability_and_exit
+  - skills_support_and_maintainability
+  - provider_and_community_sustainability
+
+architecture_layers:
+  - experience_and_channels
+  - applications_and_workflows
+  - agent_and_orchestration
+  - model_gateway_and_inference
+  - model_development_and_evaluation
+  - prompt_context_and_knowledge
+  - data_and_information
+  - integration_and_API
+  - platform_and_infrastructure
+  - identity_security_and_trust
+  - governance_catalogue_and_assurance
+  - observability_operations_and_finops
+
+design_pattern_types:
+  - application
+  - model_selection_and_routing
+  - retrieval_augmented_generation
+  - prompt_and_context
+  - agent_and_orchestration
+  - human_in_the_loop
+  - integration
+  - data
+  - deployment
+  - resilience_and_fallback
+  - security_and_guardrail
+  - evaluation_and_testing
+  - observability
+  - cost_optimization
+
+practice_types:
+  - architecture_governance
+  - model_and_platform_evaluation
+  - AI_software_delivery
+  - model_and_prompt_evaluation
+  - release_and_change_management
+  - AI_observability
+  - incident_and_problem_management
+  - reliability_and_resilience
+  - cost_and_consumption_management
+  - catalogue_discovery
+  - catalogue_registration
+  - catalogue_review
+  - catalogue_retirement
+  - documentation_management
+
+observability_signal_types:
+  - availability
+  - latency
+  - throughput
+  - error_and_failure
+  - model_quality
+  - grounding_and_faithfulness
+  - hallucination
+  - safety_and_policy
+  - bias_and_fairness
+  - drift
+  - prompt_and_context
+  - agent_trace_and_tool_use
+  - human_override_and_feedback
+  - data_quality
+  - security_and_abuse
+  - cost_and_token_consumption
+  - business_outcome
+
+ai_ux_pattern_types:
+  - capability_and_limitation_disclosure
+  - AI_generated_content_disclosure
+  - confidence_and_uncertainty
+  - source_and_evidence_presentation
+  - prompt_guidance
+  - progressive_control
+  - human_review_and_approval
+  - override_and_escalation
+  - correction_and_feedback
+  - error_recovery_and_fallback
+  - conversational_interaction
+  - agent_activity_and_progress
+  - accessibility_and_inclusion
+  - privacy_and_data_use_notice
+
+catalogue_entity_types:
+  - model
+  - agent
+  - AI_application
+  - AI_enabled_application
+  - prompt
+  - prompt_library
+  - context_or_knowledge_asset
+  - software_tool
+  - platform_service
+  - model_API
+  - evaluation_asset
+  - design_pattern
+
+catalogue_lifecycle_states:
+  - discovered
+  - registration_pending
+  - registered
+  - assessment_pending
+  - approved_for_pilot
+  - approved_for_use
+  - conditionally_approved
+  - restricted
+  - deprecated
+  - retired
+  - rejected
+
+catalogue_processes:
+  - discovery
+  - registration_and_identity
+  - ownership_assignment
+  - classification
+  - documentation_review
+  - architecture_review
+  - security_testing
+  - risk_and_control_validation
+  - compliance_review_and_reporting
+  - lifecycle_monitoring
+  - change_and_version_management
+  - periodic_reassessment
+  - deprecation_and_retirement
+
+documentation_types:
+  - purpose_and_scope
+  - owner_and_accountability
+  - architecture_and_dependencies
+  - model_or_agent_card
+  - data_and_context_description
+  - prompt_and_instruction_description
+  - evaluation_and_test_report
+  - security_and_threat_assessment
+  - risk_and_control_record
+  - operating_and_support_guide
+  - user_guidance_and_AI_disclosure
+  - change_and_version_history
+  - incident_and_limitation_history
+  - compliance_and_approval_evidence
+  - retirement_and_data_disposition
+
+assurance_check_types:
+  - documentation_completeness
+  - architecture_conformance
+  - security_testing
+  - privacy_review
+  - risk_validation
+  - control_design_validation
+  - control_operating_evidence
+  - responsible_AI_evaluation
+  - model_quality_evaluation
+  - compliance_evidence
+  - operational_readiness
+  - observability_readiness
+  - resilience_and_exit_readiness
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap_analysis
+  - reference_architecture
+  - technology_option
+  - engineering_capability
+  - observability
+  - AI_UX
+  - catalogue_readiness
+  - progress
+
+semantic_relationships:
+  - subject: engineering_requirement
+    predicate: constrains
+    object: engineering_options_architectures_patterns_and_solutions
+  - subject: engineering_option
+    predicate: evaluated_by
+    object: technology_evaluation
+  - subject: technology_evaluation
+    predicate: informs
+    object: strategic_choice_sourcing_case_and_decision
+  - subject: reference_architecture
+    predicate: composed_of
+    object: architecture_layers_patterns_capabilities_and_controls
+  - subject: engineering_design_pattern
+    predicate: realizes
+    object: architecture_and_requirement
+  - subject: engineering_practice
+    predicate: operates
+    object: solution_platform_and_catalogue
+  - subject: ai_ux_pattern
+    predicate: shapes
+    object: human_AI_interaction
+  - subject: ai_catalogue_entry
+    predicate: indexes
+    object: canonical_technical_entity
+  - subject: catalogue_assurance_check
+    predicate: provides_evidence_for
+    object: catalogue_status_risks_controls_and_compliance
+  - subject: engineering_assessment
+    predicate: identifies
+    object: engineering_findings
+  - subject: engineering_finding
+    predicate: justifies
+    object: engineering_action
+
+cross_domain_mappings:
+  strategic_choices: registers/strategic-choices.yaml
+  decision_records: registers/decisions.yaml
+  use_cases: registers/use-cases.yaml
+  implementations: registers/implementations.yaml
+  implementation_snapshots: registers/implementation-snapshots.yaml
+  solutions: registers/solutions.yaml
+  ecosystem_providers: registers/ecosystem-providers.yaml
+  ecosystem_offerings: registers/ecosystem-offerings.yaml
+  sourcing_cases: registers/sourcing-cases.yaml
+  governance_artifacts: registers/governance-artifacts.yaml
+  risks: registers/risks.yaml
+  controls: registers/controls.yaml
+  metrics: registers/metrics.yaml
+  capabilities: registers/capabilities.yaml
+  initiatives: registers/initiatives.yaml
+  dependencies: registers/dependencies.yaml
+
+evidence_and_decision_rules:
+  current_state_claims_require_source_ids: true
+  option_evaluations_require_approved_criteria_and_evidence: true
+  technical_evaluation_does_not_select_a_provider_or_solution: true
+  strategic_choice_or_decision_reference_required_for_selection: true
+  provider_claims_require_ecosystem_evidence: true
+  implemented_status_requires_current_state_evidence: true
+  catalogue_registration_does_not_imply_approval: true
+  security_test_does_not_imply_security_approval: true
+  risk_or_control_check_does_not_replace_governance_approval: true
+  compliance_evidence_does_not_imply_compliance_conclusion: true
+  observability_and_AI_UX_claims_require_metrics_or_review_evidence: true
+  source_derived_records_remain_proposed_until_human_review: true
