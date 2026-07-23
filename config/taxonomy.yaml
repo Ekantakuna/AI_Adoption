@@ -193,8 +193,9 @@ domains:
 
   - id: engineering_platform
     name: AI engineering, platform and catalogue
-    description: Technical architecture, engineering practices, option evaluation, reusable patterns, observability, AI experience design and governed catalogue capabilities required to build and operate AI solutions.
+    description: Technical architecture, engineering practices, option evaluation, reusable patterns, observability, AI experience design and governed catalogue capabilities required to build and operate analytical and AI solutions. Analytical platforms include reporting, BI, forecasting, model-serving and decision-support environments; they are distinct from autonomous agentic systems.
     includes:
+      - analytical platforms, reporting, BI, forecasting and decision-support systems
       - engineering requirements and target platform capabilities
       - build, buy and partner technical option evaluation
       - commercial, open-source and internally developed model trade-offs
@@ -260,6 +261,7 @@ domains:
     excludes:
       - autonomous material decisions without approved human authority
       - strategic conclusions owned by strategic_intent
+      - analytical platforms, reporting, BI, forecasting and decision-support systems owned by engineering_platform
       - generic platform architecture owned by engineering_platform
       - organization design approval owned by organization
       - risk acceptance, policy approval or security conclusions owned by their respective domains
