@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ai-awareness-campaign.schema.yaml
+title: AI awareness campaign
+description: Audience-specific awareness and communication campaign with schedule and measures.
+type: object
+additionalProperties: false
+required: [ai_awareness_campaign_id, ai_change_plan_id, name, campaign_type, status, objective, key_messages, audience_ids, related_domain_ids, channel_ids, content_asset_refs, owner_stakeholder_ids, responsible_role_ids, champion_network_ids, start_date, end_date, cadence, reach_target, metric_ids, action_ids, source_ids, evidence_refs, assumptions, classification]
+properties:
+  ai_awareness_campaign_id: {type: string, pattern: "^AWARE-[0-9]{6}$"}
+  ai_change_plan_id: {type: string, pattern: "^CHGPLAN-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  campaign_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, planned, active, paused, completed, cancelled, superseded]}
+  objective: {type: string}
+  key_messages: {$ref: "#/$defs/text"}
+  audience_ids: {$ref: "#/$defs/ids"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  channel_ids: {$ref: "#/$defs/ids"}
+  content_asset_refs: {$ref: "#/$defs/text"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  responsible_role_ids: {$ref: "#/$defs/records"}
+  champion_network_ids: {$ref: "#/$defs/records"}
+  start_date: {type: [string, "null"], format: date}
+  end_date: {type: [string, "null"], format: date}
+  cadence: {type: [string, "null"]}
+  reach_target: {type: [integer, "null"], minimum: 0}
+  metric_ids: {$ref: "#/$defs/records"}
+  action_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

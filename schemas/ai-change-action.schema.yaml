@@ -1,0 +1,44 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ai-change-action.schema.yaml
+title: AI change action
+description: Executable change action with ownership, schedule, dependencies, measures and acceptance criteria.
+type: object
+additionalProperties: false
+required: [ai_change_action_id, ai_change_plan_id, title, action_type, phase_id, status, description, intended_outcome, audience_ids, related_domain_ids, owner_stakeholder_ids, responsible_role_ids, champion_network_ids, start_date, due_date, completed_at, dependency_ids, risk_ids, milestone_ids, metric_ids, acceptance_criteria, progress_percent, blocker_notes, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  ai_change_action_id: {type: string, pattern: "^CHGACT-[0-9]{6}$"}
+  ai_change_plan_id: {type: string, pattern: "^CHGPLAN-[0-9]{6}$"}
+  title: {type: string, minLength: 1}
+  action_type: {$ref: "#/$defs/id"}
+  phase_id: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [not_started, planned, in_progress, at_risk, blocked, completed, paused, cancelled]}
+  description: {type: string}
+  intended_outcome: {type: string}
+  audience_ids: {$ref: "#/$defs/ids"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  responsible_role_ids: {$ref: "#/$defs/records"}
+  champion_network_ids: {$ref: "#/$defs/records"}
+  start_date: {type: [string, "null"], format: date}
+  due_date: {type: [string, "null"], format: date}
+  completed_at: {type: [string, "null"], format: date-time}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  milestone_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  acceptance_criteria: {$ref: "#/$defs/text"}
+  progress_percent: {type: integer, minimum: 0, maximum: 100}
+  blocker_notes: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-unit.schema.yaml
+title: Organization unit
+description: Existing or proposed unit, team, center of excellence or enabling function.
+type: object
+additionalProperties: false
+required: [organization_unit_id, name, state_type, status, element_type, constituency_ids, organization_layer_ids, mandate, responsibilities, value_contribution, accountable_role_ids, member_role_ids, parent_unit_id, collaborating_unit_ids, capacity_assumptions, capability_ids, practice_ids, related_domain_ids, source_ids, evidence_refs, assumptions, classification]
+properties:
+  organization_unit_id: {type: string, pattern: "^OUNIT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  state_type: {type: string, enum: [current, proposed, target, transitional]}
+  status: {$ref: "#/$defs/status"}
+  element_type: {$ref: "#/$defs/id"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  organization_layer_ids: {$ref: "#/$defs/ids"}
+  mandate: {type: string}
+  responsibilities: {$ref: "#/$defs/text"}
+  value_contribution: {$ref: "#/$defs/text"}
+  accountable_role_ids: {$ref: "#/$defs/records"}
+  member_role_ids: {$ref: "#/$defs/records"}
+  parent_unit_id: {type: [string, "null"], pattern: "^OUNIT-[0-9]{6}$"}
+  collaborating_unit_ids: {$ref: "#/$defs/records"}
+  capacity_assumptions: {$ref: "#/$defs/text"}
+  capability_ids: {$ref: "#/$defs/records"}
+  practice_ids: {$ref: "#/$defs/records"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

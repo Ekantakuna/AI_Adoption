@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-role.schema.yaml
+title: Organization role
+description: Organizational role definition without implying a named appointment.
+type: object
+additionalProperties: false
+required: [organization_role_id, name, role_category_id, state_type, status, appointment_status, purpose, accountability, responsibilities, decision_rights, constituency_ids, unit_ids, network_ids, competency_ids, competency_requirements, capacity_requirements, collaboration_interfaces, governance_role_ids, source_ids, evidence_refs, assumptions, classification]
+properties:
+  organization_role_id: {type: string, pattern: "^OROLE-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  role_category_id: {$ref: "#/$defs/id"}
+  state_type: {type: string, enum: [current, proposed, target, transitional]}
+  status: {$ref: "#/$defs/status"}
+  appointment_status: {type: string, enum: [not_assessed, role_definition_only, vacancy, appointed, distributed_accountability]}
+  purpose: {type: string}
+  accountability: {$ref: "#/$defs/text"}
+  responsibilities: {$ref: "#/$defs/text"}
+  decision_rights: {$ref: "#/$defs/text"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  unit_ids: {$ref: "#/$defs/records"}
+  network_ids: {$ref: "#/$defs/records"}
+  competency_ids: {$ref: "#/$defs/records"}
+  competency_requirements: {$ref: "#/$defs/text"}
+  capacity_requirements: {$ref: "#/$defs/text"}
+  collaboration_interfaces: {$ref: "#/$defs/text"}
+  governance_role_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

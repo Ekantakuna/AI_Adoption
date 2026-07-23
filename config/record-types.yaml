@@ -1,0 +1,612 @@
+schema_version: 1
+
+record_types:
+  source:
+    id_prefix: SRC
+    register: registers/sources.yaml
+    schema: schemas/source.schema.yaml
+    purpose: Metadata-only catalogue record for original evidence held outside Git.
+
+  use_case_pattern:
+    id_prefix: UC
+    register: registers/use-cases.yaml
+    schema: schemas/use-case.schema.yaml
+    purpose: Reusable or possible AI application pattern.
+
+  implementation:
+    id_prefix: IMP
+    register: registers/implementations.yaml
+    schema: schemas/implementation.schema.yaml
+    purpose: Actual pilot, deployment or adopted AI solution.
+
+  implementation_snapshot:
+    id_prefix: SNAP
+    register: registers/implementation-snapshots.yaml
+    schema: schemas/implementation-snapshot.schema.yaml
+    purpose: Append-only time-stamped AS-IS observation of an implementation.
+
+  solution:
+    id_prefix: SOL
+    register: registers/solutions.yaml
+    schema: schemas/solution.schema.yaml
+    purpose: Repository-safe metadata about a technical solution or shared platform.
+
+  initiative:
+    id_prefix: INIT
+    register: registers/initiatives.yaml
+    schema: schemas/initiative.schema.yaml
+    purpose: Project or delivery initiative linked to use cases and implementations.
+
+  metric:
+    id_prefix: MET
+    register: registers/metrics.yaml
+    schema: schemas/metric.schema.yaml
+    purpose: Outcome, leading, lagging, operational or guardrail measure with targets and thresholds.
+
+  ai_strategy:
+    id_prefix: AISTRAT
+    register: registers/ai-strategies.yaml
+    schema: schemas/ai-strategy.schema.yaml
+    purpose: Versioned AI vision, transformation thesis, choices, objectives and execution logic.
+
+  strategic_objective:
+    id_prefix: SOBJ
+    register: registers/strategic-objectives.yaml
+    schema: schemas/strategic-objective.schema.yaml
+    purpose: Outcome-oriented strategic objective linked to metrics and execution.
+
+  strategic_choice:
+    id_prefix: SCHO
+    register: registers/strategic-choices.yaml
+    schema: schemas/strategic-choice.schema.yaml
+    purpose: Challengeable strategic choice with alternatives, criteria, assumptions and rationale.
+
+  strategic_hypothesis:
+    id_prefix: SHYP
+    register: registers/strategic-hypotheses.yaml
+    schema: schemas/strategic-hypothesis.schema.yaml
+    purpose: Testable causal hypothesis supporting or challenging a strategic choice.
+
+  strategy_scenario:
+    id_prefix: SCEN
+    register: registers/strategy-scenarios.yaml
+    schema: schemas/strategy-scenario.schema.yaml
+    purpose: Structured future scenario with uncertainties, assumptions and implications.
+
+  strategy_simulation:
+    id_prefix: SIM
+    register: registers/strategy-simulations.yaml
+    schema: schemas/strategy-simulation.schema.yaml
+    purpose: Reproducible simulation or structured challenge run over scenarios and choices.
+
+  decision_intelligence_target:
+    id_prefix: DIT
+    register: registers/decision-intelligence-targets.yaml
+    schema: schemas/decision-intelligence-target.schema.yaml
+    purpose: Target decision-centric intelligence system and its required properties.
+
+  decision_type:
+    id_prefix: DTYPE
+    register: registers/decision-types.yaml
+    schema: schemas/decision-type.schema.yaml
+    purpose: Reusable class of business decision with cadence, materiality, outcome and authority characteristics.
+
+  decision_context:
+    id_prefix: DCTX
+    register: registers/decision-contexts.yaml
+    schema: schemas/decision-context.schema.yaml
+    purpose: Versioned business context and semantic boundary for a decision type or actual decision.
+
+  choice_architecture:
+    id_prefix: CARCH
+    register: registers/choice-architectures.yaml
+    schema: schemas/choice-architecture.schema.yaml
+    purpose: Controlled design for framing a choice, generating options, evaluating evidence and reaching an authorized decision.
+
+  decision_option:
+    id_prefix: DOPT
+    register: registers/decision-options.yaml
+    schema: schemas/decision-option.schema.yaml
+    purpose: Candidate action or alternative evaluated within a decision.
+
+  decision_evidence:
+    id_prefix: DEVID
+    register: registers/decision-evidence.yaml
+    schema: schemas/decision-evidence.schema.yaml
+    purpose: Decision-specific evidence, prediction, forecast, scenario or simulation input with provenance and limitations.
+
+  decision_authority_rule:
+    id_prefix: DAUTH
+    register: registers/decision-authority-rules.yaml
+    schema: schemas/decision-authority-rule.schema.yaml
+    purpose: Human authority, delegation, override, escalation and prohibited-action rule for a decision type.
+
+  decision:
+    id_prefix: DEC
+    register: registers/decisions.yaml
+    schema: schemas/decision.schema.yaml
+    purpose: Actual decision instance preserving context, options, evidence, authority, rationale and execution status.
+
+  decision_outcome:
+    id_prefix: DOUT
+    register: registers/decision-outcomes.yaml
+    schema: schemas/decision-outcome.schema.yaml
+    purpose: Time-stamped observed result linked to a decision, metrics, value, risks and unintended consequences.
+
+  decision_learning_event:
+    id_prefix: DLE
+    register: registers/decision-learning-events.yaml
+    schema: schemas/decision-learning-event.schema.yaml
+    purpose: Reviewed learning-loop change proposed or applied from decision outcomes and feedback.
+
+  decision_environment_assessment:
+    id_prefix: DEAS
+    register: registers/decision-environment-assessments.yaml
+    schema: schemas/decision-environment-assessment.schema.yaml
+    purpose: Evidence-backed assessment of decision-environment capability, quality, controls and learning effectiveness.
+
+  critical_success_factor:
+    id_prefix: CSF
+    register: registers/critical-success-factors.yaml
+    schema: schemas/critical-success-factor.schema.yaml
+    purpose: Condition required for strategy success with evidence and indicator links.
+
+  strategy_execution_plan:
+    id_prefix: SEXEC
+    register: registers/strategy-execution-plans.yaml
+    schema: schemas/strategy-execution-plan.schema.yaml
+    purpose: Versioned plan linking strategy to initiatives, milestones, dependencies and review triggers.
+
+  strategy_assessment:
+    id_prefix: SASMT
+    register: registers/strategy-assessments.yaml
+    schema: schemas/strategy-assessment.schema.yaml
+    purpose: Dated assessment of strategic progress, assumptions, outcomes and execution health.
+
+  strategy_finding:
+    id_prefix: SFND
+    register: registers/strategy-findings.yaml
+    schema: schemas/strategy-finding.schema.yaml
+    purpose: Evidence-backed finding about progress, assumptions, choices, risks or adaptation needs.
+
+  strategy_change_event:
+    id_prefix: SEVT
+    register: registers/strategy-change-events.yaml
+    schema: schemas/strategy-change-event.schema.yaml
+    purpose: Immutable record of strategy or execution-plan evolution and its rationale.
+
+  capability:
+    id_prefix: CAP
+    register: registers/capabilities.yaml
+    schema: schemas/capability.schema.yaml
+    purpose: Organizational or technical capability required by the AI adoption target state.
+
+  competency:
+    id_prefix: COMP
+    register: registers/competencies.yaml
+    schema: schemas/competency.schema.yaml
+    purpose: Reusable role-level knowledge, skill or behavioral competency requirement.
+
+  ai_change_plan:
+    id_prefix: CHGPLAN
+    register: registers/ai-change-plans.yaml
+    schema: schemas/ai-change-plan.schema.yaml
+    purpose: Versioned AI change-management plan with scope, phases, timeline and accountability.
+
+  ai_change_action:
+    id_prefix: CHGACT
+    register: registers/ai-change-actions.yaml
+    schema: schemas/ai-change-action.schema.yaml
+    purpose: Executable change, communication, learning, readiness or reinforcement action.
+
+  ai_awareness_campaign:
+    id_prefix: AWARE
+    register: registers/ai-awareness-campaigns.yaml
+    schema: schemas/ai-awareness-campaign.schema.yaml
+    purpose: AI awareness and communication campaign with audiences, channels, schedule and measures.
+
+  ai_literacy_program:
+    id_prefix: LIT
+    register: registers/ai-literacy-programs.yaml
+    schema: schemas/ai-literacy-program.schema.yaml
+    purpose: Role-based AI literacy program with learning outcomes, pathways, delivery and evaluation.
+
+  workforce_impact_assessment:
+    id_prefix: WIA
+    register: registers/workforce-impact-assessments.yaml
+    schema: schemas/workforce-impact-assessment.schema.yaml
+    purpose: Evidence-backed assessment header for AI effects on roles, tasks, skills and capacity.
+
+  workforce_impact:
+    id_prefix: WIMP
+    register: registers/workforce-impacts.yaml
+    schema: schemas/workforce-impact.schema.yaml
+    purpose: Granular evidence-backed workforce impact linked to an assessed role or employee segment.
+
+  employee_readiness_assessment:
+    id_prefix: ERA
+    register: registers/employee-readiness-assessments.yaml
+    schema: schemas/employee-readiness-assessment.schema.yaml
+    purpose: Dated readiness assessment across awareness, confidence, skills, trust and support.
+
+  employee_readiness_finding:
+    id_prefix: ERF
+    register: registers/employee-readiness-findings.yaml
+    schema: schemas/employee-readiness-finding.schema.yaml
+    purpose: Aggregated readiness finding for a population segment with privacy-safe evidence.
+
+  people_change_snapshot:
+    id_prefix: PCSNP
+    register: registers/people-change-snapshots.yaml
+    schema: schemas/people-change-snapshot.schema.yaml
+    purpose: Append-only progress snapshot for plans, campaigns, literacy, readiness and adoption.
+
+  glossary_term:
+    id_prefix: TERM
+    register: registers/terms.yaml
+    schema: schemas/term.schema.yaml
+    purpose: Approved or candidate cross-cutting term and definition.
+
+  organization_target:
+    id_prefix: OTGT
+    register: registers/organization-targets.yaml
+    schema: schemas/organization-target.schema.yaml
+    purpose: Versioned TO-BE organization profile for AI value creation at scale.
+
+  organization_operating_model:
+    id_prefix: OOM
+    register: registers/organization-operating-models.yaml
+    schema: schemas/organization-operating-model.schema.yaml
+    purpose: Current, transitional or target model for structure, accountability, flow and interfaces.
+
+  organization_unit:
+    id_prefix: OUNIT
+    register: registers/organization-units.yaml
+    schema: schemas/organization-unit.schema.yaml
+    purpose: Existing or proposed unit, team, center of excellence or enabling function.
+
+  organization_role:
+    id_prefix: OROLE
+    register: registers/organization-roles.yaml
+    schema: schemas/organization-role.schema.yaml
+    purpose: Organizational role such as AI leader, champion or initial AI-team role.
+
+  organization_network:
+    id_prefix: ONET
+    register: registers/organization-networks.yaml
+    schema: schemas/organization-network.schema.yaml
+    purpose: Community of practice, champion network or cross-functional collaboration mechanism.
+
+  organization_practice:
+    id_prefix: OPRAC
+    register: registers/organization-practices.yaml
+    schema: schemas/organization-practice.schema.yaml
+    purpose: Way of working or process used to coordinate AI work and create value.
+
+  partnership_requirement:
+    id_prefix: OPART
+    register: registers/partnership-requirements.yaml
+    schema: schemas/partnership-requirement.schema.yaml
+    purpose: Capability-based requirement for an external or internal strategic partnership.
+
+  ecosystem_provider:
+    id_prefix: EPROV
+    register: registers/ecosystem-providers.yaml
+    schema: schemas/ecosystem-provider.schema.yaml
+    purpose: Provider or partner identity, capabilities, jurisdictions and relationship metadata.
+
+  ecosystem_offering:
+    id_prefix: EOFF
+    register: registers/ecosystem-offerings.yaml
+    schema: schemas/ecosystem-offering.schema.yaml
+    purpose: Provider offering such as model, cloud service, platform, data, advisory or delivery capability.
+
+  sourcing_case:
+    id_prefix: SCASE
+    register: registers/sourcing-cases.yaml
+    schema: schemas/sourcing-case.schema.yaml
+    purpose: Controlled sourcing workflow initiated by partnership or capability requirements.
+
+  provider_evaluation:
+    id_prefix: PEVAL
+    register: registers/provider-evaluations.yaml
+    schema: schemas/provider-evaluation.schema.yaml
+    purpose: Evidence-backed comparison of candidate providers and offerings against approved criteria.
+
+  provider_due_diligence:
+    id_prefix: PDD
+    register: registers/provider-due-diligence.yaml
+    schema: schemas/provider-due-diligence.schema.yaml
+    purpose: Legal, compliance, security, privacy, financial, operational and responsible-AI review.
+
+  sourcing_agreement:
+    id_prefix: AGR
+    register: registers/sourcing-agreements.yaml
+    schema: schemas/sourcing-agreement.schema.yaml
+    purpose: Repository-safe agreement metadata, obligations, controls, service levels and lifecycle dates.
+
+  provider_performance:
+    id_prefix: PPERF
+    register: registers/provider-performance.yaml
+    schema: schemas/provider-performance.schema.yaml
+    purpose: Dated provider, offering and agreement performance, value, risk and service review.
+
+  sourcing_exit_plan:
+    id_prefix: EXIT
+    register: registers/sourcing-exit-plans.yaml
+    schema: schemas/sourcing-exit-plan.schema.yaml
+    purpose: Portability, transition, data disposition, continuity, replacement and termination plan.
+
+  organization_tool_requirement:
+    id_prefix: OTOOL
+    register: registers/organization-tool-requirements.yaml
+    schema: schemas/organization-tool-requirement.schema.yaml
+    purpose: Vendor-neutral requirement for work, knowledge, portfolio or collaboration tooling.
+
+  organization_assessment:
+    id_prefix: OAS
+    register: registers/organization-assessments.yaml
+    schema: schemas/organization-assessment.schema.yaml
+    purpose: Evidence-backed AS-IS, TO-BE, gap or progress assessment header.
+
+  organization_finding:
+    id_prefix: OFND
+    register: registers/organization-findings.yaml
+    schema: schemas/organization-finding.schema.yaml
+    purpose: Evidence-backed organizational strength, drawback, gap, dependency or opportunity.
+
+  organization_action:
+    id_prefix: OACT
+    register: registers/organization-actions.yaml
+    schema: schemas/organization-action.schema.yaml
+    purpose: Organizational, process, competency, partnership or technical enablement pathway action.
+
+  governance_target:
+    id_prefix: GTGT
+    register: registers/governance-targets.yaml
+    schema: schemas/governance-target.schema.yaml
+    purpose: Versioned TO-BE governance profile defining scope, characteristics and intended outcomes.
+
+  governance_operating_model:
+    id_prefix: GOM
+    register: registers/governance-operating-models.yaml
+    schema: schemas/governance-operating-model.schema.yaml
+    purpose: Target or current governance bodies, accountabilities, decision rights, interfaces and cadence.
+
+  governance_artifact:
+    id_prefix: GART
+    register: registers/governance-artifacts.yaml
+    schema: schemas/governance-artifact.schema.yaml
+    purpose: Policy, standard, procedure, guideline, how-to, playbook or charter metadata.
+
+  governance_role:
+    id_prefix: GROLE
+    register: registers/governance-roles.yaml
+    schema: schemas/governance-role.schema.yaml
+    purpose: Governance role, board, committee or forum with decision and accountability responsibilities.
+
+  governance_capability:
+    id_prefix: GCAP
+    register: registers/governance-capabilities.yaml
+    schema: schemas/governance-capability.schema.yaml
+    purpose: Governance capability spanning organization, process, information, controls, skills and technology.
+
+  governance_tool_requirement:
+    id_prefix: GTOOL
+    register: registers/governance-tool-requirements.yaml
+    schema: schemas/governance-tool-requirement.schema.yaml
+    purpose: Vendor-neutral functional or non-functional requirement for governance software or automation.
+
+  governance_assessment:
+    id_prefix: GAS
+    register: registers/governance-assessments.yaml
+    schema: schemas/governance-assessment.schema.yaml
+    purpose: Evidence-backed AS-IS, TO-BE or gap assessment header.
+
+  governance_finding:
+    id_prefix: GFND
+    register: registers/governance-findings.yaml
+    schema: schemas/governance-finding.schema.yaml
+    purpose: Evidence-backed governance observation, gap, strength or constraint.
+
+  governance_action:
+    id_prefix: GACT
+    register: registers/governance-actions.yaml
+    schema: schemas/governance-action.schema.yaml
+    purpose: Organizational or technical pathway action linked to an approved governance gap.
+
+  risk:
+    id_prefix: RISK
+    register: registers/risks.yaml
+    schema: schemas/risk.schema.yaml
+    purpose: AI or data governance risk with lifecycle applicability and treatment links.
+
+  control:
+    id_prefix: CTRL
+    register: registers/controls.yaml
+    schema: schemas/control.schema.yaml
+    purpose: Preventive, detective, corrective or directive governance control.
+
+  maturity_framework:
+    id_prefix: MF
+    register: registers/maturity-frameworks.yaml
+    schema: schemas/maturity-framework.schema.yaml
+    purpose: Evaluation framework combining one or more maturity models.
+
+  maturity_model:
+    id_prefix: MM
+    register: registers/maturity-models.yaml
+    schema: schemas/maturity-model.schema.yaml
+    purpose: Versioned maturity model with dimensions, levels and criteria.
+
+  maturity_assessment:
+    id_prefix: MA
+    register: registers/maturity-assessments.yaml
+    schema: schemas/maturity-assessment.schema.yaml
+    purpose: Time-stamped maturity evaluation header and overall conclusion.
+
+  maturity_finding:
+    id_prefix: MFND
+    register: registers/maturity-findings.yaml
+    schema: schemas/maturity-finding.schema.yaml
+    purpose: Evidence-backed criterion or dimension judgement within an assessment.
+
+  maturity_action:
+    id_prefix: MACT
+    register: registers/maturity-actions.yaml
+    schema: schemas/maturity-action.schema.yaml
+    purpose: Pathway action linked to maturity gaps and findings.
+
+source_collection_record_targets:
+  decision_environment:
+    - decision_intelligence_target
+    - decision_type
+    - decision_context
+    - choice_architecture
+    - decision_option
+    - decision_evidence
+    - decision_authority_rule
+    - decision
+    - decision_outcome
+    - decision_learning_event
+    - decision_environment_assessment
+    - capability
+    - solution
+    - metric
+    - risk
+    - control
+  ecosystem_sourcing:
+    - ecosystem_provider
+    - ecosystem_offering
+    - sourcing_case
+    - provider_evaluation
+    - provider_due_diligence
+    - sourcing_agreement
+    - provider_performance
+    - sourcing_exit_plan
+    - partnership_requirement
+    - solution
+    - risk
+    - control
+    - metric
+  strategic_intent:
+    - ai_strategy
+    - strategic_objective
+    - strategic_choice
+    - strategic_hypothesis
+    - strategy_scenario
+    - strategy_simulation
+    - decision_intelligence_target
+    - critical_success_factor
+    - strategy_execution_plan
+    - strategy_assessment
+    - strategy_finding
+    - strategy_change_event
+    - metric
+  strategic_intent/vision:
+    - ai_strategy
+    - strategic_objective
+    - strategic_choice
+    - strategic_hypothesis
+    - decision_intelligence_target
+    - critical_success_factor
+  strategic_intent/vision.mmd:
+    - ai_strategy
+    - strategic_objective
+    - decision_intelligence_target
+    - critical_success_factor
+  strategic_intent/strategy.mmd:
+    - ai_strategy
+    - strategic_objective
+    - strategic_choice
+    - strategic_hypothesis
+    - strategy_scenario
+    - critical_success_factor
+    - strategy_execution_plan
+    - metric
+  people_and_culture:
+    - ai_change_plan
+    - ai_change_action
+    - ai_awareness_campaign
+    - ai_literacy_program
+    - workforce_impact_assessment
+    - workforce_impact
+    - employee_readiness_assessment
+    - employee_readiness_finding
+    - people_change_snapshot
+    - capability
+    - competency
+  organization:
+    - organization_target
+    - organization_operating_model
+    - organization_unit
+    - organization_role
+    - organization_network
+    - organization_practice
+    - partnership_requirement
+    - organization_tool_requirement
+    - organization_assessment
+    - organization_finding
+    - organization_action
+    - capability
+    - competency
+  organization/research:
+    - organization_target
+    - organization_operating_model
+    - organization_unit
+    - organization_role
+    - organization_network
+    - organization_practice
+    - partnership_requirement
+    - organization_finding
+    - capability
+    - competency
+  governance:
+    - governance_target
+    - governance_operating_model
+    - governance_artifact
+    - governance_role
+    - governance_capability
+    - governance_tool_requirement
+    - governance_assessment
+    - governance_finding
+    - governance_action
+    - risk
+    - control
+  governance/research/adaptive_governance:
+    - governance_target
+    - governance_operating_model
+    - governance_capability
+    - governance_role
+  governance/research/governance_policies_and_how_to:
+    - governance_artifact
+    - governance_capability
+    - control
+  current_state/implemented_use_cases:
+    - implementation
+    - implementation_snapshot
+    - use_case_pattern
+  current_state/shared_platforms:
+    - solution
+    - implementation_snapshot
+  current_state/project_summaries:
+    - initiative
+    - implementation
+    - implementation_snapshot
+  maturity_execution/framework:
+    - maturity_framework
+  maturity_execution/models:
+    - maturity_model
+  maturity_execution/assessment_inputs:
+    - maturity_assessment
+    - maturity_finding
+  maturity_execution/assessment_reports:
+    - maturity_assessment
+    - maturity_finding
+  maturity_execution/action_plans:
+    - maturity_action
+    - initiative
+
+candidate_record_status: proposed
+human_review_required: true
+field_level_provenance_required: true

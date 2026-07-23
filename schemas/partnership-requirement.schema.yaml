@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: partnership-requirement.schema.yaml
+title: Partnership requirement
+description: Capability-based partnership need without selecting a provider.
+type: object
+additionalProperties: false
+required: [partnership_requirement_id, name, partnership_type, status, need_statement, intended_outcomes, capability_gap, required_capabilities, engagement_options, constituency_ids, owner_role_ids, related_domain_ids, dependency_ids, risk_ids, evaluation_criteria, selection_status, source_ids, evidence_refs, assumptions, classification]
+properties:
+  partnership_requirement_id: {type: string, pattern: "^OPART-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  partnership_type: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  need_statement: {type: string}
+  intended_outcomes: {$ref: "#/$defs/text"}
+  capability_gap: {type: string}
+  required_capabilities: {$ref: "#/$defs/text"}
+  engagement_options: {$ref: "#/$defs/text"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  evaluation_criteria: {$ref: "#/$defs/text"}
+  selection_status: {type: string, enum: [requirement_only, market_scan, evaluation, selected, contracted, active, retired]}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

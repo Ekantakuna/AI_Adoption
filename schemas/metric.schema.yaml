@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: metric.schema.yaml
+title: Metric
+description: Outcome, indicator, operational, capability, adoption, risk or guardrail measure.
+type: object
+additionalProperties: false
+required: [metric_id, name, metric_type, status, description, purpose, related_record_ids, formula_or_method, unit, desired_direction, baseline_value, baseline_date, target_value, target_date, warning_threshold, intervention_threshold, measurement_frequency, data_source_refs, owner_stakeholder_ids, limitations, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  metric_id: {type: string, pattern: "^MET-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  metric_type: {type: string, enum: [outcome, leading_indicator, lagging_indicator, operational, capability, adoption, risk, guardrail]}
+  status: {$ref: "#/$defs/status"}
+  description: {type: string}
+  purpose: {type: string}
+  related_record_ids: {$ref: "#/$defs/records"}
+  formula_or_method: {type: string}
+  unit: {type: string}
+  desired_direction: {type: string, enum: [increase, decrease, maintain_range, threshold_only, qualitative, not_applicable]}
+  baseline_value: {type: [number, string, "null"]}
+  baseline_date: {type: [string, "null"], format: date}
+  target_value: {type: [number, string, "null"]}
+  target_date: {type: [string, "null"], format: date}
+  warning_threshold: {type: [number, string, "null"]}
+  intervention_threshold: {type: [number, string, "null"]}
+  measurement_frequency: {type: string}
+  data_source_refs: {$ref: "#/$defs/text"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -1,0 +1,44 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: risk.schema.yaml
+title: AI and data governance risk
+description: Risk record covering cause, event, impact, lifecycle exposure and treatment.
+type: object
+additionalProperties: false
+required: [risk_id, title, status, risk_category_id, governance_domain_ids, lifecycle_stage_ids, cause, risk_event, impacts, affected_assets_or_stakeholders, inherent_likelihood, inherent_impact, inherent_rating, risk_owner_ids, control_ids, treatment_strategy, treatment_action_ids, residual_likelihood, residual_impact, residual_rating, monitoring_metric_ids, review_date, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  risk_id: {type: string, pattern: "^RISK-[0-9]{6}$"}
+  title: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, open, accepted, treating, monitored, closed, superseded]}
+  risk_category_id: {$ref: "#/$defs/id"}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  cause: {type: string}
+  risk_event: {type: string}
+  impacts: {$ref: "#/$defs/text"}
+  affected_assets_or_stakeholders: {$ref: "#/$defs/text"}
+  inherent_likelihood: {$ref: "#/$defs/rating"}
+  inherent_impact: {$ref: "#/$defs/rating"}
+  inherent_rating: {$ref: "#/$defs/rating"}
+  risk_owner_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  treatment_strategy: {type: string, enum: [avoid, reduce, transfer, accept, pending]}
+  treatment_action_ids: {$ref: "#/$defs/record_ids"}
+  residual_likelihood: {$ref: "#/$defs/rating"}
+  residual_impact: {$ref: "#/$defs/rating"}
+  residual_rating: {$ref: "#/$defs/rating"}
+  monitoring_metric_ids: {$ref: "#/$defs/record_ids"}
+  review_date: {type: [string, "null"], format: date}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  rating: {type: string, enum: [low, medium, high, critical, not_assessed]}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -1,0 +1,176 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: maturity-model.schema.yaml
+title: Maturity model
+description: Versioned model with dimensions, levels, characteristics and assessment criteria.
+type: object
+additionalProperties: false
+required:
+  - model_id
+  - name
+  - description
+  - provider
+  - version
+  - focus_areas
+  - levels
+  - dimensions
+  - scoring_method
+  - applicability
+  - strengths
+  - limitations
+  - source_ids
+  - evidence_refs
+  - classification
+  - status
+properties:
+  model_id:
+    type: string
+    pattern: "^MM-[0-9]{6}$"
+  name:
+    type: string
+    minLength: 1
+  description:
+    type: string
+  provider:
+    type: string
+  version:
+    type: string
+    minLength: 1
+  focus_areas:
+    $ref: "#/$defs/unique_ids"
+  levels:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/level"
+  dimensions:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/dimension"
+  scoring_method:
+    type: string
+  applicability:
+    $ref: "#/$defs/unique_text"
+  strengths:
+    $ref: "#/$defs/unique_text"
+  limitations:
+    $ref: "#/$defs/unique_text"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  status:
+    type: string
+    enum:
+      - proposed
+      - in_review
+      - approved
+      - superseded
+      - retired
+$defs:
+  level:
+    type: object
+    additionalProperties: false
+    required:
+      - level_id
+      - ordinal
+      - name
+      - characteristics
+      - qualitative_indicators
+      - quantitative_indicators
+    properties:
+      level_id:
+        type: string
+        pattern: "^MM-[0-9]{6}-L[0-9]{2}$"
+      ordinal:
+        type: integer
+        minimum: 0
+      name:
+        type: string
+        minLength: 1
+      characteristics:
+        $ref: "#/$defs/unique_text"
+      qualitative_indicators:
+        $ref: "#/$defs/unique_text"
+      quantitative_indicators:
+        $ref: "#/$defs/unique_text"
+  dimension:
+    type: object
+    additionalProperties: false
+    required:
+      - dimension_id
+      - name
+      - description
+      - weight
+      - criteria
+    properties:
+      dimension_id:
+        type: string
+        pattern: "^MM-[0-9]{6}-D[0-9]{2}$"
+      name:
+        type: string
+        minLength: 1
+      description:
+        type: string
+      weight:
+        type:
+          - number
+          - "null"
+        minimum: 0
+      criteria:
+        type: array
+        minItems: 1
+        items:
+          $ref: "#/$defs/criterion"
+  criterion:
+    type: object
+    additionalProperties: false
+    required:
+      - criterion_id
+      - name
+      - description
+      - evidence_types
+    properties:
+      criterion_id:
+        type: string
+        pattern: "^MM-[0-9]{6}-D[0-9]{2}-C[0-9]{2}$"
+      name:
+        type: string
+        minLength: 1
+      description:
+        type: string
+      evidence_types:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+          enum:
+            - qualitative
+            - quantitative
+            - mixed
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

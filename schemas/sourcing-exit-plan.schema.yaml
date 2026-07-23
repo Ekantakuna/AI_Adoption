@@ -1,0 +1,50 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: sourcing-exit-plan.schema.yaml
+title: Sourcing exit plan
+description: Portability, transition, data disposition, continuity, replacement and termination plan.
+type: object
+additionalProperties: false
+required: [sourcing_exit_plan_id, provider_id, offering_ids, agreement_ids, name, version, status, exit_trigger_ids, target_exit_date, owner_stakeholder_ids, replacement_provider_id, replacement_offering_ids, exit_workstreams, data_export_return_and_deletion_plan, model_agent_prompt_and_configuration_plan, integration_and_dependency_plan, continuity_and_fallback_plan, knowledge_transfer_plan, access_revocation_plan, legal_commercial_and_license_plan, communication_and_change_plan, dependency_ids, risk_ids, control_ids, metric_ids, milestone_ids, estimated_cost, currency, test_status, last_tested_at, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  sourcing_exit_plan_id: {type: string, pattern: "^EXIT-[0-9]{6}$"}
+  provider_id: {type: string, pattern: "^EPROV-[0-9]{6}$"}
+  offering_ids: {$ref: "#/$defs/records"}
+  agreement_ids: {$ref: "#/$defs/records"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, completed, superseded, retired]}
+  exit_trigger_ids: {$ref: "#/$defs/ids"}
+  target_exit_date: {type: [string, "null"], format: date}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  replacement_provider_id: {type: [string, "null"], pattern: "^EPROV-[0-9]{6}$"}
+  replacement_offering_ids: {$ref: "#/$defs/records"}
+  exit_workstreams: {$ref: "#/$defs/ids"}
+  data_export_return_and_deletion_plan: {type: string}
+  model_agent_prompt_and_configuration_plan: {type: string}
+  integration_and_dependency_plan: {type: string}
+  continuity_and_fallback_plan: {type: string}
+  knowledge_transfer_plan: {type: string}
+  access_revocation_plan: {type: string}
+  legal_commercial_and_license_plan: {type: string}
+  communication_and_change_plan: {type: string}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  milestone_ids: {$ref: "#/$defs/records"}
+  estimated_cost: {type: [number, "null"], minimum: 0}
+  currency: {type: [string, "null"]}
+  test_status: {type: string, enum: [not_tested, tabletop_tested, partially_tested, fully_tested, failed, not_applicable]}
+  last_tested_at: {type: [string, "null"], format: date-time}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

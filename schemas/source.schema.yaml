@@ -1,0 +1,300 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: source.schema.yaml
+title: Source catalogue record
+description: Metadata-only record for original evidence retained outside Git.
+type: object
+additionalProperties: false
+required:
+  - source_id
+  - source_category
+  - prefix_assignment_basis
+  - source_root_id
+  - original_filename
+  - original_relative_path
+  - current_filename
+  - current_relative_path
+  - path_history
+  - domain_ids
+  - proposed_domain_ids
+  - knowledge_layer_ids
+  - business_domain_ids
+  - ai_technique_ids
+  - proposed_record_types
+  - source_type
+  - extension
+  - size_bytes
+  - filesystem_modified_at
+  - hash_algorithm
+  - content_hash
+  - hash_calculated_at
+  - processing_state
+  - classification
+  - classification_basis
+  - classification_reviewed_by
+  - classification_reviewed_at
+  - processing_route
+  - processing_route_approved_by
+  - processing_route_approved_at
+  - approved_external_service
+  - approved_account
+  - approved_purpose
+  - contains_personal_data
+  - contains_credentials
+  - contains_restricted_operational_data
+  - rights_or_license_status
+  - handling_notes
+  - extraction_record_ids
+  - approved_tool
+  - tool_version
+  - ocr_required
+  - duplicate_status
+  - duplicate_of_source_id
+  - approved_summary_ref
+  - normalized_knowledge_refs
+  - candidate_record_refs
+  - field_evidence_refs
+  - derived_classification
+  - review_status
+properties:
+  source_id:
+    type: string
+    pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  source_category:
+    type: string
+    pattern: "^[a-z][a-z0-9_]*$"
+  prefix_assignment_basis:
+    type: string
+    minLength: 1
+  source_root_id:
+    type: string
+    pattern: "^SROOT-[0-9]{4}$"
+  original_filename:
+    type: string
+    minLength: 1
+  original_relative_path:
+    $ref: "#/$defs/relative_path"
+  current_filename:
+    type: string
+    minLength: 1
+  current_relative_path:
+    $ref: "#/$defs/relative_path"
+  path_history:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/path_event"
+  domain_ids:
+    $ref: "#/$defs/unique_ids"
+  proposed_domain_ids:
+    $ref: "#/$defs/unique_ids"
+  knowledge_layer_ids:
+    $ref: "#/$defs/unique_ids"
+  business_domain_ids:
+    $ref: "#/$defs/unique_ids"
+  ai_technique_ids:
+    $ref: "#/$defs/unique_ids"
+  proposed_record_types:
+    $ref: "#/$defs/unique_ids"
+  source_type:
+    type: string
+    enum:
+      - pdf
+      - word
+      - presentation
+      - spreadsheet
+      - image
+      - markdown
+      - text
+      - apple_document
+      - web_document
+      - mind_map
+      - unsupported
+  extension:
+    type: string
+    pattern: "^\\.[a-z0-9]+$"
+  size_bytes:
+    type: integer
+    minimum: 0
+  filesystem_modified_at:
+    type: string
+    format: date-time
+  hash_algorithm:
+    type:
+      - string
+      - "null"
+  content_hash:
+    type:
+      - string
+      - "null"
+  hash_calculated_at:
+    type:
+      - string
+      - "null"
+    format: date-time
+  processing_state:
+    type: string
+    enum:
+      - discovered
+      - metadata_catalogued
+      - classification_pending
+      - approved_for_processing
+      - approved_local
+      - approved_external
+      - extraction_in_progress
+      - extracted
+      - reviewed
+      - rejected
+      - superseded
+      - unreadable
+  classification:
+    $ref: "#/$defs/classification"
+  classification_basis:
+    type: string
+    minLength: 1
+  classification_reviewed_by:
+    $ref: "#/$defs/nullable_string"
+  classification_reviewed_at:
+    $ref: "#/$defs/nullable_datetime"
+  processing_route:
+    type: string
+    enum:
+      - pending
+      - local
+      - external
+      - prohibited
+  processing_route_approved_by:
+    $ref: "#/$defs/nullable_string"
+  processing_route_approved_at:
+    $ref: "#/$defs/nullable_datetime"
+  approved_external_service:
+    $ref: "#/$defs/nullable_string"
+  approved_account:
+    $ref: "#/$defs/nullable_string"
+  approved_purpose:
+    $ref: "#/$defs/nullable_string"
+  contains_personal_data:
+    $ref: "#/$defs/nullable_boolean"
+  contains_credentials:
+    $ref: "#/$defs/nullable_boolean"
+  contains_restricted_operational_data:
+    $ref: "#/$defs/nullable_boolean"
+  rights_or_license_status:
+    type: string
+    enum:
+      - pending
+      - owned
+      - licensed
+      - public_domain
+      - permission_required
+      - restricted
+      - unknown
+  handling_notes:
+    type: string
+  extraction_record_ids:
+    $ref: "#/$defs/record_refs"
+  approved_tool:
+    $ref: "#/$defs/nullable_string"
+  tool_version:
+    $ref: "#/$defs/nullable_string"
+  ocr_required:
+    $ref: "#/$defs/nullable_boolean"
+  duplicate_status:
+    type: string
+    enum:
+      - unchecked
+      - suspected
+      - confirmed
+      - unique
+  duplicate_of_source_id:
+    type:
+      - string
+      - "null"
+    pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  approved_summary_ref:
+    $ref: "#/$defs/nullable_string"
+  normalized_knowledge_refs:
+    $ref: "#/$defs/record_refs"
+  candidate_record_refs:
+    $ref: "#/$defs/record_refs"
+  field_evidence_refs:
+    $ref: "#/$defs/unique_text"
+  derived_classification:
+    $ref: "#/$defs/classification"
+  review_status:
+    type: string
+    enum:
+      - proposed
+      - in_review
+      - approved
+      - rejected
+$defs:
+  relative_path:
+    type: string
+    minLength: 1
+    pattern: "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  record_refs:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"
+  nullable_string:
+    type:
+      - string
+      - "null"
+  nullable_boolean:
+    type:
+      - boolean
+      - "null"
+  nullable_datetime:
+    type:
+      - string
+      - "null"
+    format: date-time
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted
+  path_event:
+    type: object
+    additionalProperties: false
+    required:
+      - event_date
+      - event_type
+      - from_relative_path
+      - to_relative_path
+      - reason
+    properties:
+      event_date:
+        type: string
+        format: date
+      event_type:
+        type: string
+        enum:
+          - originally_observed
+          - taxonomy_reorganization
+          - semantic_separation
+          - custody_baseline
+      from_relative_path:
+        anyOf:
+          - $ref: "#/$defs/relative_path"
+          - type: "null"
+      to_relative_path:
+        $ref: "#/$defs/relative_path"
+      reason:
+        type: string
+        minLength: 1

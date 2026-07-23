@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-artifact.schema.yaml
+title: Governance artifact
+description: Metadata for a policy, standard, procedure, guideline, How-To, playbook or charter.
+type: object
+additionalProperties: false
+required: [governance_artifact_id, title, artifact_type, version, status, governance_domain_ids, governance_layer_ids, lifecycle_stage_ids, purpose, scope, owner_role_ids, approver_role_ids, related_artifact_ids, risk_ids, control_ids, capability_ids, effective_date, review_date, repository_ref, source_ids, evidence_refs, classification]
+properties:
+  governance_artifact_id: {type: string, pattern: "^GART-[0-9]{6}$"}
+  title: {type: string, minLength: 1}
+  artifact_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  governance_layer_ids: {$ref: "#/$defs/ids"}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  purpose: {type: string}
+  scope: {type: string}
+  owner_role_ids: {$ref: "#/$defs/record_ids"}
+  approver_role_ids: {$ref: "#/$defs/record_ids"}
+  related_artifact_ids: {$ref: "#/$defs/record_ids"}
+  risk_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  effective_date: {type: [string, "null"], format: date}
+  review_date: {type: [string, "null"], format: date}
+  repository_ref: {type: [string, "null"]}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

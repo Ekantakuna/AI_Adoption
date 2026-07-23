@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: capability.schema.yaml
+title: AI adoption capability
+description: Reusable organizational or technical capability required by an AI adoption target state.
+type: object
+additionalProperties: false
+required: [capability_id, name, capability_type, status, description, related_domain_ids, current_characteristics, target_characteristics, owner_stakeholder_ids, organization_unit_ids, role_ids, competency_ids, dependency_ids, metric_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  capability_id: {type: string, pattern: "^CAP-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  capability_type: {type: string, enum: [organizational, people, process, governance, data, engineering_and_platform, security_and_resilience, value_management, ecosystem, cross_cutting]}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  description: {type: string}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  current_characteristics: {$ref: "#/$defs/text"}
+  target_characteristics: {$ref: "#/$defs/text"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  organization_unit_ids: {$ref: "#/$defs/records"}
+  role_ids: {$ref: "#/$defs/records"}
+  competency_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

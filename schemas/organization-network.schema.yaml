@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-network.schema.yaml
+title: Organization network
+description: Community of practice, champion network or cross-functional collaboration mechanism.
+type: object
+additionalProperties: false
+required: [organization_network_id, name, network_type, state_type, status, purpose, constituency_ids, related_domain_ids, sponsor_role_ids, lead_role_ids, member_role_ids, membership_model, responsibilities, collaboration_mechanisms, knowledge_flows, cadence, participation_expectations, tool_requirement_ids, metric_ids, source_ids, evidence_refs, assumptions, classification]
+properties:
+  organization_network_id: {type: string, pattern: "^ONET-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  network_type: {$ref: "#/$defs/id"}
+  state_type: {type: string, enum: [current, proposed, target, transitional]}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  sponsor_role_ids: {$ref: "#/$defs/records"}
+  lead_role_ids: {$ref: "#/$defs/records"}
+  member_role_ids: {$ref: "#/$defs/records"}
+  membership_model: {type: string}
+  responsibilities: {$ref: "#/$defs/text"}
+  collaboration_mechanisms: {$ref: "#/$defs/text"}
+  knowledge_flows: {$ref: "#/$defs/text"}
+  cadence: {type: [string, "null"]}
+  participation_expectations: {$ref: "#/$defs/text"}
+  tool_requirement_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

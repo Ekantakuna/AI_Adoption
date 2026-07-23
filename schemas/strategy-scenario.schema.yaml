@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: strategy-scenario.schema.yaml
+title: Strategy scenario
+description: Structured possible future used to challenge choices and execution plans.
+type: object
+additionalProperties: false
+required: [strategy_scenario_id, ai_strategy_id, name, scenario_type, status, horizon, narrative, uncertainty_ids, assumptions, signals, strategic_choice_ids, hypothesis_ids, implications, opportunity_ids, risk_ids, simulation_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  strategy_scenario_id: {type: string, pattern: "^SCEN-[0-9]{6}$"}
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  scenario_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  horizon: {$ref: "#/$defs/id"}
+  narrative: {type: string}
+  uncertainty_ids: {$ref: "#/$defs/ids"}
+  assumptions: {$ref: "#/$defs/text"}
+  signals: {$ref: "#/$defs/text"}
+  strategic_choice_ids: {$ref: "#/$defs/records"}
+  hypothesis_ids: {$ref: "#/$defs/records"}
+  implications: {$ref: "#/$defs/text"}
+  opportunity_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  simulation_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

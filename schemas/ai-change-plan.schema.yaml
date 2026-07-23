@@ -1,0 +1,61 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ai-change-plan.schema.yaml
+title: AI change-management plan
+description: Versioned plan covering scope, phases, timeline, roles, activities, measures and reporting.
+type: object
+additionalProperties: false
+required: [ai_change_plan_id, name, version, status, change_vision, scope, exclusions, objective_statements, change_dimension_ids, phase_ids, audience_ids, related_domain_ids, sponsor_stakeholder_ids, owner_stakeholder_ids, accountable_role_ids, responsibility_assignments, start_date, target_end_date, milestone_ids, dependency_ids, risk_ids, action_ids, campaign_ids, literacy_program_ids, workforce_impact_assessment_ids, readiness_assessment_ids, champion_network_ids, metric_ids, reporting_cadence, assumptions, constraints, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  ai_change_plan_id: {type: string, pattern: "^CHGPLAN-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string, minLength: 1}
+  status: {$ref: "#/$defs/status"}
+  change_vision: {type: string}
+  scope: {type: string}
+  exclusions: {$ref: "#/$defs/text"}
+  objective_statements: {$ref: "#/$defs/text"}
+  change_dimension_ids: {$ref: "#/$defs/ids"}
+  phase_ids: {$ref: "#/$defs/ids"}
+  audience_ids: {$ref: "#/$defs/ids"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  sponsor_stakeholder_ids: {$ref: "#/$defs/records"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  accountable_role_ids: {$ref: "#/$defs/records"}
+  responsibility_assignments: {type: array, items: {$ref: "#/$defs/responsibility"}}
+  start_date: {type: [string, "null"], format: date}
+  target_end_date: {type: [string, "null"], format: date}
+  milestone_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  action_ids: {$ref: "#/$defs/records"}
+  campaign_ids: {$ref: "#/$defs/records"}
+  literacy_program_ids: {$ref: "#/$defs/records"}
+  workforce_impact_assessment_ids: {$ref: "#/$defs/records"}
+  readiness_assessment_ids: {$ref: "#/$defs/records"}
+  champion_network_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  reporting_cadence: {type: [string, "null"]}
+  assumptions: {$ref: "#/$defs/text"}
+  constraints: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, completed, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
+  responsibility:
+    type: object
+    additionalProperties: false
+    required: [work_item_ref, accountable_role_ids, responsible_role_ids, consulted_role_ids, informed_role_ids]
+    properties:
+      work_item_ref: {type: string, minLength: 1}
+      accountable_role_ids: {$ref: "#/$defs/records"}
+      responsible_role_ids: {$ref: "#/$defs/records"}
+      consulted_role_ids: {$ref: "#/$defs/records"}
+      informed_role_ids: {$ref: "#/$defs/records"}

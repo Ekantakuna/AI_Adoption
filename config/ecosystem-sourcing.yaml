@@ -1,0 +1,234 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_provider_claims: true
+selection_requires_approved_decision: true
+
+sourcing_lifecycle_stages:
+  - need_identification
+  - make_buy_partner_review
+  - sourcing_case_approval
+  - market_discovery
+  - request_and_response
+  - evaluation
+  - due_diligence
+  - selection_decision
+  - negotiation_and_agreement
+  - onboarding_and_integration
+  - active_service_management
+  - performance_and_value_review
+  - renewal_or_recompetition
+  - transition_and_exit
+
+provider_types:
+  - strategic_partner
+  - cloud_provider
+  - frontier_model_provider
+  - AI_platform_provider
+  - data_or_content_provider
+  - software_vendor
+  - systems_integrator
+  - advisory_or_consulting
+  - managed_service_provider
+  - research_or_academic_partner
+  - training_or_capability_partner
+  - legal_regulatory_or_assurance_partner
+  - open_source_or_foundation_ecosystem
+
+offering_types:
+  - foundation_or_frontier_model
+  - managed_AI_or_ML_service
+  - cloud_infrastructure
+  - data_or_content_license
+  - AI_development_platform
+  - model_and_agent_operations
+  - governance_risk_or_security_tool
+  - enterprise_application_or_copilot
+  - systems_integration
+  - advisory_and_transformation
+  - managed_service
+  - learning_and_enablement
+  - assurance_testing_or_audit
+
+sourcing_case_types:
+  - strategic_partnership
+  - competitive_procurement
+  - request_for_information
+  - proof_of_value_or_trial
+  - direct_award_exception
+  - renewal_or_extension
+  - replacement_or_recompetition
+
+evaluation_dimensions:
+  - strategic_and_business_fit
+  - functional_fit
+  - technical_and_architecture_fit
+  - data_and_integration_fit
+  - model_capability_and_quality
+  - security_privacy_and_resilience
+  - governance_responsible_ai_and_compliance
+  - commercial_and_total_cost
+  - value_and_outcome_potential
+  - delivery_and_support_capability
+  - scalability_and_performance
+  - interoperability_portability_and_exit
+  - provider_viability_and_roadmap
+  - concentration_and_lock_in
+  - sustainability_and_social_impact
+
+due_diligence_domains:
+  - legal_entity_and_authority
+  - financial_viability
+  - legal_and_regulatory
+  - contracting_and_commercial
+  - licensing_and_intellectual_property
+  - data_protection_and_privacy
+  - information_and_cyber_security
+  - responsible_ai_model_and_agent_risk
+  - operational_resilience_and_continuity
+  - subcontractors_and_supply_chain
+  - service_delivery_and_support
+  - data_location_and_cross_border_transfer
+  - audit_evidence_and_assurance
+  - sanctions_ethics_and_reputation
+  - sustainability
+
+due_diligence_outcomes:
+  - not_started
+  - in_progress
+  - satisfactory
+  - satisfactory_with_conditions
+  - remediation_required
+  - rejected
+  - expired_or_reassessment_required
+
+agreement_types:
+  - master_services_agreement
+  - subscription_or_cloud_agreement
+  - software_or_model_license
+  - data_or_content_license
+  - statement_of_work
+  - data_processing_agreement
+  - service_level_agreement
+  - partnership_or_collaboration_agreement
+  - research_or_pilot_agreement
+  - support_and_maintenance_agreement
+
+agreement_obligation_types:
+  - service_level
+  - security_and_privacy
+  - data_use_location_and_retention
+  - model_training_and_content_use
+  - intellectual_property_and_indemnity
+  - audit_and_evidence_access
+  - incident_notification
+  - regulatory_cooperation
+  - change_notification
+  - subcontractor_management
+  - business_continuity
+  - portability_transition_and_exit
+  - pricing_and_usage
+
+performance_dimensions:
+  - service_level_and_availability
+  - quality_accuracy_and_reliability
+  - security_privacy_and_compliance
+  - delivery_and_support
+  - cost_and_consumption
+  - realized_value_and_outcomes
+  - innovation_and_roadmap
+  - relationship_and_governance
+  - risk_and_issue_management
+  - portability_and_exit_readiness
+
+performance_signals:
+  - on_track
+  - watch
+  - remediation_required
+  - executive_intervention
+  - renewal_at_risk
+  - exit_or_recompetition
+  - not_assessed
+
+exit_trigger_types:
+  - agreement_expiry
+  - material_breach
+  - performance_failure
+  - security_privacy_or_compliance_event
+  - unacceptable_cost_or_value
+  - strategic_or_architecture_change
+  - provider_viability_change
+  - concentration_or_lock_in_reduction
+  - regulatory_requirement
+  - replacement_selected
+  - internal_capability_available
+
+exit_workstreams:
+  - service_transition
+  - data_export_return_or_deletion
+  - model_prompt_agent_and_configuration_portability
+  - knowledge_and_documentation_transfer
+  - identity_access_and_secret_revocation
+  - integration_and_dependency_removal
+  - continuity_and_fallback
+  - legal_commercial_and_license_termination
+  - evidence_and_compliance_closure
+  - workforce_and_stakeholder_change
+
+selection_statuses:
+  - requirements_only
+  - market_discovery
+  - evaluation
+  - due_diligence
+  - decision_pending
+  - selected
+  - not_selected
+  - cancelled
+  - superseded
+
+semantic_relationships:
+  - subject: partnership_requirement
+    predicate: initiates
+    object: sourcing_case
+  - subject: strategic_choice
+    predicate: constrains
+    object: sourcing_case
+  - subject: sourcing_case
+    predicate: evaluates
+    object: providers_and_offerings
+  - subject: provider_evaluation
+    predicate: compares
+    object: candidate_providers_and_offerings
+  - subject: provider_due_diligence
+    predicate: identifies
+    object: risks_controls_conditions_and_remediation
+  - subject: sourcing_agreement
+    predicate: governs
+    object: provider_offering_solution_and_obligations
+  - subject: provider_performance
+    predicate: measures
+    object: agreement_service_value_risk_and_outcomes
+  - subject: sourcing_exit_plan
+    predicate: reduces
+    object: lock_in_concentration_continuity_and_transition_risk
+
+cross_domain_mappings:
+  partnership_requirements: registers/partnership-requirements.yaml
+  strategic_choices: registers/strategic-choices.yaml
+  solutions: registers/solutions.yaml
+  risks: registers/risks.yaml
+  controls: registers/controls.yaml
+  metrics: registers/metrics.yaml
+  dependencies: registers/dependencies.yaml
+
+evidence_rules:
+  provider_and_offering_claims_require_source_ids: true
+  evaluation_criteria_require_approval_before_scoring: true
+  scores_require_evidence_and_review: true
+  due_diligence_does_not_imply_legal_security_or_compliance_approval: true
+  selection_requires_decision_reference: true
+  agreement_records_store_metadata_not_restricted_contract_content: true
+  performance_reviews_require_metric_evidence: true
+  selected_or_material_providers_require_exit_plan: true
+  source_derived_records_remain_proposed_until_human_review: true

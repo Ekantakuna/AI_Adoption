@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-capability.schema.yaml
+title: Governance capability
+description: AI or data governance capability across organizational and technical dimensions.
+type: object
+additionalProperties: false
+required: [governance_capability_id, name, capability_domain_id, status, description, governance_domain_ids, governance_layer_ids, lifecycle_stage_ids, measure_dimension_ids, current_characteristics, target_characteristics, owner_role_ids, artifact_ids, risk_ids, control_ids, tool_requirement_ids, metric_ids, dependency_ids, source_ids, evidence_refs, assumptions, classification]
+properties:
+  governance_capability_id: {type: string, pattern: "^GCAP-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  capability_domain_id: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  description: {type: string}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  governance_layer_ids: {$ref: "#/$defs/ids"}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  measure_dimension_ids: {$ref: "#/$defs/ids"}
+  current_characteristics: {$ref: "#/$defs/text"}
+  target_characteristics: {$ref: "#/$defs/text"}
+  owner_role_ids: {$ref: "#/$defs/record_ids"}
+  artifact_ids: {$ref: "#/$defs/record_ids"}
+  risk_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  tool_requirement_ids: {$ref: "#/$defs/record_ids"}
+  metric_ids: {$ref: "#/$defs/record_ids"}
+  dependency_ids: {$ref: "#/$defs/record_ids"}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: employee-readiness-finding.schema.yaml
+title: Employee readiness finding
+description: Aggregated evidence-backed readiness finding for a privacy-safe population segment.
+type: object
+additionalProperties: false
+required: [employee_readiness_finding_id, employee_readiness_assessment_id, status, title, readiness_dimension_id, audience_ids, organization_unit_ids, population_count, response_count, rating, score, score_scale, statement, qualitative_arguments, quantitative_arguments, confidence, personal_data_included, limitation_notes, change_action_ids, campaign_ids, literacy_program_ids, source_ids, evidence_refs, field_evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  employee_readiness_finding_id: {type: string, pattern: "^ERF-[0-9]{6}$"}
+  employee_readiness_assessment_id: {type: string, pattern: "^ERA-[0-9]{6}$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded]}
+  title: {type: string, minLength: 1}
+  readiness_dimension_id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  audience_ids: {$ref: "#/$defs/ids"}
+  organization_unit_ids: {$ref: "#/$defs/records"}
+  population_count: {type: integer, minimum: 1}
+  response_count: {type: integer, minimum: 0}
+  rating: {type: string, enum: [not_assessed, very_low, low, moderate, high, very_high, not_applicable]}
+  score: {type: [number, "null"]}
+  score_scale: {type: [string, "null"]}
+  statement: {type: string}
+  qualitative_arguments: {$ref: "#/$defs/text"}
+  quantitative_arguments: {$ref: "#/$defs/text"}
+  confidence: {type: string, enum: [low, medium, high]}
+  personal_data_included: {const: false}
+  limitation_notes: {$ref: "#/$defs/text"}
+  change_action_ids: {$ref: "#/$defs/records"}
+  campaign_ids: {$ref: "#/$defs/records"}
+  literacy_program_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources_required"}
+  evidence_refs: {$ref: "#/$defs/text_required"}
+  field_evidence_refs: {$ref: "#/$defs/text_required"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  text_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, minLength: 1}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

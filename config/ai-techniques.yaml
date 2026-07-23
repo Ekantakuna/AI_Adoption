@@ -1,0 +1,55 @@
+schema_version: 1
+
+definition_status_values:
+  - proposed
+  - approved
+  - deprecated
+
+ai_techniques:
+  - id: traditional_ai
+    name: Traditional AI
+    definition_status: proposed
+
+  - id: generative_ai
+    name: Generative AI
+    definition_status: proposed
+
+  - id: llm
+    name: Large language models
+    definition_status: proposed
+
+  - id: agency
+    name: AI agency
+    definition_status: proposed
+    glossary_definition_required: true
+
+  - id: agentic_ai
+    name: Agentic AI
+    definition_status: proposed
+    glossary_definition_required: true
+
+implementation_lifecycle_states:
+  - planned
+  - prototype
+  - pilot
+  - production
+  - scaling
+  - paused
+  - retired
+  - unknown
+
+hosting_models:
+  - on_premises
+  - private_cloud
+  - public_cloud
+  - hybrid
+  - software_as_a_service
+  - unknown
+
+development_models:
+  - in_house
+  - vendor
+  - open_source
+  - cloud_managed
+  - hybrid
+  - unknown

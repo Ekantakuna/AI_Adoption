@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-target.schema.yaml
+title: Organization target profile
+description: Versioned TO-BE organization profile for creating AI value at scale.
+type: object
+additionalProperties: false
+required: [organization_target_id, name, version, status, vision_statement, design_principles, constituency_ids, organization_dimension_ids, target_characteristics, intended_value_outcomes, operating_model_id, capability_ids, unit_ids, role_ids, network_ids, practice_ids, partnership_requirement_ids, tool_requirement_ids, related_domain_ids, assumptions, constraints, rationale, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  organization_target_id: {type: string, pattern: "^OTGT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string, minLength: 1}
+  status: {$ref: "#/$defs/status"}
+  vision_statement: {type: string}
+  design_principles: {$ref: "#/$defs/text"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  organization_dimension_ids: {$ref: "#/$defs/ids"}
+  target_characteristics: {$ref: "#/$defs/text"}
+  intended_value_outcomes: {$ref: "#/$defs/text"}
+  operating_model_id: {type: [string, "null"], pattern: "^OOM-[0-9]{6}$"}
+  capability_ids: {$ref: "#/$defs/records"}
+  unit_ids: {$ref: "#/$defs/records"}
+  role_ids: {$ref: "#/$defs/records"}
+  network_ids: {$ref: "#/$defs/records"}
+  practice_ids: {$ref: "#/$defs/records"}
+  partnership_requirement_ids: {$ref: "#/$defs/records"}
+  tool_requirement_ids: {$ref: "#/$defs/records"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  assumptions: {$ref: "#/$defs/text"}
+  constraints: {$ref: "#/$defs/text"}
+  rationale: {type: string}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

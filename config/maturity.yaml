@@ -1,0 +1,78 @@
+schema_version: 1
+
+focus_areas:
+  - overall_ai_adoption
+  - generative_ai_adoption
+  - ai_scaling
+  - business_process_transformation
+  - use_case_adoption
+  - strategic_intent_progress
+
+assessment_types:
+  - baseline
+  - progress
+  - target
+  - comparative
+
+assessment_scopes:
+  - overall_ai_adoption
+  - taxonomy_domain
+  - business_domain
+  - business_process
+  - use_case_pattern
+  - implementation
+  - shared_platform
+
+evidence_types:
+  - qualitative
+  - quantitative
+  - mixed
+
+framework_status_values:
+  - proposed
+  - in_review
+  - approved
+  - superseded
+  - retired
+
+assessment_status_values:
+  - planned
+  - in_progress
+  - in_review
+  - approved
+  - superseded
+
+finding_status_values:
+  - proposed
+  - in_review
+  - approved
+  - superseded
+
+action_status_values:
+  - proposed
+  - approved
+  - in_progress
+  - completed
+  - blocked
+  - superseded
+
+action_types:
+  - strategy
+  - portfolio
+  - people_and_culture
+  - organization
+  - governance
+  - data
+  - engineering_platform
+  - security_trust
+  - use_case_adoption
+  - value_management
+
+assessment_rules:
+  field_level_evidence_required: true
+  qualitative_argument_required: true
+  quantitative_argument_required_when_available: true
+  unsupported_level_judgement_prohibited: true
+  historical_assessments_immutable: true
+  progress_requires_comparable_assessments: true
+  actions_require_gap_or_finding_reference: true

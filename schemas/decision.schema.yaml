@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision.schema.yaml
+title: Decision
+description: Actual decision instance preserving context, evaluated options, authority, rationale and execution traceability.
+type: object
+additionalProperties: false
+required: [decision_id, decision_type_id, decision_context_id, choice_architecture_id, name, status, trigger, decision_question, decision_option_ids, decision_evidence_ids, selected_option_ids, rationale, authority_rule_ids, deciding_stakeholder_ids, human_authorization_confirmed, decided_at, override_applied, override_rationale, escalation_status, execution_initiative_ids, outcome_ids, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_id: {type: string, pattern: "^DEC-[0-9]{6}$"}
+  decision_type_id: {type: string, pattern: "^DTYPE-[0-9]{6}$"}
+  decision_context_id: {type: string, pattern: "^DCTX-[0-9]{6}$"}
+  choice_architecture_id: {type: string, pattern: "^CARCH-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, framing, evaluating, decision_pending, decided, execution_in_progress, executed, outcome_review, superseded, cancelled]}
+  trigger: {type: string}
+  decision_question: {type: string}
+  decision_option_ids: {$ref: "#/$defs/records"}
+  decision_evidence_ids: {$ref: "#/$defs/records"}
+  selected_option_ids: {$ref: "#/$defs/records"}
+  rationale: {type: string}
+  authority_rule_ids: {$ref: "#/$defs/records"}
+  deciding_stakeholder_ids: {$ref: "#/$defs/records"}
+  human_authorization_confirmed: {type: boolean}
+  decided_at: {type: [string, "null"], format: date-time}
+  override_applied: {type: boolean}
+  override_rationale: {type: [string, "null"]}
+  escalation_status: {type: string, enum: [not_required, pending, escalated, resolved]}
+  execution_initiative_ids: {$ref: "#/$defs/records"}
+  outcome_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

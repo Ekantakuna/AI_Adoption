@@ -1,0 +1,46 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-action.schema.yaml
+title: Governance pathway action
+description: Organizational or technical action that closes an approved governance gap.
+type: object
+additionalProperties: false
+required: [governance_action_id, title, status, measure_type, description, intended_target_outcome, governance_target_id, finding_ids, capability_ids, risk_ids, control_ids, artifact_ids, governance_role_ids, tool_requirement_ids, initiative_ids, owner_stakeholder_ids, dependency_ids, milestone_ids, metric_ids, priority, sequence_group, target_start_date, target_end_date, acceptance_criteria, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  governance_action_id: {type: string, pattern: "^GACT-[0-9]{6}$"}
+  title: {type: string, minLength: 1}
+  status: {$ref: "#/$defs/status"}
+  measure_type: {$ref: "#/$defs/id"}
+  description: {type: string}
+  intended_target_outcome: {type: string}
+  governance_target_id: {type: string, pattern: "^GTGT-[0-9]{6}$"}
+  finding_ids: {$ref: "#/$defs/record_ids_required"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  risk_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  artifact_ids: {$ref: "#/$defs/record_ids"}
+  governance_role_ids: {$ref: "#/$defs/record_ids"}
+  tool_requirement_ids: {$ref: "#/$defs/record_ids"}
+  initiative_ids: {$ref: "#/$defs/record_ids"}
+  owner_stakeholder_ids: {$ref: "#/$defs/record_ids"}
+  dependency_ids: {$ref: "#/$defs/record_ids"}
+  milestone_ids: {$ref: "#/$defs/record_ids"}
+  metric_ids: {$ref: "#/$defs/record_ids"}
+  priority: {type: string, enum: [low, medium, high, critical, not_prioritized]}
+  sequence_group: {type: [string, "null"]}
+  target_start_date: {type: [string, "null"], format: date}
+  target_end_date: {type: [string, "null"], format: date}
+  acceptance_criteria: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  record_ids_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, pattern: "^GFND-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

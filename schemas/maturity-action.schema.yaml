@@ -1,0 +1,139 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: maturity-action.schema.yaml
+title: Maturity improvement action
+description: Evidence-linked pathway action intended to address an assessed maturity gap.
+type: object
+additionalProperties: false
+required:
+  - action_id
+  - assessment_id
+  - finding_ids
+  - title
+  - description
+  - action_type
+  - current_gap
+  - target_outcome
+  - target_level_ids
+  - priority
+  - owner_stakeholder_ids
+  - initiative_ids
+  - milestone_ids
+  - dependency_ids
+  - metric_ids
+  - target_date
+  - source_ids
+  - evidence_refs
+  - classification
+  - confidence
+  - status
+properties:
+  action_id:
+    type: string
+    pattern: "^MACT-[0-9]{6}$"
+  assessment_id:
+    type: string
+    pattern: "^MA-[0-9]{6}$"
+  finding_ids:
+    type: array
+    uniqueItems: true
+    minItems: 1
+    items:
+      type: string
+      pattern: "^MFND-[0-9]{6}$"
+  title:
+    type: string
+    minLength: 1
+  description:
+    type: string
+  action_type:
+    type: string
+    enum:
+      - strategy
+      - portfolio
+      - people_and_culture
+      - organization
+      - governance
+      - data
+      - engineering_platform
+      - security_trust
+      - use_case_adoption
+      - value_management
+  current_gap:
+    type: string
+    minLength: 1
+  target_outcome:
+    type: string
+    minLength: 1
+  target_level_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  priority:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+      - critical
+  owner_stakeholder_ids:
+    $ref: "#/$defs/record_ids"
+  initiative_ids:
+    $ref: "#/$defs/record_ids"
+  milestone_ids:
+    $ref: "#/$defs/record_ids"
+  dependency_ids:
+    $ref: "#/$defs/record_ids"
+  metric_ids:
+    $ref: "#/$defs/record_ids"
+  target_date:
+    type:
+      - string
+      - "null"
+    format: date
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+  status:
+    type: string
+    enum:
+      - proposed
+      - approved
+      - in_progress
+      - completed
+      - blocked
+      - superseded
+$defs:
+  record_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

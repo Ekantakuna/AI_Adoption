@@ -1,0 +1,48 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ai-strategy.schema.yaml
+title: AI strategy
+description: Versioned AI vision, transformation thesis, strategic logic and execution linkage.
+type: object
+additionalProperties: false
+required: [ai_strategy_id, name, version, previous_strategy_id, status, effective_from, effective_to, generative_ai_focus, purpose, ambition, vision, transformation_thesis, business_problem_statements, guiding_principles, target_state_summary, decision_intelligence_target_id, strategic_objective_ids, strategic_choice_ids, hypothesis_ids, scenario_ids, critical_success_factor_ids, execution_plan_id, capability_ids, prerequisite_domain_ids, metric_ids, risk_ids, assumptions, constraints, source_ids, evidence_refs, classification, approved_by, approved_at]
+properties:
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string, minLength: 1}
+  previous_strategy_id: {type: [string, "null"], pattern: "^AISTRAT-[0-9]{6}$"}
+  status: {$ref: "#/$defs/status"}
+  effective_from: {type: [string, "null"], format: date}
+  effective_to: {type: [string, "null"], format: date}
+  generative_ai_focus: {type: boolean}
+  purpose: {type: string}
+  ambition: {type: string}
+  vision: {type: string}
+  transformation_thesis: {$ref: "#/$defs/text"}
+  business_problem_statements: {$ref: "#/$defs/text"}
+  guiding_principles: {$ref: "#/$defs/text"}
+  target_state_summary: {type: string}
+  decision_intelligence_target_id: {type: [string, "null"], pattern: "^DIT-[0-9]{6}$"}
+  strategic_objective_ids: {$ref: "#/$defs/records"}
+  strategic_choice_ids: {$ref: "#/$defs/records"}
+  hypothesis_ids: {$ref: "#/$defs/records"}
+  scenario_ids: {$ref: "#/$defs/records"}
+  critical_success_factor_ids: {$ref: "#/$defs/records"}
+  execution_plan_id: {type: [string, "null"], pattern: "^SEXEC-[0-9]{6}$"}
+  capability_ids: {$ref: "#/$defs/records"}
+  prerequisite_domain_ids: {$ref: "#/$defs/ids"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  assumptions: {$ref: "#/$defs/text"}
+  constraints: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  approved_by: {type: [string, "null"]}
+  approved_at: {type: [string, "null"], format: date-time}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

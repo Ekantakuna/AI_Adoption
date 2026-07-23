@@ -1,0 +1,239 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+privacy_review_required_for_employee_data: true
+aggregate_reporting_default: true
+
+change_dimensions:
+  - vision_and_change_story
+  - leadership_sponsorship_and_coalition
+  - stakeholder_and_audience_engagement
+  - workforce_and_role_impact
+  - awareness_and_communications
+  - literacy_learning_and_practice
+  - champions_and_peer_enablement
+  - manager_enablement
+  - employee_readiness_and_adoption
+  - resistance_concerns_and_trust
+  - support_reinforcement_and_community
+  - measurement_feedback_and_improvement
+
+change_phases:
+  - discover_and_baseline
+  - align_and_mobilize
+  - design
+  - prepare
+  - pilot
+  - launch
+  - reinforce
+  - scale
+  - sustain_and_improve
+
+audience_types:
+  - all_employees
+  - executive_leaders
+  - people_managers
+  - business_function_leaders
+  - business_champions
+  - product_and_process_owners
+  - ict_engineering_and_data
+  - legal_compliance_risk_and_governance
+  - security_and_privacy
+  - human_resources_and_learning
+  - AI_solution_users
+  - employees_in_impacted_roles
+
+workforce_impact_types:
+  - role_purpose
+  - job_or_role_demand
+  - task_automation
+  - task_augmentation
+  - new_task_or_responsibility
+  - competency_and_skill
+  - capacity_and_workload
+  - decision_right_and_accountability
+  - process_and_way_of_working
+  - tool_and_work_environment
+  - location_or_team_interface
+  - control_and_compliance_responsibility
+
+impact_directions:
+  - increase
+  - decrease
+  - redesign
+  - create
+  - retire
+  - no_material_change
+  - unknown
+
+readiness_dimensions:
+  - awareness
+  - understanding
+  - perceived_relevance
+  - willingness_and_intent
+  - confidence_and_self_efficacy
+  - literacy_and_skills
+  - trust_safety_and_fairness
+  - leadership_and_manager_support
+  - access_to_tools_and_guidance
+  - process_and_role_clarity
+  - peer_and_champion_support
+  - actual_adoption_and_usage
+
+readiness_ratings:
+  - not_assessed
+  - very_low
+  - low
+  - moderate
+  - high
+  - very_high
+  - not_applicable
+
+literacy_levels:
+  - awareness
+  - foundational
+  - practitioner
+  - advanced
+  - leader
+  - specialist
+
+literacy_topic_areas:
+  - AI_fundamentals_and_terminology
+  - traditional_ai_generative_ai_and_agentic_ai
+  - opportunities_limits_and_value
+  - responsible_and_safe_use
+  - data_privacy_security_and_intellectual_property
+  - policy_controls_and_approved_tools
+  - prompting_context_and_human_oversight
+  - use_case_discovery_and_evaluation
+  - role_specific_workflows
+  - critical_evaluation_and_output_validation
+  - change_learning_and_continuous_improvement
+
+campaign_types:
+  - awareness
+  - leadership_alignment
+  - policy_and_safe_use
+  - literacy_enrollment
+  - use_case_story_and_value
+  - champion_activation
+  - launch_and_adoption
+  - reinforcement
+
+communication_channels:
+  - leadership_message
+  - manager_briefing
+  - town_hall
+  - intranet
+  - email_or_newsletter
+  - team_channel
+  - webinar
+  - workshop
+  - office_hours
+  - community_event
+  - learning_platform
+  - job_aid_or_how_to
+
+champion_responsibilities:
+  - local_awareness_and_advocacy
+  - literacy_activation
+  - use_case_discovery
+  - peer_support_and_coaching
+  - feedback_and_concern_capture
+  - approved_practice_reinforcement
+  - adoption_observation
+  - knowledge_and_success_story_sharing
+  - escalation_to_AI_leadership_or_governance
+
+action_types:
+  - sponsorship
+  - stakeholder_engagement
+  - communication
+  - awareness_campaign
+  - literacy_and_learning
+  - champion_enablement
+  - manager_enablement
+  - workforce_transition
+  - role_or_process_change
+  - readiness_intervention
+  - support_and_reinforcement
+  - measurement_and_feedback
+
+progress_statuses:
+  - not_started
+  - planned
+  - in_progress
+  - at_risk
+  - blocked
+  - completed
+  - paused
+  - cancelled
+
+metric_categories:
+  - reach
+  - participation
+  - completion
+  - knowledge_gain
+  - confidence
+  - readiness
+  - behavior_and_adoption
+  - tool_usage
+  - manager_enablement
+  - champion_activity
+  - employee_sentiment
+  - support_demand
+  - value_contribution
+
+semantic_relationships:
+  - subject: ai_change_plan
+    predicate: coordinates
+    object: change_actions_campaigns_literacy_impacts_and_readiness
+  - subject: workforce_impact_assessment
+    predicate: contains
+    object: workforce_impacts
+  - subject: workforce_impact
+    predicate: affects
+    object: roles_tasks_competencies_capacity_and_processes
+  - subject: ai_literacy_program
+    predicate: develops
+    object: competencies_for_audiences_and_roles
+  - subject: ai_awareness_campaign
+    predicate: prepares
+    object: target_audiences_for_change
+  - subject: organization_network
+    predicate: enables
+    object: business_champions_and_peer_literacy
+  - subject: employee_readiness_assessment
+    predicate: contains
+    object: privacy_safe_readiness_findings
+  - subject: readiness_finding
+    predicate: drives
+    object: targeted_change_actions
+  - subject: people_change_snapshot
+    predicate: measures
+    object: plan_campaign_literacy_readiness_and_adoption_progress
+
+cross_domain_interfaces:
+  - strategic_intent
+  - organization
+  - value_management
+  - use_cases
+  - governance
+  - data
+  - engineering_platform
+  - security_trust
+  - ecosystem_sourcing
+  - maturity_execution
+
+evidence_and_privacy_rules:
+  no_person_level_record_by_default: true
+  minimum_reporting_population_required: true
+  sensitive_demographic_breakdowns_require_approval: true
+  current_workforce_claims_require_source_ids: true
+  readiness_findings_require_method_sample_and_limitations: true
+  plans_require_scope_timeline_roles_metrics_and_dependencies: true
+  actions_require_owner_due_date_and_acceptance_criteria: true
+  snapshots_are_append_only: true
+  source_derived_records_remain_proposed_until_human_review: true

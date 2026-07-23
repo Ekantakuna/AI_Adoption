@@ -1,0 +1,47 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: people-change-snapshot.schema.yaml
+title: People and culture progress snapshot
+description: Append-only dated progress snapshot for change, awareness, literacy, readiness and adoption reporting.
+type: object
+additionalProperties: false
+required: [people_change_snapshot_id, snapshot_at, reporting_period_start, reporting_period_end, ai_change_plan_id, subject_type, subject_id, status, progress_percent, audience_ids, metric_values, completed_action_ids, upcoming_action_ids, risk_ids, blocker_notes, decisions_required, qualitative_progress, source_ids, evidence_refs, classification, prepared_by, reviewed_by, reviewed_at]
+properties:
+  people_change_snapshot_id: {type: string, pattern: "^PCSNP-[0-9]{6}$"}
+  snapshot_at: {type: string, format: date-time}
+  reporting_period_start: {type: [string, "null"], format: date}
+  reporting_period_end: {type: [string, "null"], format: date}
+  ai_change_plan_id: {type: string, pattern: "^CHGPLAN-[0-9]{6}$"}
+  subject_type: {type: string, enum: [change_plan, change_action, awareness_campaign, literacy_program, workforce_impact, employee_readiness, champion_network, overall_people_and_culture]}
+  subject_id: {type: [string, "null"], pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}
+  status: {type: string, enum: [not_started, planned, in_progress, at_risk, blocked, completed, paused, cancelled]}
+  progress_percent: {type: integer, minimum: 0, maximum: 100}
+  audience_ids: {$ref: "#/$defs/ids"}
+  metric_values:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required: [metric_id, value, unit, measured_at]
+      properties:
+        metric_id: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}
+        value: {type: number}
+        unit: {type: string}
+        measured_at: {type: string, format: date-time}
+  completed_action_ids: {$ref: "#/$defs/records"}
+  upcoming_action_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  blocker_notes: {$ref: "#/$defs/text"}
+  decisions_required: {$ref: "#/$defs/text"}
+  qualitative_progress: {type: string}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  prepared_by: {type: string}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

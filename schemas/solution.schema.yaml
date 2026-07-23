@@ -1,0 +1,127 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: solution.schema.yaml
+title: Technical solution
+description: Repository-safe metadata about a reusable or deployed technical solution.
+type: object
+additionalProperties: false
+required:
+  - solution_id
+  - name
+  - solution_type
+  - hosting_model
+  - development_model
+  - component_ids
+  - data_solution
+  - model_solution
+  - integration_patterns
+  - monitoring_patterns
+  - security_control_ids
+  - source_ids
+  - evidence_refs
+  - classification
+properties:
+  solution_id:
+    type: string
+    pattern: "^SOL-[0-9]{6}$"
+  name:
+    type: string
+    minLength: 1
+  solution_type:
+    type: string
+  hosting_model:
+    type: string
+    enum:
+      - on_premises
+      - private_cloud
+      - public_cloud
+      - hybrid
+      - software_as_a_service
+      - unknown
+  development_model:
+    type: string
+    enum:
+      - in_house
+      - vendor
+      - open_source
+      - cloud_managed
+      - hybrid
+      - unknown
+  component_ids:
+    $ref: "#/$defs/record_ids"
+  data_solution:
+    type: object
+    additionalProperties: false
+    required:
+      - data_domain_ids
+      - storage_pattern
+      - processing_pattern
+      - governance_control_ids
+    properties:
+      data_domain_ids:
+        $ref: "#/$defs/unique_ids"
+      storage_pattern:
+        type: string
+      processing_pattern:
+        type: string
+      governance_control_ids:
+        $ref: "#/$defs/record_ids"
+  model_solution:
+    type: object
+    additionalProperties: false
+    required:
+      - model_categories
+      - provider_categories
+      - model_names
+      - orchestration_pattern
+    properties:
+      model_categories:
+        $ref: "#/$defs/unique_text"
+      provider_categories:
+        $ref: "#/$defs/unique_text"
+      model_names:
+        $ref: "#/$defs/unique_text"
+      orchestration_pattern:
+        type: string
+  integration_patterns:
+    $ref: "#/$defs/unique_text"
+  monitoring_patterns:
+    $ref: "#/$defs/unique_text"
+  security_control_ids:
+    $ref: "#/$defs/record_ids"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+$defs:
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  record_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

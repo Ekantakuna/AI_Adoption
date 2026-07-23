@@ -1,0 +1,53 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: provider-performance.schema.yaml
+title: Provider performance review
+description: Dated review of provider, offering, agreement, value, service, risk and exit readiness.
+type: object
+additionalProperties: false
+required: [provider_performance_id, provider_id, offering_ids, agreement_ids, review_date, reporting_period_start, reporting_period_end, status, performance_dimension_ids, metric_observations, overall_signal, service_summary, value_summary, risk_and_issue_summary, remediation_action_ids, dependency_ids, risk_ids, control_ids, renewal_recommendation, exit_readiness_status, source_ids, evidence_refs, limitations, classification, prepared_by, reviewed_by, reviewed_at]
+properties:
+  provider_performance_id: {type: string, pattern: "^PPERF-[0-9]{6}$"}
+  provider_id: {type: string, pattern: "^EPROV-[0-9]{6}$"}
+  offering_ids: {$ref: "#/$defs/records"}
+  agreement_ids: {$ref: "#/$defs/records"}
+  review_date: {type: string, format: date}
+  reporting_period_start: {type: [string, "null"], format: date}
+  reporting_period_end: {type: [string, "null"], format: date}
+  status: {type: string, enum: [draft, in_review, approved, superseded]}
+  performance_dimension_ids: {$ref: "#/$defs/ids"}
+  metric_observations: {type: array, minItems: 1, items: {$ref: "#/$defs/metric_observation"}}
+  overall_signal: {type: string, enum: [on_track, watch, remediation_required, executive_intervention, renewal_at_risk, exit_or_recompetition, not_assessed]}
+  service_summary: {type: string}
+  value_summary: {type: string}
+  risk_and_issue_summary: {type: string}
+  remediation_action_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  renewal_recommendation: {type: string, enum: [continue, renew, renew_with_conditions, renegotiate, recompete, exit, not_assessed]}
+  exit_readiness_status: {type: string, enum: [not_assessed, insufficient, partial, ready, tested]}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  limitations: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  prepared_by: {type: string}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
+  metric_observation:
+    type: object
+    additionalProperties: false
+    required: [metric_id, observed_value, unit, observed_at, target_value, signal, evidence_ref]
+    properties:
+      metric_id: {type: string, pattern: "^MET-[0-9]{6}$"}
+      observed_value: {type: [number, string]}
+      unit: {type: string}
+      observed_at: {type: string, format: date-time}
+      target_value: {type: [number, string, "null"]}
+      signal: {type: string, enum: [on_track, watch, remediation_required, executive_intervention, renewal_at_risk, exit_or_recompetition, not_assessed]}
+      evidence_ref: {type: string}

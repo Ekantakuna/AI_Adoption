@@ -1,0 +1,94 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: use-case.schema.yaml
+title: AI use-case pattern
+description: Reusable or possible AI application pattern, separate from an actual implementation.
+type: object
+additionalProperties: false
+required:
+  - use_case_id
+  - name
+  - description
+  - business_domain_ids
+  - ai_technique_ids
+  - actors
+  - business_processes
+  - expected_outcomes
+  - implementation_considerations
+  - related_implementation_ids
+  - source_ids
+  - evidence_refs
+  - classification
+  - status
+  - confidence
+properties:
+  use_case_id:
+    type: string
+    pattern: "^UC-[0-9]{6}$"
+  name:
+    type: string
+    minLength: 1
+  description:
+    type: string
+  business_domain_ids:
+    $ref: "#/$defs/unique_ids"
+  ai_technique_ids:
+    $ref: "#/$defs/unique_ids"
+  actors:
+    $ref: "#/$defs/unique_text"
+  business_processes:
+    $ref: "#/$defs/unique_text"
+  expected_outcomes:
+    $ref: "#/$defs/unique_text"
+  implementation_considerations:
+    $ref: "#/$defs/unique_text"
+  related_implementation_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^IMP-[0-9]{6}$"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  status:
+    type: string
+    enum:
+      - candidate
+      - in_review
+      - approved
+      - deprecated
+      - superseded
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+$defs:
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

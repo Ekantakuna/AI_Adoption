@@ -1,0 +1,151 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: maturity-assessment.schema.yaml
+title: Maturity assessment
+description: Time-stamped evaluation scope, finding set and evidence-backed overall conclusion.
+type: object
+additionalProperties: false
+required:
+  - assessment_id
+  - framework_id
+  - model_ids
+  - assessment_type
+  - scope_type
+  - scope_id
+  - as_of_date
+  - comparison_assessment_ids
+  - finding_ids
+  - current_level_ids
+  - target_level_ids
+  - qualitative_conclusion
+  - quantitative_summary
+  - limitations
+  - source_ids
+  - evidence_refs
+  - classification
+  - confidence
+  - status
+properties:
+  assessment_id:
+    type: string
+    pattern: "^MA-[0-9]{6}$"
+  framework_id:
+    type: string
+    pattern: "^MF-[0-9]{6}$"
+  model_ids:
+    type: array
+    uniqueItems: true
+    minItems: 1
+    items:
+      type: string
+      pattern: "^MM-[0-9]{6}$"
+  assessment_type:
+    type: string
+    enum:
+      - baseline
+      - progress
+      - target
+      - comparative
+  scope_type:
+    type: string
+    enum:
+      - overall_ai_adoption
+      - taxonomy_domain
+      - business_domain
+      - business_process
+      - use_case_pattern
+      - implementation
+      - shared_platform
+  scope_id:
+    type:
+      - string
+      - "null"
+  as_of_date:
+    type: string
+    format: date-time
+  comparison_assessment_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^MA-[0-9]{6}$"
+  finding_ids:
+    type: array
+    uniqueItems: true
+    minItems: 1
+    items:
+      type: string
+      pattern: "^MFND-[0-9]{6}$"
+  current_level_ids:
+    $ref: "#/$defs/unique_text"
+  target_level_ids:
+    $ref: "#/$defs/unique_text"
+  qualitative_conclusion:
+    type: string
+    minLength: 1
+  quantitative_summary:
+    $ref: "#/$defs/measurements"
+  limitations:
+    $ref: "#/$defs/unique_text"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+  status:
+    type: string
+    enum:
+      - planned
+      - in_progress
+      - in_review
+      - approved
+      - superseded
+$defs:
+  measurements:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - metric_id
+        - value
+        - unit
+        - as_of_date
+      properties:
+        metric_id:
+          type:
+            - string
+            - "null"
+        value:
+          type:
+            - number
+            - string
+        unit:
+          type: string
+        as_of_date:
+          type: string
+          format: date-time
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

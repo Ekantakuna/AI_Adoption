@@ -1,3 +1,21 @@
 # Configuration
 
 This directory contains project-wide controlled values, taxonomy, audience definitions, and scoring-model configuration.
+
+`business-domains.yaml` controls the proposed business grouping used by use cases and implementations. `ai-techniques.yaml` controls AI technique labels, implementation lifecycle states, hosting models and development models. These values are metadata controls, not claims about the organization.
+
+`record-types.yaml` maps each structured record type to its stable ID prefix, canonical register and approved schema. Candidate records produced by extraction always require field-level provenance and human review.
+
+`maturity.yaml` controls assessment scopes, evidence types, lifecycle states and evidence requirements for maturity evaluation and improvement planning.
+
+`governance.yaml` defines the proposed AI and data governance domains, layers, lifecycle stages, capability areas, measure dimensions, artifact and body types, risk and control vocabulary, assessment values, pathway measure types and semantic relationships.
+
+`organization.yaml` defines the proposed constituencies, organizational layers and dimensions, operating-model options, value-creation practices, roles, networks, partnership and tool capabilities, assessment values, cross-domain interfaces and semantic relationships.
+
+`people-culture.yaml` controls AI change dimensions and phases, audiences, workforce-impact and readiness values, literacy levels and topics, awareness channels, champion responsibilities, progress states, reporting metrics, privacy rules and semantic relationships.
+
+`strategic-intent.yaml` controls strategy components, horizons, choices, hypotheses, scenarios, simulations, decision-intelligence properties, success factors, indicators, review triggers, evolution events and cross-domain prerequisites. Its transformation thesis is explicitly provisional user direction.
+
+`decision-environment.yaml` controls the decision lifecycle, decision classes, choice-architecture components, input and evidence types, human authority and automation boundaries, outcome signals, learning changes, assessment dimensions, semantic relationships and cross-domain mappings.
+
+`ecosystem-sourcing.yaml` controls provider and offering types, sourcing lifecycle, evaluation and due-diligence dimensions, agreement obligations, performance signals, exit triggers, semantic relationships and cross-domain mappings.

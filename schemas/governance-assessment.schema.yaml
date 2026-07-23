@@ -1,0 +1,43 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-assessment.schema.yaml
+title: Governance assessment
+description: Evidence-backed current-state, target-state, gap, progress or control-effectiveness assessment.
+type: object
+additionalProperties: false
+required: [governance_assessment_id, name, assessment_type, status, assessed_at, baseline_date, target_date, governance_target_id, governance_domain_ids, governance_layer_ids, lifecycle_stage_ids, capability_ids, risk_ids, control_ids, method, rating_scale_id, overall_rating, qualitative_summary, quantitative_summary, finding_ids, source_ids, evidence_refs, limitations, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  governance_assessment_id: {type: string, pattern: "^GAS-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  assessment_type: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  assessed_at: {type: [string, "null"], format: date-time}
+  baseline_date: {type: [string, "null"], format: date}
+  target_date: {type: [string, "null"], format: date}
+  governance_target_id: {type: [string, "null"], pattern: "^GTGT-[0-9]{6}$"}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  governance_layer_ids: {$ref: "#/$defs/ids"}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  risk_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  method: {type: string}
+  rating_scale_id: {type: [string, "null"]}
+  overall_rating: {type: [string, "null"]}
+  qualitative_summary: {type: string}
+  quantitative_summary: {type: string}
+  finding_ids: {$ref: "#/$defs/record_ids"}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  limitations: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

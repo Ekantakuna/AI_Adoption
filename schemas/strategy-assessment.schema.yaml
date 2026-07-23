@@ -1,0 +1,51 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: strategy-assessment.schema.yaml
+title: Strategy assessment
+description: Dated evaluation of outcomes, indicators, assumptions, choices and execution health.
+type: object
+additionalProperties: false
+required: [strategy_assessment_id, ai_strategy_id, strategy_execution_plan_id, name, assessment_type, status, assessed_at, reporting_period_start, reporting_period_end, strategic_objective_ids, critical_success_factor_ids, metric_observations, hypothesis_ids, scenario_ids, strategic_choice_ids, overall_signal, qualitative_summary, quantitative_summary, finding_ids, limitations, assumptions, source_ids, evidence_refs, classification, prepared_by, reviewed_by, reviewed_at]
+properties:
+  strategy_assessment_id: {type: string, pattern: "^SASMT-[0-9]{6}$"}
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  strategy_execution_plan_id: {type: [string, "null"], pattern: "^SEXEC-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  assessment_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded]}
+  assessed_at: {type: [string, "null"], format: date-time}
+  reporting_period_start: {type: [string, "null"], format: date}
+  reporting_period_end: {type: [string, "null"], format: date}
+  strategic_objective_ids: {$ref: "#/$defs/records"}
+  critical_success_factor_ids: {$ref: "#/$defs/records"}
+  metric_observations: {type: array, items: {$ref: "#/$defs/metric_observation"}}
+  hypothesis_ids: {$ref: "#/$defs/records"}
+  scenario_ids: {$ref: "#/$defs/records"}
+  strategic_choice_ids: {$ref: "#/$defs/records"}
+  overall_signal: {type: string, enum: [on_track, watch, intervene, stop_or_rethink, not_assessed]}
+  qualitative_summary: {type: string}
+  quantitative_summary: {type: string}
+  finding_ids: {$ref: "#/$defs/records"}
+  limitations: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  prepared_by: {type: string}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
+  metric_observation:
+    type: object
+    additionalProperties: false
+    required: [metric_id, observed_value, observed_at, signal, evidence_ref]
+    properties:
+      metric_id: {type: string, pattern: "^MET-[0-9]{6}$"}
+      observed_value: {type: [number, string]}
+      observed_at: {type: string, format: date-time}
+      signal: {type: string, enum: [on_track, watch, intervene, stop_or_rethink, not_assessed]}
+      evidence_ref: {type: string}

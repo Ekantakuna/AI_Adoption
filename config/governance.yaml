@@ -1,0 +1,206 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_findings: true
+
+governance_domains:
+  - ai_governance
+  - data_governance
+  - integrated_ai_data_governance
+
+governance_layers:
+  - enterprise
+  - portfolio
+  - business_domain
+  - product_and_platform
+  - use_case_and_model
+  - operational
+
+lifecycle_stages:
+  - strategy_and_planning
+  - ideation_and_intake
+  - classification_and_triage
+  - data_acquisition_and_preparation
+  - design_and_development
+  - validation_and_assurance
+  - deployment_approval
+  - deployment_and_release
+  - operation_and_monitoring
+  - change_and_revalidation
+  - incident_response
+  - retirement_and_disposal
+
+capability_domains:
+  - direction_accountability_and_oversight
+  - governance_scope_principles_and_decision_rights
+  - policy_standards_guidance_and_how_tos
+  - ai_inventory_intake_and_classification
+  - data_governance_and_data_quality
+  - model_and_ml_lifecycle_governance
+  - generative_ai_and_llm_governance
+  - agentic_ai_governance
+  - risk_compliance_and_assurance
+  - security_privacy_safety_and_resilience
+  - human_oversight_ethics_and_responsible_ai
+  - third_party_cloud_and_frontier_model_governance
+  - value_portfolio_and_use_case_governance
+  - monitoring_incident_change_and_retirement
+  - evidence_reporting_audit_and_regulatory_readiness
+  - governance_tools_workflows_and_automation
+  - governance_literacy_change_and_business_champions
+
+measure_dimensions:
+  - organization_and_accountability
+  - process_and_workflow
+  - policy_and_guidance
+  - risk_and_control
+  - data_and_information
+  - technology_and_tooling
+  - skills_literacy_and_change
+  - measurement_evidence_and_assurance
+
+target_characteristics:
+  - defined
+  - approved
+  - owned
+  - implemented
+  - integrated_into_delivery
+  - tool_enabled
+  - monitored
+  - evidenced
+  - assured
+  - continuously_improved
+
+artifact_types:
+  - policy
+  - standard
+  - procedure
+  - guideline
+  - how_to
+  - playbook
+  - control_description
+  - operating_model
+  - board_charter
+  - role_mandate
+  - decision_framework
+  - assessment_method
+  - training_material
+  - reporting_template
+
+governance_body_types:
+  - cross_functional_ai_governance_board
+  - data_governance_body
+  - risk_or_assurance_committee
+  - architecture_or_engineering_forum
+  - business_domain_governance_forum
+  - operational_review_forum
+  - accountable_role
+  - advisory_role
+
+risk_categories:
+  - strategic_and_value
+  - legal_regulatory_and_compliance
+  - ethical_and_human_rights
+  - privacy_and_data_protection
+  - data_quality_and_provenance
+  - model_performance_and_reliability
+  - security_and_adversarial_threats
+  - safety_and_resilience
+  - transparency_explainability_and_disclosure
+  - bias_fairness_and_accessibility
+  - intellectual_property_and_rights
+  - third_party_vendor_and_concentration
+  - operational_and_change
+  - workforce_and_misuse
+  - shadow_ai
+  - agentic_autonomy_and_action
+
+control_types:
+  - directive
+  - preventive
+  - detective
+  - corrective
+  - compensating
+
+control_implementation_modes:
+  - manual
+  - technology_assisted
+  - automated
+  - hybrid
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap
+  - progress
+  - control_effectiveness
+
+assessment_ratings:
+  - not_assessed
+  - absent
+  - ad_hoc
+  - defined
+  - implemented
+  - measured
+  - optimized
+  - not_applicable
+
+finding_types:
+  - strength
+  - gap
+  - risk_exposure
+  - control_weakness
+  - dependency
+  - constraint
+  - opportunity
+
+action_measure_types:
+  - organizational
+  - process
+  - policy
+  - control
+  - technical_tooling
+  - data
+  - skills_and_literacy
+  - assurance_and_reporting
+
+semantic_relationships:
+  - subject: governance_target
+    predicate: defines
+    object: target_characteristics
+  - subject: governance_target
+    predicate: composed_of
+    object: governance_capabilities
+  - subject: governance_operating_model
+    predicate: assigns
+    object: governance_roles_and_bodies
+  - subject: governance_capability
+    predicate: enabled_by
+    object: artifacts_controls_roles_tools_and_actions
+  - subject: risk
+    predicate: treated_by
+    object: controls_and_actions
+  - subject: control
+    predicate: implemented_by
+    object: roles_processes_and_tools
+  - subject: governance_assessment
+    predicate: evaluates
+    object: targets_capabilities_risks_and_controls
+  - subject: governance_finding
+    predicate: supported_by
+    object: source_and_evidence_references
+  - subject: governance_action
+    predicate: closes
+    object: approved_findings_and_target_gaps
+  - subject: governance_tool_requirement
+    predicate: supports
+    object: capabilities_controls_and_evidence
+
+evidence_rules:
+  current_state_claims_require_source_ids: true
+  target_state_recommendations_require_rationale: true
+  gaps_require_current_and_target_references: true
+  actions_require_approved_gap_or_finding: true
+  tool_selection_is_out_of_scope_until_requirements_are_approved: true
+  source_derived_records_remain_proposed_until_human_review: true

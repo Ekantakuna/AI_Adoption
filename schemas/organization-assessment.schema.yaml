@@ -1,0 +1,43 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-assessment.schema.yaml
+title: Organization assessment
+description: Evidence-backed current-state, target-state, gap or progress assessment.
+type: object
+additionalProperties: false
+required: [organization_assessment_id, name, assessment_type, status, assessed_at, baseline_date, target_date, organization_target_id, constituency_ids, organization_dimension_ids, unit_ids, role_ids, network_ids, practice_ids, method, rating_scale_id, overall_rating, qualitative_summary, quantitative_summary, finding_ids, source_ids, evidence_refs, limitations, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  organization_assessment_id: {type: string, pattern: "^OAS-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  assessment_type: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  assessed_at: {type: [string, "null"], format: date-time}
+  baseline_date: {type: [string, "null"], format: date}
+  target_date: {type: [string, "null"], format: date}
+  organization_target_id: {type: [string, "null"], pattern: "^OTGT-[0-9]{6}$"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  organization_dimension_ids: {$ref: "#/$defs/ids"}
+  unit_ids: {$ref: "#/$defs/records"}
+  role_ids: {$ref: "#/$defs/records"}
+  network_ids: {$ref: "#/$defs/records"}
+  practice_ids: {$ref: "#/$defs/records"}
+  method: {type: string}
+  rating_scale_id: {type: [string, "null"]}
+  overall_rating: {type: [string, "null"]}
+  qualitative_summary: {type: string}
+  quantitative_summary: {type: string}
+  finding_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  limitations: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

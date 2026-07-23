@@ -1,0 +1,53 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: sourcing-case.schema.yaml
+title: Sourcing case
+description: Controlled sourcing workflow initiated from approved capability or partnership needs.
+type: object
+additionalProperties: false
+required: [sourcing_case_id, name, case_type, status, selection_status, need_statement, scope, intended_outcomes, partnership_requirement_ids, strategic_choice_ids, capability_ids, related_domain_ids, owner_stakeholder_ids, approver_stakeholder_ids, evaluation_criteria_version, candidate_provider_ids, candidate_offering_ids, evaluation_ids, due_diligence_ids, selected_provider_id, selected_offering_ids, selection_decision_id, agreement_ids, solution_ids, dependency_ids, risk_ids, control_ids, metric_ids, start_date, target_decision_date, closed_at, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  sourcing_case_id: {type: string, pattern: "^SCASE-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  case_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, approved, active, on_hold, completed, cancelled, superseded]}
+  selection_status: {$ref: "#/$defs/id"}
+  need_statement: {type: string}
+  scope: {type: string}
+  intended_outcomes: {$ref: "#/$defs/text"}
+  partnership_requirement_ids: {$ref: "#/$defs/partnerships_required"}
+  strategic_choice_ids: {$ref: "#/$defs/records"}
+  capability_ids: {$ref: "#/$defs/records"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  approver_stakeholder_ids: {$ref: "#/$defs/records"}
+  evaluation_criteria_version: {type: string}
+  candidate_provider_ids: {$ref: "#/$defs/records"}
+  candidate_offering_ids: {$ref: "#/$defs/records"}
+  evaluation_ids: {$ref: "#/$defs/records"}
+  due_diligence_ids: {$ref: "#/$defs/records"}
+  selected_provider_id: {type: [string, "null"], pattern: "^EPROV-[0-9]{6}$"}
+  selected_offering_ids: {$ref: "#/$defs/records"}
+  selection_decision_id: {type: [string, "null"], pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}
+  agreement_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  start_date: {type: [string, "null"], format: date}
+  target_decision_date: {type: [string, "null"], format: date}
+  closed_at: {type: [string, "null"], format: date-time}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  partnerships_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, pattern: "^OPART-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

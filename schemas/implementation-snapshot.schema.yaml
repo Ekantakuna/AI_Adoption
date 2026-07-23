@@ -1,0 +1,103 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: implementation-snapshot.schema.yaml
+title: AI implementation snapshot
+description: Append-only, time-stamped AS-IS observation of an AI implementation.
+type: object
+additionalProperties: false
+required:
+  - snapshot_id
+  - implementation_id
+  - as_of_date
+  - lifecycle_state
+  - deployment_scale
+  - technical_solution_id
+  - data_platform_ids
+  - model_ids
+  - cloud_service_ids
+  - monitoring_status
+  - governance_status
+  - human_oversight
+  - known_constraints
+  - source_ids
+  - evidence_refs
+  - classification
+  - confidence
+properties:
+  snapshot_id:
+    type: string
+    pattern: "^SNAP-[0-9]{6}$"
+  implementation_id:
+    type: string
+    pattern: "^IMP-[0-9]{6}$"
+  as_of_date:
+    type: string
+    format: date-time
+  lifecycle_state:
+    type: string
+    enum:
+      - planned
+      - prototype
+      - pilot
+      - production
+      - scaling
+      - paused
+      - retired
+      - unknown
+  deployment_scale:
+    type: string
+  technical_solution_id:
+    type:
+      - string
+      - "null"
+    pattern: "^SOL-[0-9]{6}$"
+  data_platform_ids:
+    $ref: "#/$defs/record_ids"
+  model_ids:
+    $ref: "#/$defs/record_ids"
+  cloud_service_ids:
+    $ref: "#/$defs/record_ids"
+  monitoring_status:
+    type: string
+  governance_status:
+    type: string
+  human_oversight:
+    type: string
+  known_constraints:
+    $ref: "#/$defs/unique_text"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+$defs:
+  record_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

@@ -1,0 +1,45 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: control.schema.yaml
+title: AI and data governance control
+description: Directive, preventive, detective, corrective or compensating control.
+type: object
+additionalProperties: false
+required: [control_id, title, status, control_type, implementation_mode, objective, description, governance_domain_ids, governance_layer_ids, lifecycle_stage_ids, risk_ids, capability_ids, artifact_ids, owner_role_ids, operator_role_ids, tool_requirement_ids, solution_ids, frequency, trigger, evidence_requirements, effectiveness_status, last_tested_at, monitoring_metric_ids, exceptions, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  control_id: {type: string, pattern: "^CTRL-[0-9]{6}$"}
+  title: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, designed, implemented, operating, ineffective, retired, superseded]}
+  control_type: {$ref: "#/$defs/id"}
+  implementation_mode: {$ref: "#/$defs/id"}
+  objective: {type: string}
+  description: {type: string}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  governance_layer_ids: {$ref: "#/$defs/ids"}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  risk_ids: {$ref: "#/$defs/record_ids"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  artifact_ids: {$ref: "#/$defs/record_ids"}
+  owner_role_ids: {$ref: "#/$defs/record_ids"}
+  operator_role_ids: {$ref: "#/$defs/record_ids"}
+  tool_requirement_ids: {$ref: "#/$defs/record_ids"}
+  solution_ids: {$ref: "#/$defs/record_ids"}
+  frequency: {type: [string, "null"]}
+  trigger: {type: [string, "null"]}
+  evidence_requirements: {$ref: "#/$defs/text"}
+  effectiveness_status: {type: string, enum: [not_assessed, design_effective, design_ineffective, operating_effective, operating_ineffective]}
+  last_tested_at: {type: [string, "null"], format: date-time}
+  monitoring_metric_ids: {$ref: "#/$defs/record_ids"}
+  exceptions: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

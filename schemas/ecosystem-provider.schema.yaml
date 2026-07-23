@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ecosystem-provider.schema.yaml
+title: Ecosystem provider
+description: Repository-safe identity, capability and relationship metadata for an external provider or partner.
+type: object
+additionalProperties: false
+required: [ecosystem_provider_id, name, legal_name, provider_type_ids, status, headquarters_country, operating_jurisdictions, parent_provider_id, website_ref, capability_ids, offering_ids, relationship_owner_ids, strategic_relationship, agreement_ids, dependency_ids, risk_ids, due_diligence_ids, performance_review_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  ecosystem_provider_id: {type: string, pattern: "^EPROV-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  legal_name: {type: [string, "null"]}
+  provider_type_ids: {$ref: "#/$defs/ids"}
+  status: {type: string, enum: [candidate, evaluating, approved, active, watch, suspended, exiting, exited, rejected, superseded]}
+  headquarters_country: {type: [string, "null"]}
+  operating_jurisdictions: {$ref: "#/$defs/text"}
+  parent_provider_id: {type: [string, "null"], pattern: "^EPROV-[0-9]{6}$"}
+  website_ref: {type: [string, "null"]}
+  capability_ids: {$ref: "#/$defs/records"}
+  offering_ids: {$ref: "#/$defs/records"}
+  relationship_owner_ids: {$ref: "#/$defs/records"}
+  strategic_relationship: {type: boolean}
+  agreement_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  due_diligence_ids: {$ref: "#/$defs/records"}
+  performance_review_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -1,0 +1,108 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: term.schema.yaml
+title: Glossary term
+description: Schema for a cross-cutting glossary or vocabulary record.
+type: object
+additionalProperties: false
+required:
+  - term_id
+  - preferred_label
+  - aliases
+  - acronyms
+  - definition
+  - definition_origin
+  - status
+  - domain_ids
+  - source_ids
+  - evidence_refs
+  - classification
+  - broader_terms
+  - narrower_terms
+  - related_terms
+  - usage_guidance
+properties:
+  term_id:
+    type: string
+    pattern: ^TERM-[0-9]{6}$
+  preferred_label:
+    type: string
+    minLength: 1
+  aliases:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  acronyms:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  definition:
+    type: string
+  definition_origin:
+    type: string
+    enum:
+      - manual
+      - source_extracted
+      - industry_standard
+      - combined
+  status:
+    type: string
+    enum:
+      - candidate
+      - in_review
+      - approved
+      - deprecated
+      - superseded
+  domain_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: ^SRC-[A-Z]{2,4}-[0-9]{6}$
+  evidence_refs:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted
+  broader_terms:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: ^TERM-[0-9]{6}$
+  narrower_terms:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: ^TERM-[0-9]{6}$
+  related_terms:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: ^TERM-[0-9]{6}$
+  usage_guidance:
+    type: string
+  reviewed_by:
+    type:
+      - string
+      - "null"
+  reviewed_at:
+    type:
+      - string
+      - "null"
+    format: date-time

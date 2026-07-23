@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-authority-rule.schema.yaml
+title: Decision authority rule
+description: Human authority, delegation, override and escalation rule for a decision type.
+type: object
+additionalProperties: false
+required: [decision_authority_rule_id, decision_type_ids, name, status, materiality_levels, permitted_action_ids, authority_stakeholder_ids, authority_role_ids, automation_level, delegation_boundaries, approval_conditions, override_conditions, escalation_conditions, prohibited_actions, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_authority_rule_id: {type: string, pattern: "^DAUTH-[0-9]{6}$"}
+  decision_type_ids: {$ref: "#/$defs/records"}
+  name: {type: string, minLength: 1}
+  status: {$ref: "#/$defs/status"}
+  materiality_levels: {$ref: "#/$defs/ids"}
+  permitted_action_ids: {$ref: "#/$defs/ids"}
+  authority_stakeholder_ids: {$ref: "#/$defs/records"}
+  authority_role_ids: {$ref: "#/$defs/records"}
+  automation_level: {type: string, enum: [human_only, AI_assisted, human_approved_AI_execution, bounded_automated_with_human_oversight, fully_automated_prohibited_by_default]}
+  delegation_boundaries: {$ref: "#/$defs/text"}
+  approval_conditions: {$ref: "#/$defs/text"}
+  override_conditions: {$ref: "#/$defs/text"}
+  escalation_conditions: {$ref: "#/$defs/text"}
+  prohibited_actions: {$ref: "#/$defs/text"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, suspended, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

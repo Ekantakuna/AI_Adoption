@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: strategic-choice.schema.yaml
+title: Strategic choice
+description: Challengeable strategic choice with alternatives, criteria, trade-offs and rationale.
+type: object
+additionalProperties: false
+required: [strategic_choice_id, ai_strategy_id, name, choice_type, status, decision_question, selected_option, alternative_options, evaluation_criteria, tradeoffs, rationale, assumptions, hypothesis_ids, scenario_ids, simulation_ids, related_domain_ids, decision_owner_ids, decided_at, review_trigger_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  strategic_choice_id: {type: string, pattern: "^SCHO-[0-9]{6}$"}
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  choice_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, exploring, in_review, decided, challenged, superseded, retired]}
+  decision_question: {type: string}
+  selected_option: {type: [string, "null"]}
+  alternative_options: {type: array, minItems: 1, uniqueItems: true, items: {type: string}}
+  evaluation_criteria: {$ref: "#/$defs/text"}
+  tradeoffs: {$ref: "#/$defs/text"}
+  rationale: {type: string}
+  assumptions: {$ref: "#/$defs/text"}
+  hypothesis_ids: {$ref: "#/$defs/records"}
+  scenario_ids: {$ref: "#/$defs/records"}
+  simulation_ids: {$ref: "#/$defs/records"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  decision_owner_ids: {$ref: "#/$defs/records"}
+  decided_at: {type: [string, "null"], format: date-time}
+  review_trigger_ids: {$ref: "#/$defs/ids"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

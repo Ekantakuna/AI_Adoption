@@ -2,25 +2,171 @@ schema_version: 1
 
 domains:
   - id: strategic_intent
-    name: Strategic intent
+    name: Strategic intent and AI transformation strategy
+    description: Versioned vision, strategic choices and execution logic for Generative-AI-led business transformation and a decision-centric intelligence environment.
+    includes:
+      - AI adoption ambition, vision and transformation thesis
+      - business problems, intended outcomes and strategic objectives
+      - strategic choices, alternatives, assumptions and hypotheses
+      - scenarios, simulations and challenge mechanisms
+      - decision-intelligence target and transformation requirements
+      - Generative and predictive AI combination
+      - human override, escalation and accountability
+      - multi-agent orchestration, observability and learning loops
+      - critical success factors, outcome metrics and early indicators
+      - versioned execution plans, initiatives and dependencies
+      - progress assessment, adaptation triggers and strategy evolution
+    excludes:
+      - strategy conclusions unsupported by approved evidence
+      - counting deployed models or tools as business transformation
+      - unreviewed scenario or simulation output presented as fact
+      - approved investment or organization decisions implied by proposals
+      - operational decision types, contexts, choice architectures and decision records owned by decision_environment
+    outlook_sections:
+      - outlook/01-strategic-intent
+      - outlook/15-roadmap
 
   - id: decision_environment
-    name: Decision environment
+    name: Decision environment and decision intelligence
+    description: Reusable environment for framing decisions, applying business semantics, generating and evaluating options, preserving human authority, observing outcomes and improving future choices.
+    includes:
+      - decision portfolio, decision types and decision-problem definitions
+      - business context and formal semantic requirements
+      - choice architectures, decision policies and evaluation criteria
+      - options, evidence, predictions, forecasts and simulations
+      - human decision rights, override and escalation
+      - agent and workflow orchestration supporting decisions
+      - decision execution, observability, outcomes and feedback
+      - outcome-linked learning loops and controlled model evolution
+      - current-state, target-state, gap and decision-quality assessment
+    excludes:
+      - strategic ambition and enterprise strategic choices owned by strategic_intent
+      - source evidence or simulation output presented as an approved decision
+      - autonomous execution without approved authority and escalation controls
+      - data, platform, governance, agentic or value records duplicated from their owning domains
+    outlook_sections:
+      - outlook/02-decision-environment
+      - outlook/15-roadmap
 
   - id: current_state
     name: Current-state baseline
+    description: Evidence-backed AS-IS view of implemented or piloted AI use cases, adopted techniques, deployed solutions and shared platforms.
+    includes:
+      - implemented and piloted AI use cases
+      - adopted AI techniques
+      - deployed technical solutions
+      - data and model platforms
+      - cloud and on-premises services
+      - governance, security, monitoring and human oversight
+      - implementation maturity and operating status
+    excludes:
+      - unimplemented opportunities
+      - future-state recommendations
+      - portfolio prioritization decisions
 
-  - id: value_and_use_cases
-    name: Value and use cases
+  - id: value_management
+    name: Value management and portfolio prioritization
+    description: Definition, prioritization, tracking and governance of value across the AI initiative portfolio.
+    includes:
+      - initial use-case prioritization
+      - value hypotheses and expected outcomes
+      - portfolio scoring and prioritization
+      - value baselines, targets and metrics
+      - pilot and implemented-use-case value tracking
+      - realized-benefit monitoring
+      - AI value-monitoring systems
+      - portfolio review and reprioritization
+    excludes:
+      - use-case catalogue ownership
+      - use-case descriptions and implementation patterns
+
+  - id: use_cases
+    name: AI use cases
+    description: Possible and reusable AI application patterns, with emphasis on telecom, IT product development and product engineering.
+    includes:
+      - Traditional AI use cases
+      - Generative AI and LLM use cases
+      - Agentic AI use cases
+      - telecom applications and implications
+      - IT product-development applications
+      - product-engineering applications
+      - actors, workflows, dependencies and implementation considerations
+    excludes:
+      - evidence-backed AS-IS implementation records
+      - portfolio prioritization decisions
+      - value baselines and realized-benefit tracking
 
   - id: organization
-    name: Organization and operating model
+    name: Organization and AI value operating model
+    description: Organizational vision, structures, practices and interfaces required to create Generative AI and broader AI value at scale across ICT, Business, Legal and Compliance.
+    includes:
+      - evidence-backed current organization and drawbacks
+      - organization design principles and value-creation practices
+      - AI leadership and accountability
+      - initial AI team and center-of-excellence design
+      - federated business and ICT collaboration
+      - Legal and Compliance integration
+      - AI communities of practice, champions and cross-company coordination
+      - target AI operating model, roles and competencies
+      - partnership requirements and ecosystem interfaces
+      - work-management, collaboration and enablement tools
+      - current-state, target-state and gap assessment
+      - organizational change and implementation pathway
+    excludes:
+      - unsupported claims about the current organization
+      - approved organization-chart changes without owner review
+      - named appointments, partner selections or tool selections
+      - workforce plans owned by people_and_culture
+    outlook_sections:
+      - outlook/06-organization
+      - outlook/15-roadmap
 
   - id: people_and_culture
     name: People and culture
+    description: Workforce impact, change management, awareness, literacy, champion enablement and employee readiness required for responsible AI scaling and adoption.
+    includes:
+      - AI workforce planning
+      - role, job, task and competency impact assessment
+      - change-management strategy, scope, plan and timeline
+      - sponsorship, stakeholder engagement and responsibilities
+      - AI awareness campaigns and communications
+      - role-based AI literacy programs and learning pathways
+      - business-function AI champions and literacy enablement
+      - employee readiness, confidence, trust and adoption monitoring
+      - resistance, feedback, support and reinforcement
+      - progress, participation, learning and adoption reporting
+    excludes:
+      - general AI terminology
+      - cross-domain industry definitions
+      - glossary and vocabulary ownership
+      - named employee conclusions without approved evidence
+      - approved workforce decisions or role changes without owner review
+      - organization-structure and operating-model ownership
+    outlook_sections:
+      - outlook/07-people-and-culture
+      - outlook/15-roadmap
 
   - id: governance
-    name: Governance and responsible AI
+    name: AI and data governance
+    description: Definition and implementation of an integrated AI and data governance approach, target state, operating model and improvement pathway.
+    includes:
+      - governance scope, principles and decision rights
+      - AI and data policies, standards, procedures, guidance and how-tos
+      - governance operating model, roles and cross-functional oversight bodies
+      - AI risk identification, treatment and lifecycle controls
+      - data, model, Generative AI, LLM and Agentic AI governance
+      - technical governance tooling and automation requirements
+      - governance literacy, communications and change enablement
+      - monitoring, evidence, assurance, audit and regulatory readiness
+      - current-state, target-state and gap assessment
+      - organizational and technical implementation roadmap
+    excludes:
+      - unsupported statements about current governance maturity
+      - unapproved policies, target-state conclusions or tool selections
+      - source-derived findings without evidence references
+    outlook_sections:
+      - outlook/08-governance
+      - outlook/15-roadmap
 
   - id: data
     name: Data readiness
@@ -36,9 +182,61 @@ domains:
 
   - id: ecosystem_sourcing
     name: Ecosystem and sourcing
+    description: External capability, provider, offering and agreement lifecycle supporting AI adoption from partnership need through performance, renewal and exit.
+    includes:
+      - make, buy and partner sourcing execution
+      - provider and offering discovery
+      - AI platform, cloud, frontier-model, data, advisory and delivery ecosystems
+      - structured evaluation and selection support
+      - legal, compliance, security, privacy, financial and operational due diligence
+      - commercial, licensing, intellectual-property and service agreements
+      - onboarding and technical or organizational integration
+      - provider performance, value, service-level and risk monitoring
+      - concentration, lock-in, portability and continuity management
+      - renewal, replacement, transition and exit planning
+    excludes:
+      - partnership needs owned by organization design
+      - strategic build, buy or partner choices owned by strategic intent
+      - unsupported provider recommendations or product selections
+      - security, governance or legal approvals implied by a sourcing evaluation
+    outlook_sections:
+      - outlook/13-ecosystem-sourcing
+      - outlook/15-roadmap
 
   - id: maturity_execution
     name: Maturity and execution
+    description: Framework-based evaluation, monitoring and improvement of overall AI adoption, with particular focus on Generative AI adoption and scaling.
+    includes:
+      - maturity frameworks and models
+      - model characteristics, dimensions, levels and criteria
+      - baseline, progress and target assessments
+      - qualitative and quantitative assessment arguments
+      - evidence-backed maturity judgements
+      - progress monitoring across use-case adoption and business-process transformation
+      - progress towards AI vision and strategic intent
+      - maturity reports and improvement pathways
+    excludes:
+      - unsupported maturity-level conclusions
+      - actions without a linked maturity gap or finding
     outlook_sections:
       - outlook/14-maturity
       - outlook/15-roadmap
+
+knowledge_layers:
+  - id: glossary_vocabulary
+    name: Glossary and vocabulary
+    description: Cross-cutting approved terms, definitions, aliases and semantic relationships used throughout the AI Adoption Outlook.
+    canonical_register: registers/terms.yaml
+    record_schema: schemas/term.schema.yaml
+    record_id_prefix: TERM
+    definition_origins:
+      - manual
+      - source_extracted
+      - industry_standard
+      - combined
+    status_values:
+      - candidate
+      - in_review
+      - approved
+      - deprecated
+      - superseded

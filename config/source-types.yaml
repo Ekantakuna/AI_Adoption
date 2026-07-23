@@ -7,16 +7,100 @@ source_root:
 
 processing_states:
   - discovered
-  - metadata_recorded
+  - metadata_catalogued
   - classification_pending
-  - route_pending
+  - approved_for_processing
   - approved_local
   - approved_external
   - extraction_in_progress
   - extracted
   - reviewed
-  - blocked
-  - retired
+  - rejected
+  - superseded
+  - unreadable
+
+processing_routes:
+  - pending
+  - local
+  - external
+  - prohibited
+
+content_access_states:
+  - approved_local
+  - approved_external
+  - extraction_in_progress
+  - extracted
+  - reviewed
+
+state_transitions:
+  discovered:
+    - metadata_catalogued
+    - rejected
+    - unreadable
+  metadata_catalogued:
+    - classification_pending
+    - rejected
+    - superseded
+    - unreadable
+  classification_pending:
+    - approved_for_processing
+    - rejected
+    - unreadable
+  approved_for_processing:
+    - approved_local
+    - approved_external
+    - rejected
+    - superseded
+  approved_local:
+    - extraction_in_progress
+    - rejected
+    - superseded
+  approved_external:
+    - extraction_in_progress
+    - rejected
+    - superseded
+  extraction_in_progress:
+    - extracted
+    - rejected
+    - unreadable
+  extracted:
+    - reviewed
+    - rejected
+    - superseded
+  reviewed:
+    - superseded
+  rejected: []
+  superseded: []
+  unreadable:
+    - superseded
+
+processing_approval_rules:
+  approved_for_processing:
+    content_access: false
+    requires:
+      - final_classification
+      - compatible_approved_tool
+  approved_local:
+    content_access: true
+    route: local
+    requires:
+      - final_classification
+      - approved_processing_route
+      - approved_local_tool
+      - approver
+      - approval_date
+  approved_external:
+    content_access: true
+    route: external
+    not_implied_by_public_classification: true
+    requires:
+      - final_classification
+      - approved_processing_route
+      - approved_external_service
+      - approved_account
+      - approved_purpose
+      - approver
+      - approval_date
 
 classification_states:
   - pending
@@ -120,20 +204,164 @@ ignored_files:
   - "~$*"
   - "*.swp"
   - "*.bak"
+  - "*.part"
+  - "*.crdownload"
 
 source_id_prefixes:
-  strategic_intent: SRC-SI
-  decision_environment: SRC-DE
-  current_state: SRC-CS
-  value_and_use_cases: SRC-VUC
+  glossary: SRC-GLO
+  scope: SRC-SCO
+  decision_environment: SRC-DEC
+  vision: SRC-VIS
   organization: SRC-ORG
-  people_and_culture: SRC-PC
+  agentic_ai: SRC-AGT
   governance: SRC-GOV
+  maturity: SRC-MAT
+  maturity_framework: SRC-MFW
+  maturity_model: SRC-MOD
+  maturity_assessment: SRC-MAS
+  maturity_evidence: SRC-MEV
+  maturity_action_plan: SRC-MAP
   data: SRC-DATA
   engineering_platform: SRC-ENG
-  security_trust: SRC-ST
-  agentic_ai: SRC-AAI
-  ecosystem_sourcing: SRC-ES
-  maturity_execution: SRC-ME
+  ecosystem_sourcing: SRC-ECO
+  security: SRC-SEC
+  risk_trust: SRC-RSK
+  value_management: SRC-VAL
+  use_cases: SRC-UC
+  telecom: SRC-TEL
+  prompt_context: SRC-PRM
+  implementation: SRC-IMP
+  platform: SRC-PLT
+  project_summary: SRC-PRJ
+  miscellaneous: SRC-MIS
 
-source_id_format: "<domain-prefix>-<six-digit-sequence>"
+source_id_policy:
+  format: "<source-category-prefix>-<six-digit-sequence>"
+  sequence_scope: per_prefix
+  sequence_start: 1
+  sequence_allocation: next_unused_monotonic
+  reuse: prohibited
+  immutable_after_assignment: true
+  primary_category_required: true
+  multiple_prefixes_per_source: prohibited
+  unmatched_source_action: category_review_required
+  matching_rule: longest_matching_current_relative_path
+  taxonomy_relationship:
+    source_category_is_taxonomy_domain: false
+    additional_domains_field: domain_ids
+    prefix_changes_when_domains_change: false
+
+source_prefix_path_rules:
+  - current_relative_path: glossary_vocabulary
+    source_category: glossary
+  - current_relative_path: people_and_culture/overview.mmd
+    source_category: scope
+  - current_relative_path: strategic_intent/general_presentation_draft
+    source_category: scope
+  - current_relative_path: strategic_intent/strategy.mmd
+    source_category: scope
+  - current_relative_path: decision_environment
+    source_category: decision_environment
+  - current_relative_path: strategic_intent/vision
+    source_category: vision
+  - current_relative_path: strategic_intent/vision.mmd
+    source_category: vision
+  - current_relative_path: organization
+    source_category: organization
+  - current_relative_path: agentic_ai
+    source_category: agentic_ai
+  - current_relative_path: governance
+    source_category: governance
+  - current_relative_path: maturity_execution/framework
+    source_category: maturity_framework
+  - current_relative_path: maturity_execution/models
+    source_category: maturity_model
+  - current_relative_path: maturity_execution/assessment_inputs
+    source_category: maturity_evidence
+  - current_relative_path: maturity_execution/assessment_reports
+    source_category: maturity_assessment
+  - current_relative_path: maturity_execution/action_plans
+    source_category: maturity_action_plan
+  - current_relative_path: maturity_execution
+    source_category: maturity
+  - current_relative_path: data
+    source_category: data
+  - current_relative_path: engineering_platform/prompt_and_context_engineering
+    source_category: prompt_context
+  - current_relative_path: engineering_platform
+    source_category: engineering_platform
+  - current_relative_path: ecosystem_sourcing
+    source_category: ecosystem_sourcing
+  - current_relative_path: security_trust/risks_trust_security_management
+    source_category: risk_trust
+  - current_relative_path: security_trust/security
+    source_category: security
+  - current_relative_path: value_management
+    source_category: value_management
+  - current_relative_path: use_cases/telecom
+    source_category: telecom
+  - current_relative_path: use_cases
+    source_category: use_cases
+  - current_relative_path: current_state/implemented_use_cases
+    source_category: implementation
+  - current_relative_path: current_state/shared_platforms
+    source_category: platform
+  - current_relative_path: current_state/project_summaries
+    source_category: project_summary
+  - current_relative_path: current_state/unclassified_research
+    source_category: miscellaneous
+
+source_category_taxonomy_defaults:
+  glossary: []
+  scope: []
+  decision_environment:
+    - decision_environment
+  vision:
+    - strategic_intent
+  organization:
+    - organization
+  agentic_ai:
+    - agentic_ai
+  governance:
+    - governance
+  maturity:
+    - maturity_execution
+  maturity_framework:
+    - maturity_execution
+  maturity_model:
+    - maturity_execution
+  maturity_assessment:
+    - maturity_execution
+  maturity_evidence:
+    - maturity_execution
+  maturity_action_plan:
+    - maturity_execution
+  data:
+    - data
+  engineering_platform:
+    - engineering_platform
+  ecosystem_sourcing:
+    - ecosystem_sourcing
+  security:
+    - security_trust
+  risk_trust:
+    - security_trust
+  value_management:
+    - value_management
+  use_cases:
+    - use_cases
+  telecom:
+    - use_cases
+  prompt_context:
+    - engineering_platform
+  implementation:
+    - current_state
+  platform:
+    - current_state
+  project_summary:
+    - current_state
+  miscellaneous: []
+
+source_category_knowledge_layer_defaults:
+  glossary:
+    - glossary_vocabulary

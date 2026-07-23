@@ -1,0 +1,47 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-intelligence-target.schema.yaml
+title: Decision-centric intelligence target
+description: Target intelligent choice architecture combining generative and predictive AI with human decision control and learning loops.
+type: object
+additionalProperties: false
+required: [decision_intelligence_target_id, ai_strategy_id, name, version, status, purpose, scope, decision_classes, target_property_ids, system_layer_ids, business_semantic_requirements, option_generation_requirements, predictive_and_simulation_requirements, human_override_and_escalation_requirements, multi_agent_orchestration_requirements, observability_requirements, outcome_learning_requirements, governance_security_and_assurance_requirements, capability_ids, solution_ids, metric_ids, assumptions, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_intelligence_target_id: {type: string, pattern: "^DIT-[0-9]{6}$"}
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  purpose: {type: string}
+  scope: {type: string}
+  decision_classes: {$ref: "#/$defs/text"}
+  target_property_ids: {$ref: "#/$defs/required_properties"}
+  system_layer_ids: {$ref: "#/$defs/ids"}
+  business_semantic_requirements: {$ref: "#/$defs/text"}
+  option_generation_requirements: {$ref: "#/$defs/text"}
+  predictive_and_simulation_requirements: {$ref: "#/$defs/text"}
+  human_override_and_escalation_requirements: {$ref: "#/$defs/text"}
+  multi_agent_orchestration_requirements: {$ref: "#/$defs/text"}
+  observability_requirements: {$ref: "#/$defs/text"}
+  outcome_learning_requirements: {$ref: "#/$defs/text"}
+  governance_security_and_assurance_requirements: {$ref: "#/$defs/text"}
+  capability_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  assumptions: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  required_properties:
+    type: array
+    minItems: 5
+    uniqueItems: true
+    contains: {const: formalized_business_semantics}
+    items: {type: string, enum: [formalized_business_semantics, transparent_human_override_and_escalation, multi_agent_orchestration, continuous_observability, outcome_linked_learning_loops]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

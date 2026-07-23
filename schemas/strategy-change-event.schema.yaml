@@ -1,0 +1,33 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: strategy-change-event.schema.yaml
+title: Strategy change event
+description: Immutable history of strategy or execution-plan evolution and rationale.
+type: object
+additionalProperties: false
+required: [strategy_change_event_id, changed_at, change_type, status, from_strategy_id, to_strategy_id, from_execution_plan_id, to_execution_plan_id, changed_record_ids, trigger_type, triggering_finding_ids, decision_ids, change_summary, rationale, expected_effect, approved_by, source_ids, evidence_refs, classification]
+properties:
+  strategy_change_event_id: {type: string, pattern: "^SEVT-[0-9]{6}$"}
+  changed_at: {type: string, format: date-time}
+  change_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, approved, applied, rejected]}
+  from_strategy_id: {type: [string, "null"], pattern: "^AISTRAT-[0-9]{6}$"}
+  to_strategy_id: {type: [string, "null"], pattern: "^AISTRAT-[0-9]{6}$"}
+  from_execution_plan_id: {type: [string, "null"], pattern: "^SEXEC-[0-9]{6}$"}
+  to_execution_plan_id: {type: [string, "null"], pattern: "^SEXEC-[0-9]{6}$"}
+  changed_record_ids: {$ref: "#/$defs/records"}
+  trigger_type: {$ref: "#/$defs/id"}
+  triggering_finding_ids: {$ref: "#/$defs/records"}
+  decision_ids: {$ref: "#/$defs/records"}
+  change_summary: {type: string}
+  rationale: {type: string, minLength: 1}
+  expected_effect: {type: string}
+  approved_by: {type: [string, "null"]}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

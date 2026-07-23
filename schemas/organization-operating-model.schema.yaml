@@ -1,0 +1,44 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-operating-model.schema.yaml
+title: Organization operating model
+description: Current, transitional or target structure, accountability, value flow and interfaces.
+type: object
+additionalProperties: false
+required: [organization_operating_model_id, name, version, state_type, status, archetype_id, constituency_ids, organization_layer_ids, capability_ids, unit_ids, role_ids, network_ids, practice_ids, decision_rights, funding_and_portfolio_model, work_flow, capacity_model, governance_interfaces, cross_domain_interfaces, partnership_requirement_ids, tool_requirement_ids, metric_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  organization_operating_model_id: {type: string, pattern: "^OOM-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string, minLength: 1}
+  state_type: {type: string, enum: [current, transitional, target]}
+  status: {$ref: "#/$defs/status"}
+  archetype_id: {$ref: "#/$defs/id"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  organization_layer_ids: {$ref: "#/$defs/ids"}
+  capability_ids: {$ref: "#/$defs/records"}
+  unit_ids: {$ref: "#/$defs/records"}
+  role_ids: {$ref: "#/$defs/records"}
+  network_ids: {$ref: "#/$defs/records"}
+  practice_ids: {$ref: "#/$defs/records"}
+  decision_rights: {$ref: "#/$defs/text"}
+  funding_and_portfolio_model: {type: string}
+  work_flow: {$ref: "#/$defs/ids"}
+  capacity_model: {type: string}
+  governance_interfaces: {$ref: "#/$defs/text"}
+  cross_domain_interfaces: {$ref: "#/$defs/ids"}
+  partnership_requirement_ids: {$ref: "#/$defs/records"}
+  tool_requirement_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

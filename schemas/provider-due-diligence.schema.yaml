@@ -1,0 +1,51 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: provider-due-diligence.schema.yaml
+title: Provider due diligence
+description: Multi-domain provider and offering review that does not itself grant legal, security or compliance approval.
+type: object
+additionalProperties: false
+required: [provider_due_diligence_id, sourcing_case_id, provider_id, offering_ids, status, started_at, completed_at, review_domains, overall_outcome, condition_statements, remediation_action_ids, risk_ids, control_ids, dependency_ids, owner_stakeholder_ids, approver_stakeholder_ids, next_review_date, limitations, source_ids, evidence_refs, field_evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  provider_due_diligence_id: {type: string, pattern: "^PDD-[0-9]{6}$"}
+  sourcing_case_id: {type: string, pattern: "^SCASE-[0-9]{6}$"}
+  provider_id: {type: string, pattern: "^EPROV-[0-9]{6}$"}
+  offering_ids: {$ref: "#/$defs/records"}
+  status: {type: string, enum: [not_started, in_progress, in_review, completed, rejected, expired, superseded]}
+  started_at: {type: [string, "null"], format: date-time}
+  completed_at: {type: [string, "null"], format: date-time}
+  review_domains: {type: array, items: {$ref: "#/$defs/domain_review"}}
+  overall_outcome: {type: string, enum: [not_started, in_progress, satisfactory, satisfactory_with_conditions, remediation_required, rejected, expired_or_reassessment_required]}
+  condition_statements: {$ref: "#/$defs/text"}
+  remediation_action_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  approver_stakeholder_ids: {$ref: "#/$defs/records"}
+  next_review_date: {type: [string, "null"], format: date}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources_required"}
+  evidence_refs: {$ref: "#/$defs/text_required"}
+  field_evidence_refs: {$ref: "#/$defs/text_required"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  text_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, minLength: 1}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
+  domain_review:
+    type: object
+    additionalProperties: false
+    required: [domain_id, outcome, reviewer_stakeholder_ids, finding_summary, condition_statements, risk_ids, control_ids, evidence_refs]
+    properties:
+      domain_id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+      outcome: {type: string, enum: [not_started, in_progress, satisfactory, satisfactory_with_conditions, remediation_required, rejected, expired_or_reassessment_required]}
+      reviewer_stakeholder_ids: {$ref: "#/$defs/records"}
+      finding_summary: {type: string}
+      condition_statements: {$ref: "#/$defs/text"}
+      risk_ids: {$ref: "#/$defs/records"}
+      control_ids: {$ref: "#/$defs/records"}
+      evidence_refs: {$ref: "#/$defs/text_required"}

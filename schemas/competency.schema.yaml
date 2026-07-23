@@ -1,0 +1,31 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: competency.schema.yaml
+title: AI adoption competency
+description: Reusable knowledge, skill or behavioral competency linked to organizational roles.
+type: object
+additionalProperties: false
+required: [competency_id, name, competency_category_id, competency_type, status, description, proficiency_levels, applicable_role_ids, related_domain_ids, learning_asset_refs, assessment_method, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  competency_id: {type: string, pattern: "^COMP-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  competency_category_id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  competency_type: {type: string, enum: [knowledge, skill, behavior, experience, certification]}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  description: {type: string}
+  proficiency_levels: {type: array, uniqueItems: true, items: {type: string}}
+  applicable_role_ids: {$ref: "#/$defs/records"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  learning_asset_refs: {$ref: "#/$defs/text"}
+  assessment_method: {type: string}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

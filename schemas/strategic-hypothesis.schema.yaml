@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: strategic-hypothesis.schema.yaml
+title: Strategic hypothesis
+description: Testable causal hypothesis supporting or challenging strategy.
+type: object
+additionalProperties: false
+required: [strategic_hypothesis_id, ai_strategy_id, name, status, hypothesis_statement, cause_or_intervention, expected_effect, affected_outcome_ids, assumptions, test_method, falsification_criteria, leading_indicator_ids, outcome_metric_ids, test_start_date, review_date, result_summary, confidence, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  strategic_hypothesis_id: {type: string, pattern: "^SHYP-[0-9]{6}$"}
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, testing, supported, weakened, rejected, superseded]}
+  hypothesis_statement: {type: string, minLength: 1}
+  cause_or_intervention: {type: string}
+  expected_effect: {type: string}
+  affected_outcome_ids: {$ref: "#/$defs/records"}
+  assumptions: {$ref: "#/$defs/text"}
+  test_method: {type: string}
+  falsification_criteria: {$ref: "#/$defs/text_required"}
+  leading_indicator_ids: {$ref: "#/$defs/records"}
+  outcome_metric_ids: {$ref: "#/$defs/records"}
+  test_start_date: {type: [string, "null"], format: date}
+  review_date: {type: [string, "null"], format: date}
+  result_summary: {type: string}
+  confidence: {type: string, enum: [low, medium, high]}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  text_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, minLength: 1}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

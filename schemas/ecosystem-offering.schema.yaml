@@ -1,0 +1,40 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ecosystem-offering.schema.yaml
+title: Ecosystem offering
+description: Provider model, service, platform, data, advisory or delivery offering.
+type: object
+additionalProperties: false
+required: [ecosystem_offering_id, ecosystem_provider_id, name, offering_type, version_or_tier, status, description, capability_ids, solution_ids, hosting_and_delivery_model, supported_jurisdictions, data_use_and_retention_summary, model_or_service_dependencies, integration_requirements, commercial_model_summary, agreement_ids, dependency_ids, risk_ids, control_ids, metric_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  ecosystem_offering_id: {type: string, pattern: "^EOFF-[0-9]{6}$"}
+  ecosystem_provider_id: {type: string, pattern: "^EPROV-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  offering_type: {$ref: "#/$defs/id"}
+  version_or_tier: {type: [string, "null"]}
+  status: {type: string, enum: [candidate, evaluating, approved, active, deprecated, retired, rejected, superseded]}
+  description: {type: string}
+  capability_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  hosting_and_delivery_model: {type: string}
+  supported_jurisdictions: {$ref: "#/$defs/text"}
+  data_use_and_retention_summary: {type: string}
+  model_or_service_dependencies: {$ref: "#/$defs/text"}
+  integration_requirements: {$ref: "#/$defs/text"}
+  commercial_model_summary: {type: string}
+  agreement_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

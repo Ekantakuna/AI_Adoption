@@ -1,0 +1,43 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: employee-readiness-assessment.schema.yaml
+title: Employee AI readiness assessment
+description: Privacy-safe dated assessment of awareness, confidence, skills, trust, support and adoption.
+type: object
+additionalProperties: false
+required: [employee_readiness_assessment_id, name, version, status, assessment_date, scope, audience_ids, organization_unit_ids, readiness_dimension_ids, method, collection_method, data_period_start, data_period_end, invited_population_count, response_count, minimum_reporting_population, personal_data_included, demographic_breakdown_status, finding_ids, qualitative_summary, quantitative_summary, limitations, assumptions, source_ids, evidence_refs, classification, privacy_review_status, reviewed_by, reviewed_at]
+properties:
+  employee_readiness_assessment_id: {type: string, pattern: "^ERA-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded]}
+  assessment_date: {type: [string, "null"], format: date}
+  scope: {type: string}
+  audience_ids: {$ref: "#/$defs/ids"}
+  organization_unit_ids: {$ref: "#/$defs/records"}
+  readiness_dimension_ids: {$ref: "#/$defs/ids"}
+  method: {type: string}
+  collection_method: {type: string}
+  data_period_start: {type: [string, "null"], format: date}
+  data_period_end: {type: [string, "null"], format: date}
+  invited_population_count: {type: [integer, "null"], minimum: 0}
+  response_count: {type: [integer, "null"], minimum: 0}
+  minimum_reporting_population: {type: integer, minimum: 1}
+  personal_data_included: {const: false}
+  demographic_breakdown_status: {type: string, enum: [not_requested, pending_privacy_review, approved, prohibited]}
+  finding_ids: {$ref: "#/$defs/records"}
+  qualitative_summary: {type: string}
+  quantitative_summary: {type: string}
+  limitations: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  privacy_review_status: {type: string, enum: [not_required, pending, approved, rejected]}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

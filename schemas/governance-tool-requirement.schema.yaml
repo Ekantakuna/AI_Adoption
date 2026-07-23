@@ -1,0 +1,37 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-tool-requirement.schema.yaml
+title: Governance tool requirement
+description: Vendor-neutral requirement for governance software, workflow or automation.
+type: object
+additionalProperties: false
+required: [governance_tool_requirement_id, name, requirement_type, status, description, rationale, governance_domain_ids, lifecycle_stage_ids, capability_ids, control_ids, functional_requirements, non_functional_requirements, integration_requirements, data_requirements, evidence_and_audit_requirements, security_and_access_requirements, solution_ids, selection_status, source_ids, evidence_refs, assumptions, classification]
+properties:
+  governance_tool_requirement_id: {type: string, pattern: "^GTOOL-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  requirement_type: {type: string, enum: [functional, non_functional, integration, data, security, evidence_and_audit, workflow_and_automation]}
+  status: {$ref: "#/$defs/status"}
+  description: {type: string}
+  rationale: {type: string}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  functional_requirements: {$ref: "#/$defs/text"}
+  non_functional_requirements: {$ref: "#/$defs/text"}
+  integration_requirements: {$ref: "#/$defs/text"}
+  data_requirements: {$ref: "#/$defs/text"}
+  evidence_and_audit_requirements: {$ref: "#/$defs/text"}
+  security_and_access_requirements: {$ref: "#/$defs/text"}
+  solution_ids: {$ref: "#/$defs/record_ids"}
+  selection_status: {type: string, enum: [requirements_only, market_scan, evaluation, selected, implemented, retired]}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

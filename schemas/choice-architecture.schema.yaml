@@ -1,0 +1,40 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: choice-architecture.schema.yaml
+title: Choice architecture
+description: Controlled design for framing, evaluating, authorizing and observing a class of decisions.
+type: object
+additionalProperties: false
+required: [choice_architecture_id, decision_type_ids, decision_intelligence_target_id, name, version, status, purpose, lifecycle_stage_ids, problem_framing_rules, semantic_requirements, option_generation_rules, evaluation_criteria, evidence_requirements, prediction_forecast_and_simulation_rules, authority_rule_ids, orchestration_solution_ids, observability_metric_ids, risk_ids, control_ids, dependency_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  choice_architecture_id: {type: string, pattern: "^CARCH-[0-9]{6}$"}
+  decision_type_ids: {$ref: "#/$defs/records"}
+  decision_intelligence_target_id: {type: [string, "null"], pattern: "^DIT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  problem_framing_rules: {$ref: "#/$defs/text"}
+  semantic_requirements: {$ref: "#/$defs/text"}
+  option_generation_rules: {$ref: "#/$defs/text"}
+  evaluation_criteria: {$ref: "#/$defs/text"}
+  evidence_requirements: {$ref: "#/$defs/text"}
+  prediction_forecast_and_simulation_rules: {$ref: "#/$defs/text"}
+  authority_rule_ids: {$ref: "#/$defs/records"}
+  orchestration_solution_ids: {$ref: "#/$defs/records"}
+  observability_metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

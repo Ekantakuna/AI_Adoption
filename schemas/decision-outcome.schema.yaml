@@ -1,0 +1,32 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-outcome.schema.yaml
+title: Decision outcome
+description: Time-stamped observation of intended, actual and unintended results of a decision.
+type: object
+additionalProperties: false
+required: [decision_outcome_id, decision_id, observed_at, status, observation_period, expected_outcomes, actual_outcomes, outcome_signal, metric_ids, metric_observations, value_record_ids, unintended_consequences, risk_ids, control_event_refs, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_outcome_id: {type: string, pattern: "^DOUT-[0-9]{6}$"}
+  decision_id: {type: string, pattern: "^DEC-[0-9]{6}$"}
+  observed_at: {type: string, format: date-time}
+  status: {type: string, enum: [observation_pending, partially_observed, observed, inconclusive, superseded]}
+  observation_period: {type: string}
+  expected_outcomes: {$ref: "#/$defs/text"}
+  actual_outcomes: {$ref: "#/$defs/text"}
+  outcome_signal: {type: string, enum: [better_than_expected, on_target, below_target, guardrail_breached, unintended_consequence, not_assessed]}
+  metric_ids: {$ref: "#/$defs/records"}
+  metric_observations: {$ref: "#/$defs/text"}
+  value_record_ids: {$ref: "#/$defs/records"}
+  unintended_consequences: {$ref: "#/$defs/text"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_event_refs: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

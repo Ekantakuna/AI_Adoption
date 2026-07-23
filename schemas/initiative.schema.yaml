@@ -1,0 +1,124 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: initiative.schema.yaml
+title: AI initiative or project summary
+description: Project-level summary linked to use-case patterns and actual implementations.
+type: object
+additionalProperties: false
+required:
+  - initiative_id
+  - name
+  - summary
+  - business_domain_ids
+  - use_case_ids
+  - implementation_ids
+  - lifecycle_state
+  - start_date
+  - end_date
+  - owner_stakeholder_ids
+  - milestone_ids
+  - dependency_ids
+  - source_ids
+  - evidence_refs
+  - classification
+  - confidence
+  - status
+properties:
+  initiative_id:
+    type: string
+    pattern: "^INIT-[0-9]{6}$"
+  name:
+    type: string
+    minLength: 1
+  summary:
+    type: string
+  business_domain_ids:
+    $ref: "#/$defs/unique_ids"
+  use_case_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^UC-[0-9]{6}$"
+  implementation_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^IMP-[0-9]{6}$"
+  lifecycle_state:
+    type: string
+    enum:
+      - planned
+      - active
+      - paused
+      - completed
+      - cancelled
+      - unknown
+  start_date:
+    type:
+      - string
+      - "null"
+    format: date
+  end_date:
+    type:
+      - string
+      - "null"
+    format: date
+  owner_stakeholder_ids:
+    $ref: "#/$defs/record_ids"
+  milestone_ids:
+    $ref: "#/$defs/record_ids"
+  dependency_ids:
+    $ref: "#/$defs/record_ids"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+  status:
+    type: string
+    enum:
+      - proposed
+      - draft
+      - in_review
+      - approved
+      - superseded
+      - retired
+$defs:
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  record_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

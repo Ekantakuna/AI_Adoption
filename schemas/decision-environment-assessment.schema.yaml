@@ -1,0 +1,41 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-environment-assessment.schema.yaml
+title: Decision environment assessment
+description: Evidence-backed assessment of decision capability, quality, controls and learning effectiveness.
+type: object
+additionalProperties: false
+required: [decision_environment_assessment_id, decision_intelligence_target_id, name, assessment_type, status, scope, assessment_date, comparison_date, decision_type_ids, dimension_ids, method, qualitative_arguments, quantitative_arguments, finding_refs, strength_ids, gap_ids, action_ids, metric_ids, risk_ids, control_ids, limitations, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_environment_assessment_id: {type: string, pattern: "^DEAS-[0-9]{6}$"}
+  decision_intelligence_target_id: {type: [string, "null"], pattern: "^DIT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  assessment_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, planned, in_progress, in_review, approved, superseded]}
+  scope: {type: string}
+  assessment_date: {type: string, format: date}
+  comparison_date: {type: [string, "null"], format: date}
+  decision_type_ids: {$ref: "#/$defs/records"}
+  dimension_ids: {$ref: "#/$defs/ids"}
+  method: {type: string}
+  qualitative_arguments: {$ref: "#/$defs/text"}
+  quantitative_arguments: {$ref: "#/$defs/text"}
+  finding_refs: {$ref: "#/$defs/text"}
+  strength_ids: {$ref: "#/$defs/records"}
+  gap_ids: {$ref: "#/$defs/records"}
+  action_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

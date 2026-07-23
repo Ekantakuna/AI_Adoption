@@ -1,0 +1,46 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: ai-literacy-program.schema.yaml
+title: AI literacy program
+description: Role-based AI literacy program with outcomes, pathways, delivery and evaluation.
+type: object
+additionalProperties: false
+required: [ai_literacy_program_id, ai_change_plan_id, name, version, status, purpose, literacy_level_ids, literacy_topic_ids, audience_ids, applicable_role_ids, competency_ids, prerequisite_competency_ids, learning_outcomes, curriculum_outline, delivery_methods, practice_and_support_model, champion_network_ids, owner_stakeholder_ids, facilitator_role_ids, enrollment_start_date, delivery_start_date, delivery_end_date, completion_requirements, assessment_method, metric_ids, learning_asset_refs, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  ai_literacy_program_id: {type: string, pattern: "^LIT-[0-9]{6}$"}
+  ai_change_plan_id: {type: string, pattern: "^CHGPLAN-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, enrollment_open, active, completed, superseded, retired]}
+  purpose: {type: string}
+  literacy_level_ids: {$ref: "#/$defs/ids"}
+  literacy_topic_ids: {$ref: "#/$defs/ids"}
+  audience_ids: {$ref: "#/$defs/ids"}
+  applicable_role_ids: {$ref: "#/$defs/records"}
+  competency_ids: {$ref: "#/$defs/records"}
+  prerequisite_competency_ids: {$ref: "#/$defs/records"}
+  learning_outcomes: {$ref: "#/$defs/text"}
+  curriculum_outline: {$ref: "#/$defs/text"}
+  delivery_methods: {$ref: "#/$defs/text"}
+  practice_and_support_model: {$ref: "#/$defs/text"}
+  champion_network_ids: {$ref: "#/$defs/records"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  facilitator_role_ids: {$ref: "#/$defs/records"}
+  enrollment_start_date: {type: [string, "null"], format: date}
+  delivery_start_date: {type: [string, "null"], format: date}
+  delivery_end_date: {type: [string, "null"], format: date}
+  completion_requirements: {$ref: "#/$defs/text"}
+  assessment_method: {type: string}
+  metric_ids: {$ref: "#/$defs/records"}
+  learning_asset_refs: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

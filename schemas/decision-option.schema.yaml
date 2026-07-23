@@ -1,0 +1,30 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-option.schema.yaml
+title: Decision option
+description: Candidate action or alternative evaluated within an actual decision.
+type: object
+additionalProperties: false
+required: [decision_option_id, decision_id, name, status, description, expected_outcomes, evaluation_summary, assumptions, uncertainties, risk_ids, dependency_ids, solution_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_option_id: {type: string, pattern: "^DOPT-[0-9]{6}$"}
+  decision_id: {type: string, pattern: "^DEC-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, screened, shortlisted, selected, not_selected, withdrawn, superseded]}
+  description: {type: string}
+  expected_outcomes: {$ref: "#/$defs/text"}
+  evaluation_summary: {type: string}
+  assumptions: {$ref: "#/$defs/text"}
+  uncertainties: {$ref: "#/$defs/text"}
+  risk_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

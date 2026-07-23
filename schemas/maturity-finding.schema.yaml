@@ -1,0 +1,117 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: maturity-finding.schema.yaml
+title: Maturity finding
+description: Granular evidence-backed maturity judgement for a model dimension or criterion.
+type: object
+additionalProperties: false
+required:
+  - finding_id
+  - assessment_id
+  - model_id
+  - dimension_id
+  - criterion_id
+  - assessed_level_id
+  - numeric_score
+  - qualitative_argument
+  - quantitative_measurements
+  - evidence_refs
+  - source_ids
+  - gaps
+  - confidence
+  - classification
+  - status
+properties:
+  finding_id:
+    type: string
+    pattern: "^MFND-[0-9]{6}$"
+  assessment_id:
+    type: string
+    pattern: "^MA-[0-9]{6}$"
+  model_id:
+    type: string
+    pattern: "^MM-[0-9]{6}$"
+  dimension_id:
+    type: string
+    pattern: "^MM-[0-9]{6}-D[0-9]{2}$"
+  criterion_id:
+    type:
+      - string
+      - "null"
+    pattern: "^MM-[0-9]{6}-D[0-9]{2}-C[0-9]{2}$"
+  assessed_level_id:
+    type: string
+    pattern: "^MM-[0-9]{6}-L[0-9]{2}$"
+  numeric_score:
+    type:
+      - number
+      - "null"
+  qualitative_argument:
+    type: string
+    minLength: 1
+  quantitative_measurements:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - metric_id
+        - value
+        - unit
+        - as_of_date
+        - evidence_ref
+      properties:
+        metric_id:
+          type:
+            - string
+            - "null"
+        value:
+          type:
+            - number
+            - string
+        unit:
+          type: string
+        as_of_date:
+          type: string
+          format: date-time
+        evidence_ref:
+          type: string
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  gaps:
+    $ref: "#/$defs/unique_text"
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+  classification:
+    $ref: "#/$defs/classification"
+  status:
+    type: string
+    enum:
+      - proposed
+      - in_review
+      - approved
+      - superseded
+$defs:
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

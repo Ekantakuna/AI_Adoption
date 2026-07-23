@@ -1,0 +1,43 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: strategic-objective.schema.yaml
+title: Strategic objective
+description: Outcome-oriented objective linked to success factors, metrics and execution.
+type: object
+additionalProperties: false
+required: [strategic_objective_id, ai_strategy_id, name, status, horizon, problem_statement, intended_outcome, outcome_definition, scope, related_domain_ids, owner_stakeholder_ids, critical_success_factor_ids, outcome_metric_ids, leading_indicator_ids, guardrail_metric_ids, initiative_ids, capability_ids, dependency_ids, risk_ids, target_date, assumptions, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  strategic_objective_id: {type: string, pattern: "^SOBJ-[0-9]{6}$"}
+  ai_strategy_id: {type: string, pattern: "^AISTRAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {$ref: "#/$defs/status"}
+  horizon: {$ref: "#/$defs/id"}
+  problem_statement: {type: string}
+  intended_outcome: {type: string}
+  outcome_definition: {type: string}
+  scope: {type: string}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  critical_success_factor_ids: {$ref: "#/$defs/records"}
+  outcome_metric_ids: {$ref: "#/$defs/metrics_required"}
+  leading_indicator_ids: {$ref: "#/$defs/records"}
+  guardrail_metric_ids: {$ref: "#/$defs/records"}
+  initiative_ids: {$ref: "#/$defs/records"}
+  capability_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  target_date: {type: [string, "null"], format: date}
+  assumptions: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, achieved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  metrics_required: {type: array, minItems: 1, uniqueItems: true, items: {type: string, pattern: "^MET-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

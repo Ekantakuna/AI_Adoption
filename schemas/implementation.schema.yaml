@@ -1,0 +1,130 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: implementation.schema.yaml
+title: AI implementation
+description: Actual pilot, deployment or adopted AI solution linked to a reusable use-case pattern.
+type: object
+additionalProperties: false
+required:
+  - implementation_id
+  - use_case_id
+  - name
+  - business_domain_ids
+  - initiative_ids
+  - owner_stakeholder_ids
+  - lifecycle_state
+  - deployment_scope
+  - implementation_date
+  - last_verified_at
+  - ai_technique_ids
+  - solution_ids
+  - current_snapshot_id
+  - risk_ids
+  - control_ids
+  - metric_ids
+  - source_ids
+  - evidence_refs
+  - classification
+  - confidence
+properties:
+  implementation_id:
+    type: string
+    pattern: "^IMP-[0-9]{6}$"
+  use_case_id:
+    type:
+      - string
+      - "null"
+    pattern: "^UC-[0-9]{6}$"
+  name:
+    type: string
+    minLength: 1
+  business_domain_ids:
+    $ref: "#/$defs/unique_ids"
+  initiative_ids:
+    $ref: "#/$defs/record_ids"
+  owner_stakeholder_ids:
+    $ref: "#/$defs/record_ids"
+  lifecycle_state:
+    type: string
+    enum:
+      - planned
+      - prototype
+      - pilot
+      - production
+      - scaling
+      - paused
+      - retired
+      - unknown
+  deployment_scope:
+    type: string
+  implementation_date:
+    type:
+      - string
+      - "null"
+    format: date
+  last_verified_at:
+    type:
+      - string
+      - "null"
+    format: date-time
+  ai_technique_ids:
+    $ref: "#/$defs/unique_ids"
+  solution_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SOL-[0-9]{6}$"
+  current_snapshot_id:
+    type:
+      - string
+      - "null"
+    pattern: "^SNAP-[0-9]{6}$"
+  risk_ids:
+    $ref: "#/$defs/record_ids"
+  control_ids:
+    $ref: "#/$defs/record_ids"
+  metric_ids:
+    $ref: "#/$defs/record_ids"
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  confidence:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+$defs:
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  record_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

@@ -1,0 +1,42 @@
+schema_version: 1
+
+status_values:
+  - proposed
+  - approved
+  - deprecated
+
+business_domains:
+  - id: marketing_product_management
+    name: Marketing and product management
+    status: proposed
+
+  - id: customer_care
+    name: Customer care
+    status: proposed
+
+  - id: ict
+    name: ICT
+    status: proposed
+    children:
+      - id: software_engineering
+        name: Software engineering
+        status: proposed
+      - id: cyber_defence
+        name: Cyber defence
+        status: proposed
+      - id: cyber_defence_centre
+        name: Cyber Defence Centre
+        status: proposed
+      - id: service_monitoring
+        name: Service monitoring
+        status: proposed
+
+  - id: cross_cutting
+    name: Cross-cutting
+    status: proposed
+    children:
+      - id: shadow_ai
+        name: Shadow AI
+        status: proposed
+        category_type: discovery_and_risk
+        security_review_required: true

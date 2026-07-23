@@ -1,0 +1,86 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: maturity-framework.schema.yaml
+title: AI adoption maturity framework
+description: Versioned evaluation framework combining one or more maturity models.
+type: object
+additionalProperties: false
+required:
+  - framework_id
+  - name
+  - description
+  - purpose
+  - focus_areas
+  - model_ids
+  - evaluation_scopes
+  - aggregation_method
+  - version
+  - source_ids
+  - evidence_refs
+  - classification
+  - status
+properties:
+  framework_id:
+    type: string
+    pattern: "^MF-[0-9]{6}$"
+  name:
+    type: string
+    minLength: 1
+  description:
+    type: string
+  purpose:
+    type: string
+  focus_areas:
+    $ref: "#/$defs/unique_ids"
+  model_ids:
+    type: array
+    uniqueItems: true
+    minItems: 1
+    items:
+      type: string
+      pattern: "^MM-[0-9]{6}$"
+  evaluation_scopes:
+    $ref: "#/$defs/unique_ids"
+  aggregation_method:
+    type: string
+  version:
+    type: string
+    minLength: 1
+  source_ids:
+    $ref: "#/$defs/source_ids"
+  evidence_refs:
+    $ref: "#/$defs/unique_text"
+  classification:
+    $ref: "#/$defs/classification"
+  status:
+    type: string
+    enum:
+      - proposed
+      - in_review
+      - approved
+      - superseded
+      - retired
+$defs:
+  unique_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[a-z][a-z0-9_]*$"
+  source_ids:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"
+  unique_text:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+  classification:
+    type: string
+    enum:
+      - pending
+      - public
+      - internal
+      - restricted

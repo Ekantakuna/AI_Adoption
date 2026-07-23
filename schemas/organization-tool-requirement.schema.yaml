@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-tool-requirement.schema.yaml
+title: Organization tool requirement
+description: Vendor-neutral work, knowledge, portfolio, collaboration or measurement requirement.
+type: object
+additionalProperties: false
+required: [organization_tool_requirement_id, name, tool_capability_type, status, need_statement, functional_requirements, non_functional_requirements, integration_requirements, security_and_access_requirements, data_and_reporting_requirements, enabled_practice_ids, enabled_network_ids, constituency_ids, solution_ids, selection_status, source_ids, evidence_refs, assumptions, classification]
+properties:
+  organization_tool_requirement_id: {type: string, pattern: "^OTOOL-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  tool_capability_type: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  need_statement: {type: string}
+  functional_requirements: {$ref: "#/$defs/text"}
+  non_functional_requirements: {$ref: "#/$defs/text"}
+  integration_requirements: {$ref: "#/$defs/text"}
+  security_and_access_requirements: {$ref: "#/$defs/text"}
+  data_and_reporting_requirements: {$ref: "#/$defs/text"}
+  enabled_practice_ids: {$ref: "#/$defs/records"}
+  enabled_network_ids: {$ref: "#/$defs/records"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  solution_ids: {$ref: "#/$defs/records"}
+  selection_status: {type: string, enum: [requirements_only, market_scan, evaluation, selected, implemented, retired]}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

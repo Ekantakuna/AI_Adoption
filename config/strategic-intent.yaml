@@ -1,0 +1,245 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+
+provisional_user_direction:
+  status: proposed
+  origin: user_direction
+  focus: generative_ai_led_business_transformation
+  transformation_thesis:
+    - success is business transformation rather than deployment of more AI models or tools
+    - AI should improve how business problems are framed and how strategic options are created and evaluated
+    - intelligent choice architectures should combine Generative AI and predictive AI to improve human decisions
+    - learning loops should improve both outcomes and the decision environment itself
+  target_system: decision_centric_intelligence_system
+  target_properties:
+    - formalized_business_semantics
+    - transparent_human_override_and_escalation
+    - multi_agent_orchestration
+    - continuous_observability
+    - outcome_linked_learning_loops
+
+strategy_components:
+  - purpose_and_ambition
+  - transformation_thesis
+  - business_problem_definition
+  - vision_and_target_state
+  - guiding_principles
+  - strategic_choices_and_tradeoffs
+  - assumptions_and_hypotheses
+  - scenarios_and_uncertainties
+  - strategic_objectives_and_outcomes
+  - critical_success_factors
+  - metrics_indicators_and_guardrails
+  - capabilities_and_prerequisites
+  - execution_plan
+  - review_adaptation_and_evolution
+
+strategy_horizons:
+  - near_term
+  - medium_term
+  - long_term
+  - continuous
+
+choice_types:
+  - ambition
+  - business_scope
+  - decision_environment
+  - capability
+  - operating_model
+  - technology_and_architecture
+  - data
+  - governance_and_risk
+  - build_buy_partner
+  - sequencing_and_investment
+  - adoption_and_change
+
+hypothesis_statuses:
+  - proposed
+  - testing
+  - supported
+  - weakened
+  - rejected
+  - superseded
+
+scenario_types:
+  - baseline
+  - optimistic
+  - constrained
+  - disruptive
+  - regulatory
+  - technology_shift
+  - competitive_response
+  - custom
+
+uncertainty_types:
+  - business_demand
+  - customer_behavior
+  - competitive
+  - technology_capability
+  - cost_and_economics
+  - data_availability_and_quality
+  - workforce_and_adoption
+  - legal_and_regulatory
+  - security_and_trust
+  - partner_and_supplier
+
+simulation_types:
+  - qualitative_wargame
+  - assumption_stress_test
+  - option_comparison
+  - sensitivity_analysis
+  - system_dynamics
+  - agent_based
+  - monte_carlo
+  - financial_model
+  - decision_tree
+  - red_team_challenge
+
+decision_intelligence_properties:
+  - formalized_business_semantics
+  - transparent_human_override_and_escalation
+  - multi_agent_orchestration
+  - continuous_observability
+  - outcome_linked_learning_loops
+
+decision_system_layers:
+  - business_semantics_and_context
+  - problem_and_decision_definition
+  - option_generation
+  - prediction_evaluation_and_simulation
+  - human_decision_and_override
+  - orchestration_and_execution
+  - observability_outcomes_and_feedback
+  - governance_security_and_assurance
+
+success_factor_categories:
+  - strategic_clarity_and_alignment
+  - business_problem_and_value_focus
+  - decision_quality_and_speed
+  - leadership_and_operating_model
+  - data_semantics_and_knowledge
+  - engineering_platform_and_orchestration
+  - governance_security_and_trust
+  - people_literacy_and_adoption
+  - ecosystem_and_partnerships
+  - execution_discipline_and_learning
+
+metric_types:
+  - outcome
+  - leading_indicator
+  - lagging_indicator
+  - operational
+  - capability
+  - adoption
+  - risk
+  - guardrail
+
+indicator_signals:
+  - on_track
+  - watch
+  - intervene
+  - stop_or_rethink
+  - not_assessed
+
+review_trigger_types:
+  - metric_threshold
+  - assumption_invalidated
+  - scenario_materialized
+  - risk_or_control_event
+  - regulatory_change
+  - technology_shift
+  - business_priority_change
+  - dependency_failure
+  - value_not_realized
+  - scheduled_review
+
+change_event_types:
+  - vision_refinement
+  - objective_change
+  - strategic_choice_change
+  - assumption_change
+  - target_state_change
+  - metric_or_threshold_change
+  - execution_replan
+  - initiative_reprioritization
+  - scope_change
+  - retirement_or_replacement
+
+assessment_types:
+  - baseline
+  - execution_progress
+  - strategic_outcome
+  - assumption_review
+  - scenario_review
+  - target_state_progress
+  - annual_strategy_review
+
+finding_types:
+  - progress
+  - success
+  - underperformance
+  - leading_warning
+  - assumption_at_risk
+  - hypothesis_supported
+  - hypothesis_rejected
+  - scenario_signal
+  - dependency_issue
+  - adaptation_required
+
+semantic_relationships:
+  - subject: ai_strategy
+    predicate: defines
+    object: vision_choices_objectives_and_target_state
+  - subject: strategic_choice
+    predicate: supported_or_challenged_by
+    object: hypotheses_scenarios_and_simulations
+  - subject: strategy_scenario
+    predicate: explored_by
+    object: strategy_simulation
+  - subject: strategic_objective
+    predicate: measured_by
+    object: metrics_and_critical_success_factors
+  - subject: decision_intelligence_target
+    predicate: realizes
+    object: transformation_thesis
+  - subject: strategy_execution_plan
+    predicate: implements
+    object: strategy_through_initiatives_capabilities_and_actions
+  - subject: strategy_assessment
+    predicate: evaluates
+    object: outcomes_indicators_assumptions_choices_and_execution
+  - subject: strategy_finding
+    predicate: triggers
+    object: review_intervention_or_strategy_change
+  - subject: strategy_change_event
+    predicate: preserves
+    object: strategy_evolution_and_rationale
+
+cross_domain_prerequisites:
+  - decision_environment
+  - current_state
+  - value_management
+  - use_cases
+  - organization
+  - people_and_culture
+  - governance
+  - data
+  - engineering_platform
+  - security_trust
+  - agentic_ai
+  - ecosystem_sourcing
+  - maturity_execution
+
+evidence_rules:
+  facts_require_source_ids: true
+  strategic_choices_require_alternatives_and_rationale: true
+  hypotheses_require_test_and_falsification_criteria: true
+  simulation_outputs_are_not_facts: true
+  objectives_require_outcome_metrics: true
+  success_factors_require_indicators: true
+  execution_plans_require_owners_milestones_dependencies_and_review_triggers: true
+  changes_require_version_links_and_rationale: true
+  source_derived_records_remain_proposed_until_human_review: true

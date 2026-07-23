@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-operating-model.schema.yaml
+title: Governance operating model
+description: Governance bodies, accountabilities, decisions, interfaces, escalation and cadence.
+type: object
+additionalProperties: false
+required: [governance_operating_model_id, name, version, state_type, status, governance_domain_ids, governance_layer_ids, governance_role_ids, accountability_model, decision_rights, escalation_paths, operating_cadences, organizational_interfaces, delivery_lifecycle_integration, capability_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  governance_operating_model_id: {type: string, pattern: "^GOM-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string, minLength: 1}
+  state_type: {type: string, enum: [current, target, transitional]}
+  status: {$ref: "#/$defs/status"}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  governance_layer_ids: {$ref: "#/$defs/ids"}
+  governance_role_ids: {$ref: "#/$defs/record_ids"}
+  accountability_model: {type: string}
+  decision_rights: {$ref: "#/$defs/text"}
+  escalation_paths: {$ref: "#/$defs/text"}
+  operating_cadences: {$ref: "#/$defs/text"}
+  organizational_interfaces: {$ref: "#/$defs/text"}
+  delivery_lifecycle_integration: {$ref: "#/$defs/ids"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

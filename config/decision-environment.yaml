@@ -1,0 +1,227 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+decision_authorization_required_for_execution: true
+
+decision_lifecycle_stages:
+  - need_or_trigger_detected
+  - problem_framed
+  - context_and_semantics_established
+  - options_generated
+  - evidence_prediction_and_simulation_reviewed
+  - option_evaluation
+  - authority_and_control_check
+  - human_decision
+  - execution
+  - outcome_observation
+  - feedback_and_learning
+  - review_or_retirement
+
+decision_types:
+  - strategic
+  - portfolio
+  - investment
+  - product
+  - customer
+  - commercial
+  - operational
+  - engineering
+  - security
+  - risk_and_compliance
+  - workforce
+  - data_and_model
+
+decision_cadences:
+  - event_driven
+  - continuous
+  - daily
+  - weekly
+  - monthly
+  - quarterly
+  - annual
+  - ad_hoc
+
+decision_materiality_levels:
+  - low
+  - moderate
+  - high
+  - critical
+
+choice_architecture_components:
+  - problem_and_decision_question
+  - business_context_and_semantics
+  - constraints_and_guardrails
+  - option_generation
+  - evaluation_criteria
+  - evidence_and_uncertainty
+  - prediction_forecast_and_simulation
+  - human_authority_and_override
+  - orchestration_and_execution
+  - observability_outcomes_and_feedback
+
+decision_input_types:
+  - fact
+  - observation
+  - qualitative_evidence
+  - quantitative_evidence
+  - prediction
+  - forecast
+  - scenario
+  - simulation
+  - expert_judgement
+  - assumption
+  - constraint
+
+evidence_strengths:
+  - unassessed
+  - weak
+  - moderate
+  - strong
+  - conflicting
+
+option_statuses:
+  - proposed
+  - screened
+  - shortlisted
+  - selected
+  - not_selected
+  - withdrawn
+  - superseded
+
+authority_actions:
+  - recommend
+  - advise
+  - approve
+  - decide
+  - veto
+  - override
+  - escalate
+  - execute
+  - monitor
+
+automation_levels:
+  - human_only
+  - AI_assisted
+  - human_approved_AI_execution
+  - bounded_automated_with_human_oversight
+  - fully_automated_prohibited_by_default
+
+decision_statuses:
+  - proposed
+  - framing
+  - evaluating
+  - decision_pending
+  - decided
+  - execution_in_progress
+  - executed
+  - outcome_review
+  - superseded
+  - cancelled
+
+outcome_statuses:
+  - observation_pending
+  - partially_observed
+  - observed
+  - inconclusive
+  - superseded
+
+outcome_signals:
+  - better_than_expected
+  - on_target
+  - below_target
+  - guardrail_breached
+  - unintended_consequence
+  - not_assessed
+
+learning_change_types:
+  - business_semantic_refinement
+  - decision_problem_refinement
+  - option_generation_change
+  - evidence_requirement_change
+  - prediction_or_simulation_change
+  - evaluation_criteria_change
+  - authority_or_escalation_change
+  - orchestration_change
+  - observability_change
+  - control_or_guardrail_change
+  - retirement_or_replacement
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap_analysis
+  - decision_quality
+  - authority_and_control
+  - observability
+  - learning_effectiveness
+  - progress
+
+assessment_dimensions:
+  - business_semantics_and_context
+  - problem_and_decision_definition
+  - option_generation
+  - evidence_quality_and_uncertainty
+  - prediction_evaluation_and_simulation
+  - human_authority_override_and_escalation
+  - agent_and_workflow_orchestration
+  - execution_traceability
+  - observability_outcomes_and_feedback
+  - outcome_linked_learning
+  - governance_security_and_assurance
+
+semantic_relationships:
+  - subject: decision_intelligence_target
+    predicate: defines_target_for
+    object: decision_environment
+  - subject: decision_type
+    predicate: is_contextualized_by
+    object: decision_context
+  - subject: decision_type
+    predicate: is_operationalized_by
+    object: choice_architecture
+  - subject: choice_architecture
+    predicate: applies
+    object: decision_authority_rules_controls_and_guardrails
+  - subject: decision
+    predicate: evaluates
+    object: decision_options_using_decision_evidence
+  - subject: decision
+    predicate: produces
+    object: execution_and_decision_outcomes
+  - subject: decision_outcome
+    predicate: informs
+    object: decision_learning_event
+  - subject: decision_learning_event
+    predicate: improves
+    object: semantics_choice_architecture_models_controls_and_metrics
+  - subject: decision_environment_assessment
+    predicate: evaluates
+    object: target_capability_decision_quality_controls_and_learning
+
+cross_domain_mappings:
+  strategic_targets_and_choices: registers/decision-intelligence-targets.yaml
+  business_semantics: registers/terms.yaml
+  business_domains: config/business-domains.yaml
+  agentic_orchestration: registers/solutions.yaml
+  data_and_platform_solutions: registers/solutions.yaml
+  governance_controls: registers/controls.yaml
+  governance_risks: registers/risks.yaml
+  value_and_outcome_metrics: registers/metrics.yaml
+  capabilities: registers/capabilities.yaml
+  dependencies: registers/dependencies.yaml
+  stakeholders_and_authorities: registers/stakeholders.yaml
+  initiatives_and_execution: registers/initiatives.yaml
+
+evidence_and_control_rules:
+  current_state_claims_require_source_ids: true
+  facts_predictions_and_simulations_must_be_distinguished: true
+  simulation_output_is_not_an_approved_decision: true
+  AI_recommendation_is_not_human_authorization: true
+  material_decisions_require_named_role_or_body_authority: true
+  override_and_escalation_paths_are_required: true
+  actual_decisions_preserve_options_evidence_and_rationale: true
+  outcomes_are_time_stamped_and_linked_to_metrics: true
+  learning_changes_require_outcome_or_feedback_evidence: true
+  source_derived_records_remain_proposed_until_human_review: true

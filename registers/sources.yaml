@@ -1,3 +1,2785 @@
+---
 schema_version: 1
 register: sources
-records: []
+records:
+- source_id: SRC-AGT-000001
+  source_category: agentic_ai
+  prefix_assignment_basis: longest_path_rule:agentic_ai
+  source_root_id: SROOT-0001
+  original_filename: 2508.11957v1.pdf
+  original_relative_path: AI_Agency/2508.11957v1.pdf
+  current_filename: 2508.11957v1.pdf
+  current_relative_path: agentic_ai/research/2508.11957v1.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Agency/2508.11957v1.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Agency/2508.11957v1.pdf
+    to_relative_path: agentic_ai/research/2508.11957v1.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - agentic_ai
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1073003
+  filesystem_modified_at: '2026-07-16T09:35:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-AGT-000002
+  source_category: agentic_ai
+  prefix_assignment_basis: longest_path_rule:agentic_ai
+  source_root_id: SROOT-0001
+  original_filename: Gartner Reprint.pdf
+  original_relative_path: AI_Agency/Gartner Reprint.pdf
+  current_filename: Gartner Reprint.pdf
+  current_relative_path: agentic_ai/research/Gartner Reprint.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Agency/Gartner Reprint.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Agency/Gartner Reprint.pdf
+    to_relative_path: agentic_ai/research/Gartner Reprint.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - agentic_ai
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 520728
+  filesystem_modified_at: '2026-07-16T08:26:26Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-DATA-000001
+  source_category: data
+  prefix_assignment_basis: longest_path_rule:data
+  source_root_id: SROOT-0001
+  original_filename: AI_DATA.mmd
+  original_relative_path: AI_adoption_MindMap/AI_DATA.mmd
+  current_filename: overview.mmd
+  current_relative_path: data/overview.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_DATA.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_DATA.mmd
+    to_relative_path: data/overview.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - data
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 2219
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-ENG-000001
+  source_category: engineering_platform
+  prefix_assignment_basis: longest_path_rule:engineering_platform
+  source_root_id: SROOT-0001
+  original_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  original_relative_path: AI_Types_Traditional_and_Generative/DD1_Handout__Overview_of_Generative_AI.pdf
+  current_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  current_relative_path: engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Types_Traditional_and_Generative/DD1_Handout__Overview_of_Generative_AI.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Types_Traditional_and_Generative/DD1_Handout__Overview_of_Generative_AI.pdf
+    to_relative_path: engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - engineering_platform
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 311931
+  filesystem_modified_at: '2026-07-16T09:23:19Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-ENG-000002
+  source_category: engineering_platform
+  prefix_assignment_basis: longest_path_rule:engineering_platform
+  source_root_id: SROOT-0001
+  original_filename: AI_ENGINEERING.mmd
+  original_relative_path: AI_adoption_MindMap/AI_ENGINEERING.mmd
+  current_filename: overview.mmd
+  current_relative_path: engineering_platform/overview.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_ENGINEERING.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_ENGINEERING.mmd
+    to_relative_path: engineering_platform/overview.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - engineering_platform
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 1621
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GLO-000001
+  source_category: glossary
+  prefix_assignment_basis: longest_path_rule:glossary_vocabulary
+  source_root_id: SROOT-0001
+  original_filename: AI_Fluency_vocabulary_cheat_sheet.pdf
+  original_relative_path: AI_Gloassary_Vocabluary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  current_filename: AI_Fluency_vocabulary_cheat_sheet.pdf
+  current_relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Gloassary_Vocabluary/AI_Fluency_vocabulary_cheat_sheet.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Gloassary_Vocabluary/AI_Fluency_vocabulary_cheat_sheet.pdf
+    to_relative_path: people_and_culture/glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-21'
+    event_type: semantic_separation
+    from_relative_path: people_and_culture/glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+    to_relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids:
+  - glossary_vocabulary
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - glossary_term
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1400028
+  filesystem_modified_at: '2026-07-16T09:25:29Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GOV-000001
+  source_category: governance
+  prefix_assignment_basis: longest_path_rule:governance
+  source_root_id: SROOT-0001
+  original_filename: GOVERNANCE.mmd
+  original_relative_path: AI_adoption_MindMap/GOVERNANCE.mmd
+  current_filename: overview.mmd
+  current_relative_path: governance/overview.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/GOVERNANCE.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/GOVERNANCE.mmd
+    to_relative_path: governance/overview.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - governance
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - governance_target
+  - governance_operating_model
+  - governance_artifact
+  - governance_role
+  - governance_capability
+  - governance_tool_requirement
+  - governance_assessment
+  - governance_finding
+  - governance_action
+  - risk
+  - control
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 3819
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GOV-000002
+  source_category: governance
+  prefix_assignment_basis: longest_path_rule:governance
+  source_root_id: SROOT-0001
+  original_filename: Scaling AI With Adaptive Governance.pdf
+  original_relative_path: AI_Governance /Adaptive_Governance/Scaling AI With Adaptive
+    Governance.pdf
+  current_filename: Scaling AI With Adaptive Governance.pdf
+  current_relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive
+    Governance.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Governance /Adaptive_Governance/Scaling AI With Adaptive
+      Governance.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Governance /Adaptive_Governance/Scaling AI With Adaptive
+      Governance.pdf
+    to_relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive
+      Governance.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - governance
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - governance_target
+  - governance_operating_model
+  - governance_capability
+  - governance_role
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 731898
+  filesystem_modified_at: '2026-07-16T08:14:41Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GOV-000003
+  source_category: governance
+  prefix_assignment_basis: longest_path_rule:governance
+  source_root_id: SROOT-0001
+  original_filename: cost-of-a-data-breach-2025-full-report.pdf
+  original_relative_path: AI_Governance /cost-of-a-data-breach-2025-full-report.pdf
+  current_filename: cost-of-a-data-breach-2025-full-report.pdf
+  current_relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Governance /cost-of-a-data-breach-2025-full-report.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Governance /cost-of-a-data-breach-2025-full-report.pdf
+    to_relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - governance
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - governance_target
+  - governance_operating_model
+  - governance_artifact
+  - governance_role
+  - governance_capability
+  - governance_tool_requirement
+  - governance_assessment
+  - governance_finding
+  - governance_action
+  - risk
+  - control
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2016131
+  filesystem_modified_at: '2026-07-16T08:48:15Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GOV-000004
+  source_category: governance
+  prefix_assignment_basis: longest_path_rule:governance
+  source_root_id: SROOT-0001
+  original_filename: AI usage Goverance HowTos.docx
+  original_relative_path: AI_Governance /Governance_Policies_and_Howto/AI usage Goverance
+    HowTos.docx
+  current_filename: AI usage Goverance HowTos.docx
+  current_relative_path: governance/research/governance_policies_and_how_to/AI usage
+    Goverance HowTos.docx
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Governance /Governance_Policies_and_Howto/AI usage Goverance
+      HowTos.docx
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Governance /Governance_Policies_and_Howto/AI usage Goverance
+      HowTos.docx
+    to_relative_path: governance/research/governance_policies_and_how_to/AI usage
+      Goverance HowTos.docx
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - governance
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - governance_artifact
+  - governance_capability
+  - control
+  source_type: word
+  extension: ".docx"
+  size_bytes: 9936
+  filesystem_modified_at: '2026-07-16T08:03:01Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GOV-000005
+  source_category: governance
+  prefix_assignment_basis: longest_path_rule:governance
+  source_root_id: SROOT-0001
+  original_filename: Artificial Intelligence Usage en.pdf
+  original_relative_path: AI_Governance /Governance_Policies_and_Howto/Artificial
+    Intelligence Usage en.pdf
+  current_filename: Artificial Intelligence Usage en.pdf
+  current_relative_path: governance/research/governance_policies_and_how_to/Artificial
+    Intelligence Usage en.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Governance /Governance_Policies_and_Howto/Artificial Intelligence
+      Usage en.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Governance /Governance_Policies_and_Howto/Artificial Intelligence
+      Usage en.pdf
+    to_relative_path: governance/research/governance_policies_and_how_to/Artificial
+      Intelligence Usage en.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - governance
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - governance_artifact
+  - governance_capability
+  - control
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1015236
+  filesystem_modified_at: '2025-10-16T12:23:23Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-GOV-000006
+  source_category: governance
+  prefix_assignment_basis: longest_path_rule:governance
+  source_root_id: SROOT-0001
+  original_filename: GOVERNANCE.mmd
+  original_relative_path: AI_Governance /GOVERNANCE.mmd
+  current_filename: GOVERNANCE.mmd
+  current_relative_path: governance/research/GOVERNANCE.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Governance /GOVERNANCE.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Governance /GOVERNANCE.mmd
+    to_relative_path: governance/research/GOVERNANCE.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - governance
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - governance_target
+  - governance_operating_model
+  - governance_artifact
+  - governance_role
+  - governance_capability
+  - governance_tool_requirement
+  - governance_assessment
+  - governance_finding
+  - governance_action
+  - risk
+  - control
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 3819
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata-only duplicate candidate based on matching size and modification
+    timestamp; retain independently until an approved local hash comparison.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: suspected
+  duplicate_of_source_id: SRC-GOV-000001
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000001
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: 2402.12234v1.pdf
+  original_relative_path: Muscellaneous /2402.12234v1.pdf
+  current_filename: 2402.12234v1.pdf
+  current_relative_path: current_state/unclassified_research/2402.12234v1.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /2402.12234v1.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /2402.12234v1.pdf
+    to_relative_path: current_state/unclassified_research/2402.12234v1.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 160733
+  filesystem_modified_at: '2026-07-16T09:32:56Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000002
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: 2403.12881v1.pdf
+  original_relative_path: Muscellaneous /2403.12881v1.pdf
+  current_filename: 2403.12881v1.pdf
+  current_relative_path: current_state/unclassified_research/2403.12881v1.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /2403.12881v1.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /2403.12881v1.pdf
+    to_relative_path: current_state/unclassified_research/2403.12881v1.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 3000308
+  filesystem_modified_at: '2026-07-16T09:33:36Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000003
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: 2504.00906.pdf
+  original_relative_path: Muscellaneous /2504.00906.pdf
+  current_filename: 2504.00906.pdf
+  current_relative_path: current_state/unclassified_research/2504.00906.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /2504.00906.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /2504.00906.pdf
+    to_relative_path: current_state/unclassified_research/2504.00906.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 9404849
+  filesystem_modified_at: '2026-07-16T09:34:31Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000004
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: 2510.04618v1.pdf
+  original_relative_path: Muscellaneous /2510.04618v1.pdf
+  current_filename: 2510.04618v1.pdf
+  current_relative_path: current_state/unclassified_research/2510.04618v1.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /2510.04618v1.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /2510.04618v1.pdf
+    to_relative_path: current_state/unclassified_research/2510.04618v1.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2075847
+  filesystem_modified_at: '2026-07-16T09:35:39Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000005
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: 2510.08558v1.pdf
+  original_relative_path: Muscellaneous /2510.08558v1.pdf
+  current_filename: 2510.08558v1.pdf
+  current_relative_path: current_state/unclassified_research/2510.08558v1.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /2510.08558v1.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /2510.08558v1.pdf
+    to_relative_path: current_state/unclassified_research/2510.08558v1.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2371450
+  filesystem_modified_at: '2026-07-16T09:36:14Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000006
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: 2510.09577v1.pdf
+  original_relative_path: Muscellaneous /2510.09577v1.pdf
+  current_filename: 2510.09577v1.pdf
+  current_relative_path: current_state/unclassified_research/2510.09577v1.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /2510.09577v1.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /2510.09577v1.pdf
+    to_relative_path: current_state/unclassified_research/2510.09577v1.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 774417
+  filesystem_modified_at: '2026-07-16T09:36:40Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000007
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  original_relative_path: Muscellaneous /Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  current_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  current_relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and
+    Claude Code _ Anthropic.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+    to_relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and Claude
+      Code _ Anthropic.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2090639
+  filesystem_modified_at: '2026-07-16T09:37:39Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MIS-000008
+  source_category: miscellaneous
+  prefix_assignment_basis: longest_path_rule:current_state/unclassified_research
+  source_root_id: SROOT-0001
+  original_filename: Conversational AI with Language Models _ Rasa Documentation.pdf
+  original_relative_path: Muscellaneous /Conversational AI with Language Models _
+    Rasa Documentation.pdf
+  current_filename: Conversational AI with Language Models _ Rasa Documentation.pdf
+  current_relative_path: current_state/unclassified_research/Conversational AI with
+    Language Models _ Rasa Documentation.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: Muscellaneous /Conversational AI with Language Models _ Rasa
+      Documentation.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: Muscellaneous /Conversational AI with Language Models _ Rasa
+      Documentation.pdf
+    to_relative_path: current_state/unclassified_research/Conversational AI with Language
+      Models _ Rasa Documentation.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2307226
+  filesystem_modified_at: '2026-07-16T09:30:10Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-MOD-000001
+  source_category: maturity_model
+  prefix_assignment_basis: longest_path_rule:maturity_execution/models
+  source_root_id: SROOT-0001
+  original_filename: AI-Maturity-Model-Overview.pdf
+  original_relative_path: AI_Maturity_Models_Adoption /AI-Maturity-Model-Overview.pdf
+  current_filename: AI-Maturity-Model-Overview.pdf
+  current_relative_path: maturity_execution/models/AI-Maturity-Model-Overview.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Maturity_Models_Adoption /AI-Maturity-Model-Overview.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Maturity_Models_Adoption /AI-Maturity-Model-Overview.pdf
+    to_relative_path: maturity_execution/maturity_models/AI-Maturity-Model-Overview.pdf
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-22'
+    event_type: semantic_separation
+    from_relative_path: maturity_execution/maturity_models/AI-Maturity-Model-Overview.pdf
+    to_relative_path: maturity_execution/models/AI-Maturity-Model-Overview.pdf
+    reason: Placed under the approved maturity-model collection.
+  domain_ids: []
+  proposed_domain_ids:
+  - maturity_execution
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - maturity_model
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 901454
+  filesystem_modified_at: '2026-07-16T08:55:57Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-ORG-000001
+  source_category: organization
+  prefix_assignment_basis: longest_path_rule:organization
+  source_root_id: SROOT-0001
+  original_filename: AI_ORGANIZATION.mmd
+  original_relative_path: AI_adoption_MindMap/AI_ORGANIZATION.mmd
+  current_filename: overview.mmd
+  current_relative_path: organization/overview.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_ORGANIZATION.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_ORGANIZATION.mmd
+    to_relative_path: organization/overview.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - organization
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - organization_target
+  - organization_operating_model
+  - organization_unit
+  - organization_role
+  - organization_network
+  - organization_practice
+  - partnership_requirement
+  - organization_tool_requirement
+  - organization_assessment
+  - organization_finding
+  - organization_action
+  - capability
+  - competency
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 2007
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-ORG-000002
+  source_category: organization
+  prefix_assignment_basis: longest_path_rule:organization
+  source_root_id: SROOT-0001
+  original_filename: create-generative-ai-value-at-scale.pdf
+  original_relative_path: AI_Adoption_Organization/create-generative-ai-value-at-scale.pdf
+  current_filename: create-generative-ai-value-at-scale.pdf
+  current_relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Adoption_Organization/create-generative-ai-value-at-scale.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Adoption_Organization/create-generative-ai-value-at-scale.pdf
+    to_relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - organization
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - organization_target
+  - organization_operating_model
+  - organization_unit
+  - organization_role
+  - organization_network
+  - organization_practice
+  - partnership_requirement
+  - organization_finding
+  - capability
+  - competency
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1532460
+  filesystem_modified_at: '2026-07-16T08:20:29Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-PRM-000001
+  source_category: prompt_context
+  prefix_assignment_basis: longest_path_rule:engineering_platform/prompt_and_context_engineering
+  source_root_id: SROOT-0001
+  original_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  original_relative_path: AI_Prompt_and_Context_Engineering/Effective context engineering
+    for AI agents _ Anthropic.pdf
+  current_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  current_relative_path: engineering_platform/prompt_and_context_engineering/Effective
+    context engineering for AI agents _ Anthropic.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Prompt_and_Context_Engineering/Effective context engineering
+      for AI agents _ Anthropic.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Prompt_and_Context_Engineering/Effective context engineering
+      for AI agents _ Anthropic.pdf
+    to_relative_path: engineering_platform/prompt_and_context_engineering/Effective
+      context engineering for AI agents _ Anthropic.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - engineering_platform
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2019012
+  filesystem_modified_at: '2026-07-16T09:19:53Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-RSK-000001
+  source_category: risk_trust
+  prefix_assignment_basis: longest_path_rule:security_trust/risks_trust_security_management
+  source_root_id: SROOT-0001
+  original_filename: Gartner Reprint.pdf
+  original_relative_path: AI_Risks_Trust_SecurityManagement/Gartner Reprint.pdf
+  current_filename: Gartner Reprint.pdf
+  current_relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Risks_Trust_SecurityManagement/Gartner Reprint.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Risks_Trust_SecurityManagement/Gartner Reprint.pdf
+    to_relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - security_trust
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 941680
+  filesystem_modified_at: '2026-07-16T08:49:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SCO-000001
+  source_category: decision_environment
+  prefix_assignment_basis: legacy_source_id_preserved:SRC-SCO;longest_path_rule:decision_environment
+  source_root_id: SROOT-0001
+  original_filename: technologys-generational-moment-with-generative-ai-a-cio-and-cto-guide.pdf
+  original_relative_path: technologys-generational-moment-with-generative-ai-a-cio-and-cto-guide.pdf
+  current_filename: technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  current_relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: technologys-generational-moment-with-generative-ai-a-cio-and-cto-guide.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: technologys-generational-moment-with-generative-ai-a-cio-and-cto-guide.pdf
+    to_relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - decision_environment
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - decision_intelligence_target
+  - decision_type
+  - decision_context
+  - choice_architecture
+  - decision_option
+  - decision_evidence
+  - decision_authority_rule
+  - decision
+  - decision_outcome
+  - decision_learning_event
+  - decision_environment_assessment
+  - capability
+  - solution
+  - metric
+  - risk
+  - control
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 538729
+  filesystem_modified_at: '2026-07-16T08:23:34Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SCO-000002
+  source_category: scope
+  prefix_assignment_basis: longest_path_rule:people_and_culture/overview.mmd
+  source_root_id: SROOT-0001
+  original_filename: AI_PEOPLE_and_CULTURE.mmd
+  original_relative_path: AI_adoption_MindMap/AI_PEOPLE_and_CULTURE.mmd
+  current_filename: overview.mmd
+  current_relative_path: people_and_culture/overview.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_PEOPLE_and_CULTURE.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_PEOPLE_and_CULTURE.mmd
+    to_relative_path: people_and_culture/overview.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_change_plan
+  - ai_change_action
+  - ai_awareness_campaign
+  - ai_literacy_program
+  - workforce_impact_assessment
+  - workforce_impact
+  - employee_readiness_assessment
+  - employee_readiness_finding
+  - people_change_snapshot
+  - capability
+  - competency
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 1285
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SCO-000003
+  source_category: scope
+  prefix_assignment_basis: longest_path_rule:strategic_intent/general_presentation_draft
+  source_root_id: SROOT-0001
+  original_filename: AI Adoption Program - the overall picture.html
+  original_relative_path: AI_Adoption_General_Presentation_Draft/AI Adoption Program
+    - the overall picture.html
+  current_filename: AI Adoption Program - the overall picture.html
+  current_relative_path: strategic_intent/general_presentation_draft/AI Adoption Program
+    - the overall picture.html
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Adoption_General_Presentation_Draft/AI Adoption Program -
+      the overall picture.html
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Adoption_General_Presentation_Draft/AI Adoption Program
+      - the overall picture.html
+    to_relative_path: strategic_intent/general_presentation_draft/AI Adoption Program
+      - the overall picture.html
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - strategic_choice
+  - strategic_hypothesis
+  - strategy_scenario
+  - strategy_simulation
+  - decision_intelligence_target
+  - critical_success_factor
+  - strategy_execution_plan
+  - strategy_assessment
+  - strategy_finding
+  - strategy_change_event
+  - metric
+  source_type: web_document
+  extension: ".html"
+  size_bytes: 32447
+  filesystem_modified_at: '2026-07-15T05:43:29Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SCO-000004
+  source_category: scope
+  prefix_assignment_basis: longest_path_rule:strategic_intent/strategy.mmd
+  source_root_id: SROOT-0001
+  original_filename: AI_STRATEGY.mmd
+  original_relative_path: AI_adoption_MindMap/AI_STRATEGY.mmd
+  current_filename: strategy.mmd
+  current_relative_path: strategic_intent/strategy.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_STRATEGY.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_STRATEGY.mmd
+    to_relative_path: strategic_intent/strategy.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids: []
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - strategic_choice
+  - strategic_hypothesis
+  - strategy_scenario
+  - critical_success_factor
+  - strategy_execution_plan
+  - metric
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 5040
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SEC-000001
+  source_category: security
+  prefix_assignment_basis: longest_path_rule:security_trust/security
+  source_root_id: SROOT-0001
+  original_filename: A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  original_relative_path: AI_Security/A small number of samples can poison LLMs of
+    any size _ Anthropic.pdf
+  current_filename: A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  current_relative_path: security_trust/security/A small number of samples can poison
+    LLMs of any size _ Anthropic.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Security/A small number of samples can poison LLMs of any
+      size _ Anthropic.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Security/A small number of samples can poison LLMs of any
+      size _ Anthropic.pdf
+    to_relative_path: security_trust/security/A small number of samples can poison
+      LLMs of any size _ Anthropic.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - security_trust
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 8521581
+  filesystem_modified_at: '2026-07-16T09:17:48Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SEC-000002
+  source_category: security
+  prefix_assignment_basis: longest_path_rule:security_trust/security
+  source_root_id: SROOT-0001
+  original_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  original_relative_path: AI_Security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  current_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  current_relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+    to_relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - security_trust
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 331914
+  filesystem_modified_at: '2026-07-16T08:56:48Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-SEC-000003
+  source_category: security
+  prefix_assignment_basis: longest_path_rule:security_trust/security
+  source_root_id: SROOT-0001
+  original_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not
+    Ready - deepsense.ai.pdf
+  original_relative_path: AI_Security/Secure AI Agents in Production_ Why If It’s
+    Not Safe, It’s Not Ready - deepsense.ai.pdf
+  current_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not
+    Ready - deepsense.ai.pdf
+  current_relative_path: security_trust/security/Secure AI Agents in Production_ Why
+    If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Security/Secure AI Agents in Production_ Why If It’s Not
+      Safe, It’s Not Ready - deepsense.ai.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Security/Secure AI Agents in Production_ Why If It’s Not
+      Safe, It’s Not Ready - deepsense.ai.pdf
+    to_relative_path: security_trust/security/Secure AI Agents in Production_ Why
+      If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - security_trust
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1275695
+  filesystem_modified_at: '2026-07-16T09:30:56Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-TEL-000001
+  source_category: telecom
+  prefix_assignment_basis: longest_path_rule:use_cases/telecom
+  source_root_id: SROOT-0001
+  original_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  original_relative_path: AI_Telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  current_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  current_relative_path: use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+    to_relative_path: value_and_use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-21'
+    event_type: semantic_separation
+    from_relative_path: value_and_use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+    to_relative_path: use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - use_cases
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - use_case_pattern
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 3070828
+  filesystem_modified_at: '2026-07-16T09:39:09Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-UC-000001
+  source_category: use_cases
+  prefix_assignment_basis: longest_path_rule:use_cases
+  source_root_id: SROOT-0001
+  original_filename: ai_academy_guidebook_customer_service.pdf
+  original_relative_path: AI_Use_Cases /ai_academy_guidebook_customer_service.pdf
+  current_filename: ai_academy_guidebook_customer_service.pdf
+  current_relative_path: use_cases/catalogue/ai_academy_guidebook_customer_service.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Use_Cases /ai_academy_guidebook_customer_service.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Use_Cases /ai_academy_guidebook_customer_service.pdf
+    to_relative_path: value_and_use_cases/use_cases/ai_academy_guidebook_customer_service.pdf
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-21'
+    event_type: semantic_separation
+    from_relative_path: value_and_use_cases/use_cases/ai_academy_guidebook_customer_service.pdf
+    to_relative_path: use_cases/catalogue/ai_academy_guidebook_customer_service.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - use_cases
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - use_case_pattern
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 11472178
+  filesystem_modified_at: '2026-07-16T08:47:04Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-UC-000002
+  source_category: use_cases
+  prefix_assignment_basis: longest_path_rule:use_cases
+  source_root_id: SROOT-0001
+  original_filename: rewiring-the-telecom-mindset.pdf
+  original_relative_path: AI_Use_Cases /rewiring-the-telecom-mindset.pdf
+  current_filename: rewiring-the-telecom-mindset.pdf
+  current_relative_path: use_cases/catalogue/rewiring-the-telecom-mindset.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Use_Cases /rewiring-the-telecom-mindset.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Use_Cases /rewiring-the-telecom-mindset.pdf
+    to_relative_path: value_and_use_cases/use_cases/rewiring-the-telecom-mindset.pdf
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-21'
+    event_type: semantic_separation
+    from_relative_path: value_and_use_cases/use_cases/rewiring-the-telecom-mindset.pdf
+    to_relative_path: use_cases/catalogue/rewiring-the-telecom-mindset.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - use_cases
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - use_case_pattern
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1286002
+  filesystem_modified_at: '2026-07-16T08:53:57Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-UC-000003
+  source_category: use_cases
+  prefix_assignment_basis: longest_path_rule:use_cases
+  source_root_id: SROOT-0001
+  original_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  original_relative_path: AI_USE/the-innovation-advantage-genai-cant-give-you.pdf
+  current_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  current_relative_path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_USE/the-innovation-advantage-genai-cant-give-you.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_USE/the-innovation-advantage-genai-cant-give-you.pdf
+    to_relative_path: value_and_use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-21'
+    event_type: semantic_separation
+    from_relative_path: value_and_use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+    to_relative_path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - use_cases
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - use_case_pattern
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 282793
+  filesystem_modified_at: '2026-07-16T08:19:10Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata-only duplicate candidate; retain independently until an
+    approved local hash comparison.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: suspected
+  duplicate_of_source_id: SRC-VIS-000005
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-VAL-000001
+  source_category: value_management
+  prefix_assignment_basis: longest_path_rule:value_management
+  source_root_id: SROOT-0001
+  original_filename: AI_VALUE_CREATION.mmd
+  original_relative_path: AI_adoption_MindMap/AI_VALUE_CREATION.mmd
+  current_filename: value_creation.mmd
+  current_relative_path: value_management/value_creation.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_VALUE_CREATION.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_VALUE_CREATION.mmd
+    to_relative_path: value_and_use_cases/value_creation.mmd
+    reason: User-approved physical taxonomy reorganization before the custody baseline.
+  - event_date: '2026-07-21'
+    event_type: semantic_separation
+    from_relative_path: value_and_use_cases/value_creation.mmd
+    to_relative_path: value_management/value_creation.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - value_management
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types: []
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 4267
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-VIS-000001
+  source_category: vision
+  prefix_assignment_basis: longest_path_rule:strategic_intent/vision.mmd
+  source_root_id: SROOT-0001
+  original_filename: AI_VISION.mmd
+  original_relative_path: AI_adoption_MindMap/AI_VISION.mmd
+  current_filename: vision.mmd
+  current_relative_path: strategic_intent/vision.mmd
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_adoption_MindMap/AI_VISION.mmd
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_adoption_MindMap/AI_VISION.mmd
+    to_relative_path: strategic_intent/vision.mmd
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - strategic_intent
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - decision_intelligence_target
+  - critical_success_factor
+  source_type: mind_map
+  extension: ".mmd"
+  size_bytes: 1595
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-VIS-000002
+  source_category: vision
+  prefix_assignment_basis: longest_path_rule:strategic_intent/vision
+  source_root_id: SROOT-0001
+  original_filename: From AI Deployment to Intelligence Design.pages
+  original_relative_path: AI_Adoption_Vision /From AI Deployment to Intelligence Design.pages
+  current_filename: From AI Deployment to Intelligence Design.pages
+  current_relative_path: strategic_intent/vision/From AI Deployment to Intelligence
+    Design.pages
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Adoption_Vision /From AI Deployment to Intelligence Design.pages
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Adoption_Vision /From AI Deployment to Intelligence Design.pages
+    to_relative_path: strategic_intent/vision/From AI Deployment to Intelligence Design.pages
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - strategic_intent
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - strategic_choice
+  - strategic_hypothesis
+  - decision_intelligence_target
+  - critical_success_factor
+  source_type: apple_document
+  extension: ".pages"
+  size_bytes: 994280
+  filesystem_modified_at: '2026-07-16T08:17:28Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-VIS-000003
+  source_category: vision
+  prefix_assignment_basis: longest_path_rule:strategic_intent/vision
+  source_root_id: SROOT-0001
+  original_filename: Winning With Intelligent Choice Architectures.pdf
+  original_relative_path: AI_Adoption_Vision /Winning With Intelligent Choice Architectures.pdf
+  current_filename: Winning With Intelligent Choice Architectures.pdf
+  current_relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Adoption_Vision /Winning With Intelligent Choice Architectures.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Adoption_Vision /Winning With Intelligent Choice Architectures.pdf
+    to_relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - strategic_intent
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - strategic_choice
+  - strategic_hypothesis
+  - decision_intelligence_target
+  - critical_success_factor
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 543032
+  filesystem_modified_at: '2026-07-16T08:16:10Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-VIS-000004
+  source_category: vision
+  prefix_assignment_basis: longest_path_rule:strategic_intent/vision
+  source_root_id: SROOT-0001
+  original_filename: stop-deploying-ai-start-designing-intelligence.pdf
+  original_relative_path: AI_Adoption_Vision /stop-deploying-ai-start-designing-intelligence.pdf
+  current_filename: stop-deploying-ai-start-designing-intelligence.pdf
+  current_relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Adoption_Vision /stop-deploying-ai-start-designing-intelligence.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Adoption_Vision /stop-deploying-ai-start-designing-intelligence.pdf
+    to_relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - strategic_intent
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - strategic_choice
+  - strategic_hypothesis
+  - decision_intelligence_target
+  - critical_success_factor
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 498560
+  filesystem_modified_at: '2026-07-16T08:21:50Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed
+- source_id: SRC-VIS-000005
+  source_category: vision
+  prefix_assignment_basis: longest_path_rule:strategic_intent/vision
+  source_root_id: SROOT-0001
+  original_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  original_relative_path: AI_Adoption_Vision /the-innovation-advantage-genai-cant-give-you.pdf
+  current_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  current_relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+  path_history:
+  - event_date: '2026-07-21'
+    event_type: originally_observed
+    from_relative_path: null
+    to_relative_path: AI_Adoption_Vision /the-innovation-advantage-genai-cant-give-you.pdf
+    reason: Recorded from the read-only source-access verification.
+  - event_date: '2026-07-21'
+    event_type: taxonomy_reorganization
+    from_relative_path: AI_Adoption_Vision /the-innovation-advantage-genai-cant-give-you.pdf
+    to_relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+    reason: Placed under the approved repository-aligned source taxonomy.
+  domain_ids: []
+  proposed_domain_ids:
+  - strategic_intent
+  knowledge_layer_ids: []
+  business_domain_ids: []
+  ai_technique_ids: []
+  proposed_record_types:
+  - ai_strategy
+  - strategic_objective
+  - strategic_choice
+  - strategic_hypothesis
+  - decision_intelligence_target
+  - critical_success_factor
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 282793
+  filesystem_modified_at: '2026-07-16T08:19:10Z'
+  hash_algorithm: null
+  content_hash: null
+  hash_calculated_at: null
+  processing_state: metadata_catalogued
+  classification: pending
+  classification_basis: metadata_only_not_reviewed
+  classification_reviewed_by: null
+  classification_reviewed_at: null
+  processing_route: pending
+  processing_route_approved_by: null
+  processing_route_approved_at: null
+  approved_external_service: null
+  approved_account: null
+  approved_purpose: null
+  contains_personal_data: null
+  contains_credentials: null
+  contains_restricted_operational_data: null
+  rights_or_license_status: pending
+  handling_notes: Metadata only; document content has not been analyzed.
+  extraction_record_ids: []
+  approved_tool: null
+  tool_version: null
+  ocr_required: null
+  duplicate_status: unchecked
+  duplicate_of_source_id: null
+  approved_summary_ref: null
+  normalized_knowledge_refs: []
+  candidate_record_refs: []
+  field_evidence_refs: []
+  derived_classification: pending
+  review_status: proposed

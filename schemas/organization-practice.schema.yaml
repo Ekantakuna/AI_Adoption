@@ -1,0 +1,41 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: organization-practice.schema.yaml
+title: Organization value-creation practice
+description: Way of working or process used to coordinate AI effort and create value.
+type: object
+additionalProperties: false
+required: [organization_practice_id, name, practice_type, state_type, status, purpose, work_stage_ids, constituency_ids, related_domain_ids, current_description, target_description, inputs, activities, outputs, decision_points, accountable_role_ids, participating_unit_ids, network_ids, governance_control_ids, tool_requirement_ids, metric_ids, source_ids, evidence_refs, assumptions, classification]
+properties:
+  organization_practice_id: {type: string, pattern: "^OPRAC-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  practice_type: {$ref: "#/$defs/id"}
+  state_type: {type: string, enum: [current, proposed, target, transitional]}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  work_stage_ids: {$ref: "#/$defs/ids"}
+  constituency_ids: {$ref: "#/$defs/ids"}
+  related_domain_ids: {$ref: "#/$defs/ids"}
+  current_description: {type: string}
+  target_description: {type: string}
+  inputs: {$ref: "#/$defs/text"}
+  activities: {$ref: "#/$defs/text"}
+  outputs: {$ref: "#/$defs/text"}
+  decision_points: {$ref: "#/$defs/text"}
+  accountable_role_ids: {$ref: "#/$defs/records"}
+  participating_unit_ids: {$ref: "#/$defs/records"}
+  network_ids: {$ref: "#/$defs/records"}
+  governance_control_ids: {$ref: "#/$defs/records"}
+  tool_requirement_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

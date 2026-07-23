@@ -1,0 +1,32 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-evidence.schema.yaml
+title: Decision evidence
+description: Provenanced evidence, prediction, forecast, scenario, simulation, judgement, assumption or constraint used in a decision.
+type: object
+additionalProperties: false
+required: [decision_evidence_id, decision_id, decision_option_ids, input_type, title, status, statement, method_or_model, data_and_solution_ids, observed_or_generated_at, valid_until, evidence_strength, uncertainty, limitations, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_evidence_id: {type: string, pattern: "^DEVID-[0-9]{6}$"}
+  decision_id: {type: string, pattern: "^DEC-[0-9]{6}$"}
+  decision_option_ids: {$ref: "#/$defs/records"}
+  input_type: {type: string, enum: [fact, observation, qualitative_evidence, quantitative_evidence, prediction, forecast, scenario, simulation, expert_judgement, assumption, constraint]}
+  title: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, unverified, reviewed, accepted, challenged, rejected, expired, superseded]}
+  statement: {type: string}
+  method_or_model: {type: string}
+  data_and_solution_ids: {$ref: "#/$defs/records"}
+  observed_or_generated_at: {type: [string, "null"], format: date-time}
+  valid_until: {type: [string, "null"], format: date-time}
+  evidence_strength: {type: string, enum: [unassessed, weak, moderate, strong, conflicting]}
+  uncertainty: {type: string}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

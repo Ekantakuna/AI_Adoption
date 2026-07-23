@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: decision-learning-event.schema.yaml
+title: Decision learning event
+description: Reviewed change to the decision environment derived from outcomes and feedback.
+type: object
+additionalProperties: false
+required: [decision_learning_event_id, decision_id, decision_outcome_ids, name, status, change_type, finding, proposed_change, applied_change, changed_record_ids, rationale, owner_stakeholder_ids, proposed_at, effective_at, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  decision_learning_event_id: {type: string, pattern: "^DLE-[0-9]{6}$"}
+  decision_id: {type: string, pattern: "^DEC-[0-9]{6}$"}
+  decision_outcome_ids: {$ref: "#/$defs/records"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, in_review, approved, applied, rejected, superseded]}
+  change_type: {$ref: "#/$defs/id"}
+  finding: {type: string}
+  proposed_change: {type: string}
+  applied_change: {type: [string, "null"]}
+  changed_record_ids: {$ref: "#/$defs/records"}
+  rationale: {type: string}
+  owner_stakeholder_ids: {$ref: "#/$defs/records"}
+  proposed_at: {type: string, format: date-time}
+  effective_at: {type: [string, "null"], format: date-time}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-z][a-z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

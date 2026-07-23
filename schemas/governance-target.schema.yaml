@@ -1,0 +1,41 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: governance-target.schema.yaml
+title: Governance target profile
+description: Versioned TO-BE profile for AI and data governance.
+type: object
+additionalProperties: false
+required: [governance_target_id, name, version, status, governance_domain_ids, governance_layer_ids, scope_statement, applicability, exclusions, principle_statements, target_characteristics, intended_outcomes, capability_ids, operating_model_id, artifact_ids, risk_ids, control_ids, tool_requirement_ids, assumptions, constraints, rationale, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  governance_target_id: {type: string, pattern: "^GTGT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  version: {type: string, minLength: 1}
+  status: {$ref: "#/$defs/status"}
+  governance_domain_ids: {$ref: "#/$defs/ids"}
+  governance_layer_ids: {$ref: "#/$defs/ids"}
+  scope_statement: {type: string}
+  applicability: {$ref: "#/$defs/text"}
+  exclusions: {$ref: "#/$defs/text"}
+  principle_statements: {$ref: "#/$defs/text"}
+  target_characteristics: {$ref: "#/$defs/ids"}
+  intended_outcomes: {$ref: "#/$defs/text"}
+  capability_ids: {$ref: "#/$defs/record_ids"}
+  operating_model_id: {type: [string, "null"], pattern: "^GOM-[0-9]{6}$"}
+  artifact_ids: {$ref: "#/$defs/record_ids"}
+  risk_ids: {$ref: "#/$defs/record_ids"}
+  control_ids: {$ref: "#/$defs/record_ids"}
+  tool_requirement_ids: {$ref: "#/$defs/record_ids"}
+  assumptions: {$ref: "#/$defs/text"}
+  constraints: {$ref: "#/$defs/text"}
+  rationale: {type: string}
+  source_ids: {$ref: "#/$defs/source_ids"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-z][a-z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  record_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  source_ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

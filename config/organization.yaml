@@ -1,0 +1,235 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+
+constituencies:
+  - ict
+  - business
+  - legal
+  - compliance
+
+organization_layers:
+  - enterprise
+  - executive_leadership
+  - ai_leadership_and_enablement
+  - business_domain
+  - ict_product_and_platform
+  - delivery_team
+  - community_and_network
+  - partner_ecosystem
+
+organization_dimensions:
+  - vision_and_design_principles
+  - structure_and_composition
+  - leadership_and_accountability
+  - decision_rights_and_governance_interfaces
+  - funding_portfolio_and_value_flow
+  - ways_of_working_and_processes
+  - roles_competencies_and_capacity
+  - communities_champions_and_knowledge_flow
+  - data_platform_and_engineering_interfaces
+  - legal_compliance_risk_and_security_interfaces
+  - tools_workflows_and_automation
+  - partnerships_and_ecosystem
+  - change_literacy_and_adoption
+  - measurement_learning_and_improvement
+
+organization_element_types:
+  - ai_leader
+  - executive_sponsor
+  - initial_ai_team
+  - ai_center_of_excellence
+  - federated_ai_team
+  - business_domain_team
+  - ict_product_or_platform_team
+  - legal_and_compliance_support
+  - ai_governance_interface
+  - community_of_practice
+  - business_champion_network
+  - partner_interface
+
+operating_model_archetypes:
+  - centralized
+  - federated
+  - hub_and_spoke
+  - distributed
+  - hybrid
+  - not_selected
+
+value_creation_practices:
+  - outcome_and_value_based_prioritization
+  - cross_functional_product_teaming
+  - reusable_platforms_and_components
+  - rapid_experimentation_with_stage_gates
+  - responsible_ai_by_design
+  - data_product_and_data_contract_practices
+  - product_lifecycle_ownership
+  - use_case_to_platform_feedback
+  - knowledge_reuse_and_community_learning
+  - portfolio_review_and_reallocation
+  - measurable_adoption_and_value_realization
+  - continuous_learning_and_improvement
+
+work_stages:
+  - opportunity_discovery
+  - intake_and_triage
+  - value_risk_and_feasibility_assessment
+  - prioritization_and_funding
+  - experimentation
+  - productization
+  - deployment_and_adoption
+  - operation_and_value_tracking
+  - scaling_and_reuse
+  - retirement_or_replacement
+
+role_categories:
+  - executive_leadership
+  - ai_leadership
+  - ai_center_of_excellence
+  - business_product_and_domain
+  - data_and_analytics
+  - engineering_and_platform
+  - legal_compliance_risk_and_governance
+  - security_and_resilience
+  - change_learning_and_communications
+  - champion_or_community
+  - partnership_and_sourcing
+
+competency_categories:
+  - strategic_and_value
+  - product_and_portfolio
+  - data_and_ai
+  - engineering_and_platform
+  - governance_risk_legal_and_compliance
+  - security_privacy_and_resilience
+  - change_leadership_and_facilitation
+  - vendor_and_partnership_management
+  - measurement_and_continuous_improvement
+
+network_types:
+  - ai_practice_community
+  - business_champion_network
+  - technical_practice_network
+  - governance_and_assurance_network
+  - learning_and_knowledge_network
+  - partner_collaboration_network
+
+partnership_types:
+  - strategic_advisory
+  - technology_and_platform
+  - cloud_and_frontier_model
+  - data_and_content
+  - systems_integration_and_delivery
+  - research_and_academia
+  - learning_and_capability_development
+  - legal_regulatory_and_assurance
+
+tool_capability_types:
+  - work_and_task_management
+  - product_and_portfolio_management
+  - collaboration_and_communications
+  - knowledge_and_reuse_management
+  - skills_and_expertise_directory
+  - community_and_champion_management
+  - demand_intake_and_workflow
+  - capacity_and_resource_planning
+  - dependency_and_roadmap_management
+  - value_metrics_and_outcome_tracking
+  - decision_and_evidence_repository
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap
+  - progress
+
+assessment_ratings:
+  - not_assessed
+  - absent
+  - fragmented
+  - emerging
+  - defined
+  - operating
+  - scaled
+  - continuously_improving
+  - not_applicable
+
+finding_types:
+  - strength
+  - drawback
+  - gap
+  - dependency
+  - constraint
+  - risk
+  - opportunity
+
+action_measure_types:
+  - organization_design
+  - leadership_and_accountability
+  - role_and_competency
+  - community_and_champion
+  - process_and_way_of_working
+  - governance_interface
+  - partnership
+  - tooling_and_automation
+  - data_platform_or_engineering_interface
+  - change_and_adoption
+  - measurement_and_improvement
+
+semantic_relationships:
+  - subject: organization_target
+    predicate: defines
+    object: target_operating_model_and_characteristics
+  - subject: organization_operating_model
+    predicate: composed_of
+    object: units_roles_networks_practices_and_interfaces
+  - subject: organization_unit
+    predicate: accountable_through
+    object: organization_roles
+  - subject: organization_role
+    predicate: requires
+    object: competencies_and_capacity
+  - subject: organization_network
+    predicate: connects
+    object: constituencies_domains_and_roles
+  - subject: organization_practice
+    predicate: enables
+    object: value_flow_and_cross_functional_delivery
+  - subject: partnership_requirement
+    predicate: fills
+    object: capability_or_capacity_gap
+  - subject: organization_tool_requirement
+    predicate: enables
+    object: practices_networks_and_measurement
+  - subject: organization_assessment
+    predicate: evaluates
+    object: current_or_target_organization
+  - subject: organization_finding
+    predicate: compares
+    object: current_evidence_and_target_characteristics
+  - subject: organization_action
+    predicate: closes
+    object: approved_organization_gap
+
+cross_domain_interfaces:
+  - strategic_intent
+  - value_management
+  - use_cases
+  - people_and_culture
+  - governance
+  - data
+  - engineering_platform
+  - security_trust
+  - ecosystem_sourcing
+  - maturity_execution
+
+evidence_rules:
+  current_state_claims_require_source_ids: true
+  drawbacks_require_evidence_and_review: true
+  target_state_recommendations_require_rationale: true
+  gaps_require_current_and_target_references: true
+  actions_require_approved_gap_or_finding: true
+  appointments_partner_selections_and_tool_selections_are_not_implied: true
+  source_derived_records_remain_proposed_until_human_review: true
