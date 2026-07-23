@@ -1,0 +1,3 @@
+schema_version: 1
+register: security_trust_actions
+records: []

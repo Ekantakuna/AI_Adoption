@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: security-trust-requirement.schema.yaml
+title: Security and trust requirement
+type: object
+additionalProperties: false
+required: [security_trust_requirement_id, name, requirement_type, status, description, rationale, priority, lifecycle_stage_ids, applicable_asset_ids, acceptance_criteria, architecture_ids, risk_ids, control_ids, test_ids, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  security_trust_requirement_id: {type: string, pattern: "^STRQ-[0-9]{6}$"}
+  name: {type: string}
+  requirement_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  description: {type: string}
+  rationale: {type: string}
+  priority: {type: string, enum: [must, should, could, will_not, unassigned]}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  applicable_asset_ids: {$ref: "#/$defs/records"}
+  acceptance_criteria: {$ref: "#/$defs/text"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  test_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

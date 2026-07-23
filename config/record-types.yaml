@@ -115,6 +115,150 @@ record_types:
     schema: schemas/data-action.schema.yaml
     purpose: Data capability, product, quality, metadata, governance or observability improvement linked to an approved finding.
 
+  agentic_concept:
+    id_prefix: ACON
+    register: registers/agentic-concepts.yaml
+    schema: schemas/agentic-concept.schema.yaml
+    purpose: Versioned definition, characteristic or evolution stage of agentic AI.
+
+  agent_profile:
+    id_prefix: AGENT
+    register: registers/agent-profiles.yaml
+    schema: schemas/agent-profile.schema.yaml
+    purpose: Controlled profile for an AI agent role, capabilities, tools, memory, authority boundaries and accountability.
+
+  agentic_platform_requirement:
+    id_prefix: APREQ
+    register: registers/agentic-platform-requirements.yaml
+    schema: schemas/agentic-platform-requirement.schema.yaml
+    purpose: Functional, orchestration, context, evaluation, security or operational requirement for agentic platforms.
+
+  agentic_architecture:
+    id_prefix: AARCH
+    register: registers/agentic-architectures.yaml
+    schema: schemas/agentic-architecture.schema.yaml
+    purpose: Versioned single-agent or multi-agent architecture with components, interactions and human-control points.
+
+  agentic_pattern:
+    id_prefix: APAT
+    register: registers/agentic-patterns.yaml
+    schema: schemas/agentic-pattern.schema.yaml
+    purpose: Reusable agent design, orchestration, tool-use, memory, approval, recovery or observability pattern.
+
+  agentic_workflow:
+    id_prefix: AWF
+    register: registers/agentic-workflows.yaml
+    schema: schemas/agentic-workflow.schema.yaml
+    purpose: Human-accountable workflow defining agent-operated steps, approval gates, escalation and evidence.
+
+  agentic_workflow_run:
+    id_prefix: AWRUN
+    register: registers/agentic-workflow-runs.yaml
+    schema: schemas/agentic-workflow-run.schema.yaml
+    purpose: Append-only trace of an agentic workflow execution, outputs, approvals, changes and outcomes.
+
+  agent_evaluation:
+    id_prefix: AEVAL
+    register: registers/agent-evaluations.yaml
+    schema: schemas/agent-evaluation.schema.yaml
+    purpose: Evidence-backed capability, quality, safety, tool-use, control or operational evaluation of an agent.
+
+  agentic_technology_signal:
+    id_prefix: ATSIG
+    register: registers/agentic-technology-signals.yaml
+    schema: schemas/agentic-technology-signal.schema.yaml
+    purpose: Time-stamped evidence-backed signal about emerging agent technology, standards, patterns or ecosystem change.
+
+  agentic_operating_model:
+    id_prefix: AOM
+    register: registers/agentic-operating-models.yaml
+    schema: schemas/agentic-operating-model.schema.yaml
+    purpose: Current, transitional or target human-accountable agentic operating-company model.
+
+  agentic_assessment:
+    id_prefix: AAS
+    register: registers/agentic-assessments.yaml
+    schema: schemas/agentic-assessment.schema.yaml
+    purpose: Evidence-backed agentic capability, platform, authority, workflow or operating-model assessment.
+
+  agentic_finding:
+    id_prefix: AFND
+    register: registers/agentic-findings.yaml
+    schema: schemas/agentic-finding.schema.yaml
+    purpose: Granular evidence-backed agentic strength, gap, risk, constraint or opportunity.
+
+  agentic_action:
+    id_prefix: AACT
+    register: registers/agentic-actions.yaml
+    schema: schemas/agentic-action.schema.yaml
+    purpose: Agentic capability, platform, workflow, control or operating-model improvement linked to an approved finding.
+
+  security_trust_target:
+    id_prefix: STTGT
+    register: registers/security-trust-targets.yaml
+    schema: schemas/security-trust-target.schema.yaml
+    purpose: Versioned TO-BE AI security, trust and resilience profile.
+
+  security_trust_requirement:
+    id_prefix: STRQ
+    register: registers/security-trust-requirements.yaml
+    schema: schemas/security-trust-requirement.schema.yaml
+    purpose: Security, privacy, safety, resilience or trustworthiness requirement for an AI asset or lifecycle stage.
+
+  threat_model:
+    id_prefix: THMOD
+    register: registers/threat-models.yaml
+    schema: schemas/threat-model.schema.yaml
+    purpose: Versioned AI threat model connecting assets, boundaries, adversaries, scenarios, risks and controls.
+
+  security_trust_architecture:
+    id_prefix: STARCH
+    register: registers/security-trust-architectures.yaml
+    schema: schemas/security-trust-architecture.schema.yaml
+    purpose: Security and trust architecture view with zones, mechanisms, interfaces and assurance points.
+
+  security_trust_practice:
+    id_prefix: STPRAC
+    register: registers/security-trust-practices.yaml
+    schema: schemas/security-trust-practice.schema.yaml
+    purpose: Repeatable secure-AI lifecycle, monitoring, incident, assurance or resilience practice.
+
+  assurance_case:
+    id_prefix: ACASE
+    register: registers/assurance-cases.yaml
+    schema: schemas/assurance-case.schema.yaml
+    purpose: Structured trust or security claim supported by arguments, evidence, assumptions and limitations.
+
+  security_test:
+    id_prefix: STEST
+    register: registers/security-tests.yaml
+    schema: schemas/security-test.schema.yaml
+    purpose: Time-stamped adversarial, abuse, privacy, safety, resilience or control-effectiveness test.
+
+  security_trust_event:
+    id_prefix: STEVT
+    register: registers/security-trust-events.yaml
+    schema: schemas/security-trust-event.schema.yaml
+    purpose: Security, trust, safety, control or resilience event with impact, response and learning.
+
+  security_trust_assessment:
+    id_prefix: STAS
+    register: registers/security-trust-assessments.yaml
+    schema: schemas/security-trust-assessment.schema.yaml
+    purpose: Evidence-backed security, trust, threat, control, resilience or assurance assessment.
+
+  security_trust_finding:
+    id_prefix: STFND
+    register: registers/security-trust-findings.yaml
+    schema: schemas/security-trust-finding.schema.yaml
+    purpose: Granular evidence-backed security or trust strength, gap, exposure, weakness or opportunity.
+
+  security_trust_action:
+    id_prefix: STACT
+    register: registers/security-trust-actions.yaml
+    schema: schemas/security-trust-action.schema.yaml
+    purpose: Security, trust, resilience or assurance improvement linked to an approved finding.
+
   engineering_requirement:
     id_prefix: ENGREQ
     register: registers/engineering-requirements.yaml
@@ -602,6 +746,53 @@ record_types:
     purpose: Pathway action linked to maturity gaps and findings.
 
 source_collection_record_targets:
+  security_trust/risks_trust_security_management:
+    - security_trust_target
+    - security_trust_requirement
+    - threat_model
+    - security_trust_practice
+    - assurance_case
+    - security_trust_assessment
+    - security_trust_finding
+    - security_trust_action
+    - risk
+    - control
+    - metric
+  security_trust/security:
+    - security_trust_target
+    - security_trust_requirement
+    - threat_model
+    - security_trust_architecture
+    - security_trust_practice
+    - assurance_case
+    - security_test
+    - security_trust_event
+    - security_trust_assessment
+    - security_trust_finding
+    - security_trust_action
+    - risk
+    - control
+    - metric
+    - solution
+  agentic_ai:
+    - agentic_concept
+    - agent_profile
+    - agentic_platform_requirement
+    - agentic_architecture
+    - agentic_pattern
+    - agentic_workflow
+    - agent_evaluation
+    - agentic_technology_signal
+    - agentic_operating_model
+    - agentic_assessment
+    - agentic_finding
+    - agentic_action
+    - use_case_pattern
+    - capability
+    - solution
+    - metric
+    - risk
+    - control
   data:
     - data_readiness_target
     - data_requirement

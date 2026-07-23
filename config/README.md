@@ -20,6 +20,10 @@ This directory contains project-wide controlled values, taxonomy, audience defin
 
 `data.yaml` controls AI data-readiness dimensions, lifecycle stages, requirements, products, capabilities, governance extensions, quality dimensions and rules, metadata practices, observability signals, assessments, semantic relationships and cross-domain mappings.
 
+`agentic-ai.yaml` controls agent definitions, evolution, types, capabilities, architectures, patterns, platform requirements, human gates, prohibited actions, evaluations, technology signals, operating-model dimensions and agentic-native project workflows.
+
+`security-trust.yaml` controls trust dimensions, protected assets, lifecycle stages, threat categories, security architecture, lifecycle practices, test and assurance types, events, assessments, semantic relationships and cross-domain mappings.
+
 `engineering-platform.yaml` controls engineering lifecycle stages, requirements, build/buy and deployment options, technical evaluation dimensions, reference-architecture layers, design patterns, observability signals, AI UX patterns, AI catalogue entities and processes, documentation, assurance checks, assessment values and cross-domain mappings.
 
 `ecosystem-sourcing.yaml` controls provider and offering types, sourcing lifecycle, evaluation and due-diligence dimensions, agreement obligations, performance signals, exit triggers, semantic relationships and cross-domain mappings.

@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-pattern.schema.yaml
+title: Agentic pattern
+type: object
+additionalProperties: false
+required: [agentic_pattern_id, name, pattern_type, version, status, intent, context, structure, applicability, benefits, tradeoffs, failure_modes, human_gate_requirements, evaluation_requirements, architecture_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_pattern_id: {type: string, pattern: "^APAT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  pattern_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  intent: {type: string}
+  context: {type: string}
+  structure: {$ref: "#/$defs/text"}
+  applicability: {$ref: "#/$defs/text"}
+  benefits: {$ref: "#/$defs/text"}
+  tradeoffs: {$ref: "#/$defs/text"}
+  failure_modes: {$ref: "#/$defs/text"}
+  human_gate_requirements: {$ref: "#/$defs/text"}
+  evaluation_requirements: {$ref: "#/$defs/text"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  status: {type: string, enum: [candidate, proposed, in_review, approved, deprecated, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

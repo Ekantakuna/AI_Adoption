@@ -14,6 +14,10 @@ This directory contains traceable current-state, target-state, gap, and maturity
 
 `data/` separates current state, target state, use-case and product readiness, governance and capabilities, quality, metadata and lineage, and observability assessments.
 
+`agentic-ai/` separates current state, target state, architecture and platform, human authority and controls, workflow readiness, operating-company and project-operation assessments.
+
+`security-trust/` separates current state, target state, threats and exposures, architecture and controls, testing and assurance, resilience and incidents, and deployment-readiness evidence.
+
 `engineering-platform/` separates current state, target state, architecture and options, observability and operations, AI UX and catalogue-readiness assessments.
 
 `ecosystem-sourcing/` separates market and capability, provider evaluation, due diligence, performance and value, and exit-readiness assessments.

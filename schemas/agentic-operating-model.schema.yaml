@@ -1,0 +1,40 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-operating-model.schema.yaml
+title: Agentic operating model
+type: object
+additionalProperties: false
+required: [agentic_operating_model_id, name, model_type, version, status, purpose, scope, organization_operating_model_ids, dimension_ids, human_accountability_model, agent_role_ids, human_role_ids, workflow_ids, decision_authority_rule_ids, platform_and_solution_ids, governance_and_control_ids, observability_and_learning, transition_principles, capability_ids, metric_ids, risk_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_operating_model_id: {type: string, pattern: "^AOM-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  model_type: {type: string, enum: [current, transitional, target]}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  purpose: {type: string}
+  scope: {type: string}
+  organization_operating_model_ids: {$ref: "#/$defs/records"}
+  dimension_ids: {$ref: "#/$defs/ids"}
+  human_accountability_model: {type: string}
+  agent_role_ids: {$ref: "#/$defs/records"}
+  human_role_ids: {$ref: "#/$defs/records"}
+  workflow_ids: {$ref: "#/$defs/records"}
+  decision_authority_rule_ids: {$ref: "#/$defs/records"}
+  platform_and_solution_ids: {$ref: "#/$defs/records"}
+  governance_and_control_ids: {$ref: "#/$defs/records"}
+  observability_and_learning: {$ref: "#/$defs/text"}
+  transition_principles: {$ref: "#/$defs/text"}
+  capability_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

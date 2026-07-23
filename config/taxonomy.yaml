@@ -220,10 +220,53 @@ domains:
       - outlook/15-roadmap
 
   - id: security_trust
-    name: Security, trust and resilience
+    name: AI trust, risk, security and resilience
+    description: Trustworthiness objectives, AI threat management, security architecture, assurance, testing, monitoring, incident response and evidence required across AI adoption.
+    includes:
+      - AI trust and trustworthiness characteristics
+      - AI, model, data, application, platform and agent threat modelling
+      - AI security and trust requirements and architecture
+      - security-by-design and secure AI lifecycle practices
+      - AI risk identification, assessment and treatment evidence
+      - control implementation and effectiveness evidence
+      - adversarial, abuse, privacy, safety and resilience testing
+      - assurance cases connecting claims, arguments and evidence
+      - monitoring, security events, incidents, recovery and learning
+      - current-state, target-state, threat, control and assurance assessment
+    excludes:
+      - enterprise risk acceptance and control approval owned by governance and accountable decision authorities
+      - platform implementation owned by engineering_platform
+      - data-quality and metadata ownership held by data
+      - unsupported assertions that an AI system is secure, safe, compliant or trustworthy
+    outlook_sections:
+      - outlook/11-security-trust
+      - outlook/15-roadmap
 
   - id: agentic_ai
-    name: Agentic AI
+    name: Agentic AI and agentic operating company
+    description: Concepts, evolution, emerging technologies, architectures, platforms, applications, controls and operating-model changes required for human-accountable agentic AI.
+    includes:
+      - controlled definition, terminology and evolution of agentic AI
+      - evidence-backed current state and emerging agent technologies
+      - agent capabilities, profiles, tools, memory, context and orchestration
+      - single-agent and multi-agent architectures and patterns
+      - prerequisites for efficient agents and agentic platforms
+      - agent evaluation, observability, safety and operational readiness
+      - application domains and reusable agentic use cases
+      - transition towards an agentic operating company
+      - human accountability, approval, override and escalation
+      - agent-operated project workflows with traceable human gates
+      - current-state, target-state, platform, authority and operating-model assessment
+    excludes:
+      - autonomous material decisions without approved human authority
+      - strategic conclusions owned by strategic_intent
+      - generic platform architecture owned by engineering_platform
+      - organization design approval owned by organization
+      - risk acceptance, policy approval or security conclusions owned by their respective domains
+      - unreviewed emerging-technology claims presented as current fact
+    outlook_sections:
+      - outlook/12-agentic-ai
+      - outlook/15-roadmap
 
   - id: ecosystem_sourcing
     name: Ecosystem and sourcing

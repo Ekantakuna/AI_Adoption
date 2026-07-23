@@ -1,0 +1,30 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-concept.schema.yaml
+title: Agentic AI concept
+type: object
+additionalProperties: false
+required: [agentic_concept_id, name, concept_type, version, status, definition, characteristics, evolution_stage, related_term_ids, implications, limitations, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_concept_id: {type: string, pattern: "^ACON-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  concept_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  definition: {type: string}
+  characteristics: {$ref: "#/$defs/text"}
+  evolution_stage: {$ref: "#/$defs/id"}
+  related_term_ids: {$ref: "#/$defs/records"}
+  implications: {$ref: "#/$defs/text"}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs: &common
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

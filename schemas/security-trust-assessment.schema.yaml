@@ -1,0 +1,46 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: security-trust-assessment.schema.yaml
+title: Security and trust assessment
+type: object
+additionalProperties: false
+required: [security_trust_assessment_id, target_id, name, assessment_type, status, scope, assessment_date, method, assessed_record_ids, dimensions, qualitative_arguments, quantitative_arguments, finding_ids, action_ids, assurance_case_ids, metric_ids, risk_ids, control_ids, limitations, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  security_trust_assessment_id: {type: string, pattern: "^STAS-[0-9]{6}$"}
+  target_id: {type: [string, "null"], pattern: "^STTGT-[0-9]{6}$"}
+  name: {type: string}
+  assessment_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [planned, evidence_pending, in_progress, draft, in_review, approved, superseded]}
+  scope: {type: string}
+  assessment_date: {type: [string, "null"], format: date}
+  method: {type: string}
+  assessed_record_ids: {$ref: "#/$defs/records"}
+  dimensions: {type: array, items: {$ref: "#/$defs/dimension"}}
+  qualitative_arguments: {$ref: "#/$defs/text"}
+  quantitative_arguments: {$ref: "#/$defs/text"}
+  finding_ids: {$ref: "#/$defs/records"}
+  action_ids: {$ref: "#/$defs/records"}
+  assurance_case_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  limitations: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
+  dimension:
+    type: object
+    additionalProperties: false
+    required: [dimension_id, rating, argument, evidence_refs]
+    properties:
+      dimension_id: {$ref: "#/$defs/id"}
+      rating: {type: [string, number, "null"]}
+      argument: {type: string}
+      evidence_refs: {$ref: "#/$defs/text"}

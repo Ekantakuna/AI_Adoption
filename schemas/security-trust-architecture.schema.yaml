@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: security-trust-architecture.schema.yaml
+title: Security and trust architecture
+type: object
+additionalProperties: false
+required: [security_trust_architecture_id, name, version, status, purpose, scope, architecture_domain_ids, zones_and_boundaries, mechanisms, interfaces, human_control_points, observability_and_evidence_points, requirement_ids, reference_architecture_ids, threat_model_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  security_trust_architecture_id: {type: string, pattern: "^STARCH-[0-9]{6}$"}
+  name: {type: string}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  purpose: {type: string}
+  scope: {type: string}
+  architecture_domain_ids: {$ref: "#/$defs/ids"}
+  zones_and_boundaries: {$ref: "#/$defs/text"}
+  mechanisms: {$ref: "#/$defs/text"}
+  interfaces: {$ref: "#/$defs/text"}
+  human_control_points: {$ref: "#/$defs/text"}
+  observability_and_evidence_points: {$ref: "#/$defs/text"}
+  requirement_ids: {$ref: "#/$defs/records"}
+  reference_architecture_ids: {$ref: "#/$defs/records"}
+  threat_model_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

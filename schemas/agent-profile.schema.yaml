@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agent-profile.schema.yaml
+title: Agent profile
+type: object
+additionalProperties: false
+required: [agent_profile_id, name, agent_type, version, status, purpose, operating_scope, capability_ids, model_and_solution_ids, tool_refs, knowledge_and_context_refs, memory_design, instruction_and_policy_refs, authority_rule_ids, accountable_role_ids, permitted_actions, prohibited_actions, escalation_rules, workflow_ids, evaluation_ids, risk_ids, control_ids, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agent_profile_id: {type: string, pattern: "^AGENT-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  agent_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  operating_scope: {type: string}
+  capability_ids: {$ref: "#/$defs/records"}
+  model_and_solution_ids: {$ref: "#/$defs/records"}
+  tool_refs: {$ref: "#/$defs/text"}
+  knowledge_and_context_refs: {$ref: "#/$defs/text"}
+  memory_design: {type: string}
+  instruction_and_policy_refs: {$ref: "#/$defs/text"}
+  authority_rule_ids: {$ref: "#/$defs/records"}
+  accountable_role_ids: {$ref: "#/$defs/records"}
+  permitted_actions: {$ref: "#/$defs/text"}
+  prohibited_actions: {$ref: "#/$defs/text"}
+  escalation_rules: {$ref: "#/$defs/text"}
+  workflow_ids: {$ref: "#/$defs/records"}
+  evaluation_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, suspended, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

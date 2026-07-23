@@ -1,0 +1,40 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-architecture.schema.yaml
+title: Agentic architecture
+type: object
+additionalProperties: false
+required: [agentic_architecture_id, name, architecture_type, version, status, purpose, scope, component_ids, agent_profile_ids, interaction_flows, context_and_memory_design, tool_and_integration_design, human_control_points, failure_and_recovery, observability_requirements, platform_requirement_ids, reference_architecture_ids, risk_ids, control_ids, source_ids, evidence_refs, assumptions, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_architecture_id: {type: string, pattern: "^AARCH-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  architecture_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {$ref: "#/$defs/status"}
+  purpose: {type: string}
+  scope: {type: string}
+  component_ids: {$ref: "#/$defs/ids"}
+  agent_profile_ids: {$ref: "#/$defs/records"}
+  interaction_flows: {$ref: "#/$defs/text"}
+  context_and_memory_design: {type: string}
+  tool_and_integration_design: {type: string}
+  human_control_points: {$ref: "#/$defs/text"}
+  failure_and_recovery: {$ref: "#/$defs/text"}
+  observability_requirements: {$ref: "#/$defs/text"}
+  platform_requirement_ids: {$ref: "#/$defs/records"}
+  reference_architecture_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  assumptions: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

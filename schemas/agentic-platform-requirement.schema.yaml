@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-platform-requirement.schema.yaml
+title: Agentic platform requirement
+type: object
+additionalProperties: false
+required: [agentic_platform_requirement_id, name, requirement_type, status, description, rationale, priority, acceptance_criteria, agent_profile_ids, architecture_ids, engineering_requirement_ids, solution_ids, risk_ids, control_ids, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_platform_requirement_id: {type: string, pattern: "^APREQ-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  requirement_type: {$ref: "#/$defs/id"}
+  status: {$ref: "#/$defs/status"}
+  description: {type: string}
+  rationale: {type: string}
+  priority: {type: string, enum: [must, should, could, will_not, unassigned]}
+  acceptance_criteria: {$ref: "#/$defs/text"}
+  agent_profile_ids: {$ref: "#/$defs/records"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  engineering_requirement_ids: {$ref: "#/$defs/records"}
+  solution_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  status: {type: string, enum: [proposed, draft, in_review, approved, superseded, retired]}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

@@ -102,6 +102,30 @@ Data-domain records form a readiness, product, quality, metadata and observabili
 
 These records reference canonical governance, engineering, current-state, use-case, risk, control, metric, capability, initiative and dependency records. Empty registers make no data-readiness or data-quality claim.
 
+Agentic-AI records form a concept, architecture, workflow, evaluation and operating-model chain:
+
+- `agentic-concepts.yaml` and `agentic-technology-signals.yaml` store reviewed definitions, evolution and emerging signals;
+- `agent-profiles.yaml`, `agentic-platform-requirements.yaml`, `agentic-architectures.yaml` and `agentic-patterns.yaml` define agents and prerequisites;
+- `agentic-workflows.yaml` defines human-accountable agent-operated processes;
+- `agentic-workflow-runs.yaml` preserves append-only inputs, outputs, tools, gates, changes and outcomes;
+- `agent-evaluations.yaml` stores reproducible agent and workflow evaluation;
+- `agentic-operating-models.yaml` specializes organization design for human-agent operation;
+- `agentic-assessments.yaml`, `agentic-findings.yaml` and `agentic-actions.yaml` support evidence-backed transition.
+
+Agents cannot approve their own outputs or bypass human authority, source-access, risk, publication or Git gates.
+
+Security-and-trust records form a requirements, threat, assurance and improvement chain:
+
+- `security-trust-targets.yaml` and `security-trust-requirements.yaml` store intended trust outcomes and traceable requirements;
+- `threat-models.yaml` stores assets, actors, threats, attack paths, failure modes and exposures linked to shared risks;
+- `security-trust-architectures.yaml` and `security-trust-practices.yaml` store proposed protection design and secure-lifecycle practices;
+- `security-tests.yaml` stores test method, scope, results, limitations and findings;
+- `assurance-cases.yaml` connects claims, arguments and evidence without implying deployment approval or risk acceptance;
+- `security-trust-events.yaml` stores detected security, safety, privacy, resilience and trust events and their response;
+- `security-trust-assessments.yaml`, `security-trust-findings.yaml` and `security-trust-actions.yaml` support evidence-backed evaluation and improvement.
+
+These records reference shared risks, controls, governance artifacts, decisions, engineering implementations, data products, catalogue entries, agentic artifacts, metrics, initiatives and dependencies. Empty registers make no security, compliance or trustworthiness claim.
+
 Engineering-platform records form a technical option, architecture, operation and catalogue chain:
 
 - `engineering-requirements.yaml` stores vendor-neutral platform, model, application and assurance needs;

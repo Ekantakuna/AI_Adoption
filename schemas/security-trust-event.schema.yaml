@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: security-trust-event.schema.yaml
+title: Security and trust event
+type: object
+additionalProperties: false
+required: [security_trust_event_id, event_type, status, title, detected_at, resolved_at, severity, affected_asset_ids, description, timeline, impact, threat_model_ids, risk_ids, control_ids, response_action_ids, decision_ids, lessons, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  security_trust_event_id: {type: string, pattern: "^STEVT-[0-9]{6}$"}
+  event_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [detected, triaged, investigating, contained, recovering, resolved, closed, superseded]}
+  title: {type: string}
+  detected_at: {type: string, format: date-time}
+  resolved_at: {type: [string, "null"], format: date-time}
+  severity: {type: string, enum: [pending, low, moderate, high, critical]}
+  affected_asset_ids: {$ref: "#/$defs/records"}
+  description: {type: string}
+  timeline: {$ref: "#/$defs/text"}
+  impact: {type: string}
+  threat_model_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  response_action_ids: {$ref: "#/$defs/records"}
+  decision_ids: {$ref: "#/$defs/records"}
+  lessons: {$ref: "#/$defs/text"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

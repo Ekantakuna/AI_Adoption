@@ -82,6 +82,25 @@ Data-domain contracts are:
 - `data-practice.schema.yaml` and `data-observability-check.schema.yaml` for lifecycle, metadata, analytics and reliability practices;
 - `data-assessment.schema.yaml`, `data-finding.schema.yaml` and `data-action.schema.yaml` for evidence-backed evaluation and improvement.
 
+Agentic-AI contracts are:
+
+- `agentic-concept.schema.yaml` and `agentic-technology-signal.schema.yaml` for definitions, evolution and emerging change;
+- `agent-profile.schema.yaml`, `agentic-platform-requirement.schema.yaml`, `agentic-architecture.schema.yaml` and `agentic-pattern.schema.yaml` for controlled agent design;
+- `agentic-workflow.schema.yaml` and `agentic-workflow-run.schema.yaml` for human-accountable workflow design and append-only execution;
+- `agent-evaluation.schema.yaml` for reproducible capability, safety, control and operational evidence;
+- `agentic-operating-model.schema.yaml` for the human-agent operating-company model;
+- `agentic-assessment.schema.yaml`, `agentic-finding.schema.yaml` and `agentic-action.schema.yaml` for evidence-backed transition.
+
+Security-and-trust contracts are:
+
+- `security-trust-target.schema.yaml` and `security-trust-requirement.schema.yaml` for intended trust outcomes and measurable requirements;
+- `threat-model.schema.yaml` for assets, actors, threats, attack paths, failure modes and exposure;
+- `security-trust-architecture.schema.yaml` and `security-trust-practice.schema.yaml` for protection design and secure-lifecycle practices;
+- `security-test.schema.yaml` for reproducible test scope, method, results, limitations and findings;
+- `assurance-case.schema.yaml` for bounded claims supported by explicit arguments and evidence;
+- `security-trust-event.schema.yaml` for detection, response, recovery and lessons;
+- `security-trust-assessment.schema.yaml`, `security-trust-finding.schema.yaml` and `security-trust-action.schema.yaml` for evidence-backed evaluation and improvement.
+
 Engineering-platform contracts are:
 
 - `engineering-requirement.schema.yaml`, `engineering-option.schema.yaml` and `technology-evaluation.schema.yaml` for vendor-neutral needs, alternatives and evidence-backed technical comparison;

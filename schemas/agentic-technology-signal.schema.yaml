@@ -1,0 +1,32 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-technology-signal.schema.yaml
+title: Agentic technology signal
+type: object
+additionalProperties: false
+required: [agentic_technology_signal_id, title, signal_type, status, observed_at, description, maturity, relevance, potential_implications, uncertainty, provider_ids, offering_ids, related_record_ids, review_trigger, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_technology_signal_id: {type: string, pattern: "^ATSIG-[0-9]{6}$"}
+  title: {type: string, minLength: 1}
+  signal_type: {$ref: "#/$defs/id"}
+  status: {type: string, enum: [proposed, monitoring, validated, incorporated, dismissed, superseded]}
+  observed_at: {type: string, format: date-time}
+  description: {type: string}
+  maturity: {type: string, enum: [research, emerging, early_adoption, scaling, established, declining, unknown]}
+  relevance: {type: string}
+  potential_implications: {$ref: "#/$defs/text"}
+  uncertainty: {type: string}
+  provider_ids: {$ref: "#/$defs/records"}
+  offering_ids: {$ref: "#/$defs/records"}
+  related_record_ids: {$ref: "#/$defs/records"}
+  review_trigger: {type: string}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

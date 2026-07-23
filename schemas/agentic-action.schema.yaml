@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agentic-action.schema.yaml
+title: Agentic action
+type: object
+additionalProperties: false
+required: [agentic_action_id, name, action_type, status, description, intended_outcome, finding_ids, assessment_ids, initiative_ids, owner_role_ids, milestone_ids, dependency_ids, affected_record_ids, start_date, target_date, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agentic_action_id: {type: string, pattern: "^AACT-[0-9]{6}$"}
+  name: {type: string}
+  action_type: {type: string, enum: [concept, capability, agent, architecture, platform, workflow, evaluation, authority, control, operating_model, project_operation]}
+  status: {type: string, enum: [proposed, planned, approved, in_progress, blocked, completed, cancelled, superseded]}
+  description: {type: string}
+  intended_outcome: {type: string}
+  finding_ids: {$ref: "#/$defs/records"}
+  assessment_ids: {$ref: "#/$defs/records"}
+  initiative_ids: {$ref: "#/$defs/records"}
+  owner_role_ids: {$ref: "#/$defs/records"}
+  milestone_ids: {$ref: "#/$defs/records"}
+  dependency_ids: {$ref: "#/$defs/records"}
+  affected_record_ids: {$ref: "#/$defs/records"}
+  start_date: {type: [string, "null"], format: date}
+  target_date: {type: [string, "null"], format: date}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

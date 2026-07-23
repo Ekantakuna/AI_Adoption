@@ -1,0 +1,213 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+security_or_trust_claims_require_assurance_evidence: true
+
+trust_dimensions:
+  - reliability
+  - robustness
+  - safety
+  - security
+  - privacy
+  - fairness
+  - transparency
+  - explainability
+  - accountability
+  - human_control
+  - data_and_model_integrity
+  - resilience_and_recoverability
+
+asset_types:
+  - data
+  - model
+  - prompt_and_context
+  - agent
+  - application
+  - API_and_integration
+  - platform_and_infrastructure
+  - tool_and_connector
+  - knowledge_base
+  - identity_and_secret
+  - monitoring_and_evidence
+  - human_process
+
+ai_lifecycle_stages:
+  - strategy_and_intake
+  - data_acquisition_and_preparation
+  - design_and_threat_modelling
+  - development_and_configuration
+  - evaluation_and_security_testing
+  - deployment_approval
+  - release_and_operation
+  - monitoring_and_incident_response
+  - change_and_revalidation
+  - retirement_and_disposition
+
+requirement_types:
+  - confidentiality
+  - integrity
+  - availability
+  - identity_and_access
+  - privacy_and_data_protection
+  - model_and_data_provenance
+  - secure_development
+  - adversarial_robustness
+  - abuse_and_misuse_prevention
+  - content_and_action_safety
+  - human_oversight_and_override
+  - logging_observability_and_audit
+  - resilience_recovery_and_continuity
+  - third_party_and_supply_chain
+  - transparency_and_explainability
+  - fairness_and_non_discrimination
+
+threat_categories:
+  - prompt_injection_and_instruction_manipulation
+  - data_poisoning_and_training_manipulation
+  - model_evasion_and_adversarial_input
+  - model_extraction_theft_and_intellectual_property
+  - sensitive_data_disclosure_and_inference
+  - insecure_output_handling
+  - excessive_agency_and_unauthorized_action
+  - agent_tool_and_connector_abuse
+  - identity_privilege_and_access_abuse
+  - memory_context_and_knowledge_poisoning
+  - supply_chain_model_and_dependency_compromise
+  - denial_of_service_resource_and_cost_abuse
+  - hallucination_deception_and_integrity_failure
+  - bias_fairness_and_harm
+  - monitoring_evasion_and_evidence_tampering
+  - unsafe_change_drift_and_configuration
+  - shadow_ai_and_unmanaged_use
+
+threat_actor_types:
+  - external_attacker
+  - malicious_insider
+  - negligent_user
+  - compromised_provider_or_dependency
+  - autonomous_or_misconfigured_agent
+  - accidental_system_behavior
+  - unknown
+
+architecture_domains:
+  - identity_access_and_secrets
+  - data_model_and_supply_chain_integrity
+  - prompt_context_memory_and_knowledge_protection
+  - tool_connector_and_action_security
+  - runtime_isolation_and_network_security
+  - guardrails_policy_and_content_safety
+  - logging_tracing_detection_and_audit
+  - resilience_fallback_recovery_and_continuity
+  - human_approval_override_and_escalation
+
+practice_types:
+  - secure_ai_design
+  - threat_modelling
+  - security_and_privacy_requirements
+  - secure_data_model_and_dependency_supply_chain
+  - adversarial_and_abuse_testing
+  - control_validation_and_assurance
+  - deployment_security_review
+  - continuous_security_monitoring
+  - vulnerability_and_exposure_management
+  - ai_incident_response
+  - resilience_recovery_and_continuity
+  - change_revalidation_and_retirement
+
+test_types:
+  - threat_scenario_test
+  - prompt_injection_test
+  - adversarial_robustness_test
+  - data_leakage_and_privacy_test
+  - model_extraction_test
+  - tool_and_action_authorization_test
+  - access_control_test
+  - supply_chain_test
+  - content_safety_and_abuse_test
+  - bias_and_fairness_test
+  - resilience_and_recovery_test
+  - monitoring_and_detection_test
+  - control_design_test
+  - control_operating_effectiveness_test
+
+assurance_claim_types:
+  - security
+  - privacy
+  - safety
+  - reliability
+  - robustness
+  - fairness
+  - transparency
+  - human_control
+  - compliance_support
+  - operational_resilience
+
+event_types:
+  - threat_detected
+  - vulnerability
+  - control_failure
+  - policy_or_guardrail_violation
+  - data_or_model_integrity_event
+  - privacy_or_disclosure_event
+  - unsafe_or_harmful_output
+  - unauthorized_agent_action
+  - service_or_resilience_failure
+  - monitoring_or_evidence_failure
+  - near_miss
+  - confirmed_incident
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap_analysis
+  - threat_and_exposure
+  - security_architecture
+  - control_design
+  - control_effectiveness
+  - trust_and_assurance
+  - resilience_and_recovery
+  - deployment_readiness
+  - progress
+
+semantic_relationships:
+  - {subject: security_trust_target, predicate: defines, object: trust_security_and_resilience_outcomes}
+  - {subject: security_trust_requirement, predicate: constrains, object: architecture_solution_model_agent_and_use_case}
+  - {subject: threat_model, predicate: identifies, object: threat_scenarios_risks_and_control_needs}
+  - {subject: security_trust_architecture, predicate: realizes, object: requirements_controls_and_trust_boundaries}
+  - {subject: security_trust_practice, predicate: operates, object: secure_ai_lifecycle}
+  - {subject: assurance_case, predicate: supports, object: bounded_trust_or_security_claim}
+  - {subject: security_test, predicate: provides_evidence_for, object: risks_controls_and_assurance_cases}
+  - {subject: security_trust_event, predicate: triggers, object: response_risk_review_and_learning}
+  - {subject: security_trust_assessment, predicate: identifies, object: security_trust_findings}
+  - {subject: security_trust_finding, predicate: justifies, object: security_trust_action}
+
+cross_domain_mappings:
+  risks: registers/risks.yaml
+  controls: registers/controls.yaml
+  governance_artifacts: registers/governance-artifacts.yaml
+  decision_authority_rules: registers/decision-authority-rules.yaml
+  decisions: registers/decisions.yaml
+  implementations: registers/implementations.yaml
+  solutions: registers/solutions.yaml
+  engineering_requirements: registers/engineering-requirements.yaml
+  reference_architectures: registers/reference-architectures.yaml
+  ai_catalogue: registers/ai-catalogue.yaml
+  data_products: registers/data-products.yaml
+  agent_profiles: registers/agent-profiles.yaml
+  agentic_architectures: registers/agentic-architectures.yaml
+  metrics: registers/metrics.yaml
+  capabilities: registers/capabilities.yaml
+  initiatives: registers/initiatives.yaml
+  dependencies: registers/dependencies.yaml
+
+evidence_and_authority_rules:
+  current_state_and_exposure_claims_require_source_ids: true
+  security_safe_compliant_or_trustworthy_claims_require_assurance_case: true
+  testing_does_not_by_itself_approve_deployment_or_accept_risk: true
+  risk_acceptance_requires_accountable_human_decision: true
+  control_effectiveness_requires_test_evidence_and_review: true
+  threat_models_require_scope_assets_boundaries_and_assumptions: true
+  events_preserve_timeline_response_impact_and_learning: true
+  source_derived_records_remain_proposed_until_human_review: true

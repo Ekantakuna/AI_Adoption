@@ -27,7 +27,25 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - agentic_concept
+  - agent_profile
+  - agentic_platform_requirement
+  - agentic_architecture
+  - agentic_pattern
+  - agentic_workflow
+  - agent_evaluation
+  - agentic_technology_signal
+  - agentic_operating_model
+  - agentic_assessment
+  - agentic_finding
+  - agentic_action
+  - use_case_pattern
+  - capability
+  - solution
+  - metric
+  - risk
+  - control
   source_type: pdf
   extension: ".pdf"
   size_bytes: 1073003
@@ -88,7 +106,25 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - agentic_concept
+  - agent_profile
+  - agentic_platform_requirement
+  - agentic_architecture
+  - agentic_pattern
+  - agentic_workflow
+  - agent_evaluation
+  - agentic_technology_signal
+  - agentic_operating_model
+  - agentic_assessment
+  - agentic_finding
+  - agentic_action
+  - use_case_pattern
+  - capability
+  - solution
+  - metric
+  - risk
+  - control
   source_type: pdf
   extension: ".pdf"
   size_bytes: 520728
@@ -1649,7 +1685,18 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - security_trust_target
+  - security_trust_requirement
+  - threat_model
+  - security_trust_practice
+  - assurance_case
+  - security_trust_assessment
+  - security_trust_finding
+  - security_trust_action
+  - risk
+  - control
+  - metric
   source_type: pdf
   extension: ".pdf"
   size_bytes: 941680
@@ -2009,7 +2056,22 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - security_trust_target
+  - security_trust_requirement
+  - threat_model
+  - security_trust_architecture
+  - security_trust_practice
+  - assurance_case
+  - security_test
+  - security_trust_event
+  - security_trust_assessment
+  - security_trust_finding
+  - security_trust_action
+  - risk
+  - control
+  - metric
+  - solution
   source_type: pdf
   extension: ".pdf"
   size_bytes: 8521581
@@ -2070,7 +2132,22 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - security_trust_target
+  - security_trust_requirement
+  - threat_model
+  - security_trust_architecture
+  - security_trust_practice
+  - assurance_case
+  - security_test
+  - security_trust_event
+  - security_trust_assessment
+  - security_trust_finding
+  - security_trust_action
+  - risk
+  - control
+  - metric
+  - solution
   source_type: pdf
   extension: ".pdf"
   size_bytes: 331914
@@ -2138,7 +2215,22 @@ records:
   knowledge_layer_ids: []
   business_domain_ids: []
   ai_technique_ids: []
-  proposed_record_types: []
+  proposed_record_types:
+  - security_trust_target
+  - security_trust_requirement
+  - threat_model
+  - security_trust_architecture
+  - security_trust_practice
+  - assurance_case
+  - security_test
+  - security_trust_event
+  - security_trust_assessment
+  - security_trust_finding
+  - security_trust_action
+  - risk
+  - control
+  - metric
+  - solution
   source_type: pdf
   extension: ".pdf"
   size_bytes: 1275695

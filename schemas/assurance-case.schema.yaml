@@ -1,0 +1,32 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: assurance-case.schema.yaml
+title: Assurance case
+type: object
+additionalProperties: false
+required: [assurance_case_id, name, claim_type, version, status, scope, claim, arguments, evidence_refs, assumptions, limitations, asset_ids, requirement_ids, test_ids, risk_ids, control_ids, decision_ids, valid_until, source_ids, classification, reviewed_by, reviewed_at]
+properties:
+  assurance_case_id: {type: string, pattern: "^ACASE-[0-9]{6}$"}
+  name: {type: string}
+  claim_type: {type: string}
+  version: {type: string}
+  status: {type: string, enum: [proposed, evidence_pending, in_review, supported, conditionally_supported, not_supported, expired, superseded]}
+  scope: {type: string}
+  claim: {type: string}
+  arguments: {type: array, items: {type: string}}
+  evidence_refs: {type: array, items: {type: string}}
+  assumptions: {type: array, items: {type: string}}
+  limitations: {type: array, items: {type: string}}
+  asset_ids: {$ref: "#/$defs/records"}
+  requirement_ids: {$ref: "#/$defs/records"}
+  test_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  decision_ids: {$ref: "#/$defs/records"}
+  valid_until: {type: [string, "null"], format: date-time}
+  source_ids: {$ref: "#/$defs/sources"}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}

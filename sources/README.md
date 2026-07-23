@@ -33,4 +33,8 @@ Decision-environment evidence remains outside Git under `decision_environment`. 
 
 Data evidence remains outside Git under `data` and uses `SRC-DATA`. Folder routing may propose readiness targets, requirements, products, capability profiles, governance extensions, quality frameworks and rules, practices, observability checks, assessments, findings and actions, but it does not approve content access or data conclusions.
 
+Agentic-AI evidence remains outside Git under `agentic_ai` and uses `SRC-AGT`. Folder routing may propose concepts, agents, platform requirements, architectures, patterns, workflows, evaluations, technology signals, operating models, assessments, findings and actions, but it does not approve content access or agentic conclusions.
+
+Security-and-trust evidence remains outside Git under `security_trust`. Security sources use `SRC-SEC`; risk-and-trust sources use `SRC-RSK`. Folder routing may propose targets, requirements, threat models, architectures, practices, tests, assurance cases, events, assessments, findings, actions and links to shared risks and controls, but it does not approve content access, risk acceptance, deployment or trustworthiness claims.
+
 Engineering evidence remains outside Git under `engineering_platform`. General engineering sources use `SRC-ENG`; prompt and context sources retain `SRC-PRM`. Folder routing may propose requirements, options, evaluations, architecture, patterns, practices, AI UX, catalogue, assurance, assessment and action records, but it does not approve content access or technical conclusions.

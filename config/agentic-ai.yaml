@@ -1,0 +1,237 @@
+schema_version: 1
+
+model_status: proposed
+human_review_required: true
+source_evidence_required_for_current_state: true
+operating_principle: humans_accountable_agents_operated
+decision_principle: agents_propose_humans_approve
+
+agentic_evolution_stages:
+  - deterministic_automation
+  - AI_assisted_workflow
+  - tool_using_agent
+  - bounded_autonomous_agent
+  - coordinated_multi_agent_system
+  - agentic_operating_model
+
+agent_types:
+  - assistant
+  - specialist
+  - planner
+  - researcher
+  - analyst
+  - reviewer
+  - orchestrator
+  - executor
+  - monitor
+  - evaluator
+  - guardian
+
+agent_capability_areas:
+  - goal_and_task_interpretation
+  - planning_and_decomposition
+  - reasoning_and_option_generation
+  - retrieval_and_context_management
+  - memory_and_state
+  - tool_discovery_and_use
+  - communication_and_collaboration
+  - delegation_and_orchestration
+  - self_evaluation_and_reflection
+  - uncertainty_and_evidence_reporting
+  - human_interaction_and_escalation
+  - observability_and_auditability
+
+architecture_components:
+  - goals_instructions_and_policies
+  - identity_role_and_authority
+  - model_and_reasoning
+  - planning_and_task_management
+  - context_knowledge_and_retrieval
+  - short_and_long_term_memory
+  - tools_actions_and_integrations
+  - orchestration_and_message_bus
+  - human_approval_override_and_escalation
+  - evaluation_guardrails_and_controls
+  - observability_tracing_and_audit
+  - runtime_security_and_isolation
+
+architecture_types:
+  - single_agent
+  - supervisor_worker
+  - router_specialist
+  - sequential_multi_agent
+  - hierarchical_multi_agent
+  - peer_collaboration
+  - event_driven_agent_network
+  - human_agent_team
+
+pattern_types:
+  - plan_and_execute
+  - reflection_and_critique
+  - routing_and_delegation
+  - supervisor_worker
+  - debate_and_consensus
+  - retrieval_and_context
+  - memory_management
+  - tool_use_and_permission
+  - human_approval_gate
+  - escalation_and_fallback
+  - evaluation_and_guardrail
+  - observability_and_trace
+  - bounded_retry_and_recovery
+
+platform_requirement_types:
+  - agent_development
+  - model_access_and_routing
+  - tool_and_connector_management
+  - prompt_context_and_knowledge
+  - memory_and_state
+  - orchestration
+  - identity_and_access
+  - policy_and_guardrail
+  - sandbox_and_isolation
+  - evaluation_and_testing
+  - observability_and_audit
+  - deployment_scaling_and_resilience
+  - cost_and_consumption
+  - catalogue_and_lifecycle
+
+workflow_scopes:
+  - enterprise
+  - business_process
+  - use_case
+  - software_delivery
+  - AI_adoption_project
+
+workflow_step_modes:
+  - human
+  - agent_operated
+  - agent_proposed_human_approved
+  - bounded_automated
+
+human_gate_types:
+  - scope_approval
+  - source_access_approval
+  - classification_and_route_approval
+  - plan_approval
+  - decision_approval
+  - material_change_approval
+  - external_action_approval
+  - quality_review
+  - publication_approval
+  - release_approval
+
+prohibited_agent_actions:
+  - approve_own_output
+  - assign_final_source_classification
+  - bypass_processing_route
+  - make_unapproved_material_decision
+  - accept_risk_or_compliance
+  - expose_credentials_personal_or_restricted_data
+  - commit_or_push_without_explicit_authority
+  - publish_unreviewed_claims_as_facts
+
+evaluation_dimensions:
+  - task_success_and_correctness
+  - evidence_and_provenance_quality
+  - reasoning_and_plan_quality
+  - tool_selection_and_use
+  - instruction_and_policy_adherence
+  - uncertainty_calibration
+  - safety_security_and_privacy
+  - human_escalation_and_override
+  - robustness_and_recovery
+  - latency_cost_and_efficiency
+  - observability_and_reproducibility
+  - business_outcome_and_user_experience
+
+technology_signal_types:
+  - model_capability
+  - agent_framework
+  - protocol_or_standard
+  - tool_and_connector
+  - memory_and_context
+  - orchestration
+  - evaluation
+  - observability
+  - security_and_safety
+  - regulation_and_governance
+  - provider_or_ecosystem
+
+operating_model_dimensions:
+  - strategic_intent_and_value
+  - human_accountability_and_decision_rights
+  - agent_roles_and_digital_workforce
+  - process_and_workflow_redesign
+  - organization_and_human_agent_teaming
+  - architecture_platform_and_tools
+  - data_knowledge_and_semantics
+  - governance_risk_security_and_assurance
+  - observability_outcomes_and_learning
+  - people_literacy_change_and_adoption
+
+assessment_types:
+  - current_state
+  - target_state
+  - gap_analysis
+  - agent_capability
+  - architecture_and_platform
+  - human_authority_and_control
+  - workflow_readiness
+  - agentic_operating_company
+  - AI_adoption_project_operation
+  - progress
+
+project_workflows:
+  - intake_and_planning
+  - source_access_and_classification
+  - research_and_extraction
+  - analysis_and_synthesis
+  - decision_and_change_approval
+  - validation_and_quality
+  - publication_and_release
+  - monitoring_feedback_and_learning
+
+semantic_relationships:
+  - {subject: agentic_concept, predicate: defines, object: agentic_AI_characteristics_and_evolution}
+  - {subject: agent_profile, predicate: operates_within, object: authority_architecture_workflow_and_controls}
+  - {subject: agentic_platform_requirement, predicate: constrains, object: agentic_architecture_platform_and_solution}
+  - {subject: agentic_architecture, predicate: composed_of, object: agents_components_patterns_tools_and_human_gates}
+  - {subject: agentic_pattern, predicate: realizes, object: architecture_and_workflow}
+  - {subject: agentic_workflow, predicate: executed_as, object: agentic_workflow_run}
+  - {subject: agent_evaluation, predicate: evaluates, object: agent_profile_architecture_workflow_and_run}
+  - {subject: agentic_technology_signal, predicate: informs, object: strategy_architecture_and_platform_choices}
+  - {subject: agentic_operating_model, predicate: specializes, object: organization_operating_model}
+  - {subject: agentic_assessment, predicate: identifies, object: agentic_findings}
+  - {subject: agentic_finding, predicate: justifies, object: agentic_action}
+
+cross_domain_mappings:
+  strategic_choices: registers/strategic-choices.yaml
+  decision_authority_rules: registers/decision-authority-rules.yaml
+  decisions: registers/decisions.yaml
+  use_cases: registers/use-cases.yaml
+  organization_operating_models: registers/organization-operating-models.yaml
+  organization_roles: registers/organization-roles.yaml
+  engineering_requirements: registers/engineering-requirements.yaml
+  reference_architectures: registers/reference-architectures.yaml
+  AI_catalogue: registers/ai-catalogue.yaml
+  data_products: registers/data-products.yaml
+  solutions: registers/solutions.yaml
+  governance_artifacts: registers/governance-artifacts.yaml
+  risks: registers/risks.yaml
+  controls: registers/controls.yaml
+  metrics: registers/metrics.yaml
+  capabilities: registers/capabilities.yaml
+  initiatives: registers/initiatives.yaml
+  dependencies: registers/dependencies.yaml
+
+evidence_and_authority_rules:
+  current_state_and_evolution_claims_require_source_ids: true
+  agents_must_have_human_accountability_and_authority_boundaries: true
+  material_actions_require_human_gate: true
+  agent_output_is_proposed_until_human_review: true
+  workflow_runs_preserve_inputs_outputs_tools_gates_and_changes: true
+  agent_evaluations_require_reproducible_evidence: true
+  emerging_signals_are_not_current_state_facts_without_review: true
+  project_agents_cannot_bypass_source_access_or_git_authority: true
+  source_derived_records_remain_proposed_until_human_review: true

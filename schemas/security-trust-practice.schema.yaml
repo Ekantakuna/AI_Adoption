@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: security-trust-practice.schema.yaml
+title: Security and trust practice
+type: object
+additionalProperties: false
+required: [security_trust_practice_id, name, practice_type, version, status, purpose, lifecycle_stage_ids, activities, role_ids, inputs, outputs, evidence_requirements, solution_ids, risk_ids, control_ids, metric_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  security_trust_practice_id: {type: string, pattern: "^STPRAC-[0-9]{6}$"}
+  name: {type: string}
+  practice_type: {$ref: "#/$defs/id"}
+  version: {type: string}
+  status: {type: string, enum: [proposed, draft, in_review, approved, active, suspended, superseded, retired]}
+  purpose: {type: string}
+  lifecycle_stage_ids: {$ref: "#/$defs/ids"}
+  activities: {$ref: "#/$defs/text"}
+  role_ids: {$ref: "#/$defs/records"}
+  inputs: {$ref: "#/$defs/text"}
+  outputs: {$ref: "#/$defs/text"}
+  evidence_requirements: {$ref: "#/$defs/text"}
+  solution_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  id: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}
+  ids: {type: array, uniqueItems: true, items: {$ref: "#/$defs/id"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}

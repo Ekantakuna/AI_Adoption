@@ -1,0 +1,35 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: agent-evaluation.schema.yaml
+title: Agent evaluation
+type: object
+additionalProperties: false
+required: [agent_evaluation_id, name, status, evaluation_type, scope, agent_profile_ids, architecture_ids, workflow_ids, evaluation_dimension_ids, method, test_case_refs, results, limitations, decision_ids, metric_ids, risk_ids, control_ids, source_ids, evidence_refs, classification, reviewed_by, reviewed_at]
+properties:
+  agent_evaluation_id: {type: string, pattern: "^AEVAL-[0-9]{6}$"}
+  name: {type: string, minLength: 1}
+  status: {type: string, enum: [proposed, planned, in_progress, in_review, approved_as_evidence, superseded]}
+  evaluation_type: {type: string, enum: [capability, quality, safety, security, tool_use, human_control, robustness, operational, comparative, regression]}
+  scope: {type: string}
+  agent_profile_ids: {$ref: "#/$defs/records"}
+  architecture_ids: {$ref: "#/$defs/records"}
+  workflow_ids: {$ref: "#/$defs/records"}
+  evaluation_dimension_ids: {$ref: "#/$defs/ids"}
+  method: {type: string}
+  test_case_refs: {$ref: "#/$defs/text"}
+  results: {$ref: "#/$defs/text"}
+  limitations: {$ref: "#/$defs/text"}
+  decision_ids: {$ref: "#/$defs/records"}
+  metric_ids: {$ref: "#/$defs/records"}
+  risk_ids: {$ref: "#/$defs/records"}
+  control_ids: {$ref: "#/$defs/records"}
+  source_ids: {$ref: "#/$defs/sources"}
+  evidence_refs: {$ref: "#/$defs/text"}
+  classification: {$ref: "#/$defs/classification"}
+  reviewed_by: {type: [string, "null"]}
+  reviewed_at: {type: [string, "null"], format: date-time}
+$defs:
+  ids: {type: array, uniqueItems: true, items: {type: string, pattern: "^[a-zA-Z][a-zA-Z0-9_]*$"}}
+  text: {type: array, uniqueItems: true, items: {type: string}}
+  records: {type: array, uniqueItems: true, items: {type: string, pattern: "^[A-Z][A-Z0-9]*-[0-9]{6}$"}}
+  sources: {type: array, uniqueItems: true, items: {type: string, pattern: "^SRC-[A-Z]{2,4}-[0-9]{6}$"}}
+  classification: {type: string, enum: [pending, public, internal, restricted]}
