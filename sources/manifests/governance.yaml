@@ -1,0 +1,65 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: governance
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T13:11:53Z'
+record_count: 7
+records:
+- source_id: SRC-GOV-000001
+  current_relative_path: governance/overview.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-GOV-000002
+  current_relative_path: governance/research/GOVERNANCE.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-GOV-000001
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-GOV-000003
+  current_relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-GOV-000004
+  current_relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-GOV-000005
+  current_relative_path: governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx
+  classification: restricted
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: word
+  source_type: word
+- source_id: SRC-GOV-000006
+  current_relative_path: governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf
+  classification: restricted
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-GOV-000007
+  current_relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
+  classification: restricted
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: word
+  source_type: word

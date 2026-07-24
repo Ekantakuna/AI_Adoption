@@ -1,0 +1,25 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: data
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T13:11:53Z'
+record_count: 2
+records:
+- source_id: SRC-MIS-000004
+  current_relative_path: data/DATA.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-MIS-000005
+  current_relative_path: data/overview.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-MIS-000004
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary

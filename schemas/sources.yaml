@@ -1,0 +1,40 @@
+schema_version: 1
+register: sources
+
+description: Canonical source inventory schema for metadata-only inventory and controlled derivatives.
+
+required_fields:
+  - source_id
+  - source_root_id
+  - original_filename
+  - original_relative_path
+  - current_filename
+  - current_relative_path
+  - path_history
+  - domain_ids
+  - source_group
+  - source_type
+  - extension
+  - size_bytes
+  - filesystem_modified_at
+  - hash_algorithm
+  - content_hash
+  - hash_calculated_at
+  - classification
+  - processing_state
+  - classification_basis
+  - classification_reviewed_by
+  - classification_reviewed_at
+  - processing_route
+  - processing_route_approved_by
+  - processing_route_approved_at
+  - contains_personal_data
+  - contains_credentials
+  - contains_production_datasets
+  - rights_or_license_status
+  - duplicate_status
+  - duplicate_of_source_id
+  - approved_summary_ref
+  - normalized_knowledge_refs
+  - derived_publication_refs
+  - review_status

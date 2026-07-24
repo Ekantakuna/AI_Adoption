@@ -1,0 +1,81 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: current_state
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T14:18:30Z'
+record_count: 9
+records:
+- source_id: SRC-MIS-000001
+  current_relative_path: current_state/DD1_Handout__Overview_of_Generative_AI.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-UC-000001
+  current_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: images
+  source_type: image
+- source_id: SRC-UC-000002
+  current_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/now.png
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: images
+  source_type: image
+- source_id: SRC-UC-000003
+  current_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: images
+  source_type: image
+- source_id: SRC-UC-000011
+  current_relative_path: current_state/implemented_use_cases/search_20/Untitled.rtf
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: word
+  source_type: word
+- source_id: SRC-PRE-000001
+  current_relative_path: current_state/project_summaries/AI Adoption Program - the overall picture.html
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: web_document
+  source_type: web_document
+- source_id: SRC-VIS-000001
+  current_relative_path: current_state/project_summaries/AI_STRATEGY.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-MIS-000002
+  current_relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-MIS-000003
+  current_relative_path: current_state/unclassified_research/Conversational AI with Language Models _ Rasa Documentation.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf

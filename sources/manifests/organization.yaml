@@ -1,0 +1,41 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: organization
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T13:11:53Z'
+record_count: 4
+records:
+- source_id: SRC-ORG-000001
+  current_relative_path: organization/Effective context engineering for AI agents _ Anthropic.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-PRM-000004
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-ORG-000002
+  current_relative_path: organization/ORGANIZATION.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-ORG-000003
+  current_relative_path: organization/overview.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-ORG-000002
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-ORG-000004
+  current_relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf

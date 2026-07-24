@@ -1,0 +1,89 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: strategic_intent
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T13:11:53Z'
+record_count: 10
+records:
+- source_id: SRC-PRE-000001
+  current_relative_path: current_state/project_summaries/AI Adoption Program - the overall picture.html
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: web_document
+  source_type: web_document
+- source_id: SRC-VIS-000001
+  current_relative_path: current_state/project_summaries/AI_STRATEGY.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-VIS-000002
+  current_relative_path: strategic_intent/AI_STRATEGY.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-VIS-000001
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-PRE-000002
+  current_relative_path: strategic_intent/general_presentation_draft/AI Adoption Program - the overall picture.html
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-PRE-000001
+  source_group: web_document
+  source_type: web_document
+- source_id: SRC-VIS-000003
+  current_relative_path: strategic_intent/strategy.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-VIS-000001
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-VIS-000004
+  current_relative_path: strategic_intent/vision.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-VIS-000005
+  current_relative_path: strategic_intent/vision/From AI Deployment to Intelligence Design.pages
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-VIS-000006
+  current_relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-VIS-000007
+  current_relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf
+- source_id: SRC-VIS-000008
+  current_relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf

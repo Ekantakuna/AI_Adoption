@@ -1,0 +1,672 @@
+# Extracted source text
+
+- Source ID: SRC-ORG-000004
+- Original relative path: organization/research/create-generative-ai-value-at-scale.pdf
+- Current relative path: organization/research/create-generative-ai-value-at-scale.pdf
+- Classification: public
+- Processing route: external_processing_approved
+- Processing state: extracted
+- Extraction tool: pdftotext
+- Extraction attempted at: 2026-07-24T13:59:58Z
+
+---
+
+Create Generative AI
+Value at Scale
+Kevin Schmitt, Gregory Vial, and Ivo Blohm
+
+Companies expanding GenAI across the enterprise use new
+structures like an “AI spine” to coordinate efforts.
+
+June 1, 2026
+Summer 2026, Vol. 67, No. 4
+Reprint 67417
+
+sloanreview.mit.edu
+
+AI IN THE ENTERPRISE
+[ Organization ]
+
+Create Generative AI Value
+at Scale
+Companies expanding GenAI across the enterprise use new structures like an
+“AI spine” to coordinate efforts.
+By Kevin Schmitt, Gregory Vial, and Ivo Blohm
+
+G
+
+ENERATIVE AI PRESENTS AN ORGAnizational puzzle. Businesses have collectively invested billions of dollars to give
+employees access to general-purpose large
+language models (LLMs) to enhance personal productivity while in most cases
+struggling to develop and adopt more strategic applications of the technology. Meaningful return
+on investment, much less competitive advantage, is
+likely to remain elusive unless companies can use GenAI
+to make innovative process improvements that scale
+across functions and business units.¹
+Our interviews with 87 practitioners in 23 large organizations revealed that leaders who scale value creation
+
+26 MIT Sloan Management Review
+
+summer 2026
+
+with generative AI cultivate three key practices. First,
+they expand the scope of use cases across processes rather
+than remaining focused on a specific task. Second, they
+treat each use case as a work in progress to be continually improved. And third, they quickly identify and
+abandon use cases that fail to bring measurable value to
+the organization.
+However, most traditional companies are not structured to institutionalize these three practices. Many operate as multidivisional organizations characterized by
+multiple profit and loss units with duplicated functions,
+limited cross-functional information flow, and internal
+competition for resources.² This setup makes it difficult
+to scale generative AI use cases across processes and units.
+
+Christian Gralingen
+
+In our research, we found that the few leaders who
+are overcoming these challenges are moving beyond the
+classical hub-and-spoke models that many organizations
+have used to connect centralized AI technical expertise
+to each unit. They are developing a new kind of internal
+resource that we call the AI spine. It provides a flexible
+core structure for implementing, evolving, and abandoning LLM use cases at scale, keeping the generative
+AI portfolio both focused and current. Notably, rather
+than deploying technologists out into business units, as
+is commonly done, this structure pulls individuals with
+domain knowledge of business processes into the core
+and makes them part of the team.
+A retail bank that we studied demonstrates the kind
+of scaling and value creation that an AI spine supports.
+Initially, the bank’s AI spine spearheaded the implementation of an email assistant for customer service employees. In an early, limited rollout, those using the assistant
+collectively saved about 700 hours. Once the tool was put
+into wider use, it reduced email handling time by 15%,
+allowing employees to dedicate more time to managing
+complex cases. Encouraged by that success, the spine
+oversaw the implementation of LLM-powered email
+thread summaries, call transcriptions, and analyses. That
+yielded data that provided new insights for customer service employees, leading the bank to start reengineering
+its approach to customer relationship management. The
+data was also used to develop the next iterations of the
+email assistant.
+We observed another example at a medical coding
+company that applies standardized alphanumeric codes
+to documentation related to diagnoses, treatments, and
+
+THE RESEARCH
+Over three years (2022-2025), two of the
+authors (Kevin and Ivo) engaged with 23 Swiss
+companies that were members of a research
+consortium focused on generative AI. The study
+participants represented a diverse array of
+industries: retail banking, investment banking,
+health insurance, insurance, medical coding,
+energy, law, laboratory instrument manufacturing,
+equipment manufacturing, postal services, and
+technology consulting. During the research
+period, the authors gathered data from more
+than 10 workshops that the consortium convened
+and conducted an additional 87 in-depth semistructured interviews with front-line employees,
+business leaders, technology leaders, data leaders,
+and C-suite executives.
+
+procedures for the purposes of insurance and health care
+management. There, the AI spine provided a structure
+that allowed it to turn its first LLM application for automated coding into a new line of business. An internal LLM
+application had reduced coding time from 25 minutes
+per case to 2 seconds, cutting the cost of coding by 60%
+compared with having humans doing the work. (Affected
+staff members were able to take on other responsibilities.)
+The AI spine was able to build out the application into
+a product for insurance companies that need to verify
+whether bills have been correctly coded, increasing the
+company’s reach into the medical insurance market and
+creating a new revenue stream.
+
+Connecting AI Efforts Across the Enterprise
+The AI spine is a cross-functional backbone that is dedicated to diffusing and scaling LLM use cases across the
+organization, focusing on reducing duplicative efforts and
+achieving economies of scale as solutions expand across
+business units and processes. Because it is a central point
+for collaboration between technologists and those holding
+business domain knowledge, the spine holds the expertise
+required for rewiring and continually improving processes
+end to end and across functions, as in the bank example
+above. As we found at the medical coding company, this
+structure can be implemented not only in large organizations but also in small and medium-sized enterprises.
+In the cases we observed, funding for the AI spine
+was allocated by top management, and the spine also
+got a cut of increased revenue or costs savings resulting
+from applications deployed. That mechanism creates the
+right incentives: It forces the organization to measure
+ROI, stay focused, and avoid disproportionate spending
+on “convenience” use cases that seem useful but don’t
+materially affect costs or revenue. By being independently
+funded, the spine maintains decision-making autonomy
+vis-à-vis other divisions so it can identify and encourage
+use cases that have the potential to improve processes
+cutting across divisions. A more traditional AI center of
+excellence with a hub-and-spoke structure is more likely
+to focus on cases within individual business units rather
+than across them.
+The spine is overseen by a C-suite leader, who keeps
+its efforts aligned with overall strategic objectives; this
+may be a chief technology officer or chief digital officer,
+or one of their direct subordinates. Sitting within the
+structure are AI developers, risk and compliance personnel, and a technology owner. (See “The AI Spine,” p. 31.)
+The technology owner is responsible for preventing
+the fragmentation of data flows and tools. They typically oversee the creation of centralized data platforms,
+prompt libraries, models, and evaluation and technical
+
+summer 2026
+
+sloanreview.mit.edu
+
+27
+
+AI IN THE
+ENTERPRISE
+
+Organization
+
+Scaling GenAI at a Swiss Bank
+The bank’s early initiative to develop a GenAI-based email
+assistant for customer service demonstrated the technology’s
+potential to improve processes. Next, the organization made
+a general-purpose ChatGPT-based tool, Company AI Chat,
+Moneybroadly available. This allowed employees who were closest to
+Laundering
+processes
+to
+experiment
+with
+generative
+AI
+to
+improve
+Policy Bot
+Case
+their own workflows and identify additional use cases
+March 2026
+Assistant
+in other departments. Business unit heads in turn
+March 2026
+brought these use case ideas to the AI spine
+for implementation. Because the use
+cases emerged from the target users
+Feedback
+CRM Bot
+themselves, the risk of low adoption
+Assistant
+October 2025
+October 2025
+once an application was deployed
+was significantly reduced.
+Writing
+Assistant
+
+AskHR Tool
+June 2025
+
+February 2025
+
+Email
+Assistant
+
+AI Code
+October 2024
+
+November 2024
+
+Company
+AI Chat
+August 2024
+PROOF OF CONCEPT
+
+Customer Service
+Email Assistant
+April 2024
+
+performance metrics (including token consumption and
+financial costs). This oversight reduces rework and lowers marginal costs as applications are diffused across the
+organization.
+To ensure that risk and compliance are managed
+throughout each iteration of a use case, the person managing those issues is a permanent fixture in the spine. Mak-
+
+28 MIT Sloan Management Review
+
+summer 2026
+
+ing that a permanent role expedites compliance issues and
+centralizes organizational learning and memory so they
+can be rapidly applied to other use cases. This means that
+governance is less ad hoc than it is within other structures
+for organizing AI work, where a general risk and compliance group sits outside and is often overwhelmed by
+issues specific to AI.
+
+Sitting within the business units but working closely
+with the AI spine are business owners, knowledge owners, and designated end users. Business owners — that is,
+the heads of the business units working with the spine
+on use cases — are the primary bridge between their unit
+and the spine. They are responsible for identifying processes where they can make a good use case for GenAI
+and determining nontechnical baselines and targets (for
+example, star ratings assigned by end users, where a minimum 3 out of 5 stars would be the goal). They are also
+accountable for implementing proven use cases for the
+identified processes and making sure that use cases that
+underdeliver are dropped. This ensures that proofs of
+concept don’t stall out or remain confined to a specific
+business unit. The business owner also enlists representatives from each unit to serve as knowledge owners, and
+end users who can deliver feedback, to ensure that new
+applications create real value for the business.
+Knowledge owners work with the technology owner
+to ensure that both explicit and tacit knowledge critical
+to the use case are understood by technologists and captured by the application. They curate ground truth and
+provide important feedback on the generative AI components that will become de facto repositories for organizational knowledge. Prompt libraries, for example, need to
+be current with company policies and safety guardrails to
+generate appropriate responses. Knowledge owners are
+able to quickly identify issues within their domain, reducing rework and costly escalations as GenAI use cases are
+implemented and evolve. They also help to rein in GenAI
+work when a tool’s performance is strong enough from a
+business perspective, regardless of technical performance.
+In other words, a solution may not be technically perfect
+but still good enough that employees find that it makes
+their work easier.
+Select end users of generative AI solutions work with
+the spine to validate that a use case will be helpful to its
+intended users. This is important because underperforming use cases lead to low adoption rates, workarounds,
+and, in some cases, shadow AI. End users also provide
+critical feedback on post-implementation performance,
+such as identifying edge cases. Their input drives the next
+iteration of application improvements.
+The AI spine serves as a central point for short standup
+meetings that are held regularly, perhaps every other week.
+At the bank, spine members use the meeting to share lessons learned, discuss ongoing and future priorities, and
+communicate changes that have been made to knowledge
+repositories, such as prompt libraries. They hold a summit event every month and invite end users to keep them
+updated with progress, show them demos, and gather
+their feedback. These events capture needed adjustments
+
+during the development process so that applications don’t
+have to be reworked after they go live. They also help manage users’ expectations and apprehensions.
+Pulling the five roles above and the AI developers
+into a self-contained, highly connected structure helps to
+effectively align stakeholder interests, ensure that salient
+knowledge in the organization is contributed where it
+will have an impact, facilitate collaboration across functions, and more effectively diffuse knowledge and value
+across business units. Those activities support the key
+GenAI scaling practices we introduced at the beginning
+of this article: selecting use cases for implementation;
+gradually expanding their scope across processes; continuously improving each use case; and taking rapid action
+on underperforming use cases. The examples below show
+how the AI spine works.
+
+Respecting Domain Experience and
+Expertise to Tune Performance
+When the bank initially built its email assistant, the effort
+focused on technical issues, such as integrating information relevant to customer service from the company
+website and internal documents. While the assistant functioned as designed from a technical perspective, customer
+service agents were underwhelmed. They reported that
+responses to customer queries that the application generated were plausible but often incomplete or subtly misaligned with the bank’s standards, and that the tone of
+the messages was inconsistent. Agents frequently had to
+modify messages before they were fit to be sent back to
+customers. Those results underscored the importance
+of making better use of the tacit knowledge the agents
+possessed, which wasn’t captured in available data sets.
+The customer service agents’ feedback gave developers in the spine a foundation for subsequent iterations.
+Because those end users were represented at regular project review meetings convened at the spine level, and the
+spine had the authority to veto underperforming releases
+(while pushing forward when all criteria were met), the
+company had the opportunity to get the application right.
+The AI spine also used mechanisms to surface more
+tacit knowledge. Customer service employees were compensated for rating each generated response on a scale of
+1-5, and their manual edits to those responses were logged
+for review. This provided critical data to evaluate the performance of the email assistant, creating a feedback loop
+that surfaced the organization’s unwritten norms regarding tone, intent, escalation thresholds, and edge cases,
+which can take a significant amount of time to answer.
+Since then, the bank’s AI spine has routinized the use of
+ratings and the logging of edits to AI-generated contents
+as key metrics for other use cases, complementing tech-
+
+summer 2026
+
+sloanreview.mit.edu
+
+29
+
+AI IN THE
+ENTERPRISE
+
+Organization
+
+nical metrics. That practice allows them to identify cases
+where efforts dedicated to addressing model or prompt
+shortcomings are likely to generate value, thus focusing
+human effort where it will be most valuable. For example, the email assistant’s performance was significantly
+improved when customer service employees shared their
+knowledge of how customers typically phrase requests.
+Compensating employees for their efforts and
+directing them to higher-value tasks reduced attrition
+and alleviated their concerns about job security. Retaining employees with deep domain knowledge is critical
+for generative AI because they help curate data, refine
+and update prompts, and provide feedback on outputs.
+When GenAI is deployed in a business unit with high
+employee churn, over time there are fewer people who
+can confidently validate outputs without having to refer
+to documentation — a slow process that undermines
+productivity gains.
+The spine structure brings discussion of both technical issues and business issues to a single forum and fosters a common language so that everyone can contribute
+to a multifaceted discussion of application performance.
+This played out at the medical coding company, where
+the coding application initially performed poorly and AI
+developers saw the problem as a technical issue that could
+potentially be resolved through additional data collection. However, nontechnical participants in the AI spine
+reviewed the results and challenged the engineers. On
+closer inspection, they found that ground-truth labels
+used to train the model were inconsistent and that the
+system was, in fact, outperforming human coders. The
+labeling inconsistencies arose because different groups
+of coders had differing levels of medical education. Discovering those inconsistencies allowed developers to
+implement a timely fix in the next iteration of the tool
+and avoid wasting time and resources training the model
+on an improperly curated data set.
+
+Accelerating AI Adoption and Aligning
+Stakeholders Across Processes
+Both the bank and the medical coding company set strategic goals for generative AI adoption, but business units
+were reluctant to directly fund GenAI use cases because
+of the high degree of uncertainty associated with such
+initiatives, given the unpredictability and unreliability
+that foundation LLMs are known for. Ideas would seem
+promising and sometimes work well on a small scale or
+as proofs of concept but fail to move further. Establishing the AI spine as a separate entity with a clear connection to executives helped maintain strategic alignment.
+At the bank, the AI spine funds use cases across multiple phases through microgrants tied to meeting both
+technical and nontechnical performance criteria; a sim30 MIT Sloan Management Review
+
+summer 2026
+
+ilar pattern was observed in the medical coding company. This approach helps build solutions and manage
+risk incrementally for long-term initiatives. In both companies, the spine acts as a catalyst for achievements and
+lessons that can benefit all business units. While moving
+funding decisions for generative AI initiatives away from
+business units was initially perceived as problematic, over
+time it resulted in bolder innovation.
+Members of the AI spine in each company also realized that process knowledge was highly fragmented. Each
+business unit had a fairly clear idea as to how its part of
+a given process worked, but a clear vision of the entire
+process from end to end across units was missing. The
+spine championed the mapping of key processes where
+GenAI use cases had been proposed, involving stakeholders from each business unit until these processes could
+be drawn accurately. With these representations, they
+could clearly communicate the scope of use cases and
+their potential expansion, as well as see GenAI’s applicability across multiple use cases, as illustrated by the
+creation of a new revenue stream for the medical coding company. Unlike AI centers of excellence, which are
+primarily geared toward the centralization of technological know-how, the AI spine centralizes business process
+knowledge to fuel innovation.
+
+Maintain Momentum for Continuous
+Improvement and Diffusion
+The AI spine is set up not to deliver technology solutions to internal customers as in the typical hub-andspoke arrangement but to codevelop them with business
+unit representatives and continually refine them based
+on user feedback and other performance metrics. That
+means business units are less likely to wind up shelving
+underperforming use cases that have been delivered by
+a team that’s moved on to something else.
+The bank capitalized on its AI spine’s facility for
+iterative experimentation and treated generative AI as
+a constant work in progress. While the email assistant
+eventually led to significant time savings for customer
+service agents, getting there took multiple incremental
+rollouts that continually raised the bar. Clear technical
+and business performance targets defined an apparent
+goal at each iteration that determined whether the solution would be rolled out to end users. It also gave teams
+time to learn progressively and to assimilate new technological developments in a field that evolves quickly.
+Embedding varying degrees of work automation led to
+a more granular view of performance. One version of the
+email assistant was good at extracting information from
+customer messages, but the voice, tone, and style of its
+written responses were off. Messages that included a lot
+of bullet points and overly familiar phrasing felt more
+
+culturally attuned to the U.S. market than to the more
+reserved Swiss culture.
+Keeping the momentum to continue innovating with
+GenAI requires a careful balance between the exploitation
+of existing use cases and the exploration of new ones. The
+AI spine’s orientation toward users, and the priority that
+its structure places on better understanding how employees interact with GenAI across processes, has helped
+the bank to develop new use cases. (See “Scaling GenAI
+at a Swiss Bank,” p. 28.) By studying those user interactions through employee surveys and shadowing sessions,
+the bank was able to identify eight new potential use
+cases, two of which have since been deployed alongside
+the email assistant: the AskHR chatbot, which answers
+HR-related questions on topics such as employee benefits; and an employee handbook chatbot that responds
+to employee questions about what is permitted and forbidden in the execution of their jobs.
+
+The Drawbacks of Simpler GenAI
+Structures
+Among the 23 organizations that participated in our
+research, only two were able to meaningfully scale generative AI to a strategic capability, and both of them had
+created structures recognizable as an AI spine. While that
+
+is an admittedly small evidence base, companies achieving such results are currently in the minority, and we
+believe that their practices are worthy of close attention.
+Building an AI spine requires significant top-level
+commitment, time, effort, and funding. The other organizations that were part of our research adopted one of two
+alternative structures — what we’ve termed GenAI units
+and GenAI squads — that we see as potential building
+blocks to a more robust capability. They were still able to
+exploit generative AI to achieve some economies of scale,
+but the scope of their efforts was narrower, and they faced
+challenges expanding their use of GenAI.
+Thirteen of the organizations we studied set up
+a standalone, central GenAI unit. These are typically
+technology-focused and charged with providing solutions to the business units. While often the most feasible approach when resources are constrained, the GenAI
+unit can quickly reveal its limits regarding business (rather
+than technical) performance and user adoption. A Swiss
+health insurer illustrates this limitation. Its generative AI
+unit tried to roll out an email assistant for its customer
+service center agents. The model could produce fluent
+replies, but compliance specialists, consulted only after
+the pilot, pointed out that every customer message had to
+follow tightly regulated text templates. Fearing noncom-
+
+The AI Spine
+The technology owner, developers, and AI engineers sit within the AI spine, as do dedicated risk
+and compliance experts. Business owners, knowledge owners, and end users across the company
+connect into the spine, which serves as the meeting point for aligning on cross-functional issues.
+Business Unit A
+
+Business Unit C
+
+A
+
+A
+
+A
+
+C
+
+C
+
+C
+
+Business
+Owner
+
+End user
+
+Knowledge
+Owner
+
+Business
+Owner
+
+End user
+
+Knowledge
+Owner
+
+B
+Business
+Owner
+
+A
+Business
+Owner
+
+Tech
+Owners
+
+End
+Users
+
+Knowledge
+Owners
+
+AI
+Engineers
+
+C
+Business
+Owner
+
+B
+
+B
+
+B
+
+Business
+Owner
+
+End user
+
+Knowledge
+Owner
+
+Software
+Developers
+
+Risk &
+Compliance
+
+Business Unit B
+
+summer 2026
+
+sloanreview.mit.edu
+
+31
+
+AI IN THE
+ENTERPRISE
+
+Organization
+
+pliance, customer service center agents reverted back to
+approved texts, and so adoption plateaued and the project
+stalled. Without a mechanism to coordinate work across
+multiple functions (in this case, risk, legal, and customer
+service), the bank was left with a zombie GenAI use case
+with no clear path forward. This early failure increased
+organizational skepticism toward generative AI, making it
+increasingly difficult to garner support for future use cases.
+A stand-alone GenAI unit can be useful for the early,
+exploratory stages of the technology: It concentrates talent and lets the organization explore GenAI’s potential
+before committing major resources. However, it cannot
+properly assess the specific needs of each unit or coordinate work across multiple use cases, and it lacks an
+end-to-end view of processes that could be improved
+with GenAI.
+Another approach, taken by eight organizations in our
+study, is to embed small, cross-functional GenAI squads
+within each business unit. The companies using GenAI
+squads were able to take ideas to working pilots much
+more quickly than those using GenAI units, because they
+were better able to harness relevant business know-how
+and faced fewer coordination challenges. However, the
+squads struggled to manage use cases at various levels of
+maturity. A Swiss insurer’s GenAI squad launched a customer-facing chatbot for product information in record
+time. Just a few weeks later, curious users prompted the
+chatbot to recommend pizza recipes. That incident led
+to multiple iterations aimed at hardening the system —
+and revealed how rolling out the initial implementation
+of a generative AI solution is often easier than maintaining and improving it. As the portfolio of use cases
+expanded, the mounting maintenance burden of updating
+data sources and prompts stretched the GenAI squad to
+its limits, leaving little capacity for pursuing new use cases.
+Because GenAI squads are funded and staffed by the
+business units, they can lead to inequities and inconsistent
+technology adoption at the enterprise level. Some units
+have the means to fund multiple use cases and hire their
+own staff. Others must lower their expectations, regardless of the potential value of a use case. This structure
+perpetuates silos and duplicative efforts; the lack of an
+end-to-end view of business processes limits value creation at the organizational level. GenAI squads can help to
+quickly spread generative AI adoption within the organization, but leaders need a different approach if their goal
+is to coordinate GenAI use cases across the organization.
+CREATING VALUE AT SCALE WITH GENERAtive AI does not come from giving everyone access to
+an LLM and hoping that something magical will happen.
+Instead, we advise leaders to begin by creating and
+
+32 MIT Sloan Management Review
+
+summer 2026
+
+Define early on what
+“value” means, to help
+identify underperforming
+use cases and normalize
+dropping them.
+visibly supporting a small, cross-functional AI spine that
+can coordinate across business units. The spine should be
+charged with standardizing and centralizing core building blocks (processes, data, evaluations, prompts, and
+models).
+That mandate must be matched by financial resources.
+Central funding is essential because it enables the spine to
+pursue cross-business-unit opportunities that no single
+business unit alone would sponsor. In addition, executives
+must define early on what “value” means, to help identify
+underperforming use cases and normalize dropping them.
+Finally, while creating value at scale with GenAI initially depends on a top-down decision by business leaders,
+sustaining and expanding that value over time depends on
+continued contributions from business units. Executives
+should empower and expect the AI spine to convene the
+technology owner, risk and compliance, business owners,
+knowledge owners, and end users in continuous collaboration so that their respective expertise can be combined
+to surface and capture tacit knowledge, align performance
+with real operating standards, and ensure that improvements compound rather than stall after the pilot phase. ▪
+Kevin Schmitt is a research associate at the Institute of Information Systems and Digital Business at the University of St. Gallen.
+Gregory Vial is an associate professor in the Department of
+Information Technologies at HEC Montréal. Ivo Blohm is an associate professor at the Institute of Information Systems and Digital
+Business at the University of St. Gallen.
+REFERENCES
+1. M. Wade, K. Trantopoulos, M. Navas, et al., “How to Scale GenAI in
+the Workplace,” MIT Sloan Management Review, July 8, 2025, https://
+sloanreview.mit.edu; and E. Mollick, “Reinventing the Organization for
+GenAI and LLMs,” MIT Sloan Management Review, April 2, 2024, https://
+sloanreview.mit.edu.
+2. P. Reineke, R. Katila, and K.M. Eisenhardt, “Decentralization in
+Organizations: A Revolution or a Mirage?” Academy of Management
+Annals 19, no. 1 (January 2025): 298-342, https://doi.org/10.5465/
+annals.2022.0206.
+Reprint 67417. For ordering information, see page 4. Copyright ©
+Massachusetts Institute of Technology, 2026. All rights reserved.
+https://doi.org/10.63383/vveF4479
+
+PDFs · Reprints ·
+Permission to Copy ·
+Back Issues
+Articles published in MIT Sloan Management Review are
+copyrighted by the Massachusetts Institute of
+Technology unless otherwise specified.
+MIT Sloan Management Review articles, permissions, and
+back issues can be purchased on our website,
+shop.sloanreview.mit.edu.
+Reproducing or distributing one or more MIT Sloan
+Management Review articles requires written
+permission.
+To request permission, use our website
+shop.sloanreview.mit.edu/store/faq or email
+smr-help@mit.edu
+
+© MIT Sloan Management Review, 2026
+
+

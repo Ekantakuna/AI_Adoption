@@ -1,0 +1,25 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: people_and_culture
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T13:11:53Z'
+record_count: 2
+records:
+- source_id: SRC-ORG-000005
+  current_relative_path: people_and_culture/PEOPLE_and_CULTURE.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+- source_id: SRC-ORG-000006
+  current_relative_path: people_and_culture/overview.mmd
+  classification: internal
+  processing_state: approved_for_processing
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-ORG-000005
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary

@@ -1,0 +1,59 @@
+# Extracted source text
+
+- Source ID: SRC-UC-000011
+- Original relative path: current_state/implemented_use_cases/search_20/Untitled.rtf
+- Current relative path: current_state/implemented_use_cases/search_20/Untitled.rtf
+- Classification: internal
+- Processing route: local_only
+- Processing state: extracted
+- Extraction tool: textutil
+- Extraction attempted at: 2026-07-24T14:54:52Z
+
+---
+
+flowchart 
+TD
+classDef 
+default fill:#e0e0e0,stroke:#616161,stroke-width:2px,color:#424242
+classDef 
+frontend fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+classDef 
+llm fill:#fff3e0,stroke:#e65100,stroke-width:2px
+classDef 
+dev fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+
+ZULIP["Zulip<br/><a href='https://zulip.life.by'>zulip.life.by</a>"]:::default
+GITLAB["GitLab<br/><a href='https://gitlab.best.local'>gitlab.best.local</a>"]:::default
+
+UI["**srv-llmui-01**<br/>1. OpenWebUI <a href='https://ai.life.by'>ai.life.by</a><br/>2. Docling"]:::frontend
+
+LLM["**srv-llm-01**<br/>AICORE - Private LLM Provider<br/>1. vLLM: Qwen3.6:27b<br/>2. LiteLLM: <a href='https://aicore.life.by'>aicore.life.by</a>"]:::llm
+DC["**srv-dc-01**<br/>Контроллер домена<br/>1. Active Directory / LDAP"]:::default
+
+DEV["**srv-llmdev-t01**<br/>1. Kedii (Zulip-бот)<br/>2. Kedii SemRAG (CDC)<br/>3. SemRAG API"]:::dev
+
+INT["**srv-int-01**<br/>AIKB <br/> (Semantic Readiness Pipeline)<br/> <a href='https://aikb.life.by'>aikb.life.by</a>"]:::default
+
+UI 
+-->|LDAP 389| 
+DC
+UI 
+-->|HTTPS 443| 
+LLM
+UI 
+-->|HTTP 8080| 
+DEV
+
+DEV 
+-->|HTTPS 443| 
+ZULIP
+DEV 
+-->|HTTPS 443| 
+GITLAB
+DEV 
+-->|HTTPS 443| 
+LLM
+
+INT 
+-->|HTTPS 443| 
+GITLAB

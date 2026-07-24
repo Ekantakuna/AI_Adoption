@@ -1,0 +1,17 @@
+---
+schema_version: 1
+manifest: domain-source-view
+domain_id: maturity_execution
+source_root_id: SROOT-0001
+source_catalogue: "../registers/sources.yaml"
+generated_at: '2026-07-24T13:11:53Z'
+record_count: 1
+records:
+- source_id: SRC-MAT-000001
+  current_relative_path: maturity_execution/models/AI-Maturity-Model-Overview.pdf
+  classification: public
+  processing_state: approved_for_processing
+  duplicate_status: unique
+  duplicate_of_source_id: 
+  source_group: pdf
+  source_type: pdf

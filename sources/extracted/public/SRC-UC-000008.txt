@@ -1,0 +1,364 @@
+# Extracted source text
+
+- Source ID: SRC-UC-000008
+- Original relative path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+- Current relative path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+- Classification: public
+- Processing route: external_processing_approved
+- Processing state: extracted
+- Extraction tool: pdftotext
+- Extraction attempted at: 2026-07-24T13:59:58Z
+
+---
+
+The Innovation
+Advantage GenAI
+Can’t Give You
+David Schonthal
+
+When everyone has access to the same idea-generation
+engine, your remaining edge is the insight that tells you where
+to point your business. GenAI can surface data and patterns
+that help you see it.
+
+April 29, 2026
+Reprint 67425
+
+sloanreview.mit.edu
+
+Innovation Strategy
+
+The Innovation Advantage
+GenAI Can’t Give You
+When everyone has access to the same idea-generation engine, your remaining
+edge is the insight that tells you where to point your business. GenAI can surface
+data and patterns that help you see it.
+By David Schonthal
+For most of modern business times, competitive advantage belonged to whoever had the best ideas. Better
+ideas meant better products, which meant more customers, which meant more revenue and profit. The
+entire innovation industry — consultancies, design
+firms, brainstorming retreats fueled by sticky notes and
+gallons of La Croix — was built on this premise: If you
+could generate more and better ideas than your competitors, you would win.
+That advantage has been vaporized by AI.
+Generative AI has turned ideation into a full-blown
+utility. Today, anyone with a $20 subscription to a
+GenAI tool can instantly generate 100 product concepts. That has rendered the raw material of innovation
+— ideas — as abundant, accessible, and cheap as electricity. And here’s the thing about electricity: Nobody
+competes on it. You compete on what you build with
+it. Which means the competitive advantage has shifted
+upstream, from the solution to the problem — specifically, to how you identify and frame the problem in the
+first place.
+This is something I’ve taught for years — to executives, MBA students, and others — going back to my
+time as a designer at IDEO. It is called Question Zero:
+the question before the question. Before you ask, “How
+do we solve this?” you need to ask, “Are we even looking
+at the right problem?” The quality of innovation has
+always been determined by the quality of problem framing. But until recently, most organizations could get
+away with mediocre problem framing. Why? Because
+ideas were scarce enough to be valuable on their own.
+That’s no longer the case. When everyone has access
+to the same idea-generation engine, the remaining edge
+is the insight that tells you where to point your business.
+GenAI won’t give you this insight, though it can surface
+data and patterns that help you see it. Let’s examine
+
+© MIT Sloan Management Review, 2026
+
+why businesses continue to frame the wrong problem,
+examples of startups and established businesses reframing successfully, and how to get started.
+
+Why Most Organizations Frame the Wrong
+Problem
+If problem framing is so important, why is everyone so
+bad at it?
+It’s because the “best” problems — the ones that lead
+to the most valuable, genuinely differentiated solutions
+— are almost always hidden. And they’re hidden for a
+specific, annoying reason: The people who experience
+them can’t tell you about them.
+This is something my colleague Loran Nordgren and
+I discuss extensively in our book, The Human Element.
+Users experience friction with your product, your service, your entire category — but they can’t explain it.
+They know how they feel but not why they feel it. The
+friction is real. The self-awareness is nonexistent.
+Ask a customer why they abandoned your app and
+they’ll likely say, “I got busy.” The real answer — the one
+hidden in the emotional recesses of their brain — might
+be that your onboarding flow made them feel like they’d
+accidentally wandered into an advanced calculus class.
+They’re not going to tell you that, because they don’t
+even know that’s what happened. They just know they
+stopped opening the app.
+This means that the standard problem-identification
+toolkit — surveys, focus groups, net promoter scores,
+quarterly voice-of-customer decks — captures only
+what people can and will articulate. The bad news is that
+what people can and will articulate is, at best, the surface problem. Understanding the surface problem leads
+to incremental solutions, which, by definition, are
+undifferentiated. You end up competing on features,
+then price, then “vibes.” This is not a strategy; it’s a slow
+descent into commodified oblivion.
+
+2
+
+Innovation Strategy
+
+AI is not the insight but the high-powered
+telescope that makes the insight visible.
+The deeper problem — the reframed one, the one
+worth solving — lives in the gap between what people
+say and what they do. Finding that gap has always
+required the kind of deep, patient observation and
+investigative interviewing that most organizations can’t
+afford or feel that they don’t have time for; it’s something that doesn’t lend itself easily to a slick 2x2 framework in a PowerPoint deck. So most companies just skip
+it and go straight to brainstorming, which they consider
+the fun part.
+AI changes this equation. Not because it replaces
+human insight — AI has no insight; it has pattern recognition and a Stuart Smalley tone of relentless encouragement — but because it can surface the behavioral
+patterns that lead to human insight at a scale and speed
+no human team can match.
+Ultimately, then, AI is not the insight but the highpowered telescope that makes the insight visible.
+
+The Startups That Won by Reframing
+The clearest proof that problem reframing drives differentiation comes from startups that have broken
+through in a big way in the past two years — not by
+having better technology but by asking Question Zero
+about problems everyone else had framed in less original ways.
+Take Cursor, an AI-powered code editor that hit $1
+billion in annualized revenue and a $29 billion valuation
+in 2025. Every other company in the space framed the
+problem the same way: “How do we help developers
+write code faster?” GitHub Copilot was already solving
+that, and solving it well. But Cursor’s founders — four
+MIT graduates barely old enough to rent a car without
+extra fees — saw something different. Developers
+weren’t actually spending most of their time writing
+code. They were spending it reading code: navigating
+unfamiliar code bases and trying to understand what
+someone else built three years ago at 2 a.m. The bottleneck wasn’t composition. It was comprehension.
+That reframe — from “write faster” to “understand
+better” — produced an entirely different product, an
+entirely different company, and an entirely different,
+much-higher-value outcome. Same market. Same
+underlying technology. Very different problem solved.
+
+© MIT Sloan Management Review, 2026
+
+Meanwhile, Speak, a language-learning app that
+raised $78 million and reached a $1 billion valuation in
+late 2024, tells the same story in a different domain.
+The obvious framing in the sector was “How do we
+teach grammar and vocabulary more effectively?” Every
+competitor was running that race, and Duolingo was
+winning by several laps. Speak’s founders reframed the
+challenge: “Why are people who study a language for
+years still terrified to open their mouths and speak it?”
+The answer isn’t that there’s a knowledge gap. It’s a confidence gap — the fear of sounding foolish in front of
+others. But nobody describes their problem that way.
+No language learner walks into a class and says, “I’m
+here because of shame.” They say they need more practice.
+So Speak built an AI conversation partner that lets
+learners mangle a subjunctive without anyone grimacing at them and then provides a gentle correction. The
+technology is impressive. But what really made it work
+was the reframe. The real problem was never learning. It
+was the emotional friction around learning.
+In the productivity industry, Fireflies.ai reframed a
+common meeting problem. When everyone was asking,
+“How do we make meetings shorter?” Fireflies asked,
+“What if the real waste isn’t the meeting itself but
+everything that happens after it?” That includes the
+hours spent writing summaries nobody reads, chasing
+action items nobody remembers, and gently reminding
+Kevin that he did, in fact, agree to that deadline last
+Tuesday. The meeting wasn’t the problem; it was the
+evaporation of the meeting’s output. That reframe produced a product the “shorter meetings” crowd couldn’t
+compete with, because even though they might have
+been building a truly better mousetrap, they were in the
+wrong room from the start.
+In each case, these startups didn’t out-ideate the competition. They out-framed them. They saw the same
+market and found a different problem within it — one
+that led to a solution nobody else was creating because
+nobody else had seen the problem the way they had.
+Ideas were never the bottleneck; the originality of the
+problem framing was.
+
+3
+
+Innovation Strategy
+
+How Established Companies Use AI to
+Surface the Reframe
+The startups mentioned above achieved innovative
+reframing through intuition and proximity. Established
+organizations can deliver the same through AI-powered
+behavioral observation at scale. There are multiple
+examples of this among some of the best-known companies. The pattern is remarkably consistent: The AI
+agent doesn’t generate the reframe; it surfaces the
+behavioral data and patterns that make the reframe possible. The human still has to have the insight, but the AI
+makes sure there’s something to see.
+For example, Netflix spent years framing its core challenge as a genre problem: “What genres does this subscriber prefer?” The AI’s job was to match users to categories — perfectly reasonable but also, it turns out,
+a pedestrian framing of the problem. By using AI to
+observe behavior at scale, Netflix discovered something
+no focus group sessions could have surfaced: People
+weren’t browsing by genre. They were browsing by
+mood.
+The difference between a Friday night with friends
+and a Sunday alone after a bad week isn’t an action-vs.comedy distinction — it’s an emotional vibe. Nobody
+ever submitted a feature request that said, “Let me
+search by how I feel.” But the behavioral data was
+unmistakable. To capitalize on this observation, in 2025
+Netflix began testing an AI-powered search that lets
+users describe what they’re in the mood for rather than
+what category they want. The reframe — from genre
+preference to emotional need — didn’t emerge from a
+product road map. It emerged from paying attention to
+what people actually did, at scale.
+Another example is Duolingo’s AI system, Birdbrain,
+which surfaced a reframe that no curriculum designer
+had considered. By analyzing billions of data points
+across dozens of language pairs (a learner’s native language and the language being learned), Birdbrain discovered that certain combinations had dramatically
+higher dropout rates, but in patterns nobody had
+expected. Spanish speakers learning Portuguese, for
+instance, were more likely to stop using the app when
+working on lessons where the two languages were
+almost identical rather than where they differed: Similarity breeds overconfidence.
+Specifically, learners cruised through lessons feeling
+great, acing quizzes, collecting little digital trophies —
+right up until they quietly stopped opening the app altogether. All that reinforcement made them feel like they
+had mastered the new language when in fact they would
+
+© MIT Sloan Management Review, 2026
+
+have struggled to use it in the real world. No survey
+would have caught this. People don’t report confidence
+as a problem — they report it as a virtue.
+The old frame: “How do we make lessons more
+engaging?” The reframe: “Where is false confidence
+silently killing retention?” That second problem can
+lead to a fundamentally different — and better — solution, such as more subtle tests of mastery for more similar language pairs.
+In a different consumer-focused domain, Procter &
+Gamble’s AI crawled parenting forums and social media
+and surfaced a behavioral signal no product team would
+have thought to look for: Parents were using adult skincare products on their babies. It wasn’t because they
+were fans of CeraVe’s minimalist branding but because
+they had given up on baby-specific products entirely:
+They’d decided that the whole category was either ineffective or filled with chemicals they didn’t trust.
+The old frame: “How do we make a better baby
+lotion?” The reframe: “Why have parents stopped
+believing us?” That’s not a product problem. It’s a trust
+problem. And the reframe changes everything: the
+product, the messaging, the entire go-to-market strategy. You can’t “new and improved” your way out of a
+credibility crisis. P&G harnessed that framing to engage
+with and educate parents better through tactics such as
+product-level personalization and real-time quality and
+innovation feedback loops.
+Then there’s the most meta example of all. Anthropic,
+the company behind the AI model Claude, built a tool
+called Clio — Claude Insights and Observations — that
+uses AI to observe how millions of people use AI. (Yes,
+it built an AI to watch people talk to their AI.)
+Clio clusters millions of conversations and surfaces
+behavioral patterns invisible at the individual level. It
+discovered, for example, that Japanese users disproportionately discuss eldercare — a cultural trend and signal
+observable only at scale. Additionally, it found that
+users in crisis arrive through specific conversational
+pathways that single-message safety filters miss
+entirely. Subsequently, in a particularly humbling discovery, it revealed that Claude’s own safety systems
+were simultaneously refusing harmless requests (“kill a
+process” on a computer) while passing over some genuinely concerning ones that could have placed people at
+risk in the real world.
+Anthropic’s original frame: “How do we make our
+safety filters more accurate?” The reframe: “We’re measuring safety at the wrong unit of analysis entirely.” The
+
+4
+
+Innovation Strategy
+
+The old frame: How do we make a better
+baby lotion? The reframe: Why have
+parents stopped believing us?
+insight and reframing didn’t just improve the product.
+It changed the company’s understanding of what the
+problem was.
+
+What if the problem isn’t product quality but category
+trust? What if the problem isn’t the meeting but the
+aftermath?
+
+Three Steps to Get Started
+
+Remember: The AI won’t reframe the problem for
+you. But if you give it the right inputs, it’ll help you generate framings you wouldn’t have reached alone.
+
+As the examples suggest, the reframing chain works like
+this: Better behavioral data leads to better problem
+reframing; better reframing leads to more novel solutions; and more novel solutions lead to more differentiated products, services, and businesses. And that is the
+only thing that matters when AI has turned raw ideation
+into something anyone can do in their pajamas. Here are
+three ways to start the cycle at your organization.
+1. Surface the gap between what people say and
+what they do. Point your AI tools at customer support
+logs, forum posts, social media mentions, and review
+data. Look specifically for workarounds — hacks,
+improvised fixes, ways people use your product that you
+never intended and would likely even find mildly insulting. Developers spending 70% of their time reading
+other people’s code is a workaround. Parents using CeraVe on their babies is a workaround. Language learners
+who ace every quiz but won’t order coffee in the language they’ve been studying for three years is a
+workaround. Every workaround is a reframe waiting to
+happen.
+
+Ideas used to be the scarce resource. Now the scarce
+resource — the thing that actually drives differentiation
+— is the insight that reframes the problem. Working this
+way requires a proactive shift from solving the obvious
+thing to solving the right thing. AI, for all its generative
+power, turns out to be most valuable not when it produces answers but when it helps you see a problem you
+didn’t know you had.
+The companies that figure this out won’t just build
+better products. They’ll build products that nobody else
+thought to build.
+David Schonthal is a clinical professor of strategy, innovation, and
+entrepreneurship at Northwestern University’s Kellogg School of
+Management and coauthor of The Human Element: Overcoming the
+Resistance That Awaits New Ideas (Wiley, 2021).
+Reprint 67425. Copyright © Massachusetts Institute of Technology,
+2026. All rights reserved.
+
+2. Audit your problem frames before you generate solutions. Get your team in a room and write down
+the problem you’re currently solving — the one driving
+your road map, your next sprint, your big second-quarter initiative. Then ask, “When was the last time we
+tested whether this is actually the right problem? What
+might a competitor see that we haven’t been able to?
+What if the opposite of our core assumption is true?” If
+the problem frame hasn’t been challenged in the past 12
+months, you’re not innovating; you’re redecorating.
+3. Use AI to reframe, not just to ideate. Most people prompt AI with “Give me 10 ideas for X.” That’s
+fine if you want 10 mediocre ideas delivered with confidence. Instead, feed your AI the behavioral data, the
+workarounds, and the surprising signals and ask it to
+generate alternative framings of the problem itself.
+What if the problem isn’t retention but overconfidence?
+
+© MIT Sloan Management Review, 2026
+
+5
+
+PDFs · Reprints ·
+Permission to Copy ·
+Back Issues
+Articles published in MIT Sloan Management Review are
+copyrighted by the Massachusetts Institute of
+Technology unless otherwise specified.
+MIT Sloan Management Review articles, permissions, and
+back issues can be purchased on our website,
+shop.sloanreview.mit.edu.
+Reproducing or distributing one or more MIT Sloan
+Management Review articles requires written
+permission.
+To request permission, use our website
+shop.sloanreview.mit.edu/store/faq or email
+smr-help@mit.edu
+
+© MIT Sloan Management Review, 2026
+
+
