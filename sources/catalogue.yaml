@@ -531,8 +531,8 @@ records:
   source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf"
   relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
   domains:
-  - decision_environment
-  domain: decision_environment
+  - glossary
+  domain: glossary
   source_type: pdf
   file_extension: ".pdf"
   file_size_bytes: 1400028

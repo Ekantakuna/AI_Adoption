@@ -16,4 +16,5 @@
 ## Notes
 
 - No metadata exceptions were recorded for the eligible glossary source.
+- All tracked extracted artifacts under `sources/extracted/` were removed from Git.
 - No source document body was read or summarized.
