@@ -1,72 +1,18 @@
 ---
 manifest_schema_version: 1
 manifest_type: domain_source_manifest
-domain: governance
+domain: glossary
 source_catalogue: "../catalogue.yaml"
-generated_at: '2026-07-25T15:43:43Z'
-record_count: 7
+generated_at: '2026-07-25T17:03:48Z'
+record_count: 1
 selection:
   source_id_prefixes:
-  - SRC-GOV-
+  - SRC-GLO-
 records:
-- id: SRC-GOV-000001
-  relative_path: governance/overview.mmd
-  source_type: mind_map_or_proprietary
-  file_extension: ".mmd"
-  classification: unclassified
-  processing_status: metadata_catalogued
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-GOV-000002
-  relative_path: governance/research/GOVERNANCE.mmd
-  source_type: mind_map_or_proprietary
-  file_extension: ".mmd"
-  classification: unclassified
-  processing_status: metadata_catalogued
-  readability_status: unknown
-  duplicate_status: exact_duplicate
-  duplicate_of: SRC-GOV-000001
-- id: SRC-GOV-000003
-  relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf
+- id: SRC-GLO-000001
+  relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: unclassified
-  processing_status: metadata_catalogued
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-GOV-000004
-  relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
-  source_type: pdf
-  file_extension: ".pdf"
-  classification: unclassified
-  processing_status: metadata_catalogued
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-GOV-000005
-  relative_path: governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx
-  source_type: word
-  file_extension: ".docx"
-  classification: unclassified
-  processing_status: metadata_catalogued
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-GOV-000006
-  relative_path: governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf
-  source_type: pdf
-  file_extension: ".pdf"
-  classification: unclassified
-  processing_status: metadata_catalogued
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-GOV-000007
-  relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
-  source_type: word
-  file_extension: ".doc"
   classification: unclassified
   processing_status: metadata_catalogued
   readability_status: unknown

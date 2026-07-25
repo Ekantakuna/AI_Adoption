@@ -537,14 +537,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1400028
   content_hash_sha256: 6a8147e972b8a4fba8d550a40d1f3629945916dcffb6f11cb6299856a16f092b
-  classification: public
+  classification: unclassified
   processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-25T18:41:49Z'
-  date_discovered: '2026-07-25T18:41:49Z'
-  last_verified: '2026-07-25T18:41:49Z'
+  date_discovered: '2026-07-25T17:03:48Z'
+  last_verified: '2026-07-25T17:03:48Z'
   notes: []
 - id: SRC-GOV-000001
   apparent_title_from_filename: overview
