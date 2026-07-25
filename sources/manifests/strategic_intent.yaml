@@ -3,55 +3,37 @@ manifest_schema_version: 1
 manifest_type: domain_source_manifest
 domain: strategic_intent
 source_catalogue: "../catalogue.yaml"
-generated_at: '2026-07-25T12:23:33Z'
-record_count: 10
+generated_at: '2026-07-25T17:37:46Z'
+record_count: 8
 selection:
   source_id_prefixes:
   - SRC-PRE-
   - SRC-VIS-
 records:
-- id: SRC-PRE-000001
-  relative_path: current_state/project_summaries/AI Adoption Program - the overall picture.html
-  source_type: web_document
-  file_extension: ".html"
-  classification: internal
-  processing_status: approved_for_processing
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-VIS-000001
-  relative_path: current_state/project_summaries/AI_STRATEGY.mmd
-  source_type: mind_map_or_proprietary
-  file_extension: ".mmd"
-  classification: internal
-  processing_status: approved_for_processing
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-VIS-000002
-  relative_path: strategic_intent/AI_STRATEGY.mmd
-  source_type: mind_map_or_proprietary
-  file_extension: ".mmd"
-  classification: internal
-  processing_status: approved_for_processing
-  readability_status: unknown
-  duplicate_status: exact_duplicate
-  duplicate_of: SRC-VIS-000001
 - id: SRC-PRE-000002
   relative_path: strategic_intent/general_presentation_draft/AI Adoption Program - the overall picture.html
   source_type: web_document
   file_extension: ".html"
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-PRE-000001
+- id: SRC-VIS-000002
+  relative_path: strategic_intent/AI_STRATEGY.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-VIS-000001
 - id: SRC-VIS-000003
   relative_path: strategic_intent/strategy.mmd
   source_type: mind_map_or_proprietary
   file_extension: ".mmd"
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-VIS-000001
@@ -59,8 +41,8 @@ records:
   relative_path: strategic_intent/vision.mmd
   source_type: mind_map_or_proprietary
   file_extension: ".mmd"
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
@@ -68,7 +50,7 @@ records:
   relative_path: strategic_intent/vision/From AI Deployment to Intelligence Design.pages
   source_type: mind_map_or_proprietary
   file_extension: ".pages"
-  classification: public
+  classification: unclassified
   processing_status: blocked
   readability_status: blocked
   duplicate_status: unique
@@ -77,26 +59,26 @@ records:
   relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-VIS-000007
   relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-VIS-000008
   relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:

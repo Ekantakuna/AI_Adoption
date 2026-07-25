@@ -3,108 +3,63 @@ manifest_schema_version: 1
 manifest_type: domain_source_manifest
 domain: value_and_use_cases
 source_catalogue: "../catalogue.yaml"
-generated_at: '2026-07-25T12:23:33Z'
-record_count: 11
+generated_at: '2026-07-25T17:37:46Z'
+record_count: 6
 selection:
   source_id_prefixes:
   - SRC-UC-
 records:
-- id: SRC-UC-000001
-  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png
-  source_type: image
-  file_extension: ".png"
-  classification: internal
-  processing_status: approved_for_processing
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-UC-000002
-  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/now.png
-  source_type: image
-  file_extension: ".png"
-  classification: internal
-  processing_status: approved_for_processing
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-UC-000003
-  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png
-  source_type: image
-  file_extension: ".png"
-  classification: internal
-  processing_status: approved_for_processing
-  readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
 - id: SRC-UC-000004
   relative_path: use_cases/catalogue/ai_academy_guidebook_customer_service.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-UC-000005
   relative_path: use_cases/catalogue/rewiring-the-telecom-mindset.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-UC-000006
   relative_path: use_cases/general_use/ai_academy_guidebook_customer_service.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-UC-000004
 - id: SRC-UC-000007
   relative_path: use_cases/general_use/rewiring-the-telecom-mindset.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-UC-000005
 - id: SRC-UC-000008
   relative_path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-VIS-000008
 - id: SRC-UC-000009
   relative_path: use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-UC-000010
-  relative_path: value_management/value_creation.mmd
-  source_type: mind_map_or_proprietary
-  file_extension: ".mmd"
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
-  duplicate_status: unique
-  duplicate_of:
-- id: SRC-UC-000011
-  relative_path: current_state/implemented_use_cases/search_20/Untitled.rtf
-  source_type: word
-  file_extension: ".rtf"
-  classification: internal
-  processing_status: extracted
-  readability_status: readable
   duplicate_status: unique
   duplicate_of:

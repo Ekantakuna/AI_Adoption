@@ -3,7 +3,7 @@ manifest_schema_version: 1
 manifest_type: domain_source_manifest
 domain: security_trust
 source_catalogue: "../catalogue.yaml"
-generated_at: '2026-07-25T12:23:33Z'
+generated_at: '2026-07-25T17:37:46Z'
 record_count: 4
 selection:
   source_id_prefixes:
@@ -14,8 +14,8 @@ records:
   relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
@@ -23,26 +23,26 @@ records:
   relative_path: security_trust/security/A small number of samples can poison LLMs of any size _ Anthropic.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-SEC-000002
   relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-SEC-000003
   relative_path: security_trust/security/Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:

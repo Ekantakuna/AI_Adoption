@@ -34,7 +34,7 @@ controlled_values:
   - possible_duplicate
   - exact_duplicate
   - unknown
-generated_at: '2026-07-25T12:23:33Z'
+generated_at: '2026-07-25T17:37:46Z'
 record_count: 58
 records:
 - id: SRC-AGT-000001
@@ -217,15 +217,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 311931
   content_hash_sha256: 836ed901fdee9c4680af421754ab324cacbcc0c5f7125d7dacac5ac6cff57d83
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:23:19Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-UC-000001
   apparent_title_from_filename: goals
   original_filename: goals.png
@@ -239,14 +239,14 @@ records:
   file_extension: ".png"
   file_size_bytes: 1598174
   content_hash_sha256: 74e8a33a91f6fc0c367b9b60d62ef588f7ef8cc922575a7142581da4e9621108
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-21T12:27:21Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: 'Additional domains: value_and_use_cases'
 - id: SRC-UC-000002
   apparent_title_from_filename: now
@@ -261,14 +261,14 @@ records:
   file_extension: ".png"
   file_size_bytes: 1226359
   content_hash_sha256: 831c496932275c4e0f77ba128802597b4cb7b0fc6efcc9b3e440ead43c6aab77
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-21T12:27:21Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: 'Additional domains: value_and_use_cases'
 - id: SRC-UC-000003
   apparent_title_from_filename: withAI
@@ -283,14 +283,14 @@ records:
   file_extension: ".png"
   file_size_bytes: 1285008
   content_hash_sha256: f56975bdcd5f1516455d15c5ea4938e6dfdba8e241081e5f4509bf111a350318
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-21T12:27:21Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: 'Additional domains: value_and_use_cases'
 - id: SRC-PRE-000001
   apparent_title_from_filename: AI Adoption Program - the overall picture
@@ -305,14 +305,14 @@ records:
   file_extension: ".html"
   file_size_bytes: 32447
   content_hash_sha256: e4ee215c3dbd2dfa8d5755d53aa46f7cfc78ec6518c4c21e4b1615a81fc2b601
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-15T05:43:29Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: 'Additional domains: strategic_intent'
 - id: SRC-VIS-000001
   apparent_title_from_filename: AI_STRATEGY
@@ -327,14 +327,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 5040
   content_hash_sha256: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: 'Additional domains: strategic_intent'
 - id: SRC-MIS-000002
   apparent_title_from_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic
@@ -348,15 +348,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2090639
   content_hash_sha256: 78a3912d63ff1d76f85c9eedb17b9478ae3ecae63c4ce7637c5054dff3e83b4c
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:37:39Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-MIS-000003
   apparent_title_from_filename: Conversational AI with Language Models _ Rasa Documentation
   original_filename: Conversational AI with Language Models _ Rasa Documentation.pdf
@@ -369,15 +369,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2307226
   content_hash_sha256: cac52ed1d83ce0dfa38ec57747e379772af026d60de9c5d797d02ea4bf99d91b
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:30:10Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-MIS-000004
   apparent_title_from_filename: DATA
   original_filename: DATA.mmd
@@ -390,15 +390,15 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 2219
   content_hash_sha256: 566c86e6fa27337533045338e463d3abcac7f9c3d7f631195c1a9f6e967c1924
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-MIS-000005
   apparent_title_from_filename: overview
   original_filename: overview.mmd
@@ -411,14 +411,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 2219
   content_hash_sha256: 566c86e6fa27337533045338e463d3abcac7f9c3d7f631195c1a9f6e967c1924
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-MIS-000004
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-MIS-000004
 - id: SRC-SCO-000001
   apparent_title_from_filename: technology-generational-moment-generative-ai-cio-cto-guide
@@ -432,15 +432,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 538729
   content_hash_sha256: 8c5013ba2827d4d530a51c66f890e8836796c6be7b4b233233bd76110c076cb0
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:23:34Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-PRM-000001
   apparent_title_from_filename: ENGINEERING
   original_filename: ENGINEERING.mmd
@@ -453,15 +453,15 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 1621
   content_hash_sha256: eaf558d61092611c28ef4c5c5a855a13d63d5262a8f6db7858e488a1a2cd871f
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-PRM-000002
   apparent_title_from_filename: DD1_Handout__Overview_of_Generative_AI
   original_filename: DD1_Handout__Overview_of_Generative_AI.pdf
@@ -474,14 +474,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 311931
   content_hash_sha256: 836ed901fdee9c4680af421754ab324cacbcc0c5f7125d7dacac5ac6cff57d83
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-MIS-000001
   filesystem_modified_at: '2026-07-16T09:23:19Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-MIS-000001
 - id: SRC-PRM-000003
   apparent_title_from_filename: overview
@@ -495,14 +495,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 1621
   content_hash_sha256: eaf558d61092611c28ef4c5c5a855a13d63d5262a8f6db7858e488a1a2cd871f
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-PRM-000001
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-PRM-000001
 - id: SRC-PRM-000004
   apparent_title_from_filename: Effective context engineering for AI agents _ Anthropic
@@ -516,15 +516,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2019012
   content_hash_sha256: e32e7dced02267e6478d029cd3ece67ddc0d436040d06d7d65433bcd623f4c0a
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:19:53Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-GLO-000001
   apparent_title_from_filename: AI_Fluency_vocabulary_cheat_sheet
   original_filename: AI_Fluency_vocabulary_cheat_sheet.pdf
@@ -705,15 +705,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 901454
   content_hash_sha256: f4d7b630cf3c7dda8c3a4254363524a82ca2f4560ca281f79fe37281b67556aa
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:55:57Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-ORG-000001
   apparent_title_from_filename: Effective context engineering for AI agents _ Anthropic
   original_filename: Effective context engineering for AI agents _ Anthropic.pdf
@@ -726,14 +726,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2019012
   content_hash_sha256: e32e7dced02267e6478d029cd3ece67ddc0d436040d06d7d65433bcd623f4c0a
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-PRM-000004
   filesystem_modified_at: '2026-07-16T09:19:53Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-PRM-000004
 - id: SRC-ORG-000002
   apparent_title_from_filename: ORGANIZATION
@@ -747,15 +747,15 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 2007
   content_hash_sha256: 947a813be84a956b4afc850537dd8682e6df1f9f8e32b05bb2c72cf6a0b36a9e
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-ORG-000003
   apparent_title_from_filename: overview
   original_filename: overview.mmd
@@ -768,14 +768,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 2007
   content_hash_sha256: 947a813be84a956b4afc850537dd8682e6df1f9f8e32b05bb2c72cf6a0b36a9e
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-ORG-000002
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-ORG-000002
 - id: SRC-ORG-000004
   apparent_title_from_filename: create-generative-ai-value-at-scale
@@ -789,15 +789,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1532460
   content_hash_sha256: e10910c018eddb43d4fece593cefd800565d50e4fa2865569869637b1f39c570
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:20:29Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-ORG-000005
   apparent_title_from_filename: PEOPLE_and_CULTURE
   original_filename: PEOPLE_and_CULTURE.mmd
@@ -810,15 +810,15 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 1285
   content_hash_sha256: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-ORG-000006
   apparent_title_from_filename: overview
   original_filename: overview.mmd
@@ -831,14 +831,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 1285
   content_hash_sha256: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-ORG-000005
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-ORG-000005
 - id: SRC-RSK-000001
   apparent_title_from_filename: Gartner Reprint
@@ -852,15 +852,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 941680
   content_hash_sha256: 4102a62895dca596f842c006cf02fa4a662645142b9c95d1b5aba93486ce8086
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:49:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-SEC-000001
   apparent_title_from_filename: A small number of samples can poison LLMs of any size _ Anthropic
   original_filename: A small number of samples can poison LLMs of any size _ Anthropic.pdf
@@ -873,15 +873,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 8521581
   content_hash_sha256: eb4b63c3a19bc1e512d7a2b224ab22d72fcc253f979fe3248cebf9116dad1537
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:17:48Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-SEC-000002
   apparent_title_from_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks
   original_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
@@ -894,15 +894,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 331914
   content_hash_sha256: 1a55b6a51c6e489ad53e26f947db55b7c03a2df1824afbaf07ac05a04db374a4
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:56:48Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-SEC-000003
   apparent_title_from_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai
   original_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
@@ -915,15 +915,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1275695
   content_hash_sha256: 2bef4241f42bbc7a7c823f0c26403bb0e40ce38c6c592d49aedd48f39aa892ca
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:30:56Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-VIS-000002
   apparent_title_from_filename: AI_STRATEGY
   original_filename: AI_STRATEGY.mmd
@@ -936,14 +936,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 5040
   content_hash_sha256: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-VIS-000001
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-VIS-000001
 - id: SRC-PRE-000002
   apparent_title_from_filename: AI Adoption Program - the overall picture
@@ -957,14 +957,14 @@ records:
   file_extension: ".html"
   file_size_bytes: 32447
   content_hash_sha256: e4ee215c3dbd2dfa8d5755d53aa46f7cfc78ec6518c4c21e4b1615a81fc2b601
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-PRE-000001
   filesystem_modified_at: '2026-07-15T05:43:29Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-PRE-000001
 - id: SRC-VIS-000003
   apparent_title_from_filename: strategy
@@ -978,14 +978,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 5040
   content_hash_sha256: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-VIS-000001
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-VIS-000001
 - id: SRC-VIS-000004
   apparent_title_from_filename: vision
@@ -999,15 +999,15 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 1595
   content_hash_sha256: 80108c0b91353861edd0aad2cb9ed429df53781eee9d805623cdb7320dd73153
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-VIS-000005
   apparent_title_from_filename: From AI Deployment to Intelligence Design
   original_filename: From AI Deployment to Intelligence Design.pages
@@ -1020,14 +1020,14 @@ records:
   file_extension: ".pages"
   file_size_bytes: 994280
   content_hash_sha256: 06e3d0f4b1116a71aa097ba319e86d20745436c9b4aa81dabe759ce0b5e609af
-  classification: public
+  classification: unclassified
   processing_status: blocked
   readability_status: blocked
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:17:28Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Blocked from local text extraction; Pages package unsupported by current extractor.
 - id: SRC-VIS-000006
   apparent_title_from_filename: Winning With Intelligent Choice Architectures
@@ -1041,15 +1041,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 543032
   content_hash_sha256: 2482ee0565176ad2bbb48e5a3d02ea28478d6b233122930f119a5f080b3ed898
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:16:10Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-VIS-000007
   apparent_title_from_filename: stop-deploying-ai-start-designing-intelligence
   original_filename: stop-deploying-ai-start-designing-intelligence.pdf
@@ -1062,15 +1062,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 498560
   content_hash_sha256: ac7e17a55b55286b8dbc7ea4f478a9294a17ddf91f4800454c5a2e1fa798a490
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:21:50Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-VIS-000008
   apparent_title_from_filename: the-innovation-advantage-genai-cant-give-you
   original_filename: the-innovation-advantage-genai-cant-give-you.pdf
@@ -1083,15 +1083,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 282793
   content_hash_sha256: 8888f9d331845e076d5961e886b4e3f95f8ecf4f7c5dc2aa4f8b196073ab77bd
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:19:10Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-UC-000004
   apparent_title_from_filename: ai_academy_guidebook_customer_service
   original_filename: ai_academy_guidebook_customer_service.pdf
@@ -1104,15 +1104,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 11472178
   content_hash_sha256: 1422948ec3efbf23f144c28198f29c27bd5983c6543bc310d539f97a2d5af97d
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:47:04Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-UC-000005
   apparent_title_from_filename: rewiring-the-telecom-mindset
   original_filename: rewiring-the-telecom-mindset.pdf
@@ -1125,15 +1125,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1286002
   content_hash_sha256: 6abd736e338b1c0458d66d667fe290202f7cc33b6bc0536c5585725b8b7129eb
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:53:57Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-UC-000006
   apparent_title_from_filename: ai_academy_guidebook_customer_service
   original_filename: ai_academy_guidebook_customer_service.pdf
@@ -1146,14 +1146,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 11472178
   content_hash_sha256: 1422948ec3efbf23f144c28198f29c27bd5983c6543bc310d539f97a2d5af97d
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-UC-000004
   filesystem_modified_at: '2026-07-16T08:47:04Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-UC-000004
 - id: SRC-UC-000007
   apparent_title_from_filename: rewiring-the-telecom-mindset
@@ -1167,14 +1167,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1286002
   content_hash_sha256: 6abd736e338b1c0458d66d667fe290202f7cc33b6bc0536c5585725b8b7129eb
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-UC-000005
   filesystem_modified_at: '2026-07-16T08:53:57Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-UC-000005
 - id: SRC-UC-000008
   apparent_title_from_filename: the-innovation-advantage-genai-cant-give-you
@@ -1188,14 +1188,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 282793
   content_hash_sha256: 8888f9d331845e076d5961e886b4e3f95f8ecf4f7c5dc2aa4f8b196073ab77bd
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-VIS-000008
   filesystem_modified_at: '2026-07-16T08:19:10Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: Exact duplicate of SRC-VIS-000008
 - id: SRC-UC-000009
   apparent_title_from_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web
@@ -1209,15 +1209,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 3070828
   content_hash_sha256: 7ce67c7f22545d967ca782a85cb67e87de5f95e425245a88b81d6017207589cf
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:39:09Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T17:37:46Z'
+  notes: []
 - id: SRC-UC-000010
   apparent_title_from_filename: value_creation
   original_filename: value_creation.mmd
@@ -1252,12 +1252,12 @@ records:
   file_extension: ".rtf"
   file_size_bytes: 2061
   content_hash_sha256: be9c005c8989850d60ab4c1251c4aa682a57cf95c4ebd971002d7f8c84ad1061
-  classification: internal
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-24T16:12:00Z'
   date_discovered: '2026-07-24T14:17:12Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T17:37:46Z'
   notes: 'Additional domains: value_and_use_cases'
