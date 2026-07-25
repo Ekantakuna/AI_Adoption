@@ -14,7 +14,7 @@ records:
   source_type: pdf
   file_extension: ".pdf"
   classification: public
-  processing_status: extracted
-  readability_status: readable
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
