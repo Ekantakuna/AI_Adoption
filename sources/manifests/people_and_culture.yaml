@@ -1,11 +1,13 @@
 ---
-schema_version: 1
-manifest_type: domain_source_view
-domain_id: people_and_culture
-source_root_id: SROOT-0001
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: people_and_culture
 source_catalogue: "../catalogue.yaml"
 generated_at: '2026-07-25T12:23:33Z'
 record_count: 2
+selection:
+  source_id_prefixes:
+  - SRC-ORG-
 records:
 - id: SRC-ORG-000005
   relative_path: people_and_culture/PEOPLE_and_CULTURE.mmd

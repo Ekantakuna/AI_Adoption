@@ -1,11 +1,13 @@
 ---
-schema_version: 1
-manifest_type: domain_source_view
-domain_id: data
-source_root_id: SROOT-0001
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: data
 source_catalogue: "../catalogue.yaml"
 generated_at: '2026-07-25T12:23:33Z'
 record_count: 2
+selection:
+  source_id_prefixes:
+  - SRC-MIS-
 records:
 - id: SRC-MIS-000004
   relative_path: data/DATA.mmd

@@ -3,7 +3,7 @@ schema_version: 1
 source_root:
   id: SROOT-0001
   path: /Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs
-  storage: local_only
+  storage: outside_git
 
 classification_values:
   - public

@@ -1,11 +1,13 @@
 ---
-schema_version: 1
-manifest_type: domain_source_view
-domain_id: engineering_platform
-source_root_id: SROOT-0001
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: engineering_platform
 source_catalogue: "../catalogue.yaml"
 generated_at: '2026-07-25T12:23:33Z'
 record_count: 4
+selection:
+  source_id_prefixes:
+  - SRC-PRM-
 records:
 - id: SRC-PRM-000001
   relative_path: engineering_platform/ENGINEERING.mmd

@@ -1,11 +1,13 @@
 ---
-schema_version: 1
-manifest_type: domain_source_view
-domain_id: organization
-source_root_id: SROOT-0001
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: organization
 source_catalogue: "../catalogue.yaml"
 generated_at: '2026-07-25T12:23:33Z'
 record_count: 4
+selection:
+  source_id_prefixes:
+  - SRC-ORG-
 records:
 - id: SRC-ORG-000001
   relative_path: organization/Effective context engineering for AI agents _ Anthropic.pdf

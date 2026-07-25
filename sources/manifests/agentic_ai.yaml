@@ -1,11 +1,13 @@
 ---
-schema_version: 1
-manifest_type: domain_source_view
-domain_id: agentic_ai
-source_root_id: SROOT-0001
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: agentic_ai
 source_catalogue: "../catalogue.yaml"
 generated_at: '2026-07-25T12:23:33Z'
 record_count: 8
+selection:
+  source_id_prefixes:
+  - SRC-AGT-
 records:
 - id: SRC-AGT-000001
   relative_path: agentic_ai/research/2402.12234v1.pdf

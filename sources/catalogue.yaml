@@ -5,7 +5,7 @@ authority: true
 source_root:
   id: SROOT-0001
   path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs"
-  storage: local_only
+  storage: outside_git
 controlled_values:
   classifications:
   - public
