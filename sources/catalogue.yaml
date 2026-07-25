@@ -558,15 +558,15 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 3819
   content_hash_sha256: 642cfad944ba40fc9d528bf1d2bcf50270426893f68552c6f3c20cce17534b28
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T15:43:43Z'
+  notes: []
 - id: SRC-GOV-000002
   apparent_title_from_filename: GOVERNANCE
   original_filename: GOVERNANCE.mmd
@@ -579,14 +579,14 @@ records:
   file_extension: ".mmd"
   file_size_bytes: 3819
   content_hash_sha256: 642cfad944ba40fc9d528bf1d2bcf50270426893f68552c6f3c20cce17534b28
-  classification: internal
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: exact_duplicate
   duplicate_of: SRC-GOV-000001
   filesystem_modified_at: '2026-07-14T12:21:11Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes: Exact duplicate of SRC-GOV-000001
 - id: SRC-GOV-000003
   apparent_title_from_filename: Scaling AI With Adaptive Governance
@@ -600,15 +600,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 731898
   content_hash_sha256: 3f7c7d1307264d174b259fd351c73aa4984f08ae803b9a61342039f8f807274c
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:14:41Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T15:43:43Z'
+  notes: []
 - id: SRC-GOV-000004
   apparent_title_from_filename: cost-of-a-data-breach-2025-full-report
   original_filename: cost-of-a-data-breach-2025-full-report.pdf
@@ -621,15 +621,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2016131
   content_hash_sha256: 1b24f250e223e1c00196a51efc9e2e5d16dbb8c1a0987248a08e286bcd45d1a2
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:48:15Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T15:43:43Z'
+  notes: []
 - id: SRC-GOV-000005
   apparent_title_from_filename: AI usage Goverance HowTos
   original_filename: AI usage Goverance HowTos.docx
@@ -642,15 +642,15 @@ records:
   file_extension: ".docx"
   file_size_bytes: 9936
   content_hash_sha256: 46684f195131dcf39897f2572c0f045b1c5381b92a7733b657f31d99d3045d84
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:03:01Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T15:43:43Z'
+  notes: []
 - id: SRC-GOV-000006
   apparent_title_from_filename: Artificial Intelligence Usage en
   original_filename: Artificial Intelligence Usage en.pdf
@@ -663,15 +663,15 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1015236
   content_hash_sha256: f46b2c2b109a7ba7246660dccbfabe437ad308a2bd61d55bb7bf3fc1a707b1fc
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2025-10-16T12:23:23Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T15:43:43Z'
+  notes: []
 - id: SRC-GOV-000007
   apparent_title_from_filename: ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated
   original_filename: ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
@@ -684,15 +684,15 @@ records:
   file_extension: ".doc"
   file_size_bytes: 896512
   content_hash_sha256: aca459b5b7d14783ee24bd5a01566091077fd78f27dd03c9426c9e5ea173d5c2
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-21T14:32:08Z'
   date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
-  notes:
+  last_verified: '2026-07-25T15:43:43Z'
+  notes: []
 - id: SRC-MAT-000001
   apparent_title_from_filename: AI-Maturity-Model-Overview
   original_filename: AI-Maturity-Model-Overview.pdf

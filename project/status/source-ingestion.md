@@ -2,34 +2,34 @@
 
 - Repository path: `/Users/maksimzakharenkau/GitHub/AI_Adoption`
 - Source root: `/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs`
-- Domain: `agentic_ai`
-- Source-ID prefix: `SRC-AGT`
+- Domain: `governance`
+- Source-ID prefix: `SRC-GOV`
 
 ## Metadata inventory summary
 
 - Files discovered: 9
-- Files catalogued: 8
-- Ignored files: 1
+- Files catalogued: 7
+- Ignored files: 2
 - Unsupported files: 0
 - Unreadable files: 0
 - Symbolic links: 0
-- Exact duplicate groups: 0
+- Exact duplicate groups: 1
 - Source IDs created: 0
 
 ## Catalogued sources
 
-- `SRC-AGT-000001` — `agentic_ai/research/2402.12234v1.pdf`
-- `SRC-AGT-000002` — `agentic_ai/research/2403.12881v1.pdf`
-- `SRC-AGT-000003` — `agentic_ai/research/2504.00906.pdf`
-- `SRC-AGT-000004` — `agentic_ai/research/2508.11957v1.pdf`
-- `SRC-AGT-000005` — `agentic_ai/research/2510.04618v1.pdf`
-- `SRC-AGT-000006` — `agentic_ai/research/2510.08558v1.pdf`
-- `SRC-AGT-000007` — `agentic_ai/research/2510.09577v1.pdf`
-- `SRC-AGT-000008` — `agentic_ai/research/Gartner Reprint.pdf`
+- `SRC-GOV-000001` — `governance/overview.mmd`
+- `SRC-GOV-000002` — `governance/research/GOVERNANCE.mmd`
+- `SRC-GOV-000003` — `governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf`
+- `SRC-GOV-000004` — `governance/research/cost-of-a-data-breach-2025-full-report.pdf`
+- `SRC-GOV-000005` — `governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx`
+- `SRC-GOV-000006` — `governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf`
+- `SRC-GOV-000007` — `governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc`
 
 ## Ignored files
 
 - `.DS_Store`
+- `research/.DS_Store`
 
 ## Validation
 
@@ -39,4 +39,4 @@
 
 ## Unresolved questions
 
-- `sources/manifests/agentic_ai.yaml` remains outside the allowed write scope for this pass.
+- `sources/manifests/governance.yaml` remains outside the allowed write scope for this pass, so `sources/manifests/vision.yaml` is the maintained manifest for this inventory.

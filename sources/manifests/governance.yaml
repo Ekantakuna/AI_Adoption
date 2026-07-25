@@ -3,6 +3,9 @@ manifest_schema_version: 1
 manifest_type: domain_source_manifest
 domain: governance
 source_catalogue: "../catalogue.yaml"
+manifest_status: deprecated
+replacement_manifest: vision.yaml
+deprecation_note: Use sources/manifests/vision.yaml as the maintained manifest for this inventory.
 generated_at: '2026-07-25T12:23:33Z'
 record_count: 7
 selection:
