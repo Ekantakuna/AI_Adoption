@@ -3,10 +3,7 @@ manifest_schema_version: 1
 manifest_type: domain_source_manifest
 domain: agentic_ai
 source_catalogue: "../catalogue.yaml"
-manifest_status: deprecated
-replacement_manifest: vision.yaml
-deprecation_note: Use sources/manifests/vision.yaml as the maintained manifest for this inventory.
-generated_at: '2026-07-25T12:23:33Z'
+generated_at: '2026-07-25T15:43:43Z'
 record_count: 8
 selection:
   source_id_prefixes:
@@ -16,71 +13,71 @@ records:
   relative_path: agentic_ai/research/2402.12234v1.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000002
   relative_path: agentic_ai/research/2403.12881v1.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000003
   relative_path: agentic_ai/research/2504.00906.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000004
   relative_path: agentic_ai/research/2508.11957v1.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000005
   relative_path: agentic_ai/research/2510.04618v1.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000006
   relative_path: agentic_ai/research/2510.08558v1.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000007
   relative_path: agentic_ai/research/2510.09577v1.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
 - id: SRC-AGT-000008
   relative_path: agentic_ai/research/Gartner Reprint.pdf
   source_type: pdf
   file_extension: ".pdf"
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:

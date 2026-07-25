@@ -49,14 +49,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 160733
   content_hash_sha256: d683a8577756d2bd2756107b25b174af1d1093efa07be93ea2815539419092b5
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:32:56Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000002
   apparent_title_from_filename: 2403.12881v1
@@ -70,14 +70,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 3000308
   content_hash_sha256: 9a3296bfd034282cf5b2df597d2203cf9ff94a1d961d731b0354bedda1f0e36f
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:33:36Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000003
   apparent_title_from_filename: '2504.00906'
@@ -91,14 +91,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 9404849
   content_hash_sha256: 4d7b2387f4ad1f3253349e4d5b92ef279727d67049991b254aae76ec5fdf65bf
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:34:31Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000004
   apparent_title_from_filename: 2508.11957v1
@@ -112,14 +112,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 1073003
   content_hash_sha256: 899bc3c9300126f3376490ae63d7084d51fcd36d46c7f0296f36d420f08d610b
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:35:11Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000005
   apparent_title_from_filename: 2510.04618v1
@@ -133,14 +133,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2075847
   content_hash_sha256: e87069417bed79efe9a222b135a267f17b42254379fd8b46fd2d99010bedf36e
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:35:39Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000006
   apparent_title_from_filename: 2510.08558v1
@@ -154,14 +154,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 2371450
   content_hash_sha256: 065ca01deaef0a96e0ecf760466fc643fe00a62de85b1125a3159cae999af960
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:36:14Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000007
   apparent_title_from_filename: 2510.09577v1
@@ -175,14 +175,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 774417
   content_hash_sha256: 92902680eeb825293ecf6360efe273c9ebe496e4beedb4c452ec310cbe0b72cf
-  classification: public
-  processing_status: extracted
-  readability_status: readable
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T09:36:40Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-AGT-000008
   apparent_title_from_filename: Gartner Reprint
@@ -196,14 +196,14 @@ records:
   file_extension: ".pdf"
   file_size_bytes: 520728
   content_hash_sha256: 3cb286cbf11eb288520ddf7bb23b9521a896e7eff93535f0ffe02019eeea8429
-  classification: restricted
-  processing_status: approved_for_processing
+  classification: unclassified
+  processing_status: metadata_catalogued
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:
   filesystem_modified_at: '2026-07-16T08:26:26Z'
-  date_discovered: '2026-07-24T12:45:56Z'
-  last_verified: '2026-07-25T12:23:33Z'
+  date_discovered: '2026-07-25T15:43:43Z'
+  last_verified: '2026-07-25T15:43:43Z'
   notes:
 - id: SRC-MIS-000001
   apparent_title_from_filename: DD1_Handout__Overview_of_Generative_AI
