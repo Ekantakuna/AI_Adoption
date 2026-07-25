@@ -39,7 +39,7 @@ Each top-level directory contains its own short `README.md` describing its inten
 
 - [Project configuration](config/project.yaml) defines project metadata and allowed status, confidence, and classification values.
 - [Taxonomy](config/taxonomy.yaml) defines the controlled domain identifiers.
-- `registers/sources.yaml` is the canonical source inventory; `sources/catalogue.yaml` is only a pointer to that register and must not contain independently maintained source records.
+- `sources/catalogue.yaml` is the canonical source inventory. `registers/sources.yaml` is retained only as a legacy compatibility snapshot and must not be treated as authoritative.
 - Each file in `registers/` has a common foundation structure consisting of `schema_version`, `register`, and an initially empty `records` list.
 - Record schemas and workflow automation remain foundation work; do not add incompatible ad hoc fields before those contracts are agreed.
 

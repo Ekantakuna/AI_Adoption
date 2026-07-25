@@ -31,4 +31,3 @@
 - Keep this source in the local-only path.
 - Use the source ID and original relative path for all downstream references.
 - Do not generalize the diagram into company-wide fact without additional corroboration.
-

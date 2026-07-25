@@ -2,7 +2,7 @@
 
 ## Scope
 
-This note summarizes downstream analysis of the approved public source set from `registers/sources.yaml`.
+This note summarizes downstream analysis of the approved public source set from `sources/catalogue.yaml`.
 
 - Public sources approved for downstream processing: 32
 - Public sources successfully extracted with local text parsing: 31
@@ -60,4 +60,3 @@ The analysis uses local extracted text for the 31 PDF sources and metadata-only 
 - This analysis is based on locally extracted text and metadata only.
 - It does not infer company facts.
 - It does not alter the blocked status of `SRC-VIS-000005`.
-

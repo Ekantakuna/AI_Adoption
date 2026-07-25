@@ -22,12 +22,12 @@
 
 ## Inventory state
 
-- Metadata-only inventory records exist in `registers/sources.yaml`.
+- Metadata-only inventory records exist in `sources/catalogue.yaml`.
 - Inventory count: 58 source records.
 - Exact duplicate clusters identified from hashes: 12.
 - Conservative metadata-only classification completed for all 58 records.
 - Classification totals: 32 `public`, 21 `internal`, 5 `restricted`.
-- Domain manifest views generated: 13 files under `sources/manifests/`.
+- Domain manifest views generated: 14 files under `sources/manifests/`.
 
 ## Route triage
 

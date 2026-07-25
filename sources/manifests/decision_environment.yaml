@@ -1,25 +1,27 @@
 ---
 schema_version: 1
-manifest: domain-source-view
+manifest_type: domain_source_view
 domain_id: decision_environment
 source_root_id: SROOT-0001
-source_catalogue: "../registers/sources.yaml"
-generated_at: '2026-07-24T13:11:53Z'
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T12:23:33Z'
 record_count: 2
 records:
-- source_id: SRC-SCO-000001
-  current_relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
-  classification: public
-  processing_state: approved_for_processing
-  duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+- id: SRC-SCO-000001
+  relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
   source_type: pdf
-- source_id: SRC-GLO-000001
-  current_relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-GLO-000001
+  relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
   source_type: pdf
+  file_extension: ".pdf"
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:

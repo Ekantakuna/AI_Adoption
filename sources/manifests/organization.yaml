@@ -1,41 +1,45 @@
 ---
 schema_version: 1
-manifest: domain-source-view
+manifest_type: domain_source_view
 domain_id: organization
 source_root_id: SROOT-0001
-source_catalogue: "../registers/sources.yaml"
-generated_at: '2026-07-24T13:11:53Z'
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T12:23:33Z'
 record_count: 4
 records:
-- source_id: SRC-ORG-000001
-  current_relative_path: organization/Effective context engineering for AI agents _ Anthropic.pdf
-  classification: public
-  processing_state: approved_for_processing
-  duplicate_status: exact_duplicate
-  duplicate_of_source_id: SRC-PRM-000004
-  source_group: pdf
+- id: SRC-ORG-000001
+  relative_path: organization/Effective context engineering for AI agents _ Anthropic.pdf
   source_type: pdf
-- source_id: SRC-ORG-000002
-  current_relative_path: organization/ORGANIZATION.mmd
-  classification: internal
-  processing_state: approved_for_processing
-  duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: mind_map_or_proprietary
-  source_type: mind_map_or_proprietary
-- source_id: SRC-ORG-000003
-  current_relative_path: organization/overview.mmd
-  classification: internal
-  processing_state: approved_for_processing
-  duplicate_status: exact_duplicate
-  duplicate_of_source_id: SRC-ORG-000002
-  source_group: mind_map_or_proprietary
-  source_type: mind_map_or_proprietary
-- source_id: SRC-ORG-000004
-  current_relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRM-000004
+- id: SRC-ORG-000002
+  relative_path: organization/ORGANIZATION.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-ORG-000003
+  relative_path: organization/overview.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-ORG-000002
+- id: SRC-ORG-000004
+  relative_path: organization/research/create-generative-ai-value-at-scale.pdf
   source_type: pdf
+  file_extension: ".pdf"
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:

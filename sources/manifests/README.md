@@ -1,8 +1,8 @@
 # Source manifests
 
-Domain manifests are domain-specific views of the canonical source catalogue in `../registers/sources.yaml`.
+Domain manifests are domain-specific views of the canonical source catalogue in `../catalogue.yaml`.
 
-`sources/catalogue.yaml` is a pointer to that register. Manifest files in this directory must remain consistent with the catalogue, preserve stable source IDs, and use the same provenance and handling decisions.
+`sources/catalogue.yaml` is authoritative. Manifest files in this directory must remain consistent with the catalogue, preserve stable source IDs, and use the same provenance and handling decisions.
 
 ## What manifests may contain
 

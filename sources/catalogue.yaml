@@ -1,2 +1,1263 @@
+---
 schema_version: 1
-canonical_source_inventory: ../registers/sources.yaml
+catalogue_type: metadata_only_source_catalogue
+authority: true
+source_root:
+  id: SROOT-0001
+  path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs"
+  storage: local_only
+controlled_values:
+  classifications:
+  - public
+  - internal
+  - restricted
+  - unclassified
+  processing_statuses:
+  - discovered
+  - metadata_catalogued
+  - classification_pending
+  - approved_for_processing
+  - extraction_in_progress
+  - extracted
+  - reviewed
+  - rejected
+  - superseded
+  - unreadable
+  - blocked
+  readability_statuses:
+  - readable
+  - unreadable
+  - blocked
+  - unknown
+  duplicate_statuses:
+  - unique
+  - possible_duplicate
+  - exact_duplicate
+  - unknown
+generated_at: '2026-07-25T12:23:33Z'
+record_count: 58
+records:
+- id: SRC-AGT-000001
+  apparent_title_from_filename: 2402.12234v1
+  original_filename: 2402.12234v1.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2402.12234v1.pdf"
+  relative_path: agentic_ai/research/2402.12234v1.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 160733
+  content_hash_sha256: d683a8577756d2bd2756107b25b174af1d1093efa07be93ea2815539419092b5
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:32:56Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000002
+  apparent_title_from_filename: 2403.12881v1
+  original_filename: 2403.12881v1.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2403.12881v1.pdf"
+  relative_path: agentic_ai/research/2403.12881v1.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 3000308
+  content_hash_sha256: 9a3296bfd034282cf5b2df597d2203cf9ff94a1d961d731b0354bedda1f0e36f
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:33:36Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000003
+  apparent_title_from_filename: '2504.00906'
+  original_filename: 2504.00906.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2504.00906.pdf"
+  relative_path: agentic_ai/research/2504.00906.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 9404849
+  content_hash_sha256: 4d7b2387f4ad1f3253349e4d5b92ef279727d67049991b254aae76ec5fdf65bf
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:34:31Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000004
+  apparent_title_from_filename: 2508.11957v1
+  original_filename: 2508.11957v1.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2508.11957v1.pdf"
+  relative_path: agentic_ai/research/2508.11957v1.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1073003
+  content_hash_sha256: 899bc3c9300126f3376490ae63d7084d51fcd36d46c7f0296f36d420f08d610b
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:35:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000005
+  apparent_title_from_filename: 2510.04618v1
+  original_filename: 2510.04618v1.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2510.04618v1.pdf"
+  relative_path: agentic_ai/research/2510.04618v1.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2075847
+  content_hash_sha256: e87069417bed79efe9a222b135a267f17b42254379fd8b46fd2d99010bedf36e
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:35:39Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000006
+  apparent_title_from_filename: 2510.08558v1
+  original_filename: 2510.08558v1.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2510.08558v1.pdf"
+  relative_path: agentic_ai/research/2510.08558v1.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2371450
+  content_hash_sha256: 065ca01deaef0a96e0ecf760466fc643fe00a62de85b1125a3159cae999af960
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:36:14Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000007
+  apparent_title_from_filename: 2510.09577v1
+  original_filename: 2510.09577v1.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/2510.09577v1.pdf"
+  relative_path: agentic_ai/research/2510.09577v1.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 774417
+  content_hash_sha256: 92902680eeb825293ecf6360efe273c9ebe496e4beedb4c452ec310cbe0b72cf
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:36:40Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-AGT-000008
+  apparent_title_from_filename: Gartner Reprint
+  original_filename: Gartner Reprint.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/agentic_ai/research/Gartner Reprint.pdf"
+  relative_path: agentic_ai/research/Gartner Reprint.pdf
+  domains:
+  - agentic_ai
+  domain: agentic_ai
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 520728
+  content_hash_sha256: 3cb286cbf11eb288520ddf7bb23b9521a896e7eff93535f0ffe02019eeea8429
+  classification: restricted
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:26:26Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-MIS-000001
+  apparent_title_from_filename: DD1_Handout__Overview_of_Generative_AI
+  original_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/DD1_Handout__Overview_of_Generative_AI.pdf"
+  relative_path: current_state/DD1_Handout__Overview_of_Generative_AI.pdf
+  domains:
+  - current_state
+  domain: current_state
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 311931
+  content_hash_sha256: 836ed901fdee9c4680af421754ab324cacbcc0c5f7125d7dacac5ac6cff57d83
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:23:19Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-UC-000001
+  apparent_title_from_filename: goals
+  original_filename: goals.png
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png"
+  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png
+  domains:
+  - current_state
+  - value_and_use_cases
+  domain: current_state
+  source_type: image
+  file_extension: ".png"
+  file_size_bytes: 1598174
+  content_hash_sha256: 74e8a33a91f6fc0c367b9b60d62ef588f7ef8cc922575a7142581da4e9621108
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-21T12:27:21Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: 'Additional domains: value_and_use_cases'
+- id: SRC-UC-000002
+  apparent_title_from_filename: now
+  original_filename: now.png
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/implemented_use_cases/ict/cyber_defence_centre/now.png"
+  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/now.png
+  domains:
+  - current_state
+  - value_and_use_cases
+  domain: current_state
+  source_type: image
+  file_extension: ".png"
+  file_size_bytes: 1226359
+  content_hash_sha256: 831c496932275c4e0f77ba128802597b4cb7b0fc6efcc9b3e440ead43c6aab77
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-21T12:27:21Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: 'Additional domains: value_and_use_cases'
+- id: SRC-UC-000003
+  apparent_title_from_filename: withAI
+  original_filename: withAI.png
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png"
+  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png
+  domains:
+  - current_state
+  - value_and_use_cases
+  domain: current_state
+  source_type: image
+  file_extension: ".png"
+  file_size_bytes: 1285008
+  content_hash_sha256: f56975bdcd5f1516455d15c5ea4938e6dfdba8e241081e5f4509bf111a350318
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-21T12:27:21Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: 'Additional domains: value_and_use_cases'
+- id: SRC-PRE-000001
+  apparent_title_from_filename: AI Adoption Program - the overall picture
+  original_filename: AI Adoption Program - the overall picture.html
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/project_summaries/AI Adoption Program - the overall picture.html"
+  relative_path: current_state/project_summaries/AI Adoption Program - the overall picture.html
+  domains:
+  - current_state
+  - strategic_intent
+  domain: current_state
+  source_type: web_document
+  file_extension: ".html"
+  file_size_bytes: 32447
+  content_hash_sha256: e4ee215c3dbd2dfa8d5755d53aa46f7cfc78ec6518c4c21e4b1615a81fc2b601
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-15T05:43:29Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: 'Additional domains: strategic_intent'
+- id: SRC-VIS-000001
+  apparent_title_from_filename: AI_STRATEGY
+  original_filename: AI_STRATEGY.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/project_summaries/AI_STRATEGY.mmd"
+  relative_path: current_state/project_summaries/AI_STRATEGY.mmd
+  domains:
+  - current_state
+  - strategic_intent
+  domain: current_state
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 5040
+  content_hash_sha256: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: 'Additional domains: strategic_intent'
+- id: SRC-MIS-000002
+  apparent_title_from_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic
+  original_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/unclassified_research/Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf"
+  relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  domains:
+  - current_state
+  domain: current_state
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2090639
+  content_hash_sha256: 78a3912d63ff1d76f85c9eedb17b9478ae3ecae63c4ce7637c5054dff3e83b4c
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:37:39Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-MIS-000003
+  apparent_title_from_filename: Conversational AI with Language Models _ Rasa Documentation
+  original_filename: Conversational AI with Language Models _ Rasa Documentation.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/unclassified_research/Conversational AI with Language Models _ Rasa Documentation.pdf"
+  relative_path: current_state/unclassified_research/Conversational AI with Language Models _ Rasa Documentation.pdf
+  domains:
+  - current_state
+  domain: current_state
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2307226
+  content_hash_sha256: cac52ed1d83ce0dfa38ec57747e379772af026d60de9c5d797d02ea4bf99d91b
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:30:10Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-MIS-000004
+  apparent_title_from_filename: DATA
+  original_filename: DATA.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/data/DATA.mmd"
+  relative_path: data/DATA.mmd
+  domains:
+  - data
+  domain: data
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 2219
+  content_hash_sha256: 566c86e6fa27337533045338e463d3abcac7f9c3d7f631195c1a9f6e967c1924
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-MIS-000005
+  apparent_title_from_filename: overview
+  original_filename: overview.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/data/overview.mmd"
+  relative_path: data/overview.mmd
+  domains:
+  - data
+  domain: data
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 2219
+  content_hash_sha256: 566c86e6fa27337533045338e463d3abcac7f9c3d7f631195c1a9f6e967c1924
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-MIS-000004
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-MIS-000004
+- id: SRC-SCO-000001
+  apparent_title_from_filename: technology-generational-moment-generative-ai-cio-cto-guide
+  original_filename: technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf"
+  relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  domains:
+  - decision_environment
+  domain: decision_environment
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 538729
+  content_hash_sha256: 8c5013ba2827d4d530a51c66f890e8836796c6be7b4b233233bd76110c076cb0
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:23:34Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-PRM-000001
+  apparent_title_from_filename: ENGINEERING
+  original_filename: ENGINEERING.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/engineering_platform/ENGINEERING.mmd"
+  relative_path: engineering_platform/ENGINEERING.mmd
+  domains:
+  - engineering_platform
+  domain: engineering_platform
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 1621
+  content_hash_sha256: eaf558d61092611c28ef4c5c5a855a13d63d5262a8f6db7858e488a1a2cd871f
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-PRM-000002
+  apparent_title_from_filename: DD1_Handout__Overview_of_Generative_AI
+  original_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf"
+  relative_path: engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf
+  domains:
+  - engineering_platform
+  domain: engineering_platform
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 311931
+  content_hash_sha256: 836ed901fdee9c4680af421754ab324cacbcc0c5f7125d7dacac5ac6cff57d83
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-MIS-000001
+  filesystem_modified_at: '2026-07-16T09:23:19Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-MIS-000001
+- id: SRC-PRM-000003
+  apparent_title_from_filename: overview
+  original_filename: overview.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/engineering_platform/overview.mmd"
+  relative_path: engineering_platform/overview.mmd
+  domains:
+  - engineering_platform
+  domain: engineering_platform
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 1621
+  content_hash_sha256: eaf558d61092611c28ef4c5c5a855a13d63d5262a8f6db7858e488a1a2cd871f
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRM-000001
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-PRM-000001
+- id: SRC-PRM-000004
+  apparent_title_from_filename: Effective context engineering for AI agents _ Anthropic
+  original_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/engineering_platform/prompt_and_context_engineering/Effective context engineering for AI agents _ Anthropic.pdf"
+  relative_path: engineering_platform/prompt_and_context_engineering/Effective context engineering for AI agents _ Anthropic.pdf
+  domains:
+  - engineering_platform
+  domain: engineering_platform
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2019012
+  content_hash_sha256: e32e7dced02267e6478d029cd3ece67ddc0d436040d06d7d65433bcd623f4c0a
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:19:53Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GLO-000001
+  apparent_title_from_filename: AI_Fluency_vocabulary_cheat_sheet
+  original_filename: AI_Fluency_vocabulary_cheat_sheet.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf"
+  relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  domains:
+  - decision_environment
+  domain: decision_environment
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1400028
+  content_hash_sha256: 6a8147e972b8a4fba8d550a40d1f3629945916dcffb6f11cb6299856a16f092b
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:25:29Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GOV-000001
+  apparent_title_from_filename: overview
+  original_filename: overview.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/overview.mmd"
+  relative_path: governance/overview.mmd
+  domains:
+  - governance
+  domain: governance
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 3819
+  content_hash_sha256: 642cfad944ba40fc9d528bf1d2bcf50270426893f68552c6f3c20cce17534b28
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GOV-000002
+  apparent_title_from_filename: GOVERNANCE
+  original_filename: GOVERNANCE.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/research/GOVERNANCE.mmd"
+  relative_path: governance/research/GOVERNANCE.mmd
+  domains:
+  - governance
+  domain: governance
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 3819
+  content_hash_sha256: 642cfad944ba40fc9d528bf1d2bcf50270426893f68552c6f3c20cce17534b28
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-GOV-000001
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-GOV-000001
+- id: SRC-GOV-000003
+  apparent_title_from_filename: Scaling AI With Adaptive Governance
+  original_filename: Scaling AI With Adaptive Governance.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf"
+  relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf
+  domains:
+  - governance
+  domain: governance
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 731898
+  content_hash_sha256: 3f7c7d1307264d174b259fd351c73aa4984f08ae803b9a61342039f8f807274c
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:14:41Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GOV-000004
+  apparent_title_from_filename: cost-of-a-data-breach-2025-full-report
+  original_filename: cost-of-a-data-breach-2025-full-report.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/research/cost-of-a-data-breach-2025-full-report.pdf"
+  relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+  domains:
+  - governance
+  domain: governance
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2016131
+  content_hash_sha256: 1b24f250e223e1c00196a51efc9e2e5d16dbb8c1a0987248a08e286bcd45d1a2
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:48:15Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GOV-000005
+  apparent_title_from_filename: AI usage Goverance HowTos
+  original_filename: AI usage Goverance HowTos.docx
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx"
+  relative_path: governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx
+  domains:
+  - governance
+  domain: governance
+  source_type: word
+  file_extension: ".docx"
+  file_size_bytes: 9936
+  content_hash_sha256: 46684f195131dcf39897f2572c0f045b1c5381b92a7733b657f31d99d3045d84
+  classification: restricted
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:03:01Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GOV-000006
+  apparent_title_from_filename: Artificial Intelligence Usage en
+  original_filename: Artificial Intelligence Usage en.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf"
+  relative_path: governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf
+  domains:
+  - governance
+  domain: governance
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1015236
+  content_hash_sha256: f46b2c2b109a7ba7246660dccbfabe437ad308a2bd61d55bb7bf3fc1a707b1fc
+  classification: restricted
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2025-10-16T12:23:23Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-GOV-000007
+  apparent_title_from_filename: ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated
+  original_filename: ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc"
+  relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
+  domains:
+  - governance
+  domain: governance
+  source_type: word
+  file_extension: ".doc"
+  file_size_bytes: 896512
+  content_hash_sha256: aca459b5b7d14783ee24bd5a01566091077fd78f27dd03c9426c9e5ea173d5c2
+  classification: restricted
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-21T14:32:08Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-MAT-000001
+  apparent_title_from_filename: AI-Maturity-Model-Overview
+  original_filename: AI-Maturity-Model-Overview.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/maturity_execution/models/AI-Maturity-Model-Overview.pdf"
+  relative_path: maturity_execution/models/AI-Maturity-Model-Overview.pdf
+  domains:
+  - maturity_execution
+  domain: maturity_execution
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 901454
+  content_hash_sha256: f4d7b630cf3c7dda8c3a4254363524a82ca2f4560ca281f79fe37281b67556aa
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:55:57Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-ORG-000001
+  apparent_title_from_filename: Effective context engineering for AI agents _ Anthropic
+  original_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/organization/Effective context engineering for AI agents _ Anthropic.pdf"
+  relative_path: organization/Effective context engineering for AI agents _ Anthropic.pdf
+  domains:
+  - organization
+  domain: organization
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 2019012
+  content_hash_sha256: e32e7dced02267e6478d029cd3ece67ddc0d436040d06d7d65433bcd623f4c0a
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRM-000004
+  filesystem_modified_at: '2026-07-16T09:19:53Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-PRM-000004
+- id: SRC-ORG-000002
+  apparent_title_from_filename: ORGANIZATION
+  original_filename: ORGANIZATION.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/organization/ORGANIZATION.mmd"
+  relative_path: organization/ORGANIZATION.mmd
+  domains:
+  - organization
+  domain: organization
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 2007
+  content_hash_sha256: 947a813be84a956b4afc850537dd8682e6df1f9f8e32b05bb2c72cf6a0b36a9e
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-ORG-000003
+  apparent_title_from_filename: overview
+  original_filename: overview.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/organization/overview.mmd"
+  relative_path: organization/overview.mmd
+  domains:
+  - organization
+  domain: organization
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 2007
+  content_hash_sha256: 947a813be84a956b4afc850537dd8682e6df1f9f8e32b05bb2c72cf6a0b36a9e
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-ORG-000002
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-ORG-000002
+- id: SRC-ORG-000004
+  apparent_title_from_filename: create-generative-ai-value-at-scale
+  original_filename: create-generative-ai-value-at-scale.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/organization/research/create-generative-ai-value-at-scale.pdf"
+  relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  domains:
+  - organization
+  domain: organization
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1532460
+  content_hash_sha256: e10910c018eddb43d4fece593cefd800565d50e4fa2865569869637b1f39c570
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:20:29Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-ORG-000005
+  apparent_title_from_filename: PEOPLE_and_CULTURE
+  original_filename: PEOPLE_and_CULTURE.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/people_and_culture/PEOPLE_and_CULTURE.mmd"
+  relative_path: people_and_culture/PEOPLE_and_CULTURE.mmd
+  domains:
+  - people_and_culture
+  domain: people_and_culture
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 1285
+  content_hash_sha256: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-ORG-000006
+  apparent_title_from_filename: overview
+  original_filename: overview.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/people_and_culture/overview.mmd"
+  relative_path: people_and_culture/overview.mmd
+  domains:
+  - people_and_culture
+  domain: people_and_culture
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 1285
+  content_hash_sha256: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-ORG-000005
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-ORG-000005
+- id: SRC-RSK-000001
+  apparent_title_from_filename: Gartner Reprint
+  original_filename: Gartner Reprint.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/security_trust/risks_trust_security_management/Gartner Reprint.pdf"
+  relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+  domains:
+  - security_trust
+  domain: security_trust
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 941680
+  content_hash_sha256: 4102a62895dca596f842c006cf02fa4a662645142b9c95d1b5aba93486ce8086
+  classification: restricted
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:49:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-SEC-000001
+  apparent_title_from_filename: A small number of samples can poison LLMs of any size _ Anthropic
+  original_filename: A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/security_trust/security/A small number of samples can poison LLMs of any size _ Anthropic.pdf"
+  relative_path: security_trust/security/A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  domains:
+  - security_trust
+  domain: security_trust
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 8521581
+  content_hash_sha256: eb4b63c3a19bc1e512d7a2b224ab22d72fcc253f979fe3248cebf9116dad1537
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:17:48Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-SEC-000002
+  apparent_title_from_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks
+  original_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf"
+  relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  domains:
+  - security_trust
+  domain: security_trust
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 331914
+  content_hash_sha256: 1a55b6a51c6e489ad53e26f947db55b7c03a2df1824afbaf07ac05a04db374a4
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:56:48Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-SEC-000003
+  apparent_title_from_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai
+  original_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/security_trust/security/Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf"
+  relative_path: security_trust/security/Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+  domains:
+  - security_trust
+  domain: security_trust
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1275695
+  content_hash_sha256: 2bef4241f42bbc7a7c823f0c26403bb0e40ce38c6c592d49aedd48f39aa892ca
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:30:56Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-VIS-000002
+  apparent_title_from_filename: AI_STRATEGY
+  original_filename: AI_STRATEGY.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/AI_STRATEGY.mmd"
+  relative_path: strategic_intent/AI_STRATEGY.mmd
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 5040
+  content_hash_sha256: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-VIS-000001
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-VIS-000001
+- id: SRC-PRE-000002
+  apparent_title_from_filename: AI Adoption Program - the overall picture
+  original_filename: AI Adoption Program - the overall picture.html
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/general_presentation_draft/AI Adoption Program - the overall picture.html"
+  relative_path: strategic_intent/general_presentation_draft/AI Adoption Program - the overall picture.html
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: web_document
+  file_extension: ".html"
+  file_size_bytes: 32447
+  content_hash_sha256: e4ee215c3dbd2dfa8d5755d53aa46f7cfc78ec6518c4c21e4b1615a81fc2b601
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRE-000001
+  filesystem_modified_at: '2026-07-15T05:43:29Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-PRE-000001
+- id: SRC-VIS-000003
+  apparent_title_from_filename: strategy
+  original_filename: strategy.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/strategy.mmd"
+  relative_path: strategic_intent/strategy.mmd
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 5040
+  content_hash_sha256: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-VIS-000001
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-VIS-000001
+- id: SRC-VIS-000004
+  apparent_title_from_filename: vision
+  original_filename: vision.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/vision.mmd"
+  relative_path: strategic_intent/vision.mmd
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 1595
+  content_hash_sha256: 80108c0b91353861edd0aad2cb9ed429df53781eee9d805623cdb7320dd73153
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-VIS-000005
+  apparent_title_from_filename: From AI Deployment to Intelligence Design
+  original_filename: From AI Deployment to Intelligence Design.pages
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/vision/From AI Deployment to Intelligence Design.pages"
+  relative_path: strategic_intent/vision/From AI Deployment to Intelligence Design.pages
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: mind_map_or_proprietary
+  file_extension: ".pages"
+  file_size_bytes: 994280
+  content_hash_sha256: 06e3d0f4b1116a71aa097ba319e86d20745436c9b4aa81dabe759ce0b5e609af
+  classification: public
+  processing_status: blocked
+  readability_status: blocked
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:17:28Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Blocked from local text extraction; Pages package unsupported by current extractor.
+- id: SRC-VIS-000006
+  apparent_title_from_filename: Winning With Intelligent Choice Architectures
+  original_filename: Winning With Intelligent Choice Architectures.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf"
+  relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 543032
+  content_hash_sha256: 2482ee0565176ad2bbb48e5a3d02ea28478d6b233122930f119a5f080b3ed898
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:16:10Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-VIS-000007
+  apparent_title_from_filename: stop-deploying-ai-start-designing-intelligence
+  original_filename: stop-deploying-ai-start-designing-intelligence.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf"
+  relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 498560
+  content_hash_sha256: ac7e17a55b55286b8dbc7ea4f478a9294a17ddf91f4800454c5a2e1fa798a490
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:21:50Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-VIS-000008
+  apparent_title_from_filename: the-innovation-advantage-genai-cant-give-you
+  original_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf"
+  relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+  domains:
+  - strategic_intent
+  domain: strategic_intent
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 282793
+  content_hash_sha256: 8888f9d331845e076d5961e886b4e3f95f8ecf4f7c5dc2aa4f8b196073ab77bd
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:19:10Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-UC-000004
+  apparent_title_from_filename: ai_academy_guidebook_customer_service
+  original_filename: ai_academy_guidebook_customer_service.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/use_cases/catalogue/ai_academy_guidebook_customer_service.pdf"
+  relative_path: use_cases/catalogue/ai_academy_guidebook_customer_service.pdf
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 11472178
+  content_hash_sha256: 1422948ec3efbf23f144c28198f29c27bd5983c6543bc310d539f97a2d5af97d
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:47:04Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-UC-000005
+  apparent_title_from_filename: rewiring-the-telecom-mindset
+  original_filename: rewiring-the-telecom-mindset.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/use_cases/catalogue/rewiring-the-telecom-mindset.pdf"
+  relative_path: use_cases/catalogue/rewiring-the-telecom-mindset.pdf
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1286002
+  content_hash_sha256: 6abd736e338b1c0458d66d667fe290202f7cc33b6bc0536c5585725b8b7129eb
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T08:53:57Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-UC-000006
+  apparent_title_from_filename: ai_academy_guidebook_customer_service
+  original_filename: ai_academy_guidebook_customer_service.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/use_cases/general_use/ai_academy_guidebook_customer_service.pdf"
+  relative_path: use_cases/general_use/ai_academy_guidebook_customer_service.pdf
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 11472178
+  content_hash_sha256: 1422948ec3efbf23f144c28198f29c27bd5983c6543bc310d539f97a2d5af97d
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-UC-000004
+  filesystem_modified_at: '2026-07-16T08:47:04Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-UC-000004
+- id: SRC-UC-000007
+  apparent_title_from_filename: rewiring-the-telecom-mindset
+  original_filename: rewiring-the-telecom-mindset.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/use_cases/general_use/rewiring-the-telecom-mindset.pdf"
+  relative_path: use_cases/general_use/rewiring-the-telecom-mindset.pdf
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 1286002
+  content_hash_sha256: 6abd736e338b1c0458d66d667fe290202f7cc33b6bc0536c5585725b8b7129eb
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-UC-000005
+  filesystem_modified_at: '2026-07-16T08:53:57Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-UC-000005
+- id: SRC-UC-000008
+  apparent_title_from_filename: the-innovation-advantage-genai-cant-give-you
+  original_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf"
+  relative_path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 282793
+  content_hash_sha256: 8888f9d331845e076d5961e886b4e3f95f8ecf4f7c5dc2aa4f8b196073ab77bd
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-VIS-000008
+  filesystem_modified_at: '2026-07-16T08:19:10Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: Exact duplicate of SRC-VIS-000008
+- id: SRC-UC-000009
+  apparent_title_from_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web
+  original_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf"
+  relative_path: use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: pdf
+  file_extension: ".pdf"
+  file_size_bytes: 3070828
+  content_hash_sha256: 7ce67c7f22545d967ca782a85cb67e87de5f95e425245a88b81d6017207589cf
+  classification: public
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-16T09:39:09Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-UC-000010
+  apparent_title_from_filename: value_creation
+  original_filename: value_creation.mmd
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/value_management/value_creation.mmd"
+  relative_path: value_management/value_creation.mmd
+  domains:
+  - value_and_use_cases
+  domain: value_and_use_cases
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  file_size_bytes: 4267
+  content_hash_sha256: 5a021911892e7eb6138fafd0cc1a68b00b9461588c8a7278c9317b8819b7bb07
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-14T12:21:11Z'
+  date_discovered: '2026-07-24T12:45:56Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes:
+- id: SRC-UC-000011
+  apparent_title_from_filename: Untitled
+  original_filename: Untitled.rtf
+  source_path: "/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs/current_state/implemented_use_cases/search_20/Untitled.rtf"
+  relative_path: current_state/implemented_use_cases/search_20/Untitled.rtf
+  domains:
+  - current_state
+  - value_and_use_cases
+  domain: current_state
+  source_type: word
+  file_extension: ".rtf"
+  file_size_bytes: 2061
+  content_hash_sha256: be9c005c8989850d60ab4c1251c4aa682a57cf95c4ebd971002d7f8c84ad1061
+  classification: internal
+  processing_status: extracted
+  readability_status: readable
+  duplicate_status: unique
+  duplicate_of:
+  filesystem_modified_at: '2026-07-24T16:12:00Z'
+  date_discovered: '2026-07-24T14:17:12Z'
+  last_verified: '2026-07-25T12:23:33Z'
+  notes: 'Additional domains: value_and_use_cases'

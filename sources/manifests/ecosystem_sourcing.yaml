@@ -1,9 +1,9 @@
 ---
 schema_version: 1
-manifest: domain-source-view
+manifest_type: domain_source_view
 domain_id: ecosystem_sourcing
 source_root_id: SROOT-0001
-source_catalogue: "../registers/sources.yaml"
-generated_at: '2026-07-24T13:11:53Z'
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T12:23:33Z'
 record_count: 0
 records: []

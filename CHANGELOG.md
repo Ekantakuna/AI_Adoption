@@ -13,7 +13,7 @@ All notable repository-foundation changes are documented in this file.
 
 ### Changed
 
-- Source inventory ownership is assigned to `registers/sources.yaml`.
+- Source inventory ownership is assigned to `sources/catalogue.yaml`.
 - Repository paths use a portable repository-relative value.
 
 No strategy conclusions or source-derived findings are included in this foundation release.

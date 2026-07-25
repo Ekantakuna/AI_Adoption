@@ -65,7 +65,7 @@ Potential duplicates and version-labelled files remain separate candidates until
 
 ## Recommendations
 
-- Approve the register-specific schema for `registers/sources.yaml` before adding records.
+- Approve the canonical source-catalogue schema in `sources/catalogue.yaml` before adding records.
 - Record the approved extraction tools and review trail for each source type before body processing starts.
 - Keep source-root verification and classification decisions paired in the same review checkpoint.
 

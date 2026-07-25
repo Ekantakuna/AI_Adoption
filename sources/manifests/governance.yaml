@@ -1,65 +1,72 @@
 ---
 schema_version: 1
-manifest: domain-source-view
+manifest_type: domain_source_view
 domain_id: governance
 source_root_id: SROOT-0001
-source_catalogue: "../registers/sources.yaml"
-generated_at: '2026-07-24T13:11:53Z'
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T12:23:33Z'
 record_count: 7
 records:
-- source_id: SRC-GOV-000001
-  current_relative_path: governance/overview.mmd
-  classification: internal
-  processing_state: approved_for_processing
-  duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: mind_map_or_proprietary
+- id: SRC-GOV-000001
+  relative_path: governance/overview.mmd
   source_type: mind_map_or_proprietary
-- source_id: SRC-GOV-000002
-  current_relative_path: governance/research/GOVERNANCE.mmd
+  file_extension: ".mmd"
   classification: internal
-  processing_state: approved_for_processing
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-GOV-000002
+  relative_path: governance/research/GOVERNANCE.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: internal
+  processing_status: approved_for_processing
+  readability_status: unknown
   duplicate_status: exact_duplicate
-  duplicate_of_source_id: SRC-GOV-000001
-  source_group: mind_map_or_proprietary
-  source_type: mind_map_or_proprietary
-- source_id: SRC-GOV-000003
-  current_relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf
+  duplicate_of: SRC-GOV-000001
+- id: SRC-GOV-000003
+  relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive Governance.pdf
+  source_type: pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-GOV-000004
+  relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
   source_type: pdf
-- source_id: SRC-GOV-000004
-  current_relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
-  source_type: pdf
-- source_id: SRC-GOV-000005
-  current_relative_path: governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx
-  classification: restricted
-  processing_state: approved_for_processing
-  duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: word
+  duplicate_of:
+- id: SRC-GOV-000005
+  relative_path: governance/research/governance_policies_and_how_to/AI usage Goverance HowTos.docx
   source_type: word
-- source_id: SRC-GOV-000006
-  current_relative_path: governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf
+  file_extension: ".docx"
   classification: restricted
-  processing_state: approved_for_processing
+  processing_status: approved_for_processing
+  readability_status: unknown
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-GOV-000006
+  relative_path: governance/research/governance_policies_and_how_to/Artificial Intelligence Usage en.pdf
   source_type: pdf
-- source_id: SRC-GOV-000007
-  current_relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
+  file_extension: ".pdf"
   classification: restricted
-  processing_state: approved_for_processing
+  processing_status: approved_for_processing
+  readability_status: unknown
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: word
+  duplicate_of:
+- id: SRC-GOV-000007
+  relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
   source_type: word
+  file_extension: ".doc"
+  classification: restricted
+  processing_status: approved_for_processing
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:

@@ -1,41 +1,45 @@
 ---
 schema_version: 1
-manifest: domain-source-view
+manifest_type: domain_source_view
 domain_id: security_trust
 source_root_id: SROOT-0001
-source_catalogue: "../registers/sources.yaml"
-generated_at: '2026-07-24T13:11:53Z'
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T12:23:33Z'
 record_count: 4
 records:
-- source_id: SRC-RSK-000001
-  current_relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+- id: SRC-RSK-000001
+  relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+  source_type: pdf
+  file_extension: ".pdf"
   classification: restricted
-  processing_state: approved_for_processing
+  processing_status: approved_for_processing
+  readability_status: unknown
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-SEC-000001
+  relative_path: security_trust/security/A small number of samples can poison LLMs of any size _ Anthropic.pdf
   source_type: pdf
-- source_id: SRC-SEC-000001
-  current_relative_path: security_trust/security/A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-SEC-000002
+  relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
   source_type: pdf
-- source_id: SRC-SEC-000002
-  current_relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
+  duplicate_of:
+- id: SRC-SEC-000003
+  relative_path: security_trust/security/Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
   source_type: pdf
-- source_id: SRC-SEC-000003
-  current_relative_path: security_trust/security/Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+  file_extension: ".pdf"
   classification: public
-  processing_state: approved_for_processing
+  processing_status: extracted
+  readability_status: readable
   duplicate_status: unique
-  duplicate_of_source_id: 
-  source_group: pdf
-  source_type: pdf
+  duplicate_of:
