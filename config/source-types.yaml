@@ -1,122 +1,108 @@
 schema_version: 1
-
 source_root:
   id: SROOT-0001
   path: /Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs
   storage: outside_git
-
 classification_values:
-  - public
-  - internal
-  - restricted
-  - unclassified
-
+- public
+- internal
+- restricted
+- unclassified
 processing_states:
-  - discovered
-  - metadata_catalogued
-  - classification_pending
-  - approved_for_processing
-  - extraction_in_progress
-  - extracted
-  - reviewed
-  - rejected
-  - superseded
-  - unreadable
-  - blocked
-
+- discovered
+- metadata_catalogued
+- classification_pending
+- approved_for_processing
+- extraction_in_progress
+- extracted
+- reviewed
+- rejected
+- superseded
+- unreadable
+- blocked
 source_groups:
   pdf:
     extensions:
-      - .pdf
+    - .pdf
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   word:
     extensions:
-      - .doc
-      - .docx
-      - .rtf
+    - .doc
+    - .docx
+    - .rtf
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   presentations:
     extensions:
-      - .ppt
-      - .pptx
-      - .key
-      - .odp
+    - .ppt
+    - .pptx
+    - .key
+    - .odp
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   spreadsheets:
     extensions:
-      - .xls
-      - .xlsx
-      - .csv
-      - .ods
+    - .xls
+    - .xlsx
+    - .csv
+    - .ods
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   images:
     extensions:
-      - .png
-      - .jpg
-      - .jpeg
-      - .webp
-      - .svg
-      - .gif
+    - .png
+    - .jpg
+    - .jpeg
+    - .webp
+    - .svg
+    - .gif
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   markdown:
     extensions:
-      - .md
-      - .markdown
+    - .md
+    - .markdown
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   web_document:
     extensions:
-      - .html
-      - .htm
+    - .html
+    - .htm
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   text:
     extensions:
-      - .txt
-      - .text
+    - .txt
+    - .text
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
   mind_map_or_proprietary:
     extensions:
-      - .mmd
-      - .mm
-      - .xmind
-      - .drawio
-      - .vsdx
-      - .pages
+    - .mmd
+    - .mm
+    - .xmind
+    - .drawio
+    - .vsdx
+    - .pages
     metadata_inventory_supported: true
     content_extraction_requires_review: true
     original_binaries_permitted_in_git_by_default: false
-
 ignored_files:
-  - .DS_Store
-  - Thumbs.db
-  - "~$*"
-  - "*.tmp"
-  - "*.swp"
-  - "*.bak"
-
+- .DS_Store
+- Thumbs.db
+- ~$*
+- '*.tmp'
+- '*.swp'
+- '*.bak'
 source_id_prefixes:
   glossary: SRC-GLO
   scope: SRC-SCO
@@ -132,3 +118,12 @@ source_id_prefixes:
   prompt_context: SRC-PRM
   presentation_drafts: SRC-PRE
   miscellaneous: SRC-MIS
+ignore_patterns:
+- .aider.chat.history.md
+- .aider.input.history
+- .DS_Store
+- Thumbs.db
+- ~$*
+- '*.tmp'
+- '*.swp'
+- '*.bak'
