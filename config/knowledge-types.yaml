@@ -1,0 +1,74 @@
+schema_version: 1
+object_types:
+  - type: evidence_statement
+    prefix: EVID
+    directory: knowledge/evidence
+    format: yaml
+    schema: schemas/evidence.schema.yaml
+    evidence_required: false
+  - type: glossary_term
+    prefix: TERM
+    directory: knowledge/glossary
+    format: markdown
+    schema: schemas/glossary-entry.schema.yaml
+    evidence_required: true
+  - type: concept
+    prefix: CONCEPT
+    directory: knowledge/concepts
+    format: markdown
+    schema: schemas/concept.schema.yaml
+    evidence_required: true
+  - type: framework
+    prefix: FRAME
+    directory: knowledge/frameworks
+    format: markdown
+    schema: schemas/framework.schema.yaml
+    evidence_required: true
+  - type: metric
+    prefix: METRIC
+    directory: knowledge/metrics
+    format: markdown
+    schema: schemas/metric.schema.yaml
+    evidence_required: true
+  - type: risk
+    prefix: RISK
+    directory: knowledge/risks
+    format: markdown
+    schema: schemas/risk.schema.yaml
+    evidence_required: true
+  - type: trend
+    prefix: TREND
+    directory: knowledge/trends
+    format: markdown
+    schema: schemas/trend.schema.yaml
+    evidence_required: true
+  - type: use_case
+    prefix: USECASE
+    directory: knowledge/use_cases
+    format: markdown
+    schema: schemas/use-case.schema.yaml
+    evidence_required: true
+  - type: relationship
+    prefix: REL
+    directory: knowledge/relationships
+    format: yaml
+    schema: schemas/relationship.schema.yaml
+    evidence_required: true
+  - type: assumption
+    prefix: ASSUMPTION
+    directory: knowledge/assumptions
+    format: markdown
+    schema: schemas/assumption.schema.yaml
+    evidence_required: true
+  - type: decision
+    prefix: DECISION
+    directory: knowledge/decisions
+    format: markdown
+    schema: schemas/decision.schema.yaml
+    evidence_required: true
+  - type: reference
+    prefix: REF
+    directory: knowledge/references
+    format: markdown
+    schema: schemas/reference.schema.yaml
+    evidence_required: true
