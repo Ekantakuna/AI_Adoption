@@ -42,13 +42,13 @@ control approval of authoritative knowledge and organizational conclusions.
 | Layer | Responsibility | Principal target locations | Current status |
 | --- | --- | --- | --- |
 | 1. Source layer | Inventory original assets, classification, routes, hashes, and controlled extraction | `sources/`, `config/source-types.yaml`, `schemas/sources.yaml` | Partial |
-| 2. Evidence layer | Store atomic, attributable evidence derived under an approved route | `knowledge/evidence/`, future evidence schema | Planned; directory intent exists but no atomic-evidence contract or records exist |
-| 3. Knowledge layer | Maintain concepts, claims, assumptions, decisions, and relationships | `knowledge/`, future knowledge schemas | Partial; two provisional synthesis notes and empty scaffolding exist, but structured contracts do not |
+| 2. Evidence layer | Store atomic, attributable evidence derived under an approved route | `knowledge/evidence/`, `schemas/evidence.schema.yaml` | Partial; approved run contract and one human-verified, AI-origin evidence statement |
+| 3. Knowledge layer | Maintain concepts, claims, assumptions, decisions, and relationships | `knowledge/`, knowledge schemas | Partial; controlled model/templates exist, production directories are empty, two provisional notes remain |
 | 4. Assessment and outlook layer | Produce traceable current/target state, gaps, maturity, impact, and outlook content | `assessments/`, `outlook/` | Planned/scaffolded |
 | 5. Project and progress layer | Maintain policies, decisions, reviews, status, risks, initiatives, metrics, and milestones | `project/`, `registers/` | Partial |
 | 6. Publication layer | Assemble reviewed content for specific audiences | `publications/`, `website/` | Planned/scaffolded |
 | 7. Presentation layer | Transform approved publication content into audience-specific decks | `presentations/` | Planned/scaffolded |
-| 8. Automation and validation layer | Validate, process changes, trace impact, test, and generate derivatives | `scripts/`, `tests/`, `.github/` | Absent; directories are scaffolds and no executable workflow exists |
+| 8. Automation and validation layer | Validate, process changes, trace impact, test, and generate derivatives | `scripts/`, `tests/`, `.github/` | Partial; validation, source-processing controls, and text/HTML pilot implemented; broader generation absent |
 
 Layering controls dependencies: downstream content cites stable upstream IDs and
 must not overwrite upstream records. A publication may summarize approved
@@ -63,9 +63,10 @@ progress views → reports → presentations**
 The first metadata step is implemented. Some historical status and knowledge
 files report extraction and synthesis, but no tracked extractor or extracted
 corpus makes that processing reproducible from the current tree; it is therefore
-partial. Atomic-evidence contracts, structured knowledge, relationships, graph
-traversal, impact automation, assessment production, and output generation
-remain planned or absent.
+partial. Stage 9 implements empty atomic-evidence and knowledge contracts plus
+relationship integrity validation. Production knowledge, graph traversal,
+impact automation, assessment production, and output generation remain planned
+or absent.
 
 See [information flow](docs/architecture/information-flow.md).
 
@@ -76,7 +77,7 @@ See [information flow](docs/architecture/information-flow.md).
 | Original source asset (original evidence) | Original asset in approved external storage | Local/external to Git; immutable during repository processing |
 | Source metadata | `sources/catalogue.yaml`, by current policy | Git-tracked; must preserve IDs and provenance |
 | Controlled values | `config/*.yaml` | Git-tracked; changes require documentation and review |
-| Schema contracts | `schemas/` | Git-tracked; the approved source schema exists, while downstream object schemas are absent |
+| Schema contracts | `schemas/` | Git-tracked; source and Stage 9 knowledge object schemas exist |
 | Evidence and knowledge | Reviewed canonical Markdown and schema-valid registers | Git-tracked only when classification permits |
 | Assessment and outlook | Reviewed canonical Markdown/structured records | Git-tracked; scaffolded today |
 | Project state | `project/status/`, decisions, and applicable registers | Git-tracked; conflicts remain explicit |
@@ -148,21 +149,23 @@ derivatives. Current directories document intent only. See the
 
 ## Architectural decisions
 
-The proposed eight-layer target model is recorded in
+The accepted eight-layer target model is recorded in
 [ADR 0001](project/decisions/0001-repository-operating-model.md). Existing
 operative decisions evidenced by implementation or policy are recorded
-as proposals so they do not imply that the full target architecture operates:
+separately so they do not imply that the full target architecture operates:
 
 | Decision | Existing evidence | Future or incomplete capability |
 | --- | --- | --- |
 | [Source assets outside Git and metadata-only catalogue](project/decisions/ADR-0003-source-assets-outside-git.md) | External root, catalogue, schema, and source policy | Extraction and enforcement automation |
-| [Markdown and YAML canonical formats](project/decisions/ADR-0004-markdown-and-yaml-canonical-formats.md) | Tracked documentation, configuration, source records, and approved source schema | Downstream object schemas and generators |
-| [Stable identifiers](project/decisions/ADR-0005-stable-identifiers.md) | Project, source-root, and source ID contracts | Evidence, knowledge, assessment, and publication identifier models |
-| [Evidence and knowledge separation](project/decisions/ADR-0006-separate-evidence-and-knowledge.md) | Operating contract, policy, and directory boundaries | Atomic evidence and structured knowledge contracts |
+| [Markdown and YAML canonical formats](project/decisions/ADR-0004-markdown-and-yaml-canonical-formats.md) | Tracked documentation, configuration, source records, knowledge schemas/templates | Assessment/publication schemas and generators |
+| [Stable identifiers](project/decisions/ADR-0005-stable-identifiers.md) | Project, source-root, source, and Stage 9 knowledge ID contracts | Assessment and publication identifier models |
+| [Evidence and knowledge separation](project/decisions/ADR-0006-separate-evidence-and-knowledge.md) | Operating contract, policy, evidence schema, knowledge schemas, processing-run contract, review workflow | Successful reviewed runs and production evidence |
 | [Human review for authority](project/decisions/ADR-0007-human-review-for-authority.md) | Operating contract and source-access gates | Repository-wide review workflow enforcement |
 | [Publications as derivatives](project/decisions/ADR-0008-publications-are-derivatives.md) | Source-of-truth and publication boundary documentation | Publication and presentation generation |
 | [Documentation as implementation](project/decisions/ADR-0009-documentation-is-part-of-implementation.md) | Agent and contribution contracts | Automated documentation completeness checks |
 
-ADR 0002 is approved. ADR 0001 and ADRs 0003–0009 are AI-authored proposals
-pending authorized human review. Their proposal status does not change the
-operative evidence or implementation boundaries shown above.
+ADRs 0005–0007 were accepted by Maksim Zakharenkau on 2026-08-02 as part of
+Stage 9 closure; ADR 0010 was accepted with source-state reconciliation later
+that day. ADRs 0001, 0003–0004, and 0008–0009 were then accepted with their
+explicit limitations. Record status does not change the implementation
+boundaries shown above.

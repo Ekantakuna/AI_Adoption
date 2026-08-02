@@ -3,8 +3,8 @@ manifest_schema_version: 1
 manifest_type: domain_source_manifest
 domain: current_state
 source_catalogue: "../catalogue.yaml"
-generated_at: '2026-07-25T17:37:46Z'
-record_count: 9
+generated_at: '2026-08-02T14:33:40Z'
+record_count: 12
 selection:
   source_id_prefixes:
   - SRC-MIS-
@@ -81,6 +81,33 @@ records:
   file_extension: ".rtf"
   classification: unclassified
   processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000012
+  relative_path: "current_state/implemented_use_cases/customer_care/callcenter_chatbot /chatbot_2024.pptx"
+  source_type: presentations
+  file_extension: ".pptx"
+  classification: internal
+  processing_status: extracted
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000013
+  relative_path: current_state/implemented_use_cases/customer_care/speech_analytics/ai_speech.pptx
+  source_type: presentations
+  file_extension: ".pptx"
+  classification: internal
+  processing_status: extracted
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000014
+  relative_path: current_state/implemented_use_cases/sales/life_registration/Life Registration - 2026 v1.pptx
+  source_type: presentations
+  file_extension: ".pptx"
+  classification: internal
+  processing_status: extracted
   readability_status: unknown
   duplicate_status: unique
   duplicate_of:

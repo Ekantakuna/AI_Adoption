@@ -1,5 +1,16 @@
 # Repository baseline
 
+> Historical baseline: the capability table and validation baseline record the
+> repository as inspected on 2026-07-30. Stage 9 subsequently added schema and
+> knowledge validators, tests, and CI. See
+> [stage-09-knowledge-framework.md](stage-09-knowledge-framework.md) for the
+> current validation state. The source-state conflict recorded here was
+> subsequently resolved by the separately approved reconciliation and source-
+> processing controls on 2026-08-02; see
+> [source-processing-approval.md](source-processing-approval.md). ADRs 0001 and
+> 0003–0009 were also subsequently accepted; the table below remains the
+> historical 2026-07-30 snapshot.
+
 ## Scope and method
 
 This baseline records repository evidence inspected on 2026-07-30 for the
@@ -116,3 +127,19 @@ checker, or CI workflow.
    graph records.
 6. Add minimal repository and documentation validation before implementing
    downstream processing.
+
+## Stage 9 validation follow-up — 2026-08-02
+
+Stage 9 supersedes the historical `absent` findings for repository validation
+and CI. `scripts/validate_schemas.py` now performs Draft 2020-12 meta-schema,
+format, source-catalogue, and production knowledge-record validation;
+`scripts/validate_knowledge.py` performs knowledge-layer integrity checks; 29
+unit tests cover both validators; and `.github/workflows/validate.yml` runs the
+implemented checks. The source schema and 58 current catalogue records pass the
+configured standards-based validator.
+
+Repository validation and CI are therefore partial rather than absent. A
+documentation build and CI link check remain absent, and the source-state,
+taxonomy, source-type mapping, manifest-consistency, and processing-run gaps in
+this baseline remain unresolved. This follow-up does not change any approval
+state or reconcile source metadata.

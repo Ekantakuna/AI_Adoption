@@ -6,10 +6,10 @@ structured knowledge, assessment, project tracking, and audience-specific
 publication while preserving provenance and human review.
 
 The repository is not yet an end-to-end operating system. Metadata inventory
-and repository operating documentation exist, while controlled extraction is
-partial. Atomic evidence, structured knowledge contracts, most downstream
-automation, reports, presentations, and incremental processing remain planned
-or absent. See the [repository baseline](project/status/repository-baseline.md) for the
+and some source-control foundations exist. Stage 9 adds an empty but operational
+knowledge contract and validator; substantive extraction, most downstream
+automation, reports, presentations, and incremental processing remain planned. See the
+[repository baseline](project/status/repository-baseline.md) for the
 evidence-backed status of each capability.
 
 ## Target information flow
@@ -48,12 +48,12 @@ evidence, knowledge, assessments, and outputs are in
 
 | Area | Intended role | Current status |
 | --- | --- | --- |
-| `sources/`, `config/`, `schemas/` | Source inventory and controlled processing foundations | Partial; metadata catalogue and approved source schema exist, while source states conflict |
-| `knowledge/`, `registers/` | Evidence and structured knowledge | Partial; two provisional synthesis notes and empty scaffolding |
+| `sources/`, `config/`, `schemas/` | Source inventory and controlled processing contracts | Partial |
+| `knowledge/`, `registers/` | Evidence and structured knowledge | Partial; controlled empty framework and two provisional notes |
 | `assessments/`, `outlook/` | Assessment and outlook content | Planned/scaffolded |
 | `project/` | Policies, decisions, reviews, and progress | Partial |
 | `publications/`, `presentations/`, `website/` | Audience outputs | Planned/scaffolded |
-| `scripts/`, `tests/`, `.github/` | Automation and validation | Absent; directories are scaffolds and no executable validators, tests, or CI workflow exist |
+| `scripts/`, `tests/`, `.github/` | Automation and validation | Partial; schema/knowledge validation, tests, and CI are implemented |
 | `docs/` | Repository operating documentation | Implemented by the operating-model baseline |
 
 The detailed accepted and prohibited contents for every area are in the
@@ -65,17 +65,19 @@ The detailed accepted and prohibited contents for every area are in the
 - Source inventory: `sources/catalogue.yaml`, by repository policy.
 - Controlled values: `config/*.yaml`.
 - Source schema: `schemas/sources.yaml`, approved in ADR 0002.
-- Evidence and knowledge: two source-linked synthesis notes under `knowledge/`
-  remain provisional. Atomic-evidence and structured-knowledge contracts are
-  planned; extraction output is not automatically evidence or approved knowledge.
-  Assessments remain planned/scaffolded.
+- Evidence and knowledge: schema-conforming records under `knowledge/`, subject
+  to classification and human review. The directories initially contain no
+  production records; extraction output is not automatically evidence or
+  approved knowledge. Assessments remain planned/scaffolded.
 - Project state: `project/status/`, relevant registers, and recorded decisions.
 - Generated publications and presentations: derivatives, never the canonical
   evidence or knowledge record.
 
-The canonical catalogue conflicts with the legacy source register, manifests,
-and historical source-status reports. That conflict remains explicit and blocks
-trustworthy new source processing pending authorized reconciliation.
+The source-state conflict was explicitly reconciled on 2026-08-02. Historical
+legacy states remain preserved but do not override the canonical catalogue.
+Fifty-seven sources have approved fresh-processing authorizations; the Pages
+source remains blocked. One controlled pilot run succeeded and is technically
+verified; one AI-origin atomic evidence statement is human-verified.
 
 ## Contributing
 
