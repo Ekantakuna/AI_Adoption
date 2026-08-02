@@ -1,0 +1,122 @@
+---
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: current_state
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-08-02T14:33:40Z'
+record_count: 12
+selection:
+  source_id_prefixes:
+  - SRC-MIS-
+  - SRC-UC-
+  - SRC-PRE-
+  - SRC-VIS-
+records:
+- id: SRC-MIS-000001
+  relative_path: current_state/DD1_Handout__Overview_of_Generative_AI.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-MIS-000002
+  relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-MIS-000003
+  relative_path: current_state/unclassified_research/Conversational AI with Language Models _ Rasa Documentation.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-PRE-000001
+  relative_path: current_state/project_summaries/AI Adoption Program - the overall picture.html
+  source_type: web_document
+  file_extension: ".html"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000001
+  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png
+  source_type: image
+  file_extension: ".png"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000002
+  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/now.png
+  source_type: image
+  file_extension: ".png"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000003
+  relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png
+  source_type: image
+  file_extension: ".png"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000011
+  relative_path: current_state/implemented_use_cases/search_20/Untitled.rtf
+  source_type: word
+  file_extension: ".rtf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000012
+  relative_path: "current_state/implemented_use_cases/customer_care/callcenter_chatbot /chatbot_2024.pptx"
+  source_type: presentations
+  file_extension: ".pptx"
+  classification: internal
+  processing_status: extracted
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000013
+  relative_path: current_state/implemented_use_cases/customer_care/speech_analytics/ai_speech.pptx
+  source_type: presentations
+  file_extension: ".pptx"
+  classification: internal
+  processing_status: extracted
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-UC-000014
+  relative_path: current_state/implemented_use_cases/sales/life_registration/Life Registration - 2026 v1.pptx
+  source_type: presentations
+  file_extension: ".pptx"
+  classification: internal
+  processing_status: extracted
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-VIS-000001
+  relative_path: current_state/project_summaries/AI_STRATEGY.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:

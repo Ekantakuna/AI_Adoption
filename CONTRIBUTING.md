@@ -1,42 +1,82 @@
 # Contributing
 
-Contributions should keep the repository traceable, reviewable, and safe for the information it contains.
+Contributions must keep the repository traceable, reviewable, and safe for its
+information classification. Read [AGENTS.md](AGENTS.md), even when contributing
+without an AI agent.
 
 ## Before making changes
 
-- Work on a dedicated branch.
-- Read `AGENTS.md` and `project/information-handling.md`.
-- Confirm that any source material has an assigned classification and approved processing route.
-- Do not add credentials, personal information, production datasets, or unreviewed restricted material.
-- Treat `sources/extracted/private/` as non-versioned content. Do not assume that other extracted artifacts are safe to track merely because Git does not ignore them.
+1. Work on a dedicated branch and inspect `git status`.
+2. Read the relevant implementation, documentation, schemas, controlled
+   configuration, tests, and project status.
+3. Confirm that source material has a stable ID, classification, approved
+   processing route, and approved tool before opening its body.
+4. Identify whether a material design choice requires an Architecture Decision
+   Record in `project/decisions/`.
+5. Preserve unrelated and pre-existing worktree changes.
 
-## Content rules
+Do not add credentials, personal information, production datasets, original
+source binaries, or unreviewed restricted material. The fact that a path is not
+ignored by Git does not make its contents safe to track.
 
-- Separate facts, assumptions, inferences, and recommendations explicitly.
-- Cite source or evidence identifiers rather than making unsupported claims.
-- Preserve existing stable record IDs; never reuse an ID for a different record.
-- Use domain IDs from `config/taxonomy.yaml` and controlled values from `config/project.yaml`.
-- Keep Markdown and YAML registers canonical; generated outputs should be reproducible from them.
-- Do not create strategy conclusions as part of repository maintenance.
+## Content and record rules
 
-## YAML registers
+- Separate facts, assumptions, inferences, and recommendations.
+- Cite stable source or evidence IDs for source-derived claims.
+- Preserve existing record IDs; never reuse an ID for another object.
+- Use controlled values from `config/`.
+- Add structured records only under an approved object-specific schema.
+- Treat reviewed Markdown and YAML registers as canonical. Mark generated
+  derivatives and keep them reproducible when automation exists.
+- Represent terminology, evidence, and status conflicts explicitly.
+- Do not present AI-generated content as human-approved.
 
-Register files use this foundation shape:
+Identifier rules are documented in
+[docs/reference/identifiers.md](docs/reference/identifiers.md), and lifecycle
+values in [docs/reference/statuses.md](docs/reference/statuses.md).
 
-```yaml
-schema_version: 1
-register: example
-records: []
-```
+## Keep documentation and status synchronized
 
-Every register must have an approved register-specific schema before its first record is added. Do not invent a register-specific field model before that approval. Keep an unused register's `records` value as an empty list.
+Any implementation change must update its authoritative documentation in the
+same branch. Cover its purpose, inputs, outputs, identifiers, lifecycle,
+relationships, validation, review ownership, operation, and limitations.
 
-## Review checklist
+Also:
 
-1. Parse all YAML files with an available safe YAML parser or project validator.
-2. Run the available Markdown checks.
-3. Confirm that links and referenced identifiers resolve where validation supports it.
-4. Review `git status` and `git diff --stat`.
-5. Summarize changed files and identify decisions still required.
+- update a stage record under `project/status/`;
+- update `CHANGELOG.md` for notable changes;
+- add or update an ADR for material architectural decisions;
+- update the repository map when a directory's contract changes.
+
+## Source changes and incremental work
+
+The automated incremental-processing model is planned, not implemented. Until
+it exists, a source metadata or hash change requires a controlled review:
+
+1. preserve the source ID and previous path or hash history;
+2. update the authoritative catalogue only through an approved inventory step;
+3. identify affected evidence, knowledge, assessments, and outputs from explicit
+   references;
+4. reprocess only under the approved handling route;
+5. mark impacted content for review rather than silently republishing it.
+
+See [change management](docs/governance/change-management.md).
+
+## Validation and review
+
+Run all checks that exist and apply:
+
+1. parse all YAML safely;
+2. run schema and repository validators;
+3. run automated tests;
+4. build documentation and check links if configured;
+5. run `git diff --check`;
+6. inspect `git status --short` and `git diff --stat`.
+
+Stage 9 provides Draft 2020-12 schema validation, a cross-record knowledge
+validator, automated unit tests, and CI integration. Install
+`requirements-validation.txt` and run all commands documented in
+`docs/operations/local-development.md`. A documentation build remains
+unconfigured. Do not substitute YAML parsing for schema validation.
 
 Do not commit or push unless explicitly authorized.

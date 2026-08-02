@@ -1,0 +1,14 @@
+template: true
+id: EVID-000000
+type: evidence_statement
+statement: "<atomic statement placeholder>"
+source_id: "<SRC-GROUP-000000>"
+source_locator: "<page, section, paragraph, timestamp, or other precise locator>"
+processing_run_id: RUN-000000
+confidence: low
+classification: public
+review_status: draft
+origin: ai
+created_at: "YYYY-MM-DD"
+created_by: "<creator>"
+notes: "Template only; replace placeholders and remove template before production use."

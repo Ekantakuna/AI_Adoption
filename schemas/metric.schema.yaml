@@ -1,0 +1,25 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "urn:ai-adoption:schema:metric:1"
+title: Metric metadata
+type: object
+additionalProperties: false
+required: [id, type, name, definition, unit, evidence_ids, classification, review_status, origin, created_at, created_by]
+properties:
+  id: {type: string, pattern: "^METRIC-[0-9]{6}$"}
+  type: {const: metric}
+  name: {type: string, minLength: 1}
+  definition: {type: string, minLength: 1}
+  unit: {type: string, minLength: 1}
+  evidence_ids: {$ref: "#/$defs/evidence_ids"}
+  classification: {enum: [public, internal, restricted]}
+  review_status: {$ref: "#/$defs/status"}
+  origin: {enum: [human, ai]}
+  created_at: {type: string, format: date}
+  created_by: {type: string, minLength: 1}
+  reviewer: {$ref: "#/$defs/reviewer"}
+allOf: [{$ref: "#/$defs/review_gate"}]
+$defs: &common
+  evidence_ids: {type: array, minItems: 1, uniqueItems: true, items: {type: string, pattern: "^EVID-[0-9]{6}$"}}
+  status: {enum: [draft, needs_review, under_review, verified, approved, rejected, deprecated]}
+  reviewer: {type: object, additionalProperties: false, required: [name, reviewed_at], properties: {name: {type: string, minLength: 1}, reviewed_at: {type: string, format: date}}}
+  review_gate: {if: {properties: {review_status: {enum: [verified, approved]}}, required: [review_status]}, then: {required: [reviewer]}}

@@ -1,0 +1,13 @@
+template: true
+id: AUTH-000000
+source_id: SRC-GROUP-000000
+classification: public
+route_id: external_processing_approved
+tool_id: pdftotext_local
+environment: approved_local
+status: proposed
+approved_by: "<authorized reviewer>"
+approved_at: "YYYY-MM-DD"
+basis_refs:
+  - "<reviewed repository record>"
+notes: "Template only; replace placeholders and remove template before use."

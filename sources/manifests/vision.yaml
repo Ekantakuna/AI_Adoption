@@ -1,0 +1,20 @@
+---
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: glossary
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T17:03:48Z'
+record_count: 1
+selection:
+  source_id_prefixes:
+  - SRC-GLO-
+records:
+- id: SRC-GLO-000001
+  relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:

@@ -1,5 +1,8 @@
 # Source management policy
 
+Amendments made by an AI agent remain review proposals until an authorized
+human reviewer accepts them.
+
 ## Scope
 
 This policy controls source access for the AI Adoption Outlook project. It applies to original source documents held outside Git and to every repository derivative created from that evidence.
@@ -8,13 +11,16 @@ The approved local source root is:
 
 `/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs`
 
-Original source documents remain outside Git in the approved local source root or its subfolders. They must not be copied into Git, renamed, moved, or modified during inventory.
-
 ## Repository storage
 
-Git stores source metadata, hashes, source IDs, approved summaries, normalized knowledge, and derived publications.
+Original source documents remain outside Git in the approved local source root or its subfolders. They must not be copied into Git, renamed, moved, or modified during inventory.
 
-Repository derivatives must link back to the source IDs and provenance that produced them. They must not introduce credentials, personal data, or production datasets without explicit approval.
+Git may store source metadata, hashes, source IDs, approved summaries,
+normalized knowledge, and derived publications only when their classification
+and approved handling route permit repository storage. Restricted or otherwise
+non-trackable derivatives remain local-only.
+
+Repository derivatives must link back to the source IDs and provenance that produced them.
 
 ## Classifications
 
@@ -65,10 +71,35 @@ Potential duplicates and version-labelled files remain separate candidates until
 
 ## Recommendations
 
-- Approve the register-specific schema for `registers/sources.yaml` before adding records.
-- Record the approved extraction tools and review trail for each source type before body processing starts.
+- Use the approved source-processing authorization/run contracts and exact
+  reconciliation matrix for every new body-processing operation.
+- Record every approved route, tool, environment, and identified reviewer in an
+  authorization record; preserve every execution in a hash-bound run record.
 - Keep source-root verification and classification decisions paired in the same review checkpoint.
 
-## Content-access gate
+## Content-access history and current gate
 
-Document-content analysis has not started. Before any source body is opened, the source must have a stable source ID, recorded metadata, approved classification, approved processing route, and an approved extraction tool.
+Historical repository reports claim that approved local extraction and
+source-linked synthesis occurred. The canonical catalogue, legacy register,
+manifests, and those reports disagree about classification and processing
+states, and the current tree has no historical processing-run record or
+extracted corpus that makes the earlier process reproducible. Proposed run
+contracts and a controlled text/HTML reader do not substantiate those earlier
+claims. See the
+[repository baseline](status/repository-baseline.md).
+
+Before any new source body is opened, the source must have a stable source ID,
+recorded metadata, approved classification, approved processing route, approved
+extraction tool, and planned run. The 2026-08-02 reconciliation authorizes
+fresh processing; it deliberately does not copy historical `extracted` claims
+into the canonical catalogue. Prior reports do not authorize access or prove a
+current run.
+
+The approved authorization and execution controls are defined in
+[source processing control policy](source-processing-control-policy.md). An
+approved authorization still requires a recorded run before body access.
+
+Extraction completion is not evidence or knowledge approval. Promotion of
+extracted material into authoritative evidence, knowledge, assessment, or
+publication requires the human review boundaries in
+[information-handling rules](information-handling.md).

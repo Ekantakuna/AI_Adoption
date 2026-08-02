@@ -1,0 +1,13 @@
+id: EVID-000007
+type: evidence_statement
+statement: "The Life Registration deck presents the core idea as turning sales and service activation that require identity verification into a simple online procedure analogous to offline sales."
+source_id: SRC-UC-000014
+source_locator: "RUN-000004, slide 3, derivative lines 23-33"
+processing_run_id: RUN-000004
+confidence: medium
+classification: internal
+review_status: needs_review
+origin: ai
+created_at: "2026-08-02"
+created_by: Codex
+notes: "English rendering of extracted Russian slide text; visible slide XML only."

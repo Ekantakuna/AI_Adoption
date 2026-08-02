@@ -1,0 +1,82 @@
+schema_version: 1
+governance:
+  status: approved
+  proposed_by: Codex
+  proposed_at: "2026-08-02"
+  review_owner: Maksim Zakharenkau
+  approved_by: Maksim Zakharenkau
+  approved_at: "2026-08-02"
+authorization_statuses:
+  - proposed
+  - approved
+  - revoked
+run_statuses:
+  - planned
+  - in_progress
+  - succeeded
+  - failed
+  - blocked
+tool_statuses:
+  - proposed
+  - approved
+  - deprecated
+environments:
+  - approved_local
+  - approved_on_prem
+  - approved_external
+routes:
+  - id: local_only
+    allowed_classifications: [public, internal, restricted]
+    external_service_allowed: false
+    restricted_environment: approved_on_prem
+  - id: external_processing_approved
+    allowed_classifications: [public]
+    external_service_allowed: true
+tools:
+  - id: pdftotext_local
+    status: approved
+    approved_by: Maksim Zakharenkau
+    approved_at: "2026-08-02"
+    mode: automated_local
+    executable: pdftotext
+    source_types: [pdf]
+    extensions: [.pdf]
+    allowed_routes: [local_only, external_processing_approved]
+  - id: textutil_local
+    status: approved
+    approved_by: Maksim Zakharenkau
+    approved_at: "2026-08-02"
+    mode: automated_local
+    executable: /usr/bin/textutil
+    source_types: [word]
+    extensions: [.doc, .docx, .rtf]
+    allowed_routes: [local_only]
+  - id: repository_text_reader
+    status: approved
+    approved_by: Maksim Zakharenkau
+    approved_at: "2026-08-02"
+    mode: automated_local
+    executable: python scripts/extract_text.py
+    source_types: [mind_map_or_proprietary, web_document, markdown, text]
+    extensions: [.mmd, .html, .htm, .md, .markdown, .txt, .text]
+    allowed_routes: [local_only, external_processing_approved]
+  - id: human_visual_review
+    status: approved
+    approved_by: Maksim Zakharenkau
+    approved_at: "2026-08-02"
+    mode: manual_local
+    executable: null
+    source_types: [image]
+    extensions: [.png, .jpg, .jpeg, .webp, .gif]
+    allowed_routes: [local_only]
+  - id: pptx_xml_reader
+    status: approved
+    proposed_by: Codex
+    proposed_at: "2026-08-02"
+    approved_by: Maksim Zakharenkau
+    approved_at: "2026-08-02"
+    mode: automated_local
+    executable: python scripts/extract_pptx_text.py
+    source_types: [presentations]
+    extensions: [.pptx]
+    allowed_routes: [local_only]

@@ -1,3 +1,2064 @@
+---
 schema_version: 1
 register: sources
-records: []
+records:
+- source_id: SRC-AGT-000001
+  source_root_id: SROOT-0001
+  original_filename: 2402.12234v1.pdf
+  original_relative_path: agentic_ai/research/2402.12234v1.pdf
+  current_filename: 2402.12234v1.pdf
+  current_relative_path: agentic_ai/research/2402.12234v1.pdf
+  path_history: &1 []
+  domain_ids: &2
+  - agentic_ai
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 160733
+  filesystem_modified_at: 2026-07-16 09:32:56.000000000 Z
+  hash_algorithm: sha256
+  content_hash: d683a8577756d2bd2756107b25b174af1d1093efa07be93ea2815539419092b5
+  hash_calculated_at: &3 2026-07-24 12:45:56.000000000 Z
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: &4 []
+  derived_publication_refs: &5 []
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000002
+  source_root_id: SROOT-0001
+  original_filename: 2403.12881v1.pdf
+  original_relative_path: agentic_ai/research/2403.12881v1.pdf
+  current_filename: 2403.12881v1.pdf
+  current_relative_path: agentic_ai/research/2403.12881v1.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 3000308
+  filesystem_modified_at: 2026-07-16 09:33:36.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 9a3296bfd034282cf5b2df597d2203cf9ff94a1d961d731b0354bedda1f0e36f
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000003
+  source_root_id: SROOT-0001
+  original_filename: 2504.00906.pdf
+  original_relative_path: agentic_ai/research/2504.00906.pdf
+  current_filename: 2504.00906.pdf
+  current_relative_path: agentic_ai/research/2504.00906.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 9404849
+  filesystem_modified_at: 2026-07-16 09:34:31.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 4d7b2387f4ad1f3253349e4d5b92ef279727d67049991b254aae76ec5fdf65bf
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000004
+  source_root_id: SROOT-0001
+  original_filename: 2508.11957v1.pdf
+  original_relative_path: agentic_ai/research/2508.11957v1.pdf
+  current_filename: 2508.11957v1.pdf
+  current_relative_path: agentic_ai/research/2508.11957v1.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1073003
+  filesystem_modified_at: 2026-07-16 09:35:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 899bc3c9300126f3376490ae63d7084d51fcd36d46c7f0296f36d420f08d610b
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000005
+  source_root_id: SROOT-0001
+  original_filename: 2510.04618v1.pdf
+  original_relative_path: agentic_ai/research/2510.04618v1.pdf
+  current_filename: 2510.04618v1.pdf
+  current_relative_path: agentic_ai/research/2510.04618v1.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2075847
+  filesystem_modified_at: 2026-07-16 09:35:39.000000000 Z
+  hash_algorithm: sha256
+  content_hash: e87069417bed79efe9a222b135a267f17b42254379fd8b46fd2d99010bedf36e
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000006
+  source_root_id: SROOT-0001
+  original_filename: 2510.08558v1.pdf
+  original_relative_path: agentic_ai/research/2510.08558v1.pdf
+  current_filename: 2510.08558v1.pdf
+  current_relative_path: agentic_ai/research/2510.08558v1.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2371450
+  filesystem_modified_at: 2026-07-16 09:36:14.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 065ca01deaef0a96e0ecf760466fc643fe00a62de85b1125a3159cae999af960
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000007
+  source_root_id: SROOT-0001
+  original_filename: 2510.09577v1.pdf
+  original_relative_path: agentic_ai/research/2510.09577v1.pdf
+  current_filename: 2510.09577v1.pdf
+  current_relative_path: agentic_ai/research/2510.09577v1.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 774417
+  filesystem_modified_at: 2026-07-16 09:36:40.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 92902680eeb825293ecf6360efe273c9ebe496e4beedb4c452ec310cbe0b72cf
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-AGT-000008
+  source_root_id: SROOT-0001
+  original_filename: Gartner Reprint.pdf
+  original_relative_path: agentic_ai/research/Gartner Reprint.pdf
+  current_filename: Gartner Reprint.pdf
+  current_relative_path: agentic_ai/research/Gartner Reprint.pdf
+  path_history: *1
+  domain_ids: *2
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 520728
+  filesystem_modified_at: 2026-07-16 08:26:26.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 3cb286cbf11eb288520ddf7bb23b9521a896e7eff93535f0ffe02019eeea8429
+  hash_calculated_at: *3
+  classification: restricted
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-MIS-000001
+  source_root_id: SROOT-0001
+  original_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  original_relative_path: current_state/DD1_Handout__Overview_of_Generative_AI.pdf
+  current_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  current_relative_path: current_state/DD1_Handout__Overview_of_Generative_AI.pdf
+  path_history: *1
+  domain_ids:
+  - current_state
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 311931
+  filesystem_modified_at: 2026-07-16 09:23:19.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 836ed901fdee9c4680af421754ab324cacbcc0c5f7125d7dacac5ac6cff57d83
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000001
+  source_root_id: SROOT-0001
+  original_filename: goals.png
+  original_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png
+  current_filename: goals.png
+  current_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/goals.png
+  path_history: *1
+  domain_ids:
+  - current_state
+  - value_and_use_cases
+  source_group: images
+  source_type: image
+  extension: ".png"
+  size_bytes: 1598174
+  filesystem_modified_at: 2026-07-21 12:27:21.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 74e8a33a91f6fc0c367b9b60d62ef588f7ef8cc922575a7142581da4e9621108
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000002
+  source_root_id: SROOT-0001
+  original_filename: now.png
+  original_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/now.png
+  current_filename: now.png
+  current_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/now.png
+  path_history: *1
+  domain_ids:
+  - current_state
+  - value_and_use_cases
+  source_group: images
+  source_type: image
+  extension: ".png"
+  size_bytes: 1226359
+  filesystem_modified_at: 2026-07-21 12:27:21.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 831c496932275c4e0f77ba128802597b4cb7b0fc6efcc9b3e440ead43c6aab77
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000003
+  source_root_id: SROOT-0001
+  original_filename: withAI.png
+  original_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png
+  current_filename: withAI.png
+  current_relative_path: current_state/implemented_use_cases/ict/cyber_defence_centre/withAI.png
+  path_history: *1
+  domain_ids:
+  - current_state
+  - value_and_use_cases
+  source_group: images
+  source_type: image
+  extension: ".png"
+  size_bytes: 1285008
+  filesystem_modified_at: 2026-07-21 12:27:21.000000000 Z
+  hash_algorithm: sha256
+  content_hash: f56975bdcd5f1516455d15c5ea4938e6dfdba8e241081e5f4509bf111a350318
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-PRE-000001
+  source_root_id: SROOT-0001
+  original_filename: AI Adoption Program - the overall picture.html
+  original_relative_path: current_state/project_summaries/AI Adoption Program - the
+    overall picture.html
+  current_filename: AI Adoption Program - the overall picture.html
+  current_relative_path: current_state/project_summaries/AI Adoption Program - the
+    overall picture.html
+  path_history: *1
+  domain_ids:
+  - current_state
+  - strategic_intent
+  source_group: web_document
+  source_type: web_document
+  extension: ".html"
+  size_bytes: 32447
+  filesystem_modified_at: 2026-07-15 05:43:29.000000000 Z
+  hash_algorithm: sha256
+  content_hash: e4ee215c3dbd2dfa8d5755d53aa46f7cfc78ec6518c4c21e4b1615a81fc2b601
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000001
+  source_root_id: SROOT-0001
+  original_filename: AI_STRATEGY.mmd
+  original_relative_path: current_state/project_summaries/AI_STRATEGY.mmd
+  current_filename: AI_STRATEGY.mmd
+  current_relative_path: current_state/project_summaries/AI_STRATEGY.mmd
+  path_history: *1
+  domain_ids:
+  - current_state
+  - strategic_intent
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 5040
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-MIS-000002
+  source_root_id: SROOT-0001
+  original_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  original_relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and
+    Claude Code _ Anthropic.pdf
+  current_filename: Claude 3.7 Sonnet and Claude Code _ Anthropic.pdf
+  current_relative_path: current_state/unclassified_research/Claude 3.7 Sonnet and
+    Claude Code _ Anthropic.pdf
+  path_history: *1
+  domain_ids:
+  - current_state
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2090639
+  filesystem_modified_at: 2026-07-16 09:37:39.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 78a3912d63ff1d76f85c9eedb17b9478ae3ecae63c4ce7637c5054dff3e83b4c
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-MIS-000003
+  source_root_id: SROOT-0001
+  original_filename: Conversational AI with Language Models _ Rasa Documentation.pdf
+  original_relative_path: current_state/unclassified_research/Conversational AI with
+    Language Models _ Rasa Documentation.pdf
+  current_filename: Conversational AI with Language Models _ Rasa Documentation.pdf
+  current_relative_path: current_state/unclassified_research/Conversational AI with
+    Language Models _ Rasa Documentation.pdf
+  path_history: *1
+  domain_ids:
+  - current_state
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2307226
+  filesystem_modified_at: 2026-07-16 09:30:10.000000000 Z
+  hash_algorithm: sha256
+  content_hash: cac52ed1d83ce0dfa38ec57747e379772af026d60de9c5d797d02ea4bf99d91b
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-MIS-000004
+  source_root_id: SROOT-0001
+  original_filename: DATA.mmd
+  original_relative_path: data/DATA.mmd
+  current_filename: DATA.mmd
+  current_relative_path: data/DATA.mmd
+  path_history: *1
+  domain_ids:
+  - data
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 2219
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 566c86e6fa27337533045338e463d3abcac7f9c3d7f631195c1a9f6e967c1924
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-MIS-000005
+  source_root_id: SROOT-0001
+  original_filename: overview.mmd
+  original_relative_path: data/overview.mmd
+  current_filename: overview.mmd
+  current_relative_path: data/overview.mmd
+  path_history: *1
+  domain_ids:
+  - data
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 2219
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 566c86e6fa27337533045338e463d3abcac7f9c3d7f631195c1a9f6e967c1924
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-MIS-000004
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-SCO-000001
+  source_root_id: SROOT-0001
+  original_filename: technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  original_relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  current_filename: technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  current_relative_path: decision_environment/technology-generational-moment-generative-ai-cio-cto-guide.pdf
+  path_history: *1
+  domain_ids:
+  - decision_environment
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 538729
+  filesystem_modified_at: 2026-07-16 08:23:34.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 8c5013ba2827d4d530a51c66f890e8836796c6be7b4b233233bd76110c076cb0
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-PRM-000001
+  source_root_id: SROOT-0001
+  original_filename: ENGINEERING.mmd
+  original_relative_path: engineering_platform/ENGINEERING.mmd
+  current_filename: ENGINEERING.mmd
+  current_relative_path: engineering_platform/ENGINEERING.mmd
+  path_history: *1
+  domain_ids:
+  - engineering_platform
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 1621
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: eaf558d61092611c28ef4c5c5a855a13d63d5262a8f6db7858e488a1a2cd871f
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-PRM-000002
+  source_root_id: SROOT-0001
+  original_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  original_relative_path: engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf
+  current_filename: DD1_Handout__Overview_of_Generative_AI.pdf
+  current_relative_path: engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf
+  path_history: *1
+  domain_ids:
+  - engineering_platform
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 311931
+  filesystem_modified_at: 2026-07-16 09:23:19.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 836ed901fdee9c4680af421754ab324cacbcc0c5f7125d7dacac5ac6cff57d83
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-MIS-000001
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-PRM-000003
+  source_root_id: SROOT-0001
+  original_filename: overview.mmd
+  original_relative_path: engineering_platform/overview.mmd
+  current_filename: overview.mmd
+  current_relative_path: engineering_platform/overview.mmd
+  path_history: *1
+  domain_ids:
+  - engineering_platform
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 1621
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: eaf558d61092611c28ef4c5c5a855a13d63d5262a8f6db7858e488a1a2cd871f
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-PRM-000001
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-PRM-000004
+  source_root_id: SROOT-0001
+  original_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  original_relative_path: engineering_platform/prompt_and_context_engineering/Effective
+    context engineering for AI agents _ Anthropic.pdf
+  current_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  current_relative_path: engineering_platform/prompt_and_context_engineering/Effective
+    context engineering for AI agents _ Anthropic.pdf
+  path_history: *1
+  domain_ids:
+  - engineering_platform
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2019012
+  filesystem_modified_at: 2026-07-16 09:19:53.000000000 Z
+  hash_algorithm: sha256
+  content_hash: e32e7dced02267e6478d029cd3ece67ddc0d436040d06d7d65433bcd623f4c0a
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GLO-000001
+  source_root_id: SROOT-0001
+  original_filename: AI_Fluency_vocabulary_cheat_sheet.pdf
+  original_relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  current_filename: AI_Fluency_vocabulary_cheat_sheet.pdf
+  current_relative_path: glossary_vocabulary/AI_Fluency_vocabulary_cheat_sheet.pdf
+  path_history: *1
+  domain_ids:
+  - decision_environment
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1400028
+  filesystem_modified_at: 2026-07-16 09:25:29.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 6a8147e972b8a4fba8d550a40d1f3629945916dcffb6f11cb6299856a16f092b
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000001
+  source_root_id: SROOT-0001
+  original_filename: overview.mmd
+  original_relative_path: governance/overview.mmd
+  current_filename: overview.mmd
+  current_relative_path: governance/overview.mmd
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 3819
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 642cfad944ba40fc9d528bf1d2bcf50270426893f68552c6f3c20cce17534b28
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000002
+  source_root_id: SROOT-0001
+  original_filename: GOVERNANCE.mmd
+  original_relative_path: governance/research/GOVERNANCE.mmd
+  current_filename: GOVERNANCE.mmd
+  current_relative_path: governance/research/GOVERNANCE.mmd
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 3819
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 642cfad944ba40fc9d528bf1d2bcf50270426893f68552c6f3c20cce17534b28
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-GOV-000001
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000003
+  source_root_id: SROOT-0001
+  original_filename: Scaling AI With Adaptive Governance.pdf
+  original_relative_path: governance/research/adaptive_governance/Scaling AI With
+    Adaptive Governance.pdf
+  current_filename: Scaling AI With Adaptive Governance.pdf
+  current_relative_path: governance/research/adaptive_governance/Scaling AI With Adaptive
+    Governance.pdf
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 731898
+  filesystem_modified_at: 2026-07-16 08:14:41.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 3f7c7d1307264d174b259fd351c73aa4984f08ae803b9a61342039f8f807274c
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000004
+  source_root_id: SROOT-0001
+  original_filename: cost-of-a-data-breach-2025-full-report.pdf
+  original_relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+  current_filename: cost-of-a-data-breach-2025-full-report.pdf
+  current_relative_path: governance/research/cost-of-a-data-breach-2025-full-report.pdf
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2016131
+  filesystem_modified_at: 2026-07-16 08:48:15.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 1b24f250e223e1c00196a51efc9e2e5d16dbb8c1a0987248a08e286bcd45d1a2
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000005
+  source_root_id: SROOT-0001
+  original_filename: AI usage Goverance HowTos.docx
+  original_relative_path: governance/research/governance_policies_and_how_to/AI usage
+    Goverance HowTos.docx
+  current_filename: AI usage Goverance HowTos.docx
+  current_relative_path: governance/research/governance_policies_and_how_to/AI usage
+    Goverance HowTos.docx
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: word
+  source_type: word
+  extension: ".docx"
+  size_bytes: 9936
+  filesystem_modified_at: 2026-07-16 08:03:01.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 46684f195131dcf39897f2572c0f045b1c5381b92a7733b657f31d99d3045d84
+  hash_calculated_at: *3
+  classification: restricted
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000006
+  source_root_id: SROOT-0001
+  original_filename: Artificial Intelligence Usage en.pdf
+  original_relative_path: governance/research/governance_policies_and_how_to/Artificial
+    Intelligence Usage en.pdf
+  current_filename: Artificial Intelligence Usage en.pdf
+  current_relative_path: governance/research/governance_policies_and_how_to/Artificial
+    Intelligence Usage en.pdf
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1015236
+  filesystem_modified_at: 2025-10-16 12:23:23.000000000 Z
+  hash_algorithm: sha256
+  content_hash: f46b2c2b109a7ba7246660dccbfabe437ad308a2bd61d55bb7bf3fc1a707b1fc
+  hash_calculated_at: *3
+  classification: restricted
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-GOV-000007
+  source_root_id: SROOT-0001
+  original_filename: ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security
+    updated.doc
+  original_relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА
+    ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
+  current_filename: ПОЛИТИКА ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security
+    updated.doc
+  current_relative_path: governance/research/governance_policies_and_how_to/ПОЛИТИКА
+    ИСПОЛЬЗОВАНИЯ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА. ЗАО БеСТ_security updated.doc
+  path_history: *1
+  domain_ids:
+  - governance
+  source_group: word
+  source_type: word
+  extension: ".doc"
+  size_bytes: 896512
+  filesystem_modified_at: 2026-07-21 14:32:08.000000000 Z
+  hash_algorithm: sha256
+  content_hash: aca459b5b7d14783ee24bd5a01566091077fd78f27dd03c9426c9e5ea173d5c2
+  hash_calculated_at: *3
+  classification: restricted
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-MAT-000001
+  source_root_id: SROOT-0001
+  original_filename: AI-Maturity-Model-Overview.pdf
+  original_relative_path: maturity_execution/models/AI-Maturity-Model-Overview.pdf
+  current_filename: AI-Maturity-Model-Overview.pdf
+  current_relative_path: maturity_execution/models/AI-Maturity-Model-Overview.pdf
+  path_history: *1
+  domain_ids:
+  - maturity_execution
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 901454
+  filesystem_modified_at: 2026-07-16 08:55:57.000000000 Z
+  hash_algorithm: sha256
+  content_hash: f4d7b630cf3c7dda8c3a4254363524a82ca2f4560ca281f79fe37281b67556aa
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-ORG-000001
+  source_root_id: SROOT-0001
+  original_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  original_relative_path: organization/Effective context engineering for AI agents
+    _ Anthropic.pdf
+  current_filename: Effective context engineering for AI agents _ Anthropic.pdf
+  current_relative_path: organization/Effective context engineering for AI agents
+    _ Anthropic.pdf
+  path_history: *1
+  domain_ids:
+  - organization
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 2019012
+  filesystem_modified_at: 2026-07-16 09:19:53.000000000 Z
+  hash_algorithm: sha256
+  content_hash: e32e7dced02267e6478d029cd3ece67ddc0d436040d06d7d65433bcd623f4c0a
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-PRM-000004
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-ORG-000002
+  source_root_id: SROOT-0001
+  original_filename: ORGANIZATION.mmd
+  original_relative_path: organization/ORGANIZATION.mmd
+  current_filename: ORGANIZATION.mmd
+  current_relative_path: organization/ORGANIZATION.mmd
+  path_history: *1
+  domain_ids:
+  - organization
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 2007
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 947a813be84a956b4afc850537dd8682e6df1f9f8e32b05bb2c72cf6a0b36a9e
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-ORG-000003
+  source_root_id: SROOT-0001
+  original_filename: overview.mmd
+  original_relative_path: organization/overview.mmd
+  current_filename: overview.mmd
+  current_relative_path: organization/overview.mmd
+  path_history: *1
+  domain_ids:
+  - organization
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 2007
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 947a813be84a956b4afc850537dd8682e6df1f9f8e32b05bb2c72cf6a0b36a9e
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-ORG-000002
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-ORG-000004
+  source_root_id: SROOT-0001
+  original_filename: create-generative-ai-value-at-scale.pdf
+  original_relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  current_filename: create-generative-ai-value-at-scale.pdf
+  current_relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  path_history: *1
+  domain_ids:
+  - organization
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1532460
+  filesystem_modified_at: 2026-07-16 08:20:29.000000000 Z
+  hash_algorithm: sha256
+  content_hash: e10910c018eddb43d4fece593cefd800565d50e4fa2865569869637b1f39c570
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-ORG-000005
+  source_root_id: SROOT-0001
+  original_filename: PEOPLE_and_CULTURE.mmd
+  original_relative_path: people_and_culture/PEOPLE_and_CULTURE.mmd
+  current_filename: PEOPLE_and_CULTURE.mmd
+  current_relative_path: people_and_culture/PEOPLE_and_CULTURE.mmd
+  path_history: *1
+  domain_ids:
+  - people_and_culture
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 1285
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-ORG-000006
+  source_root_id: SROOT-0001
+  original_filename: overview.mmd
+  original_relative_path: people_and_culture/overview.mmd
+  current_filename: overview.mmd
+  current_relative_path: people_and_culture/overview.mmd
+  path_history: *1
+  domain_ids:
+  - people_and_culture
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 1285
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-ORG-000005
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-RSK-000001
+  source_root_id: SROOT-0001
+  original_filename: Gartner Reprint.pdf
+  original_relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+  current_filename: Gartner Reprint.pdf
+  current_relative_path: security_trust/risks_trust_security_management/Gartner Reprint.pdf
+  path_history: *1
+  domain_ids:
+  - security_trust
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 941680
+  filesystem_modified_at: 2026-07-16 08:49:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 4102a62895dca596f842c006cf02fa4a662645142b9c95d1b5aba93486ce8086
+  hash_calculated_at: *3
+  classification: restricted
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-SEC-000001
+  source_root_id: SROOT-0001
+  original_filename: A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  original_relative_path: security_trust/security/A small number of samples can poison
+    LLMs of any size _ Anthropic.pdf
+  current_filename: A small number of samples can poison LLMs of any size _ Anthropic.pdf
+  current_relative_path: security_trust/security/A small number of samples can poison
+    LLMs of any size _ Anthropic.pdf
+  path_history: *1
+  domain_ids:
+  - security_trust
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 8521581
+  filesystem_modified_at: 2026-07-16 09:17:48.000000000 Z
+  hash_algorithm: sha256
+  content_hash: eb4b63c3a19bc1e512d7a2b224ab22d72fcc253f979fe3248cebf9116dad1537
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-SEC-000002
+  source_root_id: SROOT-0001
+  original_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  original_relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  current_filename: Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  current_relative_path: security_trust/security/Considerations_for_Evaluating_Large_Language_Models_for_Cybersecurity_Tasks.pdf
+  path_history: *1
+  domain_ids:
+  - security_trust
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 331914
+  filesystem_modified_at: 2026-07-16 08:56:48.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 1a55b6a51c6e489ad53e26f947db55b7c03a2df1824afbaf07ac05a04db374a4
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-SEC-000003
+  source_root_id: SROOT-0001
+  original_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not
+    Ready - deepsense.ai.pdf
+  original_relative_path: security_trust/security/Secure AI Agents in Production_
+    Why If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+  current_filename: Secure AI Agents in Production_ Why If It’s Not Safe, It’s Not
+    Ready - deepsense.ai.pdf
+  current_relative_path: security_trust/security/Secure AI Agents in Production_ Why
+    If It’s Not Safe, It’s Not Ready - deepsense.ai.pdf
+  path_history: *1
+  domain_ids:
+  - security_trust
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1275695
+  filesystem_modified_at: 2026-07-16 09:30:56.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 2bef4241f42bbc7a7c823f0c26403bb0e40ce38c6c592d49aedd48f39aa892ca
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000002
+  source_root_id: SROOT-0001
+  original_filename: AI_STRATEGY.mmd
+  original_relative_path: strategic_intent/AI_STRATEGY.mmd
+  current_filename: AI_STRATEGY.mmd
+  current_relative_path: strategic_intent/AI_STRATEGY.mmd
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 5040
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-VIS-000001
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-PRE-000002
+  source_root_id: SROOT-0001
+  original_filename: AI Adoption Program - the overall picture.html
+  original_relative_path: strategic_intent/general_presentation_draft/AI Adoption
+    Program - the overall picture.html
+  current_filename: AI Adoption Program - the overall picture.html
+  current_relative_path: strategic_intent/general_presentation_draft/AI Adoption Program
+    - the overall picture.html
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: web_document
+  source_type: web_document
+  extension: ".html"
+  size_bytes: 32447
+  filesystem_modified_at: 2026-07-15 05:43:29.000000000 Z
+  hash_algorithm: sha256
+  content_hash: e4ee215c3dbd2dfa8d5755d53aa46f7cfc78ec6518c4c21e4b1615a81fc2b601
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-PRE-000001
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000003
+  source_root_id: SROOT-0001
+  original_filename: strategy.mmd
+  original_relative_path: strategic_intent/strategy.mmd
+  current_filename: strategy.mmd
+  current_relative_path: strategic_intent/strategy.mmd
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 5040
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 723d3598af33aec768e95b6b6a554b1f2d25747880d7e639a2a3a28f5fd3c7af
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-VIS-000001
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000004
+  source_root_id: SROOT-0001
+  original_filename: vision.mmd
+  original_relative_path: strategic_intent/vision.mmd
+  current_filename: vision.mmd
+  current_relative_path: strategic_intent/vision.mmd
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 1595
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 80108c0b91353861edd0aad2cb9ed429df53781eee9d805623cdb7320dd73153
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000005
+  source_root_id: SROOT-0001
+  original_filename: From AI Deployment to Intelligence Design.pages
+  original_relative_path: strategic_intent/vision/From AI Deployment to Intelligence
+    Design.pages
+  current_filename: From AI Deployment to Intelligence Design.pages
+  current_relative_path: strategic_intent/vision/From AI Deployment to Intelligence
+    Design.pages
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".pages"
+  size_bytes: 994280
+  filesystem_modified_at: 2026-07-16 08:17:28.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 06e3d0f4b1116a71aa097ba319e86d20745436c9b4aa81dabe759ce0b5e609af
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: blocked
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000006
+  source_root_id: SROOT-0001
+  original_filename: Winning With Intelligent Choice Architectures.pdf
+  original_relative_path: strategic_intent/vision/Winning With Intelligent Choice
+    Architectures.pdf
+  current_filename: Winning With Intelligent Choice Architectures.pdf
+  current_relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 543032
+  filesystem_modified_at: 2026-07-16 08:16:10.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 2482ee0565176ad2bbb48e5a3d02ea28478d6b233122930f119a5f080b3ed898
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000007
+  source_root_id: SROOT-0001
+  original_filename: stop-deploying-ai-start-designing-intelligence.pdf
+  original_relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+  current_filename: stop-deploying-ai-start-designing-intelligence.pdf
+  current_relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 498560
+  filesystem_modified_at: 2026-07-16 08:21:50.000000000 Z
+  hash_algorithm: sha256
+  content_hash: ac7e17a55b55286b8dbc7ea4f478a9294a17ddf91f4800454c5a2e1fa798a490
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-VIS-000008
+  source_root_id: SROOT-0001
+  original_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  original_relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+  current_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  current_relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+  path_history: *1
+  domain_ids:
+  - strategic_intent
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 282793
+  filesystem_modified_at: 2026-07-16 08:19:10.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 8888f9d331845e076d5961e886b4e3f95f8ecf4f7c5dc2aa4f8b196073ab77bd
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000004
+  source_root_id: SROOT-0001
+  original_filename: ai_academy_guidebook_customer_service.pdf
+  original_relative_path: use_cases/catalogue/ai_academy_guidebook_customer_service.pdf
+  current_filename: ai_academy_guidebook_customer_service.pdf
+  current_relative_path: use_cases/catalogue/ai_academy_guidebook_customer_service.pdf
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 11472178
+  filesystem_modified_at: 2026-07-16 08:47:04.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 1422948ec3efbf23f144c28198f29c27bd5983c6543bc310d539f97a2d5af97d
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000005
+  source_root_id: SROOT-0001
+  original_filename: rewiring-the-telecom-mindset.pdf
+  original_relative_path: use_cases/catalogue/rewiring-the-telecom-mindset.pdf
+  current_filename: rewiring-the-telecom-mindset.pdf
+  current_relative_path: use_cases/catalogue/rewiring-the-telecom-mindset.pdf
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1286002
+  filesystem_modified_at: 2026-07-16 08:53:57.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 6abd736e338b1c0458d66d667fe290202f7cc33b6bc0536c5585725b8b7129eb
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000006
+  source_root_id: SROOT-0001
+  original_filename: ai_academy_guidebook_customer_service.pdf
+  original_relative_path: use_cases/general_use/ai_academy_guidebook_customer_service.pdf
+  current_filename: ai_academy_guidebook_customer_service.pdf
+  current_relative_path: use_cases/general_use/ai_academy_guidebook_customer_service.pdf
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 11472178
+  filesystem_modified_at: 2026-07-16 08:47:04.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 1422948ec3efbf23f144c28198f29c27bd5983c6543bc310d539f97a2d5af97d
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-UC-000004
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000007
+  source_root_id: SROOT-0001
+  original_filename: rewiring-the-telecom-mindset.pdf
+  original_relative_path: use_cases/general_use/rewiring-the-telecom-mindset.pdf
+  current_filename: rewiring-the-telecom-mindset.pdf
+  current_relative_path: use_cases/general_use/rewiring-the-telecom-mindset.pdf
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 1286002
+  filesystem_modified_at: 2026-07-16 08:53:57.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 6abd736e338b1c0458d66d667fe290202f7cc33b6bc0536c5585725b8b7129eb
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-UC-000005
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000008
+  source_root_id: SROOT-0001
+  original_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  original_relative_path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+  current_filename: the-innovation-advantage-genai-cant-give-you.pdf
+  current_relative_path: use_cases/general_use/the-innovation-advantage-genai-cant-give-you.pdf
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 282793
+  filesystem_modified_at: 2026-07-16 08:19:10.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 8888f9d331845e076d5961e886b4e3f95f8ecf4f7c5dc2aa4f8b196073ab77bd
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: exact_duplicate
+  duplicate_of_source_id: SRC-VIS-000008
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000009
+  source_root_id: SROOT-0001
+  original_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  original_relative_path: use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  current_filename: telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  current_relative_path: use_cases/telecom/telco-ebook-10-key-gen-ai-applications-3315945-r8-web.pdf
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: pdf
+  source_type: pdf
+  extension: ".pdf"
+  size_bytes: 3070828
+  filesystem_modified_at: 2026-07-16 09:39:09.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 7ce67c7f22545d967ca782a85cb67e87de5f95e425245a88b81d6017207589cf
+  hash_calculated_at: *3
+  classification: public
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: extracted
+  processing_route: external_processing_approved
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000010
+  source_root_id: SROOT-0001
+  original_filename: value_creation.mmd
+  original_relative_path: value_management/value_creation.mmd
+  current_filename: value_creation.mmd
+  current_relative_path: value_management/value_creation.mmd
+  path_history: *1
+  domain_ids:
+  - value_and_use_cases
+  source_group: mind_map_or_proprietary
+  source_type: mind_map_or_proprietary
+  extension: ".mmd"
+  size_bytes: 4267
+  filesystem_modified_at: 2026-07-14 12:21:11.000000000 Z
+  hash_algorithm: sha256
+  content_hash: 5a021911892e7eb6138fafd0cc1a68b00b9461588c8a7278c9317b8819b7bb07
+  hash_calculated_at: *3
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T13:10:19Z'
+  processing_state: approved_for_processing
+  processing_route: local_only
+  processing_route_approved_by: user
+  processing_route_approved_at: '2026-07-24T13:30:47Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: *4
+  derived_publication_refs: *5
+  review_status: metadata_reviewed_and_classified
+- source_id: SRC-UC-000011
+  source_root_id: SROOT-0001
+  original_filename: Untitled.rtf
+  original_relative_path: current_state/implemented_use_cases/search_20/Untitled.rtf
+  current_filename: Untitled.rtf
+  current_relative_path: current_state/implemented_use_cases/search_20/Untitled.rtf
+  path_history: []
+  domain_ids:
+  - current_state
+  - value_and_use_cases
+  source_group: word
+  source_type: word
+  extension: ".rtf"
+  size_bytes: 2061
+  filesystem_modified_at: 2026-07-24 16:12:00.000000000 Z
+  hash_algorithm: sha256
+  content_hash: be9c005c8989850d60ab4c1251c4aa682a57cf95c4ebd971002d7f8c84ad1061
+  hash_calculated_at: 2026-07-24 14:17:12.000000000 Z
+  classification: internal
+  classification_basis: filename_folder_conservative_review
+  classification_reviewed_by: codex
+  classification_reviewed_at: '2026-07-24T14:18:30Z'
+  processing_state: extracted
+  processing_route: local_only
+  processing_route_approved_by: codex
+  processing_route_approved_at: '2026-07-24T14:18:30Z'
+  contains_personal_data:
+  contains_credentials:
+  contains_production_datasets:
+  rights_or_license_status:
+  duplicate_status: unique
+  duplicate_of_source_id:
+  approved_summary_ref:
+  normalized_knowledge_refs: []
+  derived_publication_refs: []
+  review_status: metadata_reviewed_and_classified

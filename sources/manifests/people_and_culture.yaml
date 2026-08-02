@@ -1,0 +1,29 @@
+---
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: people_and_culture
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T17:37:46Z'
+record_count: 2
+selection:
+  source_id_prefixes:
+  - SRC-ORG-
+records:
+- id: SRC-ORG-000005
+  relative_path: people_and_culture/PEOPLE_and_CULTURE.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-ORG-000006
+  relative_path: people_and_culture/overview.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-ORG-000005

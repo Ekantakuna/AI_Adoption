@@ -1,3 +1,40 @@
 # Tests
 
-This directory contains fixtures and automated checks for repository structure, schemas, and workflow utilities.
+This directory contains `unittest` coverage for the Stage 9 schema and knowledge
+validators and remains the home for future repository checks. Install
+`requirements-validation.txt`, then run all tests from the repository root:
+
+```text
+python -m unittest discover -s tests -p "test_*.py"
+```
+
+`test_knowledge_validation.py` uses isolated temporary repositories and covers
+the empty framework, catalogue `records` compatibility, valid evidence,
+referential integrity, duplicate, malformed, and reserved IDs, statuses,
+reviewer gates, unsupported types, template exclusion, malformed non-string
+references and controlled values, and the boundary between root-level legacy
+notes and unstructured object-directory content.
+It also confirms that the command returns zero on success and non-zero on
+validation failure.
+
+`test_schema_validation.py` covers valid Draft 2020-12 schemas and records,
+meta-schema failures, source-catalogue failures, production knowledge-record
+failures, configured reference-schema enforcement, template exclusion, and
+command exit codes. Its fixtures contain no project source data.
+
+`test_source_processing_validation.py` covers the empty registers, catalogue
+authorization gate, human reviewer identity, classification and tool matching,
+restricted environment, run hash/provenance, local derivative hash
+verification, and evidence-eligible review.
+`test_extract_text.py` covers text normalization, HTML script/style exclusion,
+raw source hashing, output-boundary enforcement, and rejection of an unsupported
+format. These tests use synthetic temporary fixtures and do not open repository
+or external source bodies.
+
+`test_extract_pptx_text.py` uses synthetic ZIP/XML fixtures to verify numeric
+slide ordering, text extraction, and rejection of packages without slide XML.
+It contains no project source data.
+
+Fixtures must not contain production or sensitive source data. Test
+documentation must identify the command, covered contract, expected inputs and
+outputs, and limitations.
