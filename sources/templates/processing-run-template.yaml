@@ -1,0 +1,18 @@
+template: true
+id: RUN-000000
+authorization_id: AUTH-000000
+source_id: SRC-GROUP-000000
+source_hash_sha256: "<64-character source SHA-256>"
+classification: public
+route_id: external_processing_approved
+tool_id: pdftotext_local
+tool_version: "<exact tool version>"
+environment: approved_local
+status: planned
+started_at: "YYYY-MM-DDTHH:MM:SSZ"
+completed_at: null
+output_ref: null
+output_hash_sha256: null
+executed_by: "<operator>"
+review_status: draft
+error: null
