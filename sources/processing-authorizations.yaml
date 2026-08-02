@@ -1,0 +1,840 @@
+schema_version: 1
+register: source_processing_authorizations
+records:
+- id: AUTH-000001
+  source_id: SRC-AGT-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000002
+  source_id: SRC-AGT-000002
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000003
+  source_id: SRC-AGT-000003
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000004
+  source_id: SRC-AGT-000004
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000005
+  source_id: SRC-AGT-000005
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000005
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000006
+  source_id: SRC-AGT-000006
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000006
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000007
+  source_id: SRC-AGT-000007
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000007
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000008
+  source_id: SRC-AGT-000008
+  classification: restricted
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_on_prem
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-AGT-000008
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000009
+  source_id: SRC-GLO-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GLO-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000010
+  source_id: SRC-GOV-000001
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000011
+  source_id: SRC-GOV-000002
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000012
+  source_id: SRC-GOV-000003
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000013
+  source_id: SRC-GOV-000004
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000014
+  source_id: SRC-GOV-000005
+  classification: restricted
+  route_id: local_only
+  tool_id: textutil_local
+  environment: approved_on_prem
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000005
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000015
+  source_id: SRC-GOV-000006
+  classification: restricted
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_on_prem
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000006
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000016
+  source_id: SRC-GOV-000007
+  classification: restricted
+  route_id: local_only
+  tool_id: textutil_local
+  environment: approved_on_prem
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-GOV-000007
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000017
+  source_id: SRC-MAT-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-MAT-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000018
+  source_id: SRC-MIS-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-MIS-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000019
+  source_id: SRC-MIS-000002
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-MIS-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000020
+  source_id: SRC-MIS-000003
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-MIS-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000021
+  source_id: SRC-MIS-000004
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-MIS-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000022
+  source_id: SRC-MIS-000005
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-MIS-000005
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000023
+  source_id: SRC-ORG-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-ORG-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000024
+  source_id: SRC-ORG-000002
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-ORG-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000025
+  source_id: SRC-ORG-000003
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-ORG-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000026
+  source_id: SRC-ORG-000004
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-ORG-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000027
+  source_id: SRC-ORG-000005
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-ORG-000005
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000028
+  source_id: SRC-ORG-000006
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-ORG-000006
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000029
+  source_id: SRC-PRE-000001
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-PRE-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000030
+  source_id: SRC-PRE-000002
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-PRE-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000031
+  source_id: SRC-PRM-000001
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-PRM-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000032
+  source_id: SRC-PRM-000002
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-PRM-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000033
+  source_id: SRC-PRM-000003
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-PRM-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000034
+  source_id: SRC-PRM-000004
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-PRM-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000035
+  source_id: SRC-RSK-000001
+  classification: restricted
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_on_prem
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-RSK-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000036
+  source_id: SRC-SCO-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-SCO-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000037
+  source_id: SRC-SEC-000001
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-SEC-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000038
+  source_id: SRC-SEC-000002
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-SEC-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000039
+  source_id: SRC-SEC-000003
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-SEC-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000040
+  source_id: SRC-UC-000001
+  classification: internal
+  route_id: local_only
+  tool_id: human_visual_review
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000041
+  source_id: SRC-UC-000002
+  classification: internal
+  route_id: local_only
+  tool_id: human_visual_review
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000042
+  source_id: SRC-UC-000003
+  classification: internal
+  route_id: local_only
+  tool_id: human_visual_review
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000043
+  source_id: SRC-UC-000004
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000044
+  source_id: SRC-UC-000005
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000005
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000045
+  source_id: SRC-UC-000006
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000006
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000046
+  source_id: SRC-UC-000007
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000007
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000047
+  source_id: SRC-UC-000008
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000008
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000048
+  source_id: SRC-UC-000009
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000009
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000049
+  source_id: SRC-UC-000010
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000010
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000050
+  source_id: SRC-UC-000011
+  classification: internal
+  route_id: local_only
+  tool_id: textutil_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-UC-000011
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000051
+  source_id: SRC-VIS-000001
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000001
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000052
+  source_id: SRC-VIS-000002
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000002
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000053
+  source_id: SRC-VIS-000003
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000003
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000054
+  source_id: SRC-VIS-000004
+  classification: internal
+  route_id: local_only
+  tool_id: repository_text_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000004
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000055
+  source_id: SRC-VIS-000006
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000006
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000056
+  source_id: SRC-VIS-000007
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000007
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000057
+  source_id: SRC-VIS-000008
+  classification: public
+  route_id: local_only
+  tool_id: pdftotext_local
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/source-state-reconciliation-proposal.md
+  - sources/catalogue.yaml:SRC-VIS-000008
+  notes: Fresh controlled processing authorization; historical extraction claims are
+    not adopted.
+- id: AUTH-000058
+  source_id: SRC-UC-000012
+  classification: internal
+  route_id: local_only
+  tool_id: pptx_xml_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/implemented-use-cases-ingestion.md
+  - sources/catalogue.yaml:SRC-UC-000012
+  notes: Approved private slide-text extraction with documented PPTX coverage limitations.
+- id: AUTH-000059
+  source_id: SRC-UC-000013
+  classification: internal
+  route_id: local_only
+  tool_id: pptx_xml_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/implemented-use-cases-ingestion.md
+  - sources/catalogue.yaml:SRC-UC-000013
+  notes: Approved private slide-text extraction with documented PPTX coverage limitations.
+- id: AUTH-000060
+  source_id: SRC-UC-000014
+  classification: internal
+  route_id: local_only
+  tool_id: pptx_xml_reader
+  environment: approved_local
+  status: approved
+  approved_by: Maksim Zakharenkau
+  approved_at: '2026-08-02'
+  basis_refs:
+  - project/status/implemented-use-cases-ingestion.md
+  - sources/catalogue.yaml:SRC-UC-000014
+  notes: Approved private slide-text extraction with documented PPTX coverage limitations.
