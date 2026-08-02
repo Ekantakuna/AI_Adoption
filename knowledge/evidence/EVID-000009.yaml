@@ -1,0 +1,13 @@
+id: EVID-000009
+type: evidence_statement
+statement: "The deck reports an average SIM or eSIM connection time of five to eight minutes."
+source_id: SRC-UC-000014
+source_locator: "RUN-000004, slide 6, derivative lines 64-69"
+processing_run_id: RUN-000004
+confidence: medium
+classification: internal
+review_status: needs_review
+origin: ai
+created_at: "2026-08-02"
+created_by: Codex
+notes: "Source-reported timing; not independently verified."

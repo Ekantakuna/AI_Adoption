@@ -1,0 +1,13 @@
+id: EVID-000003
+type: evidence_statement
+statement: "The deck reports that the chatbot closes 51% of chats, reducing the load on operators."
+source_id: SRC-UC-000012
+source_locator: "RUN-000002, slide 2, derivative line 27"
+processing_run_id: RUN-000002
+confidence: medium
+classification: internal
+review_status: needs_review
+origin: ai
+created_at: "2026-08-02"
+created_by: Codex
+notes: "Source-reported metric; not independently verified."
