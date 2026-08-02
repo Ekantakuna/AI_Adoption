@@ -1,0 +1,16 @@
+id: EVID-000001
+type: evidence_statement
+statement: "The source places 'AI Literacy Program' directly under 'AI PEOPLE and CULTURE'."
+source_id: SRC-ORG-000005
+source_locator: "RUN-000001 derivative lines 7-8; Mermaid edge n1 --> n2"
+processing_run_id: RUN-000001
+confidence: medium
+classification: internal
+review_status: verified
+origin: ai
+created_at: "2026-08-02"
+created_by: Codex
+reviewer:
+  name: Maksim Zakharenkau
+  reviewed_at: "2026-08-02"
+notes: "Atomic structural observation preserving the source labels; it does not assess implementation or organizational approval."
