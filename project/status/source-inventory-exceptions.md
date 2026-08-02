@@ -1,5 +1,9 @@
 # Source inventory exceptions
 
+> Historical snapshot: this report covers the selected inventory pass committed
+> on 2026-07-25. It does not establish the current state of the entire source
+> catalogue. See [repository-baseline.md](repository-baseline.md).
+
 ## Repository context
 
 - Repository path: `/Users/maksimzakharenkau/GitHub/AI_Adoption`
@@ -20,4 +24,6 @@
 ## Notes
 
 - No metadata exceptions were recorded for the selected folder batch beyond the blocked Pages source.
-- No source document body was read or summarized.
+- No source document body was read or summarized during this selected metadata
+  inventory pass. This is not a repository-wide claim about earlier or later
+  processing.

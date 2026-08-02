@@ -1,5 +1,17 @@
 # Source access report
 
+> Historical snapshot: this report records claims from the source-access stage
+> as committed on 2026-07-25. It is not the current authoritative source state.
+> Its classifications, processing states, manifest count, and extraction claims
+> conflict with `sources/catalogue.yaml` and later repository evidence. Preserve
+> the claims for audit, but use
+> [repository-baseline.md](repository-baseline.md) for the current conflict
+> assessment and do not copy these values into the catalogue without authorized
+> human review. The referenced `sources/extracted/public/`,
+> `sources/extracted/internal/`, and specific extracted text file are not
+> present in the current tracked tree; this review did not inspect any possible
+> ignored or external copies.
+
 ## Repository path
 
 - `/Users/maksimzakharenkau/GitHub/AI_Adoption`
@@ -52,8 +64,7 @@
 - Internal current-state evidence note created in `knowledge/current_state_search_20.md`.
 - The downstream note stays source-ID driven and keeps the blocked Pages source out of text analysis.
 
-## Stage 8 completion checklist
-
+## Historical Stage 8 completion checklist
 
 - [x] Repository path recorded
 - [x] Source root recorded

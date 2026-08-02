@@ -4,6 +4,11 @@ Domain manifests are domain-specific views of the canonical source catalogue in 
 
 `sources/catalogue.yaml` is authoritative. Manifest files in this directory must remain consistent with the catalogue, preserve stable source IDs, and use the same provenance and handling decisions.
 
+Current limitation: the tracked manifests contain later classification and
+processing values that conflict with the catalogue. They are therefore
+non-authoritative historical/derived views pending human-led reconciliation;
+their presence is not evidence that synchronization automation exists.
+
 ## What manifests may contain
 
 - stable source IDs

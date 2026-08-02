@@ -1,40 +1,224 @@
-schema_version: 1
-register: sources
-
-description: Canonical source inventory schema for metadata-only inventory and controlled derivatives.
-
-required_fields:
-  - source_id
-  - source_root_id
-  - original_filename
-  - original_relative_path
-  - current_filename
-  - current_relative_path
-  - path_history
-  - domain_ids
-  - source_group
-  - source_type
-  - extension
-  - size_bytes
-  - filesystem_modified_at
-  - hash_algorithm
-  - content_hash
-  - hash_calculated_at
-  - classification
-  - processing_state
-  - classification_basis
-  - classification_reviewed_by
-  - classification_reviewed_at
-  - processing_route
-  - processing_route_approved_by
-  - processing_route_approved_at
-  - contains_personal_data
-  - contains_credentials
-  - contains_production_datasets
-  - rights_or_license_status
-  - duplicate_status
-  - duplicate_of_source_id
-  - approved_summary_ref
-  - normalized_knowledge_refs
-  - derived_publication_refs
-  - review_status
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "urn:ai-adoption:schema:source-catalogue:1"
+title: AI Adoption canonical source catalogue
+description: >-
+  Approved machine-readable contract for sources/catalogue.yaml. This schema
+  validates metadata and administrative source state; it does not authorize
+  source-body access or approve any classification or processing decision.
+type: object
+additionalProperties: false
+x-governance:
+  status: approved
+  proposed_by: Codex
+  proposed_at: "2026-07-30"
+  approved_by: Maksim Zakharenkau
+  approved_at: "2026-07-30"
+  decision_record: project/decisions/0002-canonical-source-catalogue-schema.md
+required:
+  - schema_version
+  - catalogue_type
+  - authority
+  - source_root
+  - controlled_values
+  - generated_at
+  - record_count
+  - records
+properties:
+  schema_version:
+    const: 1
+  catalogue_type:
+    const: metadata_only_source_catalogue
+  authority:
+    const: true
+  source_root:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - path
+      - storage
+    properties:
+      id:
+        type: string
+        pattern: "^SROOT-[0-9]{4}$"
+      path:
+        type: string
+        minLength: 1
+      storage:
+        const: outside_git
+  controlled_values:
+    type: object
+    additionalProperties: false
+    required:
+      - classifications
+      - processing_statuses
+      - readability_statuses
+      - duplicate_statuses
+    properties:
+      classifications:
+        type: array
+        uniqueItems: true
+        const:
+          - public
+          - internal
+          - restricted
+          - unclassified
+      processing_statuses:
+        type: array
+        uniqueItems: true
+        const:
+          - discovered
+          - metadata_catalogued
+          - classification_pending
+          - approved_for_processing
+          - extraction_in_progress
+          - extracted
+          - reviewed
+          - rejected
+          - superseded
+          - unreadable
+          - blocked
+      readability_statuses:
+        type: array
+        uniqueItems: true
+        const:
+          - readable
+          - unreadable
+          - blocked
+          - unknown
+      duplicate_statuses:
+        type: array
+        uniqueItems: true
+        const:
+          - unique
+          - possible_duplicate
+          - exact_duplicate
+          - unknown
+  generated_at:
+    type: string
+    format: date-time
+  record_count:
+    type: integer
+    minimum: 0
+  records:
+    type: array
+    items:
+      $ref: "#/$defs/source_record"
+$defs:
+  source_record:
+    type: object
+    additionalProperties: false
+    required:
+      - id
+      - apparent_title_from_filename
+      - original_filename
+      - source_path
+      - relative_path
+      - domains
+      - domain
+      - source_type
+      - file_extension
+      - file_size_bytes
+      - content_hash_sha256
+      - classification
+      - processing_status
+      - readability_status
+      - duplicate_status
+      - duplicate_of
+      - filesystem_modified_at
+      - date_discovered
+      - last_verified
+      - notes
+    properties:
+      id:
+        type: string
+        pattern: "^SRC-[A-Z0-9]+-[0-9]{6}$"
+      apparent_title_from_filename:
+        type: string
+        minLength: 1
+      original_filename:
+        type: string
+        minLength: 1
+      source_path:
+        type: string
+        minLength: 1
+      relative_path:
+        type: string
+        minLength: 1
+      domains:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        items:
+          type: string
+          minLength: 1
+      domain:
+        type: string
+        minLength: 1
+      source_type:
+        type: string
+        minLength: 1
+      file_extension:
+        type: string
+        pattern: "^\\.[A-Za-z0-9]+$"
+      file_size_bytes:
+        type: integer
+        minimum: 0
+      content_hash_sha256:
+        type: string
+        pattern: "^[a-f0-9]{64}$"
+      classification:
+        enum:
+          - public
+          - internal
+          - restricted
+          - unclassified
+      processing_status:
+        enum:
+          - discovered
+          - metadata_catalogued
+          - classification_pending
+          - approved_for_processing
+          - extraction_in_progress
+          - extracted
+          - reviewed
+          - rejected
+          - superseded
+          - unreadable
+          - blocked
+      readability_status:
+        enum:
+          - readable
+          - unreadable
+          - blocked
+          - unknown
+      duplicate_status:
+        enum:
+          - unique
+          - possible_duplicate
+          - exact_duplicate
+          - unknown
+      duplicate_of:
+        type:
+          - string
+          - "null"
+        pattern: "^SRC-[A-Z0-9]+-[0-9]{6}$"
+      filesystem_modified_at:
+        type: string
+        format: date-time
+      date_discovered:
+        type: string
+        format: date-time
+      last_verified:
+        type: string
+        format: date-time
+      notes:
+        description: >-
+          Legacy catalogue field. Existing records contain null, string, or
+          array values; normalization requires a separate reviewed migration.
+        oneOf:
+          - type: "null"
+          - type: string
+          - type: array
+            items:
+              type: string

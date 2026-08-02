@@ -1,5 +1,10 @@
 # Source ingestion report
 
+> Historical snapshot: this report records one selected-folder inventory pass
+> committed on 2026-07-25. Counts and claims apply only to that pass, not the
+> current whole catalogue. It does not override `sources/catalogue.yaml`; see
+> [repository-baseline.md](repository-baseline.md) for current conflicts.
+
 - Repository path: `/Users/maksimzakharenkau/GitHub/AI_Adoption`
 - Source root: `/Users/maksimzakharenkau/Documents/AI/Outlook/2026/Inputs`
 - Scope: remaining first-level folders excluding `glossary_vocabulary` and held `value_management`
@@ -47,9 +52,14 @@
 
 ## Validation
 
-- YAML validated for `sources/catalogue.yaml`
-- YAML validated for the refreshed domain manifests under `sources/manifests/`
+- The stage report recorded YAML validation for `sources/catalogue.yaml`.
+- The stage report recorded YAML validation for refreshed domain manifests
+  under `sources/manifests/`.
 - Repository file scope respected
+
+The retained report does not identify the command or validator used. Treat the
+two YAML claims as historical syntax-check claims, not current schema validation
+or cross-file consistency validation.
 
 ## Unresolved questions
 
