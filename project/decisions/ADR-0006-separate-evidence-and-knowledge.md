@@ -1,8 +1,10 @@
 ---
 id: ADR-0006
 title: Separate evidence from interpreted knowledge
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - repository maintainers
   - authorized human reviewers
@@ -17,11 +19,13 @@ superseded_by:
 Repository policy distinguishes original source assets, metadata, extraction,
 evidence, and interpreted knowledge. It prohibits treating extraction output as
 authoritative evidence or approved knowledge merely because it exists. The
-directory model separates source inventory from knowledge. Atomic evidence and
-interpreted-knowledge contracts remain to be approved and implemented.
+directory model separates source inventory from knowledge. Stage 9 adds an
+empty controlled model for atomic evidence and interpreted knowledge without
+performing source-content extraction.
 
-The separation rule is proposed. Approval of the model would not create or
-approve production evidence.
+The separation rule is already operative. Maksim Zakharenkau accepted this
+AI-authored ADR and the Stage 9 framework contracts on 2026-08-02. Approval of
+the model does not create or approve production evidence.
 
 ## Decision
 
@@ -83,18 +87,21 @@ references and do not implement an atomic-evidence contract.
 ## Implementation implications
 
 `sources/` holds metadata and controlled derivatives;
-`knowledge/` holds provisional knowledge material; and policies in `project/`
-define the proposed promotion boundary. Existing root-level knowledge notes
-remain provisional synthesis documents, not atomic evidence records. Atomic
-schemas, identifiers, templates, workflow, and cross-reference validation are
-not yet implemented.
+`knowledge/` contains the controlled empty evidence and knowledge framework;
+and policies in `project/` define the promotion boundary. Existing root-level
+knowledge notes remain provisional synthesis documents, not atomic evidence
+records. Stage 9 implements approved evidence and knowledge schemas,
+six-digit identifiers, templates, a review workflow, and cross-reference
+validation. It does not implement a processing-run register or approve any
+production record.
 
 ## Validation
 
-Review each proposed record's object type, source locator, provenance,
-classification, and review label when a record contract exists. Automated
-knowledge validation is not currently available and cannot confirm source
-fidelity, reviewer authority, or semantic truth.
+Run `python scripts/validate_schemas.py` and
+`python scripts/validate_knowledge.py`, then review each record's object type,
+source locator, provenance, classification, and review label. The validators
+check schema, structural, and reference boundaries but cannot confirm source
+fidelity, processing-run existence, reviewer authority, or semantic truth.
 
 ## References
 
@@ -102,5 +109,14 @@ fidelity, reviewer authority, or semantic truth.
 - [Information-handling rules](../information-handling.md)
 - [Source management policy](../source-management-policy.md)
 - [Knowledge directory contract](../../knowledge/README.md)
+- [Knowledge management policy](../knowledge-management-policy.md)
+- [Knowledge review workflow](../knowledge-review-workflow.md)
 - [Repository baseline](../status/repository-baseline.md)
 - [Accepted operating model](0001-repository-operating-model.md)
+
+## Post-acceptance implementation note — 2026-08-02
+
+Accepted ADR 0010 subsequently added the approved processing-run contract,
+empty run register, source-processing validator, and evidence-to-reviewed-run
+integrity check. No successful run or production evidence exists. This note
+updates implementation status without changing this ADR's decision.

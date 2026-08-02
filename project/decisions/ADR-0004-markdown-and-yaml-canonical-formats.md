@@ -1,8 +1,10 @@
 ---
 id: ADR-0004
 title: Use Markdown and YAML as canonical tracked formats
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - repository maintainers
 supersedes:
@@ -19,10 +21,11 @@ policies, decisions, status, knowledge notes, and operating documentation, and
 YAML for configuration, source metadata, schemas, manifests, and register
 scaffolds.
 
-This format rule is proposed for the repository. It does not make every
-Markdown file authoritative or every YAML scaffold operational. Canonical
-authority still depends on the designated location, classification, schema
-where applicable, provenance, and review state.
+This format rule is already operative. Maksim Zakharenkau accepted this
+AI-authored ADR on 2026-08-02. The rule does not make every Markdown file
+authoritative or every YAML scaffold operational. Canonical authority still
+depends on the designated location, classification, schema where applicable,
+provenance, and review state.
 
 ## Decision
 
@@ -84,7 +87,8 @@ in `config/`, `sources/`, `schemas/`, and `registers/`. New structured object
 types require an approved object-specific schema, lifecycle, ownership, and
 validation before records are added.
 
-Most object-specific schemas and repository validators remain absent. This
+Knowledge and source-processing schemas and validators are implemented. Most
+assessment, project-register, and publication contracts remain absent. This
 decision does not approve ad hoc YAML shapes or claim that the planned
 publication pipeline exists.
 

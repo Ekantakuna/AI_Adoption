@@ -1,7 +1,9 @@
 # ADR 0001: Repository operating model
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-07-30
+- Reviewed by: Maksim Zakharenkau
+- Reviewed at: 2026-08-02
 - Decision owners: repository maintainers and authorized human reviewers
 - Proposed by: Codex during the repository operating-model stage
 
@@ -58,8 +60,9 @@ human-review-bound content listed in `AGENTS.md`.
   invalidated states, and review gates before it can be called operational.
 - Some duplication may remain as generated views, but each view identifies its
   authority and reconciliation behavior.
-- Source catalogue conflicts require explicit attributed reconciliation without
-  erasing historical states.
+- Source catalogue conflicts require explicit attributed reconciliation; the
+  2026-08-02 reconciliation records the current decision without erasing
+  historical states.
 
 ## Alternatives considered
 
@@ -86,4 +89,14 @@ review, classification, and lifecycle requirements.
 Reviewers should verify the layer boundaries, human approval roles,
 canonical/derived distinction, and compatibility with the source-management
 policy. If accepted, record the reviewer and decision date and update the
-status.
+status. Maksim Zakharenkau accepted this ADR on 2026-08-02 with the retained
+implementation limitations documented below.
+
+## Acceptance implementation review — 2026-08-02
+
+Stage 9 and accepted ADRs 0005–0007 implement the empty evidence/knowledge
+framework and review boundaries. Accepted ADR 0010 implements source-processing
+authorization/run contracts and the explicit catalogue reconciliation. The
+assessment, publication, presentation, graph-traversal, and incremental-
+processing layers remain partial, planned, or absent. Accepting this ADR
+approves the target operating model, not those unimplemented capabilities.

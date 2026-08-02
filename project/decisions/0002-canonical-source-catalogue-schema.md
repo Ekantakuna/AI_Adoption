@@ -90,6 +90,10 @@ change requires a documented migration and review.
 
 ## Limitations
 
+- Implementation update, 2026-08-02: `requirements-validation.txt` and
+  `python scripts/validate_schemas.py` now provide executable Draft 2020-12
+  validation. This operational update does not change the approved schema or
+  broaden its approval scope.
 - The schema does not resolve conflicting catalogue, legacy-register, manifest,
   or status values.
 - `notes` accepts the three representations found in the current catalogue.

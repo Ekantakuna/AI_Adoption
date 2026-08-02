@@ -1,8 +1,10 @@
 ---
 id: ADR-0003
 title: Keep source assets outside Git and catalogue metadata only
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - repository maintainers
 supersedes:
@@ -21,9 +23,10 @@ documents into Git. The tracked catalogue contains administrative metadata such
 as identifiers, paths, sizes, hashes, classification, and processing state
 rather than source bodies.
 
-This storage and access boundary is the proposed operating rule. Controlled
-extraction, evidence promotion, and downstream processing remain partial or
-planned; this decision does not claim that those capabilities operate.
+This storage and access boundary is already operative. Maksim Zakharenkau
+accepted this AI-authored ADR on 2026-08-02. Controlled extraction, evidence
+promotion, and downstream processing remain partial or planned; this decision
+does not claim that those capabilities operate.
 
 ## Decision
 
@@ -89,8 +92,10 @@ original binaries by default. `schemas/sources.yaml` and
 `project/source-management-policy.md` and
 `project/information-handling.md` define storage and access controls.
 
-Downstream evidence, extraction, and processing-run contracts are not yet
-implemented. No run, derivative, or production evidence exists.
+Evidence and processing-run schemas, 57 processing authorizations, integrity
+validation, and a controlled text/HTML reader are now implemented. No run,
+derivative, or production evidence exists. The 2026-08-02 reconciliation is
+recorded separately and does not alter this storage-boundary decision.
 
 ## Validation
 
@@ -99,8 +104,9 @@ source root remains `outside_git`, scan tracked source paths for unexpected
 binaries, and review Git changes for source content. Automated repository-wide
 enforcement is not currently configured.
 
-Repository-wide prevention of accidentally tracked source bodies depends on
-review and ignore controls.
+The source-processing validator and CI enforce current authorization/run
+integrity, but repository-wide prevention of accidentally tracked source bodies
+still depends on review and ignore controls.
 
 ## References
 

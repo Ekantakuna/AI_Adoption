@@ -1,8 +1,10 @@
 ---
 id: ADR-0007
 title: Require human review before authoritative approval
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - authorized human reviewers
 supersedes:
@@ -19,8 +21,9 @@ and processing, authoritative evidence and knowledge, organizational
 conclusions and commitments, recommendations presented as decisions, and
 publication-ready executive claims.
 
-The review boundary is proposed policy. Workflow enforcement remains
-incomplete or absent.
+The review boundary is already operative policy. Maksim Zakharenkau accepted
+this AI-authored ADR and the Stage 9 knowledge review lifecycle on 2026-08-02.
+Workflow enforcement remains incomplete or absent outside the knowledge layer.
 
 ## Decision
 
@@ -87,17 +90,18 @@ specified governance decisions.
 schemas can record reviewer identity and date, as demonstrated by ADR-0002 and
 the source schema.
 
-Assessment, knowledge, and publication review workflows are not implemented.
-This decision establishes the authority boundary, not an automated approval
-system, and no repository-wide validator can determine whether a named
-reviewer is authorized.
+The Stage 9 knowledge workflow and reviewer gates are approved and implemented;
+assessment and publication review workflows are not implemented. This decision
+establishes the authority boundary, not an automated approval system, and the
+validator cannot determine whether a named reviewer is authorized.
 
 ## Validation
 
 Check that authoritative records identify an authorized reviewer and review
 state where supported, that AI-authored material remains draft or proposed
-until review, and that approval scope is not expanded by inference. No
-repository-wide approval validator exists.
+until review, and that approval scope is not expanded by inference. The Stage 9
+validator requires reviewer metadata for `verified` and `approved` knowledge
+records; no repository-wide approval validator exists.
 
 ## References
 
@@ -106,4 +110,5 @@ repository-wide approval validator exists.
 - [Source management policy](../source-management-policy.md)
 - [Contribution guide](../../CONTRIBUTING.md)
 - [Approved source-schema decision](0002-canonical-source-catalogue-schema.md)
+- [Knowledge review workflow](../knowledge-review-workflow.md)
 - [Repository architecture](../../ARCHITECTURE.md)

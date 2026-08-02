@@ -1,8 +1,10 @@
 ---
 id: ADR-0009
 title: Treat agent documentation as part of implementation
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - repository maintainers
 supersedes:
@@ -18,8 +20,9 @@ their relevant documentation, project status, and notable change history. It
 also requires material architectural decisions to be recorded and capabilities
 to be described from repository evidence rather than directory intent.
 
-This is a proposed repository rule. Automated documentation builds, link
-checking, policy linting, and completeness enforcement are not configured.
+This is an operative repository rule. Maksim Zakharenkau accepted this
+AI-authored ADR on 2026-08-02. Automated documentation builds, link checking,
+policy linting, and completeness enforcement are not configured.
 
 ## Decision
 

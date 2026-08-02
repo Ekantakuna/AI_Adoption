@@ -1,8 +1,10 @@
 ---
 id: ADR-0008
 title: Derive publications from canonical reviewed content
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - repository maintainers
   - authorized human reviewers
@@ -19,7 +21,9 @@ derivatives of canonical project content. Reports, presentations, and websites
 must not become the only location of evidence, knowledge, approval, or
 decisions.
 
-This canonical-versus-derivative boundary is proposed. Audience
+This canonical-versus-derivative boundary is already operative. Maksim
+Zakharenkau accepted this AI-authored ADR on 2026-08-02. The structured
+knowledge models exist as an empty approved framework. Audience
 configuration, publication assembler, renderer, traceability validator, and
 release workflow are planned or absent, so this ADR does not claim a working
 publication pipeline.

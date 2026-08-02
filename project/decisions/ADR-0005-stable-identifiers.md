@@ -1,8 +1,10 @@
 ---
 id: ADR-0005
 title: Preserve stable identifiers
-status: proposed
+status: accepted
 date: 2026-07-30
+reviewed_by: Maksim Zakharenkau
+reviewed_at: 2026-08-02
 decision_owners:
   - repository maintainers
 supersedes:
@@ -19,9 +21,12 @@ project ID, a source-root ID, 58 source IDs, configured source-ID prefixes, and
 source-ID validation patterns. Policy requires IDs to survive path and filename
 changes and prohibits reuse or presentation-only renumbering.
 
-This rule is implemented for the project, source root, and source catalogue.
-Identifier models for evidence, knowledge, assessments, project records,
-publications, and presentations remain absent or unapproved.
+This rule is implemented for project, source-root, source, and the empty Stage
+9 knowledge framework. Maksim Zakharenkau accepted this AI-authored ADR on
+2026-08-02. The Stage 9 knowledge identifiers are approved contracts;
+identifier models for assessments, most project records, publications, and
+presentations remain absent. Evidence records carry a `RUN-NNNNNN` reference
+shape, but no processing-run identity registry exists.
 
 ## Decision
 
@@ -82,8 +87,11 @@ contracts do not exist.
 `config/project.yaml` defines `AI-ADOPTION`;
 `config/source-types.yaml` defines `SROOT-0001` and source prefixes;
 `sources/catalogue.yaml` contains implemented source IDs; and
-`schemas/sources.yaml` validates their format. Future object types require
-separate approved allocation rules before identifiers are issued.
+`schemas/sources.yaml` validates their format. Stage 9 adds the proposed
+knowledge prefixes in `config/knowledge-types.yaml`, object schemas, templates,
+and `scripts/validate_knowledge.py`, which checks production knowledge ID
+format, global uniqueness, reserved IDs, and explicit references. The initial
+production knowledge set is empty.
 
 The source catalogue still lacks a repository-level uniqueness and
 referential-integrity validator, and non-reuse across Git history is not
@@ -92,10 +100,12 @@ allocation.
 
 ## Validation
 
-For sources, validate source ID format, uniqueness, configured-prefix
-membership, `duplicate_of` references, and non-reuse across history. The source
-schema checks format only; those repository-level source checks are not
-currently automated.
+For knowledge, run `python scripts/validate_schemas.py` and
+`python scripts/validate_knowledge.py` to check schema conformance, current-tree
+format, uniqueness, reserved IDs, and references. For sources, validate source
+ID format, uniqueness, configured-prefix membership, `duplicate_of`
+references, and non-reuse across history. The source schema checks format only;
+those repository-level source checks are not currently automated.
 
 ## References
 
@@ -104,4 +114,13 @@ currently automated.
 - [Canonical source catalogue](../../sources/catalogue.yaml)
 - [Canonical catalogue schema](../../schemas/sources.yaml)
 - [Change management](../../docs/governance/change-management.md)
+- [Knowledge identifier rules](../../docs/reference/knowledge-identifiers.md)
+- [Knowledge type configuration](../../config/knowledge-types.yaml)
 - [ADR-0002](0002-canonical-source-catalogue-schema.md)
+
+## Post-acceptance implementation note — 2026-08-02
+
+Accepted ADR 0010 subsequently approved `AUTH-NNNNNN` and `RUN-NNNNNN`
+contracts and repository validation. Fifty-seven authorization IDs are
+allocated, and `RUN-000001` is the first processing-run ID. This note updates
+implementation status without changing this ADR's decision.
