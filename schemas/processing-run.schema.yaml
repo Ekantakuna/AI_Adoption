@@ -1,0 +1,56 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "urn:ai-adoption:schema:processing-runs:1"
+title: Source processing run register
+type: object
+additionalProperties: false
+required: [schema_version, register, records]
+properties:
+  schema_version: {const: 1}
+  register: {const: source_processing_runs}
+  records:
+    type: array
+    items: {$ref: "#/$defs/run"}
+$defs:
+  run:
+    type: object
+    additionalProperties: false
+    required: [id, authorization_id, source_id, source_hash_sha256, classification, route_id, tool_id, tool_version, environment, status, started_at, completed_at, output_ref, output_hash_sha256, executed_by, review_status]
+    properties:
+      id: {type: string, pattern: "^RUN-[0-9]{6}$"}
+      authorization_id: {type: string, pattern: "^AUTH-[0-9]{6}$"}
+      source_id: {type: string, pattern: "^SRC-[A-Z0-9]+-[0-9]{6}$"}
+      source_hash_sha256: {type: string, pattern: "^[a-f0-9]{64}$"}
+      classification: {enum: [public, internal, restricted]}
+      route_id: {enum: [local_only, external_processing_approved]}
+      tool_id: {enum: [pdftotext_local, textutil_local, repository_text_reader, human_visual_review, pptx_xml_reader]}
+      tool_version: {type: string, minLength: 1}
+      environment: {enum: [approved_local, approved_on_prem, approved_external]}
+      status: {enum: [planned, in_progress, succeeded, failed, blocked]}
+      started_at: {type: string, format: date-time}
+      completed_at: {type: [string, "null"], format: date-time}
+      output_ref: {type: [string, "null"]}
+      output_hash_sha256: {type: [string, "null"], pattern: "^[a-f0-9]{64}$"}
+      executed_by: {type: string, minLength: 1}
+      review_status: {enum: [draft, needs_review, under_review, verified, approved, rejected, deprecated]}
+      reviewer:
+        type: object
+        additionalProperties: false
+        required: [name, reviewed_at]
+        properties:
+          name: {type: string, minLength: 1}
+          reviewed_at: {type: string, format: date}
+      error: {type: [string, "null"]}
+    allOf:
+      - if:
+          properties: {status: {const: succeeded}}
+          required: [status]
+        then:
+          required: [completed_at, output_ref, output_hash_sha256]
+          properties:
+            completed_at: {type: string}
+            output_ref: {type: string, minLength: 1}
+            output_hash_sha256: {type: string, pattern: "^[a-f0-9]{64}$"}
+      - if:
+          properties: {review_status: {enum: [verified, approved]}}
+          required: [review_status]
+        then: {required: [reviewer]}

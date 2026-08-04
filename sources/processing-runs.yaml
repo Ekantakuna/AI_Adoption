@@ -1,0 +1,83 @@
+schema_version: 1
+register: source_processing_runs
+records:
+  - id: RUN-000001
+    authorization_id: AUTH-000027
+    source_id: SRC-ORG-000005
+    source_hash_sha256: 6603e034d19d2e9e5e690c06afffc23ac7d84359487f5f29e5c5b321127b0f10
+    classification: internal
+    route_id: local_only
+    tool_id: repository_text_reader
+    tool_version: "Python 3.14.6; scripts/extract_text.py sha256:510ada255f2b71c7b0b2321bd4aee1a8cc61b39d8c519add509b6cc241912968"
+    environment: approved_local
+    status: succeeded
+    started_at: "2026-08-02T12:59:04Z"
+    completed_at: "2026-08-02T12:59:26Z"
+    output_ref: sources/extracted/private/RUN-000001.txt
+    output_hash_sha256: 17ee2e2be29542321395a442260c45ee4a7bf5fb095dd4e2d5d676d709182a17
+    executed_by: Codex
+    review_status: verified
+    reviewer:
+      name: Maksim Zakharenkau
+      reviewed_at: "2026-08-02"
+    error: null
+  - id: RUN-000002
+    authorization_id: AUTH-000058
+    source_id: SRC-UC-000012
+    source_hash_sha256: 96dddca7658c182f5de39fd56be588ca2e7c00b07cf2a8036c706bf75d47c53b
+    classification: internal
+    route_id: local_only
+    tool_id: pptx_xml_reader
+    tool_version: "Python 3.14.6; scripts/extract_pptx_text.py sha256:295b5cd68f0d3caaacd8a365b9cb323e3e28048bf97c4f51f036943a428bdeac"
+    environment: approved_local
+    status: succeeded
+    started_at: "2026-08-02T14:46:54Z"
+    completed_at: "2026-08-02T14:47:52Z"
+    output_ref: sources/extracted/private/RUN-000002.txt
+    output_hash_sha256: 4305b87118e174a8b51bfe1e9924b790ea802e7df16b5a7b2f1757ac1594ba1d
+    executed_by: Codex
+    review_status: verified
+    reviewer:
+      name: Maksim Zakharenkau
+      reviewed_at: "2026-08-02"
+    error: null
+  - id: RUN-000003
+    authorization_id: AUTH-000059
+    source_id: SRC-UC-000013
+    source_hash_sha256: 3b4a4aea4b1cd64521fa1464e592b7a19a90d2cdb0822efb97c5308ed296b635
+    classification: internal
+    route_id: local_only
+    tool_id: pptx_xml_reader
+    tool_version: "Python 3.14.6; scripts/extract_pptx_text.py sha256:295b5cd68f0d3caaacd8a365b9cb323e3e28048bf97c4f51f036943a428bdeac"
+    environment: approved_local
+    status: succeeded
+    started_at: "2026-08-02T14:46:54Z"
+    completed_at: "2026-08-02T14:47:52Z"
+    output_ref: sources/extracted/private/RUN-000003.txt
+    output_hash_sha256: 2a04614009c4e70009e6bc7bd5063cdae3c2975d13b3f653aa74ad4a863df7f0
+    executed_by: Codex
+    review_status: verified
+    reviewer:
+      name: Maksim Zakharenkau
+      reviewed_at: "2026-08-02"
+    error: null
+  - id: RUN-000004
+    authorization_id: AUTH-000060
+    source_id: SRC-UC-000014
+    source_hash_sha256: b154261861217db978fd4562134bbfe5b965712147538199df0fe3f94f308bc5
+    classification: internal
+    route_id: local_only
+    tool_id: pptx_xml_reader
+    tool_version: "Python 3.14.6; scripts/extract_pptx_text.py sha256:295b5cd68f0d3caaacd8a365b9cb323e3e28048bf97c4f51f036943a428bdeac"
+    environment: approved_local
+    status: succeeded
+    started_at: "2026-08-02T14:46:54Z"
+    completed_at: "2026-08-02T14:47:52Z"
+    output_ref: sources/extracted/private/RUN-000004.txt
+    output_hash_sha256: 36b437d0328723ac61b43bfcc4796d08e96afb21e7a23ed216136a158409716c
+    executed_by: Codex
+    review_status: verified
+    reviewer:
+      name: Maksim Zakharenkau
+      reviewed_at: "2026-08-02"
+    error: null

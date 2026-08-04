@@ -1,0 +1,47 @@
+---
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: engineering_platform
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T17:37:46Z'
+record_count: 4
+selection:
+  source_id_prefixes:
+  - SRC-PRM-
+records:
+- id: SRC-PRM-000001
+  relative_path: engineering_platform/ENGINEERING.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-PRM-000002
+  relative_path: engineering_platform/ai_types/DD1_Handout__Overview_of_Generative_AI.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-MIS-000001
+- id: SRC-PRM-000003
+  relative_path: engineering_platform/overview.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRM-000001
+- id: SRC-PRM-000004
+  relative_path: engineering_platform/prompt_and_context_engineering/Effective context engineering for AI agents _ Anthropic.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:

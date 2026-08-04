@@ -1,0 +1,13 @@
+id: EVID-000005
+type: evidence_statement
+statement: "The deck states that SpeechKit transcribes audio files from S3 and stores diarization and transcription results in data-warehouse tables."
+source_id: SRC-UC-000013
+source_locator: "RUN-000003, slide 1, derivative lines 63-82"
+processing_run_id: RUN-000003
+confidence: medium
+classification: internal
+review_status: needs_review
+origin: ai
+created_at: "2026-08-02"
+created_by: Codex
+notes: "Source-described technical process; operational behavior not independently verified."

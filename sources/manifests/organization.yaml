@@ -1,0 +1,47 @@
+---
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: organization
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T17:37:46Z'
+record_count: 4
+selection:
+  source_id_prefixes:
+  - SRC-ORG-
+records:
+- id: SRC-ORG-000001
+  relative_path: organization/Effective context engineering for AI agents _ Anthropic.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRM-000004
+- id: SRC-ORG-000002
+  relative_path: organization/ORGANIZATION.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-ORG-000003
+  relative_path: organization/overview.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-ORG-000002
+- id: SRC-ORG-000004
+  relative_path: organization/research/create-generative-ai-value-at-scale.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:

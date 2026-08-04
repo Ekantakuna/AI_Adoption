@@ -1,3 +1,4 @@
 # Governance and responsible AI
 
-This folder contains outlook material associated with the `governance` taxonomy domain.
+This folder is scaffolded for future outlook material associated with the
+`governance` taxonomy domain. No report content is implemented.

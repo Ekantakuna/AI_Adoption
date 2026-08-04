@@ -1,3 +1,5 @@
 # Current-state baseline
 
-This folder contains outlook material associated with the `current_state` taxonomy domain.
+This folder is scaffolded for future outlook material associated with the
+`current_state` taxonomy domain. No assessed baseline or report content is
+implemented.

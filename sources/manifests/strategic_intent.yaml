@@ -1,0 +1,84 @@
+---
+manifest_schema_version: 1
+manifest_type: domain_source_manifest
+domain: strategic_intent
+source_catalogue: "../catalogue.yaml"
+generated_at: '2026-07-25T17:37:46Z'
+record_count: 8
+selection:
+  source_id_prefixes:
+  - SRC-PRE-
+  - SRC-VIS-
+records:
+- id: SRC-PRE-000002
+  relative_path: strategic_intent/general_presentation_draft/AI Adoption Program - the overall picture.html
+  source_type: web_document
+  file_extension: ".html"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-PRE-000001
+- id: SRC-VIS-000002
+  relative_path: strategic_intent/AI_STRATEGY.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-VIS-000001
+- id: SRC-VIS-000003
+  relative_path: strategic_intent/strategy.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: exact_duplicate
+  duplicate_of: SRC-VIS-000001
+- id: SRC-VIS-000004
+  relative_path: strategic_intent/vision.mmd
+  source_type: mind_map_or_proprietary
+  file_extension: ".mmd"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-VIS-000005
+  relative_path: strategic_intent/vision/From AI Deployment to Intelligence Design.pages
+  source_type: mind_map_or_proprietary
+  file_extension: ".pages"
+  classification: unclassified
+  processing_status: blocked
+  readability_status: blocked
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-VIS-000006
+  relative_path: strategic_intent/vision/Winning With Intelligent Choice Architectures.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-VIS-000007
+  relative_path: strategic_intent/vision/stop-deploying-ai-start-designing-intelligence.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:
+- id: SRC-VIS-000008
+  relative_path: strategic_intent/vision/the-innovation-advantage-genai-cant-give-you.pdf
+  source_type: pdf
+  file_extension: ".pdf"
+  classification: unclassified
+  processing_status: metadata_catalogued
+  readability_status: unknown
+  duplicate_status: unique
+  duplicate_of:

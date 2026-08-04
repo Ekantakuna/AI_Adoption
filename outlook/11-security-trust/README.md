@@ -1,3 +1,4 @@
 # Security, trust and resilience
 
-This folder contains outlook material associated with the `security_trust` taxonomy domain.
+This folder is scaffolded for future outlook material associated with the
+`security_trust` taxonomy domain. No report content is implemented.

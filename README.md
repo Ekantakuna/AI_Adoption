@@ -1,54 +1,93 @@
-# AI Adoption Outlook
+# AI Adoption repository
 
-This repository is the working foundation for a traceable AI adoption outlook. It stores project configuration, structured registers, project knowledge, assessment material, report content, and publication assets as Markdown and YAML.
+This repository is the controlled working environment for an evidence-based AI
+adoption outlook. It is intended to connect source inventory, evidence,
+structured knowledge, assessment, project tracking, and audience-specific
+publication while preserving provenance and human review.
 
-The repository currently contains foundation scaffolding only. It does not contain approved strategy conclusions, and source documents must not be processed until their classification and handling requirements have been reviewed.
+The repository is not yet an end-to-end operating system. Metadata inventory
+and some source-control foundations exist. Stage 9 adds an empty but operational
+knowledge contract and validator; substantive extraction, most downstream
+automation, reports, presentations, and incremental processing remain planned. See the
+[repository baseline](project/status/repository-baseline.md) for the
+evidence-backed status of each capability.
 
-## Working principles
+## Target information flow
 
-- Never invent company facts.
-- Distinguish facts, assumptions, inferences, and recommendations.
-- Preserve provenance from sources through analysis and publication.
-- Preserve stable record identifiers.
-- Treat Markdown and YAML registers as canonical content.
-- Follow [the information-handling rules](project/information-handling.md).
+The target flow is:
 
-## Repository structure
+**Source assets → metadata catalogue → content processing → atomic evidence →
+structured knowledge → relationships and impact analysis → assessments and
+progress views → reports → presentations**
 
-| Directory | Purpose |
-| --- | --- |
-| `.github/` | GitHub-specific workflows and collaboration templates. |
-| `assessments/` | Current-state, target-state, gap, and maturity assessments. |
-| `config/` | Project-wide controlled values and taxonomy. |
-| `knowledge/` | Traceable assumptions, decisions, evidence, glossary terms, and references. |
-| `outlook/` | Modular source content for the AI adoption outlook. |
-| `presentations/` | Presentation sources, themes, and generated output. |
-| `project/` | Project controls, reviews, meeting notes, and status material. |
-| `prompts/` | Reusable prompts grouped by workflow stage. |
-| `publications/` | Audience-specific publication outputs. |
-| `registers/` | Structured YAML records used across the repository. |
-| `schemas/` | Machine-readable validation contracts. |
-| `scripts/` | Ingestion, validation, reporting, and publication utilities. |
-| `sources/` | Source metadata, manifests, notes, and controlled extraction areas. |
-| `tests/` | Fixtures and automated repository checks. |
-| `website/` | Website source and configuration. |
+This is a target architecture, not a claim that each step operates today.
+[ARCHITECTURE.md](ARCHITECTURE.md) defines the layers, boundaries, review
+points, and current implementation status.
 
-Each top-level directory contains its own short `README.md` describing its intended scope.
+## Operating principles
 
-## Configuration and records
+- Never invent company facts or unsupported evidence.
+- Label facts, assumptions, inferences, and recommendations.
+- Preserve provenance and stable identifiers.
+- Keep original source assets outside Git and follow
+  [information-handling rules](project/information-handling.md).
+- Treat reviewed Markdown and YAML registers as canonical repository content;
+  treat generated outputs as reproducible derivatives.
+- Require authorized human review for authoritative knowledge, organizational
+  conclusions, commitments, and publication-ready executive claims.
+- Represent conflicts explicitly; do not silently normalize them.
 
-- [Project configuration](config/project.yaml) defines project metadata and allowed status, confidence, and classification values.
-- [Taxonomy](config/taxonomy.yaml) defines the controlled domain identifiers.
-- `registers/sources.yaml` is the canonical source inventory; `sources/catalogue.yaml` is only a pointer to that register and must not contain independently maintained source records.
-- Each file in `registers/` has a common foundation structure consisting of `schema_version`, `register`, and an initially empty `records` list.
-- Record schemas and workflow automation remain foundation work; do not add incompatible ad hoc fields before those contracts are agreed.
+Repository agents must follow [AGENTS.md](AGENTS.md). Contributors should start
+with [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[documentation index](docs/index.md).
+Definitions and lifecycle boundaries for source assets, metadata, extraction,
+evidence, knowledge, assessments, and outputs are in
+[information objects](docs/concepts/information-objects.md).
 
-## Contribution workflow
+## Repository areas
 
-1. Work on a branch.
-2. Classify information before adding or processing it.
-3. Add provenance and stable identifiers to structured records.
-4. Run available Markdown and YAML checks.
-5. Review `git status` and the diff before requesting approval to commit.
+| Area | Intended role | Current status |
+| --- | --- | --- |
+| `sources/`, `config/`, `schemas/` | Source inventory and controlled processing contracts | Partial |
+| `knowledge/`, `registers/` | Evidence and structured knowledge | Partial; controlled empty framework and two provisional notes |
+| `assessments/`, `outlook/` | Assessment and outlook content | Planned/scaffolded |
+| `project/` | Policies, decisions, reviews, and progress | Partial |
+| `publications/`, `presentations/`, `website/` | Audience outputs | Planned/scaffolded |
+| `scripts/`, `tests/`, `.github/` | Automation and validation | Partial; schema/knowledge validation, tests, and CI are implemented |
+| `docs/` | Repository operating documentation | Implemented by the operating-model baseline |
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution rules. Do not commit or push through an automated agent without explicit permission.
+The detailed accepted and prohibited contents for every area are in the
+[repository map](docs/repository-map.md).
+
+## Current source-of-truth boundaries
+
+- Original source assets (original evidence): approved storage outside Git.
+- Source inventory: `sources/catalogue.yaml`, by repository policy.
+- Controlled values: `config/*.yaml`.
+- Source schema: `schemas/sources.yaml`, approved in ADR 0002.
+- Evidence and knowledge: schema-conforming records under `knowledge/`, subject
+  to classification and human review. The directories initially contain no
+  production records; extraction output is not automatically evidence or
+  approved knowledge. Assessments remain planned/scaffolded.
+- Project state: `project/status/`, relevant registers, and recorded decisions.
+- Generated publications and presentations: derivatives, never the canonical
+  evidence or knowledge record.
+
+The source-state conflict was explicitly reconciled on 2026-08-02. Historical
+legacy states remain preserved but do not override the canonical catalogue.
+Fifty-seven sources have approved fresh-processing authorizations; the Pages
+source remains blocked. One controlled pilot run succeeded and is technically
+verified; one AI-origin atomic evidence statement is human-verified.
+
+## Contributing
+
+1. Work on a dedicated branch.
+2. Inspect relevant implementation, documentation, configuration, schemas,
+   tests, status, and Git state.
+3. Confirm information classification and the approved processing route.
+4. Update implementation, documentation, status, and decisions together.
+5. Run applicable validation and review the complete diff.
+6. Do not commit or push through an agent without explicit permission.
+
+Local commands and current validation limitations are documented in
+[local development](docs/operations/local-development.md).

@@ -1,0 +1,12 @@
+template: true
+id: REL-000000
+type: relationship
+relationship_type: relates_to
+from_id: CONCEPT-000000
+to_id: CONCEPT-000000
+evidence_ids: [EVID-000000]
+classification: public
+review_status: draft
+origin: ai
+created_at: "YYYY-MM-DD"
+created_by: "<creator>"

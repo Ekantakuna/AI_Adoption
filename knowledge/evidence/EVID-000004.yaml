@@ -1,0 +1,13 @@
+id: EVID-000004
+type: evidence_statement
+statement: "The speech-analytics deck defines a call-evaluation process with four steps: audio handling, transcription, call estimation, and data marts."
+source_id: SRC-UC-000013
+source_locator: "RUN-000003, slide 1, derivative lines 2-9"
+processing_run_id: RUN-000003
+confidence: medium
+classification: internal
+review_status: needs_review
+origin: ai
+created_at: "2026-08-02"
+created_by: Codex
+notes: "Visible slide XML only; diagram relationships not independently reconstructed."

@@ -1,0 +1,22 @@
+schema_version: 1
+review_statuses:
+  - id: draft
+    meaning: Work in preparation; not ready for formal review.
+  - id: needs_review
+    meaning: Submitted for authorized human review.
+  - id: under_review
+    meaning: An authorized human review is in progress.
+  - id: verified
+    meaning: Evidence or factual content was checked by an identified reviewer.
+  - id: approved
+    meaning: An authorized reviewer accepted the record for its stated use.
+  - id: rejected
+    meaning: A reviewer declined the record; retain it for audit unless policy permits removal.
+  - id: deprecated
+    meaning: The record remains addressable but should not be used for new work.
+ai_initial_statuses:
+  - draft
+  - needs_review
+reviewer_required_statuses:
+  - verified
+  - approved
