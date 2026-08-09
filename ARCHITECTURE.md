@@ -54,6 +54,11 @@ Layering controls dependencies: downstream content cites stable upstream IDs and
 must not overwrite upstream records. A publication may summarize approved
 knowledge; it must not become the only location of the supporting claim.
 
+The version-controlled Codex prompt library under `prompts/codex/` is an
+instruction asset within this layer. Its catalogue and metadata validator
+govern repeatable agent work, but prompt text does not make a target workflow
+operational or replace human review.
+
 ## Target information flow
 
 **Source assets → metadata catalogue → content processing → atomic evidence →

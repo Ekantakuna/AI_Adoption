@@ -39,6 +39,7 @@ This is the entry point for understanding and operating the repository.
 ## Operations and reference
 
 - [Local development](operations/local-development.md)
+- [Using the Codex prompt library](operations/using-codex-prompt-library.md)
 - [Creating knowledge records](operations/creating-knowledge-records.md)
 - [Reviewing knowledge records](operations/reviewing-knowledge-records.md)
 - [Identifier rules](reference/identifiers.md)
@@ -46,6 +47,8 @@ This is the entry point for understanding and operating the repository.
 - [Status values](reference/statuses.md)
 - [Knowledge statuses](reference/knowledge-statuses.md)
 - [Project status](../project/status/)
+- [Master implementation roadmap](../project/roadmap/implementation-roadmap.md)
+- [Master roadmap status](../project/status/master-roadmap-status.md)
 - [Source catalogue](../sources/catalogue.yaml)
 - [Controlled configuration](../config/)
 - [Schemas](../schemas/)

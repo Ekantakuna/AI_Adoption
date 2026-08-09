@@ -1,3 +1,24 @@
+---
+id: PRM-CODEX-BOOT-001
+title: Establish the AI Adoption repository operating model
+type: bootstrap
+version: 1.1.0
+status: active
+owner_role: repository-maintainer
+created_at: 2026-08-01
+updated_at: 2026-08-05
+roadmap_stage: bootstrap
+source_access: repository_only
+allowed_paths: [AGENTS.md, README.md, ARCHITECTURE.md, CONTRIBUTING.md, CHANGELOG.md, docs, project/status]
+prohibited_actions: [commit, push, source_body_access, unsupported_claims]
+required_inputs: [repository]
+expected_outputs: [operating_model, documentation, status]
+validation: [repository_validators, tests, git_diff_check]
+human_review: required
+supersedes: null
+superseded_by: null
+---
+
 # Task: Establish the AI Adoption repository operating model
 
 You are working in the root of the AI Adoption repository.

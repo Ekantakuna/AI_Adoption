@@ -1,3 +1,24 @@
+---
+id: PRM-CODEX-MAINT-LEGACY-FINAL
+title: Perform final stage validation (legacy path)
+type: validation
+version: 1.0.0
+status: deprecated
+owner_role: repository-reviewer
+created_at: 2026-08-01
+updated_at: 2026-08-05
+roadmap_stage: cross-stage
+source_access: repository_only
+allowed_paths: [project/status, scripts, tests, docs]
+prohibited_actions: [commit, push, source_body_access]
+required_inputs: [stage_definition, worktree]
+expected_outputs: [validation_report]
+validation: [repository_validators, tests, git_diff_check]
+human_review: required
+supersedes: null
+superseded_by: PRM-CODEX-VAL-FINAL
+---
+
 # Task: Perform final stage validation
 
 Inspect all current uncommitted changes.
