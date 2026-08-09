@@ -1,5 +1,9 @@
 # Scripts
 
+`validate_prompts.py` validates Codex prompt front matter, controlled types and
+statuses, stable IDs, catalogue membership, paths, and template/lifecycle
+rules. It does not execute prompts or authorize source access.
+
 This directory contains the Stage 9 schema and knowledge-integrity validators,
 approved source-processing validation, and a controlled reader for authorized
 text/HTML runs. Reporting and publication tools remain scaffolded.
@@ -39,6 +43,17 @@ successful reviewed run.
 `validate_knowledge.py` performs cross-record integrity checks that JSON Schema
 does not cover. Run both validators; neither grants content approval or source
 access.
+
+Run the roadmap validator with:
+
+```text
+python scripts/validate_roadmap.py
+```
+
+It checks `project/roadmap.yaml` and its human-readable companion for required
+stage fields, controlled statuses, duplicate IDs, missing references,
+dependency cycles, and stage-heading consistency. It does not approve the
+roadmap, execute a stage, or inspect source bodies.
 
 Run the authorization/run integrity check with:
 

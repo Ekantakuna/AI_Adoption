@@ -14,6 +14,11 @@ are empty scaffolds, and most structured project registers are empty.
   `knowledge-review-workflow.md` define the approved Stage 9 knowledge controls.
 - `source-processing-control-policy.md` defines approved per-source
   authorization and processing-run controls.
+- `prompt-management-policy.md` defines stable prompt metadata, catalogue,
+  lifecycle, source-access, and review controls.
+- `roadmap.yaml` and `roadmap/` define the draft master implementation roadmap,
+  stage lifecycle, and downstream prompt-generation boundary. The roadmap is
+  not an implementation claim and requires human approval.
 - `decisions/` stores numbered ADRs. AI-authored ADRs remain `proposed` until an
   authorized human records approval.
 - `status/` stores dated or stage-scoped evidence about repository state.
