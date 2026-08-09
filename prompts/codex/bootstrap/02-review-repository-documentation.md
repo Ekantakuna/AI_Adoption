@@ -1,3 +1,24 @@
+---
+id: PRM-CODEX-BOOT-002
+title: Review repository documentation for accuracy and completeness
+type: review
+version: 1.1.0
+status: active
+owner_role: repository-reviewer
+created_at: 2026-08-01
+updated_at: 2026-08-05
+roadmap_stage: bootstrap
+source_access: repository_only
+allowed_paths: [README.md, AGENTS.md, CONTRIBUTING.md, ARCHITECTURE.md, CHANGELOG.md, docs, project]
+prohibited_actions: [commit, push, source_body_access, unrelated_implementation]
+required_inputs: [repository_documentation]
+expected_outputs: [findings, corrected_documentation, review_report]
+validation: [documentation_links, repository_validators, git_diff_check]
+human_review: required
+supersedes: null
+superseded_by: null
+---
+
 # Task: Review repository documentation for accuracy and completeness
 
 Review the documentation created for the AI Adoption repository.

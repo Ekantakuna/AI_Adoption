@@ -1,3 +1,24 @@
+---
+id: PRM-CODEX-MAINT-LEGACY-DOC
+title: Review documentation impact of current changes (legacy path)
+type: review
+version: 1.0.0
+status: deprecated
+owner_role: repository-reviewer
+created_at: 2026-08-01
+updated_at: 2026-08-05
+roadmap_stage: cross-stage
+source_access: repository_only
+allowed_paths: [docs, project, prompts, scripts, tests, .github]
+prohibited_actions: [commit, push, source_body_access, unrelated_implementation]
+required_inputs: [git_diff]
+expected_outputs: [documentation_impact_report]
+validation: [repository_validators, git_diff_check]
+human_review: required
+supersedes: null
+superseded_by: PRM-CODEX-REV-DOC
+---
+
 # Task: Review documentation impact of current changes
 
 Inspect the current Git diff.

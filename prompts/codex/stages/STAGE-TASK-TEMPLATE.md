@@ -1,3 +1,24 @@
+---
+id: PRM-TEMPLATE-STAGE-TASK
+title: Legacy stage task template
+type: template
+version: 1.0.0
+status: draft
+owner_role: stage-implementer
+created_at: 2026-08-01
+updated_at: 2026-08-05
+roadmap_stage: stage-specific
+source_access: repository_only
+allowed_paths: []
+prohibited_actions: [commit, push, source_body_access]
+required_inputs: [approved_roadmap, stage_id]
+expected_outputs: [stage_work, stage_status]
+validation: [applicable_validators, tests, git_diff_check]
+human_review: required
+supersedes: null
+superseded_by: null
+---
+
 # Stage N — Replace with stage name
 
 ## Objective

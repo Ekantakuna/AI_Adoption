@@ -1,0 +1,140 @@
+roadmap_version: 1
+roadmap_id: ROADMAP-000001
+title: Master implementation roadmap
+status: approved
+review_status: approved
+owner_role: roadmap-maintainer
+review_required: true
+reviewer: Maksim Zakharenkau
+reviewed_at: "2026-08-08"
+capability_status_values: [implemented, partial, planned, absent, unknown]
+roadmap_status_values: [draft, in_review, approved, superseded, retired]
+source_access: repository_only
+human_review_boundary: Approved by Maksim Zakharenkau on 2026-08-08; approval covers the roadmap plan and does not approve future stage content or execution.
+stages:
+  - id: stage-09
+    sequence: 9
+    title: Knowledge framework
+    status: implemented
+    capability_status: partial
+    summary: Controlled empty knowledge contracts, processing controls, evidence drafts, and validators are present; authoritative knowledge is not established.
+    prerequisites: [stage-08]
+    entry_criteria: [repository operating model exists, source metadata and handling policy exist]
+    deliverables: [knowledge object schemas and templates, source-processing authorization and run contracts, knowledge and processing validators, CI and tests]
+    validation: [yaml_parse, schema_validation, knowledge_validation, source_processing_validation, tests, git_diff_check]
+    exit_gates: [stage approval recorded, human-review boundaries documented, deferred limitations recorded]
+    success_measures: [controlled records validate, provenance links resolve, no source body is copied into Git]
+    dependencies: []
+    downstream_prompt: null
+  - id: stage-09.5
+    sequence: 9.5
+    title: Master implementation roadmap
+    status: implemented
+    capability_status: implemented
+    summary: A human-readable and machine-readable roadmap with lifecycle rules, stable stage IDs, gates, and validation is defined.
+    prerequisites: [stage-09]
+    entry_criteria: [stage-09 status and current repository state inspected, prompt metadata is active, source-body boundary confirmed]
+    deliverables: [project/roadmap.yaml, project/roadmap/implementation-roadmap.md, project/roadmap/stage-template.md, project/roadmap/stage-lifecycle.md, scripts/validate_roadmap.py, tests/test_roadmap_validation.py]
+    validation: [yaml_parse, roadmap_validation, tests, git_diff_check]
+    exit_gates: [machine and human roadmaps cross-check, validator passes, authorized human review recorded]
+    success_measures: [all stages have stable IDs and gates, invalid references and cycles are rejected, no unsupported estimates appear]
+    dependencies: [stage-09]
+    downstream_prompt: prompts/codex/planning/generate-stage-prompt-from-roadmap.md
+  - id: stage-10
+    sequence: 10
+    title: Reviewed evidence-to-knowledge pilot
+    status: planned
+    capability_status: partial
+    summary: Convert a deliberately small set of verified processing outputs into reviewed atomic evidence, selected knowledge, and relationships while preserving draft and conflict boundaries.
+    prerequisites: [stage-09.5]
+    entry_criteria: [roadmap approved, processing authorizations and run records validate, candidate records have stable provenance, human reviewer assigned]
+    deliverables: [reviewed pilot evidence set, selected reviewed knowledge records, relationship records where justified, pilot review report, updated stage status]
+    validation: [yaml_parse, schema_validation, knowledge_validation, source_processing_validation, tests, git_diff_check]
+    exit_gates: [every promoted record has eligible run provenance, human review is recorded, conflicts and exclusions are retained, no provisional note is migrated wholesale]
+    success_measures: [traceable run-to-evidence-to-knowledge links validate, review states are accurate, pilot limitations are explicit]
+    dependencies: [stage-09, stage-09.5]
+    downstream_prompt: null
+  - id: stage-11
+    sequence: 11
+    title: Knowledge graph and impact integrity
+    status: planned
+    capability_status: absent
+    summary: Define and validate relationship traversal and impact references for reviewed knowledge without replacing canonical records with graph derivatives.
+    prerequisites: [stage-10]
+    entry_criteria: [pilot review is closed, relationship identifier and traversal contract are approved]
+    deliverables: [relationship lifecycle contract, impact-reference validator, synthetic traversal tests, stage status]
+    validation: [yaml_parse, schema_validation, repository_validation, tests, git_diff_check]
+    exit_gates: [dangling and cyclic policy behavior is documented, canonical boundaries remain intact, human review is recorded]
+    success_measures: [affected downstream objects can be identified from explicit references, unresolved conflicts remain visible]
+    dependencies: [stage-10]
+    downstream_prompt: null
+  - id: stage-12
+    sequence: 12
+    title: Assessment and outlook contracts
+    status: planned
+    capability_status: planned
+    summary: Establish reviewed contracts for current state, target state, gaps, maturity, metrics, and outlook modules.
+    prerequisites: [stage-10, stage-11]
+    entry_criteria: [reviewed knowledge and relationship integrity exist, scoring and audience controls are approved]
+    deliverables: [assessment schemas, outlook content contract, assessment validator and tests, stage status]
+    validation: [yaml_parse, schema_validation, repository_validation, tests, git_diff_check]
+    exit_gates: [current and target claims distinguish fact, inference, recommendation, and commitment, human approval gates are explicit]
+    success_measures: [assessment records cite upstream objects, scoring inputs and limitations are reproducible]
+    dependencies: [stage-10, stage-11]
+    downstream_prompt: null
+  - id: stage-13
+    sequence: 13
+    title: Project progress and decision views
+    status: planned
+    capability_status: partial
+    summary: Define governed project registers and traceable views for initiatives, risks, decisions, milestones, and metrics.
+    prerequisites: [stage-12]
+    entry_criteria: [object-specific schemas and ownership are approved, assessment inputs are stable]
+    deliverables: [project register contracts, progress-view validation, tests, stage status]
+    validation: [yaml_parse, schema_validation, repository_validation, tests, git_diff_check]
+    exit_gates: [records have owners and lifecycle states, commitments are human-approved, source and knowledge claims remain attributed]
+    success_measures: [progress views can be regenerated from canonical records, unsupported status claims are rejected]
+    dependencies: [stage-12]
+    downstream_prompt: null
+  - id: stage-14
+    sequence: 14
+    title: Audience publications
+    status: planned
+    capability_status: planned
+    summary: Assemble reviewed assessments, outlook, and project views into audience-specific publication sources and replaceable derivatives.
+    prerequisites: [stage-12, stage-13]
+    entry_criteria: [audiences and publication contract are approved, source claims and review states validate]
+    deliverables: [publication schema, provenance validator, publication assembly procedure, tests, stage status]
+    validation: [yaml_parse, schema_validation, repository_validation, link_check, tests, git_diff_check]
+    exit_gates: [publication claims resolve to reviewed upstream records, classification is respected, release approval is recorded]
+    success_measures: [a publication can be reproduced from declared inputs and generator metadata]
+    dependencies: [stage-12, stage-13]
+    downstream_prompt: null
+  - id: stage-15
+    sequence: 15
+    title: Presentations and website derivatives
+    status: planned
+    capability_status: planned
+    summary: Transform approved publication content into audience-specific presentation and website derivatives.
+    prerequisites: [stage-14]
+    entry_criteria: [approved publication source exists, presentation and website output contracts are approved]
+    deliverables: [presentation source contract, website integration contract, traceability checks, tests, stage status]
+    validation: [yaml_parse, schema_validation, repository_validation, link_check, tests, git_diff_check]
+    exit_gates: [derivatives retain source references, generated outputs are replaceable, release approval is recorded]
+    success_measures: [audience outputs identify inputs, generator version, review state, and limitations]
+    dependencies: [stage-14]
+    downstream_prompt: null
+  - id: stage-16
+    sequence: 16
+    title: Incremental change and operating automation
+    status: planned
+    capability_status: absent
+    summary: Add controlled change detection, dependency impact, review invalidation, and regeneration around the established canonical records.
+    prerequisites: [stage-11, stage-14, stage-15]
+    entry_criteria: [stable upstream identifiers and dependency references exist, change policy and storage route are approved]
+    deliverables: [change detector, impact and invalidation records, controlled regeneration procedure, synthetic tests, stage status]
+    validation: [yaml_parse, schema_validation, repository_validation, tests, git_diff_check]
+    exit_gates: [changed inputs cannot silently leave stale approved derivatives, original evidence remains immutable, human re-review gates are enforced]
+    success_measures: [affected downstream objects are reproducibly identified, unchanged paths are not needlessly reprocessed]
+    dependencies: [stage-11, stage-14, stage-15]
+    downstream_prompt: null

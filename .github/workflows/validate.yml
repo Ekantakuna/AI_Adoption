@@ -20,5 +20,7 @@ jobs:
         run: python scripts/validate_source_processing.py
       - name: Validate knowledge records
         run: python scripts/validate_knowledge.py
+      - name: Validate Codex prompt library
+        run: python scripts/validate_prompts.py
       - name: Run tests
         run: python -m unittest discover -s tests -p "test_*.py"

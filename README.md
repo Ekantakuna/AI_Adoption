@@ -40,6 +40,12 @@ points, and current implementation status.
 Repository agents must follow [AGENTS.md](AGENTS.md). Contributors should start
 with [CONTRIBUTING.md](CONTRIBUTING.md) and the
 [documentation index](docs/index.md).
+Material Codex work uses the version-controlled [Codex prompt library](prompts/codex/README.md),
+whose lifecycle and execution procedure are documented in
+[Using the Codex prompt library](docs/operations/using-codex-prompt-library.md).
+The draft [master implementation roadmap](project/roadmap/implementation-roadmap.md)
+defines the controlled sequence for later work; it does not make planned stages
+operational.
 Definitions and lifecycle boundaries for source assets, metadata, extraction,
 evidence, knowledge, assessments, and outputs are in
 [information objects](docs/concepts/information-objects.md).

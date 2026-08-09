@@ -54,8 +54,9 @@ validation or a draft as approval.
 - Use clear English and repository-relative links.
 - Define specialized terms on first use or link to their definition.
 - Use Mermaid diagrams only with a complete prose explanation.
-- Add YAML front matter only if a consistent repository convention is adopted;
-  no such convention exists at this baseline.
+- Prompt files under `prompts/codex/` must use their defined YAML front-matter
+  metadata convention; other Markdown files need not use front matter unless a
+  separate contract requires it.
 - Preserve stable IDs and exact controlled values in documentation.
 
 ## Review and ownership

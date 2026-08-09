@@ -1,3 +1,24 @@
+---
+id: PRM-CODEX-STAGE-009
+title: Implement the Knowledge Extraction Framework
+type: stage
+version: 1.1.0
+status: active
+owner_role: stage-implementer
+created_at: 2026-08-01
+updated_at: 2026-08-05
+roadmap_stage: stage-09
+source_access: metadata_only
+allowed_paths: [knowledge, schemas, config, scripts, tests, project/status, docs, CHANGELOG.md]
+prohibited_actions: [commit, push, source_body_access, source_modification, approval]
+required_inputs: [AGENTS.md, repository_status, source_metadata]
+expected_outputs: [knowledge_contract, validators, tests, documentation, stage_status]
+validation: [yaml_parse, schema_validation, repository_validators, tests, git_diff_check]
+human_review: required
+supersedes: null
+superseded_by: null
+---
+
 # Stage 9 — Implement the Knowledge Extraction Framework
 
 ## Objective

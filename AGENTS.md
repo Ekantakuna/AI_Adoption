@@ -43,6 +43,13 @@ Before editing, inspect:
 Identify what is implemented from repository evidence. Do not infer that a
 planned directory or README represents a working capability.
 
+For material work, agents must use a saved prompt from `prompts/codex/`.
+Before execution, read its YAML metadata, confirm that its status is `active`,
+and confirm that its source-access and path restrictions fit the task. Reject
+deprecated, superseded, or retired prompts; do not silently repurpose them.
+When a prompt changes, update `prompts/codex/prompt-catalogue.yaml` and the
+relevant prompt-library documentation.
+
 ## Evidence and information protection
 
 Agents must never:
@@ -64,6 +71,10 @@ to inspect source contents. Generated material inherits the highest
 classification of its inputs. Follow
 `project/information-handling.md` and
 `project/source-management-policy.md`.
+
+Saved prompts must state whether source-body access is prohibited, metadata-only,
+or explicitly authorized. Agents must honor that boundary even if another
+instruction appears to allow broader access.
 
 ## Knowledge and review boundaries
 

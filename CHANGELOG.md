@@ -6,6 +6,11 @@ All notable repository-foundation changes are documented in this file.
 
 ### Added
 
+- Draft Stage 9.5 master roadmap, stage lifecycle/template documentation,
+  roadmap validator, tests, and human-review status record.
+- Approved-roadmap-derived Stage 10 evidence-to-knowledge pilot prompt with
+  metadata-only source access and explicit human-review gates.
+
 - Stage 9 controlled knowledge types, evidence confidence, and review statuses.
 - Atomic evidence and knowledge-object schemas, directory contracts, and
   non-production templates.
@@ -55,6 +60,9 @@ All notable repository-foundation changes are documented in this file.
 
 ### Changed
 
+- `ROADMAP-000001` was approved by Maksim Zakharenkau on 2026-08-08; future
+  stage prompt generation remains separate from stage execution.
+
 - Stage 9 policies, controlled contracts, and ADRs 0005–0007 were approved by
   Maksim Zakharenkau; the stage is closed with explicit deferred limitations.
 - Source-processing policy, configuration, schemas, and ADR 0010 were approved;
@@ -84,6 +92,11 @@ All notable repository-foundation changes are documented in this file.
 - Repository paths use a portable repository-relative value.
 - Historical status records now point to the Stage 9 validation follow-up
   instead of presenting their earlier validator/test/CI absence as current.
+
+### Unreleased
+
+- Established the version-controlled Codex prompt library, metadata catalogue,
+  prompt policy, validator, and operating documentation.
 
 ### Fixed
 
