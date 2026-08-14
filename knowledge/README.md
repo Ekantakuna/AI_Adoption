@@ -35,8 +35,12 @@ material starts as `draft` or `needs_review`; only an authorized human may add
 the review record required for `verified` or `approved`.
 
 The current structured set contains nine evidence records and three use-case
-records. `EVID-000001` is verified; `EVID-000002`–`000009` and
-`USECASE-000001`–`000003` are AI-origin internal drafts in `needs_review`.
+records. `EVID-000001`–`000003` are verified; `EVID-000004`–`000009` and
+`USECASE-000002`–`000003` are AI-origin internal drafts in `needs_review`.
+`USECASE-000001` is AI-origin and human-approved for its stated semantic use.
+Stage 10 selects only `EVID-000002`, `EVID-000003`, and `USECASE-000001` for a
+bounded review pilot; the subsequent human decisions promoted the evidence to
+`verified` and the use case to `approved`.
 
 Run `python scripts/validate_schemas.py` and
 `python scripts/validate_knowledge.py` from the repository root. They ignore

@@ -54,7 +54,7 @@ reclassify an earlier stage.
 
 ## Stage-10 — Reviewed evidence-to-knowledge pilot
 
-- Status: `planned`; capability: `partial`
+- Status: `implemented`; capability: `partial`
 - Prerequisites: `stage-09.5`
 - Entry criteria: approved roadmap; validated authorizations/runs; stable
   provenance; assigned human reviewer.
@@ -66,7 +66,9 @@ reclassify an earlier stage.
 - Success measure: run-to-evidence-to-knowledge links validate and review states
   are accurate.
 - Dependencies: `stage-09`, `stage-09.5`.
-- Limitation: Stage 10 is next planned work only and is not implemented here.
+- Limitation: the bounded pilot is complete, but it does not establish broader
+  authoritative knowledge, relationships without evidence, or Stage 11
+  traversal capability.
 
 ## Stage-11 — Knowledge graph and impact integrity
 

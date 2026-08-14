@@ -8,7 +8,7 @@
 - Approved by: Maksim Zakharenkau
 - Approval date: 2026-08-08
 - Source-body access: none
-- Stage 10 implementation: not performed
+- Stage 10 implementation: implemented and closed; broader capability remains partial
 
 ## Purpose and evidence
 
@@ -19,11 +19,11 @@ uses stable stage IDs, explicit dependencies, entry criteria, deliverables,
 validation, exit gates, and success measures. It contains no dates, budgets,
 headcount, or unsupported effort estimates.
 
-Repository evidence justifies Stage 10 as the next planned stage: Stage 9
-contracts and validators are implemented, source-processing authorization/run
-controls validate, and a small set of evidence and semantic use-case records is
-present. The records remain draft or narrowly verified where documented; this
-does not make the knowledge framework or downstream pipeline fully operational.
+Repository evidence justified Stage 10 as the next stage: Stage 9 contracts and
+validators were implemented, source-processing authorization/run controls
+validated, and a small set of evidence and semantic use-case records was
+present. The resulting bounded pilot is now closed, while the broader knowledge
+framework and downstream pipeline remain partial or unimplemented as documented.
 
 ## Capability status
 
@@ -31,7 +31,7 @@ does not make the knowledge framework or downstream pipeline fully operational.
 | --- | --- | --- |
 | Stage 9 foundation | partial capability; implemented stage | `project/status/stage-09-knowledge-framework.md`, `scripts/validate_knowledge.py`, `schemas/` |
 | Stage 9.5 roadmap controls | implemented; approved | `project/roadmap.yaml`, `scripts/validate_roadmap.py` |
-| Stage 10 pilot | partial capability; planned next stage | `project/status/source-processing-controls.md`, `knowledge/evidence/`, `knowledge/use_cases/` |
+| Stage 10 pilot | implemented stage; partial capability | `project/status/stage-10-reviewed-evidence-knowledge-pilot.md`, `project/status/stage-10-pilot-review-packet.md` |
 | Graph/impact automation | absent | `ARCHITECTURE.md`, `project/status/repository-baseline.md` |
 | Assessments and outlook | planned/scaffolded | `assessments/`, `outlook/`, `ARCHITECTURE.md` |
 | Publications/presentations | planned/scaffolded | `publications/`, `presentations/`, `website/` |
@@ -59,5 +59,6 @@ consistency. Synthetic tests cover valid data and each principal failure class.
 The validator does not assess substantive roadmap quality or grant access to
 source bodies. A documentation builder is not configured in this repository.
 
-Stage 10 and all later stages remain unimplemented by this task. A future Stage 10
-prompt must still be generated, reviewed, and executed as a separate task.
+The bounded Stage 10 pilot is implemented and closed with human-reviewed
+evidence and knowledge. Stage 11 and all later stages remain unimplemented and
+retain their own entry criteria and review gates.

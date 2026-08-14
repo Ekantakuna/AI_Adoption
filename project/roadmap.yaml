@@ -43,7 +43,7 @@ stages:
   - id: stage-10
     sequence: 10
     title: Reviewed evidence-to-knowledge pilot
-    status: planned
+    status: implemented
     capability_status: partial
     summary: Convert a deliberately small set of verified processing outputs into reviewed atomic evidence, selected knowledge, and relationships while preserving draft and conflict boundaries.
     prerequisites: [stage-09.5]

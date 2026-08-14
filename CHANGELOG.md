@@ -6,6 +6,9 @@ All notable repository-foundation changes are documented in this file.
 
 ### Added
 
+- Bounded Stage 10 review packet and status for the traceable `RUN-000002` →
+  `EVID-000002`/`EVID-000003` → `USECASE-000001` pilot; human review is
+  recorded and no relationship was invented.
 - Draft Stage 9.5 master roadmap, stage lifecycle/template documentation,
   roadmap validator, tests, and human-review status record.
 - Approved-roadmap-derived Stage 10 evidence-to-knowledge pilot prompt with
@@ -51,8 +54,8 @@ All notable repository-foundation changes are documented in this file.
   implemented-use-case PPTX files, plus an approved, synthetic-tested local
   PPTX slide-text reader and enforceable per-tool approval states.
 - Verified private runs `RUN-000002`–`000004`, eight source-attributed atomic
-  evidence drafts, and three evidence-backed semantic use-case drafts for Smart
-  Chat Bot, AI Speech Analytics Assistant, and Life Registration.
+  evidence records, and three evidence-backed semantic use-case records for
+  Smart Chat Bot, AI Speech Analytics Assistant, and Life Registration.
 - Repository purpose, contribution guidance, and information-handling rules.
 - Project configuration and controlled taxonomy.
 - Empty structured YAML registers.
@@ -60,6 +63,14 @@ All notable repository-foundation changes are documented in this file.
 
 ### Changed
 
+- MZ approved `USECASE-000001` for its stated semantic use on 2026-08-14;
+  Stage 10 is closed with its limitations and downstream authority boundaries
+  retained.
+- MZ verified the source fidelity of `EVID-000002` and `EVID-000003` on
+  2026-08-14 before the separate semantic approval of `USECASE-000001`.
+- Narrowed `USECASE-000001` to remove an unsupported reference to contract
+  operations and synchronized repository documentation with the current four
+  runs, nine evidence records, three use-case records, and Stage 10 review state.
 - `ROADMAP-000001` was approved by Maksim Zakharenkau on 2026-08-08; future
   stage prompt generation remains separate from stage execution.
 

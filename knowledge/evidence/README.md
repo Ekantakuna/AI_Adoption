@@ -12,5 +12,6 @@
 - **Current production set:** `EVID-000001` is an AI-origin internal evidence
   statement verified by Maksim Zakharenkau; verification does not establish
   organizational implementation or broader approval.
-  `EVID-000002`–`000009` are internal AI-origin drafts awaiting source-fidelity
-  review for the three newly ingested implemented-use-case decks.
+  `EVID-000002`–`000003` were verified by MZ during the Stage 10 pilot;
+  `EVID-000004`–`000009` remain internal AI-origin drafts awaiting
+  source-fidelity review for the other two implemented-use-case decks.
