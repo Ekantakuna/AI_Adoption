@@ -6,8 +6,11 @@ source_locator: "RUN-000002, slide 2, derivative line 27"
 processing_run_id: RUN-000002
 confidence: medium
 classification: internal
-review_status: needs_review
+review_status: verified
 origin: ai
 created_at: "2026-08-02"
 created_by: Codex
+reviewer:
+  name: MZ
+  reviewed_at: "2026-08-14"
 notes: "Source-reported metric; not independently verified."
