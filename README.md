@@ -5,10 +5,11 @@ adoption outlook. It is intended to connect source inventory, evidence,
 structured knowledge, assessment, project tracking, and audience-specific
 publication while preserving provenance and human review.
 
-The repository is not yet an end-to-end operating system. Metadata inventory
-and some source-control foundations exist. Stage 9 adds an empty but operational
-knowledge contract and validator; substantive extraction, most downstream
-automation, reports, presentations, and incremental processing remain planned. See the
+The repository is not yet an end-to-end operating system. Metadata inventory,
+controlled processing, and knowledge validation exist. Stage 9 established the
+knowledge contracts; a bounded Stage 10 evidence-to-knowledge pilot is closed
+with human-reviewed records. Most downstream automation, reports,
+presentations, and incremental processing remain planned. See the
 [repository baseline](project/status/repository-baseline.md) for the
 evidence-backed status of each capability.
 
@@ -43,7 +44,7 @@ with [CONTRIBUTING.md](CONTRIBUTING.md) and the
 Material Codex work uses the version-controlled [Codex prompt library](prompts/codex/README.md),
 whose lifecycle and execution procedure are documented in
 [Using the Codex prompt library](docs/operations/using-codex-prompt-library.md).
-The draft [master implementation roadmap](project/roadmap/implementation-roadmap.md)
+The approved [master implementation roadmap](project/roadmap/implementation-roadmap.md)
 defines the controlled sequence for later work; it does not make planned stages
 operational.
 Definitions and lifecycle boundaries for source assets, metadata, extraction,
@@ -55,7 +56,7 @@ evidence, knowledge, assessments, and outputs are in
 | Area | Intended role | Current status |
 | --- | --- | --- |
 | `sources/`, `config/`, `schemas/` | Source inventory and controlled processing contracts | Partial |
-| `knowledge/`, `registers/` | Evidence and structured knowledge | Partial; controlled empty framework and two provisional notes |
+| `knowledge/`, `registers/` | Evidence and structured knowledge | Partial; validated records and completed bounded Stage 10 pilot plus two provisional notes |
 | `assessments/`, `outlook/` | Assessment and outlook content | Planned/scaffolded |
 | `project/` | Policies, decisions, reviews, and progress | Partial |
 | `publications/`, `presentations/`, `website/` | Audience outputs | Planned/scaffolded |
@@ -74,16 +75,19 @@ The detailed accepted and prohibited contents for every area are in the
 - Evidence and knowledge: schema-conforming records under `knowledge/`, subject
   to classification and human review. The directories initially contain no
   production records; extraction output is not automatically evidence or
-  approved knowledge. Assessments remain planned/scaffolded.
+  approved knowledge. Nine evidence and three use-case records exist;
+  `EVID-000001`–`000003` are verified and `USECASE-000001` is approved for its
+  stated semantic use. Assessments remain planned/scaffolded.
 - Project state: `project/status/`, relevant registers, and recorded decisions.
 - Generated publications and presentations: derivatives, never the canonical
   evidence or knowledge record.
 
 The source-state conflict was explicitly reconciled on 2026-08-02. Historical
 legacy states remain preserved but do not override the canonical catalogue.
-Fifty-seven sources have approved fresh-processing authorizations; the Pages
-source remains blocked. One controlled pilot run succeeded and is technically
-verified; one AI-origin atomic evidence statement is human-verified.
+Sixty sources have approved processing authorizations; the Pages source remains
+blocked. Four controlled runs succeeded and are technically verified. Three
+AI-origin atomic evidence statements are human-verified; six evidence and two
+use-case records remain `needs_review`.
 
 ## Contributing
 

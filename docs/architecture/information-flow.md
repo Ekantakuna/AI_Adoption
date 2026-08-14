@@ -21,8 +21,10 @@ possible. Reviewed knowledge supports assessments and project views, which are
 selected and shaped for reports and presentations.
 
 This is the target flow. Metadata inventory, processing authorization/run
-controls, and the empty evidence/knowledge framework are implemented; no
-successful run or production content exists.
+controls, and evidence/knowledge validation are implemented. Four runs and 12
+production knowledge-layer records exist, but only three evidence records are
+verified and one use case is approved for its stated use. The bounded Stage 10
+pilot is closed.
 
 The distinctions between source metadata, extraction, evidence, knowledge,
 canonical records, and generated derivatives are defined in
@@ -34,9 +36,9 @@ canonical records, and generated derivatives are defined in
 | --- | --- | --- | --- | --- |
 | Source assets | Files in approved external storage | Immutable original | Classification and handling boundary | External dependency indicated by policy and metadata; bodies not verified in this review |
 | Metadata catalogue | Filesystem metadata and hashes | Stable source records | Source ID, path, hash, classification, route | Implemented and explicitly reconciled; historical views remain non-canonical |
-| Content processing | Approved source and tool | Classified extraction with provenance | Route/tool approval and processing run record | Partial; 57 authorizations and one successful private pilot derivative awaiting human review |
-| Atomic evidence | Approved extraction | One attributable statement or observation per record | Evidence schema, source locator, reviewed run, review state | Partial; empty controlled framework and run-integrity validation, no records |
-| Structured knowledge | Reviewed evidence | Terms, concepts, frameworks, metrics, risks, trends, use cases, assumptions, decisions | Object schemas and human approval | Partial; schemas/templates/validation exist, directories empty |
+| Content processing | Approved source and tool | Classified extraction with provenance | Route/tool approval and processing run record | Partial; 60 authorizations and four technically verified private runs |
+| Atomic evidence | Approved extraction | One attributable statement or observation per record | Evidence schema, source locator, reviewed run, review state | Partial; nine records validate, three verified and six awaiting review |
+| Structured knowledge | Reviewed evidence | Terms, concepts, frameworks, metrics, risks, trends, use cases, assumptions, decisions | Object schemas and human approval | Partial; three use cases validate, one approved for its stated use and two awaiting review |
 | Relationships and impact | Structured IDs and typed links | Validated relationship records; future graph projection and affected-object set | Relationship schema and integrity validation | Partial; record validation exists, traversal absent |
 | Assessments and progress | Reviewed knowledge and project records | Current/target state, gaps, maturity, delivery views | Method, scoring contract, reviewer | Planned/scaffolded |
 | Reports | Approved content selected for an audience | Audience report | Claim, provenance, classification, and audience checks | Planned/scaffolded |

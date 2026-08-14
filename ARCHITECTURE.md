@@ -42,8 +42,8 @@ control approval of authoritative knowledge and organizational conclusions.
 | Layer | Responsibility | Principal target locations | Current status |
 | --- | --- | --- | --- |
 | 1. Source layer | Inventory original assets, classification, routes, hashes, and controlled extraction | `sources/`, `config/source-types.yaml`, `schemas/sources.yaml` | Partial |
-| 2. Evidence layer | Store atomic, attributable evidence derived under an approved route | `knowledge/evidence/`, `schemas/evidence.schema.yaml` | Partial; approved run contract and one human-verified, AI-origin evidence statement |
-| 3. Knowledge layer | Maintain concepts, claims, assumptions, decisions, and relationships | `knowledge/`, knowledge schemas | Partial; controlled model/templates exist, production directories are empty, two provisional notes remain |
+| 2. Evidence layer | Store atomic, attributable evidence derived under an approved route | `knowledge/evidence/`, `schemas/evidence.schema.yaml` | Partial; nine records exist, three verified and six awaiting review |
+| 3. Knowledge layer | Maintain concepts, claims, assumptions, decisions, and relationships | `knowledge/`, knowledge schemas | Partial; one use case is approved for its stated use, two remain drafts, and two provisional notes remain |
 | 4. Assessment and outlook layer | Produce traceable current/target state, gaps, maturity, impact, and outlook content | `assessments/`, `outlook/` | Planned/scaffolded |
 | 5. Project and progress layer | Maintain policies, decisions, reviews, status, risks, initiatives, metrics, and milestones | `project/`, `registers/` | Partial |
 | 6. Publication layer | Assemble reviewed content for specific audiences | `publications/`, `website/` | Planned/scaffolded |
@@ -65,13 +65,13 @@ operational or replace human review.
 structured knowledge → relationships and impact analysis → assessments and
 progress views → reports → presentations**
 
-The first metadata step is implemented. Some historical status and knowledge
-files report extraction and synthesis, but no tracked extractor or extracted
-corpus makes that processing reproducible from the current tree; it is therefore
-partial. Stage 9 implements empty atomic-evidence and knowledge contracts plus
-relationship integrity validation. Production knowledge, graph traversal,
-impact automation, assessment production, and output generation remain planned
-or absent.
+The metadata step is implemented and controlled processing records four
+technically verified runs. Stage 9 implements atomic-evidence and knowledge
+contracts plus relationship integrity validation. Nine evidence records and
+three semantic use-case records exist; the bounded Stage 10 chain is reviewed
+and closed. That one approved use case does not establish broader authoritative
+knowledge. Graph traversal, impact automation, assessment production, and
+output generation remain planned or absent.
 
 See [information flow](docs/architecture/information-flow.md).
 

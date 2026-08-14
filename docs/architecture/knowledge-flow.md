@@ -21,8 +21,11 @@ reports and presentations remain generated or assembled derivatives.
 
 Stage 9 implements controlled knowledge types, evidence and object schemas,
 templates, integrity validation, review controls, and CI. The approved
-post-Stage-9 controls add the processing-run register and a text/HTML reader;
-the register is empty and other extraction wrappers, dependency traversal,
-assessment schemas, and report/presentation generators remain absent. Changes
-therefore require a manual search for affected `EVID` and knowledge IDs until
-incremental automation exists.
+post-Stage-9 controls add the processing-run register and text/HTML and PPTX
+readers.
+Four runs are technically verified, nine evidence records and three use-case
+records validate, and one bounded Stage 10 chain is reviewed and closed. Other
+format readers, dependency traversal, assessment schemas, and
+report/presentation generators remain absent. Changes therefore require a
+manual search for affected `EVID` and knowledge IDs until incremental
+automation exists.
