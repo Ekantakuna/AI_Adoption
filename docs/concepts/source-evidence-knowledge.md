@@ -10,16 +10,20 @@ Atomic evidence is one source-attributable statement in an `EVID` YAML record.
 Its inputs are a catalogue source and approved processing run; its output
 preserves the source ID, precise locator, run ID, classification, confidence,
 creator, and review status. Stage 9 validates source IDs but the processing-run
-contract was approved immediately after Stage 9. The run register is currently
-operational with one verified run. `EVID-000001` is the first AI-origin atomic
-statement and was human-verified for source fidelity; that verification does
-not establish implementation or broader approval.
+contract was approved immediately after Stage 9. The run register contains four
+technically verified runs. Nine evidence records exist: `EVID-000001`–`000003`
+are human-verified for source fidelity, while the other six remain
+`needs_review`. Technical run verification does not establish implementation or
+approve substantive claims.
 
 Knowledge is interpretation built from evidence. Terms, concepts, frameworks,
 metrics, risks, trends, use cases, and knowledge decisions cite evidence IDs.
 Assumptions explicitly represent unverified propositions and may expose an
 evidence gap. Relationships link existing knowledge objects and also cite
 evidence. Knowledge does not modify upstream source metadata or evidence.
+Three semantic use-case records currently demonstrate this reference boundary;
+Stage 10 completed a bounded human-review pilot for `USECASE-000001`, while the
+other two remain `needs_review`.
 
 Assessments apply a method to reviewed knowledge. Reports select reviewed
 assessment or knowledge content for an audience, and presentations are

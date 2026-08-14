@@ -3,9 +3,10 @@
 This directory contains source metadata, manifests, source notes, authorization
 and run registers, and controlled extraction areas. It is partially
 implemented: the canonical catalogue conflict has been explicitly reconciled,
-approved authorization/run contracts and 57 per-source authorizations exist,
-and a controlled repository text reader is available. No successful reviewed
-run or production evidence exists.
+approved authorization/run contracts and 60 per-source authorizations exist,
+and controlled repository text/HTML and PPTX readers are available. Four
+successful runs are technically verified and eligible to support evidence;
+this does not approve their substantive claims.
 
 The canonical source inventory is `sources/catalogue.yaml`. `../registers/sources.yaml` is retained only as a legacy compatibility snapshot.
 
@@ -31,12 +32,15 @@ authorization permits a run; it is not proof that processing occurred.
 and hash, outcome, operator, and review state. IDs use `AUTH-NNNNNN` and
 `RUN-NNNNNN`, are allocated monotonically, and are never reused.
 
-The authorization register contains 57 approved records. The run register
-contains one successful, technically verified pilot. Use the templates in
+The authorization register contains 60 approved records. The run register
+contains four successful, technically verified runs. Use the templates in
 `templates/` to create one planned run at a time and validate changes with
 `python scripts/validate_source_processing.py`. Only a successful run reviewed
 as `verified` or `approved` may support production evidence.
 
-Three newly catalogued PPTX sources, `SRC-UC-000012`–`000014`, remain
-unclassified and metadata-only pending the exact approval recorded in
-`project/status/implemented-use-cases-ingestion.md`.
+The PPTX sources `SRC-UC-000012`–`000014` are classified `internal`, have
+approved local authorizations and verified runs, and support eight AI-origin
+evidence records plus three semantic use-case records. `EVID-000002` and
+`EVID-000003` were verified during Stage 10, while `EVID-000004`–`000009`
+remain `needs_review`. `USECASE-000001` is approved for its stated semantic
+use; `USECASE-000002`–`000003` remain `needs_review`.
