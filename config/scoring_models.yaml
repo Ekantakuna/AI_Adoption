@@ -1,0 +1,16 @@
+schema_version: 1
+initial_assessment_mode:
+  mode: unscored
+  status: approved
+  reviewed_by: MZ
+  reviewed_at: "2026-08-15"
+  maintenance:
+    owner_role: roadmap-maintainer
+    semantic_changes_require_human_review: true
+  requirements:
+    claim_types: [fact, inference, recommendation, commitment]
+    upstream_review_statuses: [verified, approved]
+    evidence_visibility: [missing, disputed, insufficient]
+    human_approval_boundaries: [assessment_conclusions, recommendations, target_state_commitments]
+  prohibited_operations: [numeric_scores, ordinal_scores, weights, aggregation, ranking, implied_maturity_levels]
+models: []

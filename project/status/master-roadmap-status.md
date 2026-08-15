@@ -9,6 +9,8 @@
 - Approval date: 2026-08-08
 - Source-body access: none
 - Stage 10 implementation: implemented and closed; broader capability remains partial
+- Stage 11 implementation: implemented and closed; relationship/impact
+  capability remains partial
 
 ## Purpose and evidence
 
@@ -32,7 +34,7 @@ framework and downstream pipeline remain partial or unimplemented as documented.
 | Stage 9 foundation | partial capability; implemented stage | `project/status/stage-09-knowledge-framework.md`, `scripts/validate_knowledge.py`, `schemas/` |
 | Stage 9.5 roadmap controls | implemented; approved | `project/roadmap.yaml`, `scripts/validate_roadmap.py` |
 | Stage 10 pilot | implemented stage; partial capability | `project/status/stage-10-reviewed-evidence-knowledge-pilot.md`, `project/status/stage-10-pilot-review-packet.md` |
-| Graph/impact automation | absent | `ARCHITECTURE.md`, `project/status/repository-baseline.md` |
+| Relationship/impact traversal | partial capability; implemented stage | `project/status/stage-11-knowledge-graph-impact-integrity.md`, `scripts/validate_relationship_impact.py`, `project/decisions/ADR-0011-explicit-relationship-traversal-contract.md` |
 | Assessments and outlook | planned/scaffolded | `assessments/`, `outlook/`, `ARCHITECTURE.md` |
 | Publications/presentations | planned/scaffolded | `publications/`, `presentations/`, `website/` |
 | Incremental processing automation | absent | `ARCHITECTURE.md`, `docs/governance/change-management.md` |
@@ -60,5 +62,6 @@ The validator does not assess substantive roadmap quality or grant access to
 source bodies. A documentation builder is not configured in this repository.
 
 The bounded Stage 10 pilot is implemented and closed with human-reviewed
-evidence and knowledge. Stage 11 and all later stages remain unimplemented and
-retain their own entry criteria and review gates.
+evidence and knowledge. Stage 11 is implemented and closed with partial
+relationship/impact capability. Stage 12 and all later stages remain
+unimplemented and retain their own entry criteria and review gates.

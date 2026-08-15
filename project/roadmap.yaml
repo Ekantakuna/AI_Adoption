@@ -57,8 +57,8 @@ stages:
   - id: stage-11
     sequence: 11
     title: Knowledge graph and impact integrity
-    status: planned
-    capability_status: absent
+    status: implemented
+    capability_status: partial
     summary: Define and validate relationship traversal and impact references for reviewed knowledge without replacing canonical records with graph derivatives.
     prerequisites: [stage-10]
     entry_criteria: [pilot review is closed, relationship identifier and traversal contract are approved]

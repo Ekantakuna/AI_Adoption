@@ -48,7 +48,7 @@ control approval of authoritative knowledge and organizational conclusions.
 | 5. Project and progress layer | Maintain policies, decisions, reviews, status, risks, initiatives, metrics, and milestones | `project/`, `registers/` | Partial |
 | 6. Publication layer | Assemble reviewed content for specific audiences | `publications/`, `website/` | Planned/scaffolded |
 | 7. Presentation layer | Transform approved publication content into audience-specific decks | `presentations/` | Planned/scaffolded |
-| 8. Automation and validation layer | Validate, process changes, trace impact, test, and generate derivatives | `scripts/`, `tests/`, `.github/` | Partial; validation, source-processing controls, and text/HTML pilot implemented; broader generation absent |
+| 8. Automation and validation layer | Validate, process changes, trace impact, test, and generate derivatives | `scripts/`, `tests/`, `.github/` | Partial; validation, source-processing controls, source readers, and bounded relationship/impact traversal implemented; broader generation absent |
 
 Layering controls dependencies: downstream content cites stable upstream IDs and
 must not overwrite upstream records. A publication may summarize approved
@@ -70,8 +70,10 @@ technically verified runs. Stage 9 implements atomic-evidence and knowledge
 contracts plus relationship integrity validation. Nine evidence records and
 three semantic use-case records exist; the bounded Stage 10 chain is reviewed
 and closed. That one approved use case does not establish broader authoritative
-knowledge. Graph traversal, impact automation, assessment production, and
-output generation remain planned or absent.
+knowledge. Stage 11 implements bounded explicit-reference traversal and impact
+integrity as a derived, read-only view; its exit gates are human-approved and
+the roadmap records partial capability. Automatic invalidation, assessment
+production, and output generation remain planned or absent.
 
 See [information flow](docs/architecture/information-flow.md).
 
@@ -139,10 +141,11 @@ affected evidence and downstream objects from explicit references; reprocesses
 only the affected path; invalidates or marks downstream items for review; and
 regenerates approved derivatives after review.
 
-No dependency graph, change detector, invalidation engine, or incremental
-runner exists in the current repository. Until implemented, change impact is a
-manual, review-controlled procedure described in
-[change management](docs/governance/change-management.md).
+No persistent dependency graph, change detector, invalidation engine, or
+incremental runner exists in the current repository. The Stage 11 bounded,
+in-memory relationship projection supports explicit-reference impact review;
+acting on identified impact remains a manual, review-controlled procedure
+described in [change management](docs/governance/change-management.md).
 
 ## Publication and presentation generation
 
@@ -168,9 +171,11 @@ separately so they do not imply that the full target architecture operates:
 | [Human review for authority](project/decisions/ADR-0007-human-review-for-authority.md) | Operating contract and source-access gates | Repository-wide review workflow enforcement |
 | [Publications as derivatives](project/decisions/ADR-0008-publications-are-derivatives.md) | Source-of-truth and publication boundary documentation | Publication and presentation generation |
 | [Documentation as implementation](project/decisions/ADR-0009-documentation-is-part-of-implementation.md) | Agent and contribution contracts | Automated documentation completeness checks |
+| [Explicit relationship traversal](project/decisions/ADR-0011-explicit-relationship-traversal-contract.md) | Accepted directions, lifecycle, depth, cycle, impact, canonical-data contract, and Stage 11 implementation | Later Stage 16 invalidation/regeneration |
 
 ADRs 0005–0007 were accepted by Maksim Zakharenkau on 2026-08-02 as part of
 Stage 9 closure; ADR 0010 was accepted with source-state reconciliation later
 that day. ADRs 0001, 0003–0004, and 0008–0009 were then accepted with their
-explicit limitations. Record status does not change the implementation
+explicit limitations. ADR 0011 was accepted by MZ on 2026-08-14 before Stage 11
+implementation. Record status does not change the implementation
 boundaries shown above.

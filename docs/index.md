@@ -42,6 +42,7 @@ This is the entry point for understanding and operating the repository.
 - [Using the Codex prompt library](operations/using-codex-prompt-library.md)
 - [Creating knowledge records](operations/creating-knowledge-records.md)
 - [Reviewing knowledge records](operations/reviewing-knowledge-records.md)
+- [Traversing knowledge relationships](operations/traversing-knowledge-relationships.md)
 - [Identifier rules](reference/identifiers.md)
 - [Knowledge identifiers](reference/knowledge-identifiers.md)
 - [Status values](reference/statuses.md)

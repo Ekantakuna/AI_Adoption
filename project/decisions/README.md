@@ -62,3 +62,5 @@ record itself awaits review.
 | [0008](ADR-0008-publications-are-derivatives.md) | Publications as derivatives | accepted | Operative source-of-truth boundary; generation pipeline remains planned |
 | [0009](ADR-0009-documentation-is-part-of-implementation.md) | Documentation as implementation | accepted | Operative agent obligation; automated documentation checks remain absent |
 | [0010](ADR-0010-source-processing-authorizations-and-runs.md) | Explicit source-processing authorizations and run records | accepted | Approved contracts, 57 authorizations, and one successful pilot awaiting review; no evidence |
+| [0011](ADR-0011-explicit-relationship-traversal-contract.md) | Explicit relationship traversal without replacing canonical records | accepted | Traversal contract approved by MZ on 2026-08-14 and implemented through human-approved Stage 11 |
+| [0012](ADR-0012-assessment-scoring-and-audience-controls.md) | Control assessment scoring and audience use before Stage 12 | accepted | Framework, identifiers, unscored-first mode, `AUD-000001`, and ownership assignments approved by MZ on 2026-08-15; configuration remains unimplemented |

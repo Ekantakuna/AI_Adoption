@@ -36,6 +36,10 @@ reports, decks, and sites are generated derivatives when their generators are
 implemented. They must not become the only copy of evidence, approvals, or
 decisions.
 
+The Stage 11 relationship projection is generated in memory from explicit
+canonical IDs. Its nodes, paths, impact set, warnings, and cycle notices are
+navigation results, not new knowledge objects or approval decisions.
+
 ## Local-only and Git-tracked
 
 **Local-only** means stored outside version control in an approved location.

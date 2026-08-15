@@ -1,0 +1,63 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Approved initial audience controls
+type: object
+required: [schema_version, audiences]
+properties:
+  schema_version:
+    const: 1
+  audiences:
+    type: array
+    minItems: 1
+    maxItems: 1
+    items:
+      type: object
+      required: [id, version, name, purpose, status, recipient_scope, allowed_classifications, use, prohibitions, maintenance, authority, reviewed_by, reviewed_at]
+      properties:
+        id:
+          const: AUD-000001
+        version:
+          const: 1.0.0
+        name:
+          const: Internal assessment reviewers
+        purpose:
+          type: string
+          minLength: 1
+        status:
+          const: approved
+        recipient_scope:
+          const: authorized_internal_human_reviewers
+        allowed_classifications:
+          const: [public, internal]
+        use:
+          const: review_only
+        prohibitions:
+          const: [restricted_material, unclassified_material, source_bodies, secrets_or_credentials, unapproved_personal_information, unreviewed_content_as_authoritative, silent_conflict_resolution, public_or_external_release]
+        maintenance:
+          type: object
+          required: [owner_role, semantic_changes_require_human_review]
+          properties:
+            owner_role:
+              const: repository-maintainer
+            semantic_changes_require_human_review:
+              const: true
+          additionalProperties: false
+        authority:
+          type: object
+          required: [audience_membership_approver, assessment_approver, internal_distribution_approver, ai_permissions]
+          properties:
+            audience_membership_approver:
+              const: MZ
+            assessment_approver:
+              const: MZ
+            internal_distribution_approver:
+              const: MZ
+            ai_permissions:
+              const: [draft, validate]
+          additionalProperties: false
+        reviewed_by:
+          const: MZ
+        reviewed_at:
+          type: string
+          format: date
+      additionalProperties: false
+additionalProperties: false

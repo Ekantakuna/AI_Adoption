@@ -28,8 +28,16 @@ audience-specific report sources and replaceable rendered artifacts. A
 presentation is derived from an approved report or the same approved canonical
 content; it must not introduce unsupported executive claims.
 
-`config/audiences.yaml` and `config/scoring_models.yaml` are currently empty.
-Publication and presentation subdirectories contain no templates or generators.
+`config/audiences.yaml` contains only review-only `AUD-000001`, and
+`config/scoring_models.yaml` records an unscored initial assessment mode with no
+models. Publication and presentation subdirectories contain no templates or
+generators.
+Accepted
+[ADR-0012](../../project/decisions/ADR-0012-assessment-scoring-and-audience-controls.md)
+defines the control framework and stable identifier forms; it does not approve
+a scoring model or configuration record. `AUD-000001` is approved only for
+internal assessment review of `public` and `internal` material; it grants no
+publication or external-release authority.
 
 ## Required controls
 
@@ -65,5 +73,6 @@ changing the identity of its canonical inputs.
 - `presentations/`: purpose README, empty source/theme directories, and ignored
   generated-output area — planned.
 - `website/`: purpose README only — planned.
-- `config/audiences.yaml`: empty — absent configuration.
+- `config/audiences.yaml`: one schema-validated internal review audience; no
+  publication or external-release audience.
 - publication/report/presentation scripts and tests: absent.

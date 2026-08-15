@@ -1,0 +1,29 @@
+schema_version: 1
+audiences:
+  - id: AUD-000001
+    version: 1.0.0
+    name: Internal assessment reviewers
+    purpose: Review draft Stage 12 assessments and outlook modules.
+    status: approved
+    recipient_scope: authorized_internal_human_reviewers
+    allowed_classifications: [public, internal]
+    use: review_only
+    prohibitions:
+      - restricted_material
+      - unclassified_material
+      - source_bodies
+      - secrets_or_credentials
+      - unapproved_personal_information
+      - unreviewed_content_as_authoritative
+      - silent_conflict_resolution
+      - public_or_external_release
+    maintenance:
+      owner_role: repository-maintainer
+      semantic_changes_require_human_review: true
+    authority:
+      audience_membership_approver: MZ
+      assessment_approver: MZ
+      internal_distribution_approver: MZ
+      ai_permissions: [draft, validate]
+    reviewed_by: MZ
+    reviewed_at: "2026-08-15"

@@ -27,6 +27,7 @@ class ValidationResult:
     source_records: int = 0
     authorization_records: int = 0
     processing_runs: int = 0
+    controlled_configurations: int = 0
     knowledge_records: int = 0
     errors: list[str] = field(default_factory=list)
 
@@ -156,6 +157,26 @@ def validate_repository(root: Path | str) -> ValidationResult:
         if isinstance(instance, dict) and isinstance(instance.get("records"), list):
             setattr(result, count_attribute, len(instance["records"]))
 
+    governed_configurations = (
+        ("schemas/scoring-models.schema.yaml", "config/scoring_models.yaml"),
+        ("schemas/audiences.schema.yaml", "config/audiences.yaml"),
+    )
+    for schema_name, instance_name in governed_configurations:
+        schema_path = (root / schema_name).resolve()
+        instance_path = root / instance_name
+        if schema_path not in validators and not instance_path.exists():
+            continue
+        validator = validators.get(schema_path)
+        if validator is None:
+            result.errors.append(f"{instance_path}: no valid schema loaded for {schema_name}")
+            continue
+        instance = _load_yaml(instance_path, result.errors)
+        if instance is None:
+            continue
+        for error in sorted(validator.iter_errors(instance), key=str):
+            result.errors.append(_format_error(instance_path, error))
+        result.controlled_configurations += 1
+
     type_path = root / "config/knowledge-types.yaml"
     type_config = _load_yaml(type_path, result.errors)
     definitions = type_config.get("object_types") if isinstance(type_config, dict) else None
@@ -211,6 +232,7 @@ def _print_result(result: ValidationResult) -> None:
     print(f"Source catalogue records: {result.source_records}")
     print(f"Source processing authorizations: {result.authorization_records}")
     print(f"Source processing runs: {result.processing_runs}")
+    print(f"Controlled configurations: {result.controlled_configurations}")
     print(f"Production knowledge records: {result.knowledge_records}")
     print(f"Errors: {len(result.errors)}")
     for error in result.errors:

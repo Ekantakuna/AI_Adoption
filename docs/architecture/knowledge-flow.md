@@ -24,8 +24,17 @@ templates, integrity validation, review controls, and CI. The approved
 post-Stage-9 controls add the processing-run register and text/HTML and PPTX
 readers.
 Four runs are technically verified, nine evidence records and three use-case
-records validate, and one bounded Stage 10 chain is reviewed and closed. Other
-format readers, dependency traversal, assessment schemas, and
-report/presentation generators remain absent. Changes therefore require a
-manual search for affected `EVID` and knowledge IDs until incremental
-automation exists.
+records validate, and one bounded Stage 10 chain is reviewed and closed. Stage
+11 adds an in-memory explicit-reference projection, bounded traversal, impact
+validation, and synthetic tests; its exit gates are human-approved, its
+capability remains partial, and there are no production `REL` records. Other
+format readers, assessment schemas, report/presentation generators, and
+automatic invalidation remain absent.
+
+The accepted
+[explicit relationship traversal contract](../../project/decisions/ADR-0011-explicit-relationship-traversal-contract.md)
+defines the approved direction, depth, cycle, repeated-node,
+missing/deprecated-object, conflict, and canonical-boundary rules for Stage 11.
+MZ accepted it on 2026-08-14. The resulting Stage 11 implementation is a
+derived navigation and integrity capability; canonical knowledge records remain
+authoritative. MZ approved the implementation exit gates on 2026-08-14.

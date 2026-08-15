@@ -61,9 +61,28 @@ verification. Relationship endpoints are checked by the repository validator.
 `python scripts/validate_schemas.py` performs standards-based instance
 validation. `python scripts/validate_knowledge.py` separately performs
 cross-file integrity checks such as global uniqueness and referential
-integrity. Other configuration files and non-source registers remain without
-schemas; their empty production registers must remain empty until approved
-contracts exist.
+integrity. `python scripts/validate_relationship_impact.py` adds ADR-0011
+relationship-type, endpoint-pair, lifecycle, cycle, and traversal-integrity
+checks and verifies that the schema relationship-type enum matches
+`config/relationship-types.yaml`. The configuration file has no separate JSON
+Schema; its consumed structure is checked by the validator. Other configuration
+files and non-source registers remain without schemas; their empty production
+registers must remain empty until approved contracts exist.
+
+## Stage 12 entry-control contracts
+
+`scoring-models.schema.yaml` validates the approved unscored initial mode in
+`config/scoring_models.yaml`, including its human-review metadata, required
+claim/evidence behavior, prohibited scoring operations, maintenance boundary,
+and empty model list. `audiences.schema.yaml` validates the single approved
+`AUD-000001` version `1.0.0` record, exact classification permissions,
+prohibitions, mechanical owner, human approval authority, and review metadata.
+
+These intentionally narrow schemas reject scoring models, additional audiences,
+permission expansion, and unknown fields. They do not define assessment records
+or grant audience membership, approve assessment content, or authorize public
+release. `validate_schemas.py` validates both configuration instances and
+reports their count with the other governed repository objects.
 
 ## Source-processing contracts
 

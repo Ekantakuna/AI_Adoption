@@ -72,7 +72,7 @@ reclassify an earlier stage.
 
 ## Stage-11 — Knowledge graph and impact integrity
 
-- Status: `planned`; capability: `absent`
+- Status: `implemented`; capability: `partial`
 - Prerequisites: `stage-10`
 - Entry criteria: pilot closed and relationship/traversal contract approved.
 - Deliverables: relationship lifecycle, impact validator, synthetic tests, and
@@ -82,6 +82,8 @@ reclassify an earlier stage.
   documented.
 - Success measure: explicit references identify affected downstream objects.
 - Dependencies: `stage-10`.
+- Limitation: traversal is a bounded read-only projection; production `REL`
+  records, change detection, invalidation, and regeneration remain absent.
 
 ## Stage-12 — Assessment and outlook contracts
 

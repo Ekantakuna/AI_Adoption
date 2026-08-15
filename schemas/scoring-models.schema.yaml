@@ -1,0 +1,49 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Approved Stage 12 initial scoring control
+type: object
+required: [schema_version, initial_assessment_mode, models]
+properties:
+  schema_version:
+    const: 1
+  initial_assessment_mode:
+    type: object
+    required: [mode, status, reviewed_by, reviewed_at, maintenance, requirements, prohibited_operations]
+    properties:
+      mode:
+        const: unscored
+      status:
+        const: approved
+      reviewed_by:
+        const: MZ
+      reviewed_at:
+        type: string
+        format: date
+      maintenance:
+        type: object
+        required: [owner_role, semantic_changes_require_human_review]
+        properties:
+          owner_role:
+            const: roadmap-maintainer
+          semantic_changes_require_human_review:
+            const: true
+        additionalProperties: false
+      requirements:
+        type: object
+        required: [claim_types, upstream_review_statuses, evidence_visibility, human_approval_boundaries]
+        properties:
+          claim_types:
+            const: [fact, inference, recommendation, commitment]
+          upstream_review_statuses:
+            const: [verified, approved]
+          evidence_visibility:
+            const: [missing, disputed, insufficient]
+          human_approval_boundaries:
+            const: [assessment_conclusions, recommendations, target_state_commitments]
+        additionalProperties: false
+      prohibited_operations:
+        const: [numeric_scores, ordinal_scores, weights, aggregation, ranking, implied_maturity_levels]
+    additionalProperties: false
+  models:
+    type: array
+    maxItems: 0
+additionalProperties: false

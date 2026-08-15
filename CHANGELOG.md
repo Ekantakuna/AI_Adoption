@@ -6,6 +6,27 @@ All notable repository-foundation changes are documented in this file.
 
 ### Added
 
+- Stage 11 controlled relationship semantics, read-only bounded impact
+  traversal, integrity validator, synthetic tests, operating documentation, and
+  human-approved exit gates. The roadmap records the stage as `implemented`
+  with capability `partial`; no production `REL` record or persistent graph
+  store was created.
+- Accepted ADR 0011 traversal contract defining explicit-reference direction,
+  bounded depth, cycle and repeated-node behavior, missing/deprecated object
+  handling, conflict visibility, and canonical-versus-derived boundaries. MZ
+  approved the contract on 2026-08-14 before the separately reviewed Stage 11
+  implementation.
+- Added relationship/impact validation to the repository CI workflow and
+  synchronized the approved Stage 9 knowledge-review workflow with Stage 11's
+  bounded impact procedure. MZ approved the governance revision on 2026-08-15.
+- Added ADR 0012 and a blocked Stage 12 entry-gate assessment covering
+  scoring-model and audience-control requirements. MZ accepted the framework
+  and `SCORE`/`AUD` identifier forms and approved an unscored first assessment
+  on 2026-08-15. MZ also approved review-only `AUD-000001` for `public` and
+  `internal` material plus the mechanical-maintenance and human-authority
+  assignments. The authorized unscored mode and `AUD-000001` version `1.0.0`
+  are now implemented with narrow schemas and tests; no assessment or Stage 12
+  output was created.
 - Bounded Stage 10 review packet and status for the traceable `RUN-000002` →
   `EVID-000002`/`EVID-000003` → `USECASE-000001` pilot; human review is
   recorded and no relationship was invented.

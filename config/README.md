@@ -14,6 +14,10 @@ configuration surfaces.
 - `evidence-confidence.yaml` defines evidence-support confidence values.
 - `review-statuses.yaml` defines the knowledge review lifecycle, AI initial
   states, and reviewer-required states.
+- `relationship-types.yaml` implements the accepted ADR-0011 relationship
+  directions, endpoint constraints, impact directions, cycle policy, reviewed
+  and audit views, and controlled traversal depth. It is consumed read-only by
+  `scripts/validate_relationship_impact.py`.
 - `source-processing.yaml` defines the approved authorization and run
   statuses, execution environments, routes, and extraction tools used by the
   source-processing contracts. Per-source access still requires an approved
@@ -21,8 +25,18 @@ configuration surfaces.
   Individual tools carry an approval state; proposed tools cannot support an
   approved authorization. `pptx_xml_reader` is currently proposed pending
   human review.
-- `audiences.yaml` and `scoring_models.yaml` are empty placeholders; no audience
-  or scoring configuration is implemented.
+- `scoring_models.yaml` implements the approved unscored initial-assessment
+  mode and contains no scoring models. It prohibits scores, weights,
+  aggregation, ranking, and implied maturity levels while requiring explicit
+  claim types, reviewed upstream inputs, visible evidence limitations, and
+  human approval boundaries.
+- `audiences.yaml` implements review-only `AUD-000001` version `1.0.0` for
+  authorized internal assessment reviewers. It permits `public` and `internal`
+  material and explicitly prohibits restricted/unclassified material, source
+  bodies, sensitive content, false authority, silent conflict resolution, and
+  external release. Mechanical maintenance belongs to the roadmap and
+  repository maintainer roles; MZ retains audience, assessment, and internal
+  distribution approval authority.
 
 Configuration is canonical only for the values explicitly present. Empty files
 do not define an object type or capability. The source-specific classification

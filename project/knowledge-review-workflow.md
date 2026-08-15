@@ -2,6 +2,10 @@
 
 > Approved by Maksim Zakharenkau on 2026-08-02. See the
 > [Stage 9 approval record](status/stage-09-approval.md).
+>
+> MZ reviewed and approved the Stage 11 synchronization below on 2026-08-15,
+> including its bounded explicit-reference traversal and manual-review and
+> non-automation boundaries.
 
 ## Roles
 
@@ -30,9 +34,16 @@ acceptance for the record's stated use. Neither state is inferred from Git.
 5. For `verified` or `approved`, an authorized human adds `reviewer.name` and
    `reviewer.reviewed_at`. Preserve `origin: ai` when applicable; origin records
    authorship and does not change when a human promotes the review status.
-6. Run the validator and record any downstream objects requiring review.
+6. Run the knowledge and relationship/impact validators. For each changed
+   canonical ID, run bounded `impact` traversal and record affected IDs,
+   unresolved conflicts, warnings, alternate paths, cycles, and truncation that
+   may require review.
 
 Reviewing a knowledge object does not automatically approve an assessment,
 organizational decision, report claim, or presentation. Each downstream layer
-retains its own human-review boundary. Automated impact traversal is still
-planned, so maintainers must search explicit IDs manually after a change.
+retains its own human-review boundary. Stage 11 implements bounded, read-only
+impact traversal over explicit canonical references; it does not infer semantic
+relationships, determine that affected content is stale, alter review states,
+enforce re-review, or regenerate downstream objects. Maintainers must evaluate
+the reported impact and record any required review manually. See the
+[relationship traversal operation](../docs/operations/traversing-knowledge-relationships.md).

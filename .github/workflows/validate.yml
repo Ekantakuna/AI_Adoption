@@ -20,6 +20,8 @@ jobs:
         run: python scripts/validate_source_processing.py
       - name: Validate knowledge records
         run: python scripts/validate_knowledge.py
+      - name: Validate relationship and impact integrity
+        run: python scripts/validate_relationship_impact.py
       - name: Validate Codex prompt library
         run: python scripts/validate_prompts.py
       - name: Run tests
