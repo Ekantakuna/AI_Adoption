@@ -31,3 +31,9 @@ The complete directory, format, schema, and evidence controls are in
 `config/knowledge-types.yaml`. Relationships cannot use evidence or another
 relationship as endpoints; evidence remains a supporting reference rather than
 a graph endpoint in this model.
+
+Stage 11 derives an in-memory navigation projection from `evidence_ids` and
+canonical `REL` endpoints. In that projection, evidence and non-relationship
+knowledge are nodes and each `REL` record is an edge carrying its own stable ID,
+evidence, classification, and review metadata. The projection is never a
+canonical knowledge store and is not persisted by the validator.

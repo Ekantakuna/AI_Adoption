@@ -51,6 +51,19 @@ class SchemaValidationTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
 
+    def _install_entry_control_contracts(self):
+        repository_root = Path(__file__).resolve().parents[1]
+        for relative_path in (
+            "schemas/scoring-models.schema.yaml",
+            "schemas/audiences.schema.yaml",
+            "config/scoring_models.yaml",
+            "config/audiences.yaml",
+        ):
+            source = repository_root / relative_path
+            destination = self.root / relative_path
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+
     def test_valid_schemas_and_records_pass(self):
         self._write_yaml("knowledge/concepts/CONCEPT-000001.yaml", {
             "id": "CONCEPT-000001", "type": "concept", "title": "Fixture",
@@ -76,6 +89,60 @@ class SchemaValidationTests(unittest.TestCase):
         self._write_yaml("sources/catalogue.yaml", {"records": "not-an-array"})
         result = validate_repository(self.root)
         self.assertTrue(any("not of type 'array'" in error for error in result.errors))
+
+    def test_governed_control_configuration_is_validated(self):
+        self._write_yaml("schemas/audiences.schema.yaml", {
+            "$schema": DIALECT,
+            "type": "object",
+            "required": ["audiences"],
+            "properties": {"audiences": {"type": "array", "maxItems": 1}},
+            "additionalProperties": False,
+        })
+        self._write_yaml("config/audiences.yaml", {"audiences": []})
+        result = validate_repository(self.root)
+        self.assertTrue(result.ok, result.errors)
+        self.assertEqual(result.controlled_configurations, 1)
+
+    def test_invalid_governed_control_configuration_fails(self):
+        self._write_yaml("schemas/scoring-models.schema.yaml", {
+            "$schema": DIALECT,
+            "type": "object",
+            "required": ["models"],
+            "properties": {"models": {"type": "array", "maxItems": 0}},
+            "additionalProperties": False,
+        })
+        self._write_yaml("config/scoring_models.yaml", {"models": ["not-approved"]})
+        result = validate_repository(self.root)
+        self.assertTrue(any("is expected to be empty" in error for error in result.errors))
+
+    def test_governed_control_configuration_requires_schema(self):
+        self._write_yaml("config/audiences.yaml", {"audiences": []})
+        result = validate_repository(self.root)
+        self.assertTrue(any("no valid schema loaded" in error for error in result.errors))
+
+    def test_approved_entry_control_instances_pass_exact_contracts(self):
+        self._install_entry_control_contracts()
+        result = validate_repository(self.root)
+        self.assertTrue(result.ok, result.errors)
+        self.assertEqual(result.controlled_configurations, 2)
+
+    def test_approved_unscored_contract_rejects_a_model(self):
+        self._install_entry_control_contracts()
+        path = self.root / "config/scoring_models.yaml"
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        data["models"].append({"id": "SCORE-000001"})
+        self._write_yaml("config/scoring_models.yaml", data)
+        result = validate_repository(self.root)
+        self.assertTrue(any("is expected to be empty" in error for error in result.errors))
+
+    def test_approved_audience_contract_rejects_permission_expansion(self):
+        self._install_entry_control_contracts()
+        path = self.root / "config/audiences.yaml"
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        data["audiences"][0]["allowed_classifications"].append("restricted")
+        self._write_yaml("config/audiences.yaml", data)
+        result = validate_repository(self.root)
+        self.assertTrue(any("allowed_classifications" in error for error in result.errors))
 
     def test_invalid_schema_fails_meta_schema_validation(self):
         self._write_yaml("schemas/concept.schema.yaml", {

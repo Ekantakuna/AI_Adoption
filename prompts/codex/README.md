@@ -18,15 +18,18 @@ Prompts are stored in Git so that agent-assisted work is:
 
 - `bootstrap/` contains three prompts that establish repository-wide rules and
   documentation, review that documentation, and record evidenced decisions.
-- `stages/` contains `STAGE-TASK-TEMPLATE.md`, the Stage 09 knowledge-framework
-  implementation prompt, and the generated Stage 10 evidence-to-knowledge pilot
-  prompt. The Stage 10 prompt is not execution evidence and retains human-review
-  gates.
+- `stages/` contains `STAGE-TASK-TEMPLATE.md` and the generated Stage 09–11
+  execution prompts. A stage prompt is not execution evidence and retains its
+  entry and human-review gates; the Stage 11 prompt cannot execute until its
+  relationship-identifier and traversal-contract entry criteria are evidenced.
 - `reviews/` and `validation/` contain reusable review and final-validation
-  prompts. `maintenance/` contains health and source-change procedures; the
-  latter is future-facing and does not claim operational incremental processing.
-- `planning/` contains the Stage 9.5 roadmap prompt, its review prompt, and the
-  generator that may create one later stage prompt from an approved roadmap.
+  prompts. `maintenance/` contains health, reviewed-control synchronization,
+  approved Stage 12 entry-control implementation, and source-change procedures;
+  the latter is future-facing and does not claim operational incremental
+  processing.
+- `planning/` contains the Stage 9.5 roadmap prompt, its review prompt, the
+  generator that may create one later stage prompt from an approved roadmap,
+  and the retired Stage 12 entry-control proposal record.
 - `templates/` contains metadata-bearing generic, stage, review, and
   maintenance templates and is never included as active execution prompts.
 

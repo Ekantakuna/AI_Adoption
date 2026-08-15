@@ -8,8 +8,10 @@ publication while preserving provenance and human review.
 The repository is not yet an end-to-end operating system. Metadata inventory,
 controlled processing, and knowledge validation exist. Stage 9 established the
 knowledge contracts; a bounded Stage 10 evidence-to-knowledge pilot is closed
-with human-reviewed records. Most downstream automation, reports,
-presentations, and incremental processing remain planned. See the
+with human-reviewed records. Stage 11 bounded relationship/impact traversal is
+implemented and closed with human-approved exit gates; its capability remains
+partial. Reports, presentations, assessments, and incremental invalidation
+remain planned. See the
 [repository baseline](project/status/repository-baseline.md) for the
 evidence-backed status of each capability.
 
@@ -60,7 +62,7 @@ evidence, knowledge, assessments, and outputs are in
 | `assessments/`, `outlook/` | Assessment and outlook content | Planned/scaffolded |
 | `project/` | Policies, decisions, reviews, and progress | Partial |
 | `publications/`, `presentations/`, `website/` | Audience outputs | Planned/scaffolded |
-| `scripts/`, `tests/`, `.github/` | Automation and validation | Partial; schema/knowledge validation, tests, and CI are implemented |
+| `scripts/`, `tests/`, `.github/` | Automation and validation | Partial; schema/knowledge and relationship/impact validation, tests, and CI are implemented |
 | `docs/` | Repository operating documentation | Implemented by the operating-model baseline |
 
 The detailed accepted and prohibited contents for every area are in the

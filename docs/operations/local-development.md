@@ -63,18 +63,22 @@ validates production knowledge records against configured object schemas.
 
 ## Tests and repository validation
 
-Run the implemented Stage 9 checks from the repository root:
+Run the implemented repository checks from the repository root:
 
 ```sh
 python scripts/validate_schemas.py
 python scripts/validate_source_processing.py
 python scripts/validate_knowledge.py
+python scripts/validate_relationship_impact.py
+python scripts/validate_prompts.py
+python scripts/validate_roadmap.py
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
 The source-processing validator is an active CI gate after approved catalogue
-reconciliation. The CI workflow runs schema, source-processing, knowledge, and
-unit-test validation.
+reconciliation. The CI workflow runs schema, source-processing, knowledge,
+relationship/impact, prompt, and unit-test validation. Roadmap validation is
+available locally but is not currently a CI step.
 Documentation builds and publication validation remain unconfigured; the
 repository text reader operates only against an approved run.
 

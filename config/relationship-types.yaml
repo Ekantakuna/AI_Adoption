@@ -1,0 +1,63 @@
+schema_version: 1
+traversal:
+  default_max_depth: 1
+  hard_max_depth: 25
+  reviewed_statuses: [verified, approved]
+  audit_statuses: [draft, needs_review, under_review, verified, approved, rejected, deprecated]
+relationship_types:
+  - id: supports
+    direction: directed
+    impact_direction: from_to
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: conceptual
+  - id: contradicts
+    direction: symmetric
+    impact_direction: both
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: conceptual
+  - id: refines
+    direction: directed
+    impact_direction: both
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: conceptual
+  - id: depends_on
+    direction: directed
+    impact_direction: to_from
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: acyclic_homogeneous
+  - id: influences
+    direction: directed
+    impact_direction: from_to
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: conceptual
+  - id: measures
+    direction: directed
+    impact_direction: to_from
+    allowed_from_types: [metric]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: conceptual
+  - id: mitigates
+    direction: directed
+    impact_direction: both
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [risk]
+    cycle_policy: conceptual
+  - id: relates_to
+    direction: symmetric
+    impact_direction: both
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    cycle_policy: conceptual
+  - id: supersedes
+    direction: directed
+    impact_direction: to_from
+    allowed_from_types: [any_knowledge]
+    allowed_to_types: [any_knowledge]
+    same_endpoint_type_required: true
+    target_status_required: deprecated
+    cycle_policy: acyclic_any

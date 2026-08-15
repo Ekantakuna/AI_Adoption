@@ -4,9 +4,9 @@
 statuses, stable IDs, catalogue membership, paths, and template/lifecycle
 rules. It does not execute prompts or authorize source access.
 
-This directory contains the Stage 9 schema and knowledge-integrity validators,
-approved source-processing validation, and a controlled reader for authorized
-text/HTML runs. Reporting and publication tools remain scaffolded.
+This directory contains schema, knowledge, source-processing, prompt, roadmap,
+and relationship/impact validators plus controlled source readers. Reporting
+and publication tools remain scaffolded.
 
 Install the pinned validation dependencies and run standards-based schema
 validation from the repository root:
@@ -18,10 +18,11 @@ python scripts/validate_schemas.py
 
 `validate_schemas.py` checks every `*.schema.yaml` contract against the JSON
 Schema Draft 2020-12 meta-schema, enables declared format checks, validates the
-canonical source catalogue against `schemas/sources.yaml`, and validates future
-production knowledge records against their configured object schemas. It
-ignores READMEs, templates, and root-level provisional notes. It reports errors
-without modifying any record.
+canonical source catalogue against `schemas/sources.yaml`, validates the two
+approved Stage 12 entry-control configurations, and validates production
+knowledge records against their configured object schemas. It ignores READMEs,
+templates, and root-level provisional notes. It reports errors without modifying
+any record.
 
 Run the implemented validator from the repository root:
 
@@ -43,6 +44,20 @@ successful reviewed run.
 `validate_knowledge.py` performs cross-record integrity checks that JSON Schema
 does not cover. Run both validators; neither grants content approval or source
 access.
+
+Run the Stage 11 relationship and impact check with:
+
+```text
+python scripts/validate_relationship_impact.py
+```
+
+It validates the approved relationship semantics, evidence and endpoint
+references, review states, self-relations, deprecated/rejected behavior,
+semantic duplicates, and structural versus permitted cycles. With `--start-id`
+it derives a bounded, read-only upstream, downstream, combined, or impact view
+from explicit references. It does not write a graph store or alter canonical
+records. See the
+[traversal operation](../docs/operations/traversing-knowledge-relationships.md).
 
 Run the roadmap validator with:
 
